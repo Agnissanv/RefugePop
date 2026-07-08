@@ -241,3 +241,70 @@ header {
     .modal-body { flex-direction: column; }
     .modal-image img { height: 250px; }
 }
+/* Barre de filtres stylisée */
+.filters-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding: 1rem 5%;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.filters-container::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-btn {
+    background: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 10px 22px;
+    border-radius: 25px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    background: rgba(255, 71, 87, 0.1);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.filter-btn.active {
+    background: var(--accent);
+    color: white;
+    border-color: var(--accent);
+    box-shadow: 0 5px 15px rgba(255, 71, 87, 0.3);
+}
+
+/* Loader animé */
+.loader {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem 20px;
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+.loader i {
+    animation: spin 1s linear infinite;
+    margin-right: 12px;
+    color: var(--accent);
+    font-size: 1.5rem;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .filters-container {
+        justify-content: flex-start;
+        padding: 1rem 20px;
+    }
+}

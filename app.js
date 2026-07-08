@@ -1,6 +1,6 @@
-// app.js - Version Propulsée par TMDB
+// app.js - Version Propulsée par TMDB (Avec Filtres UX et Loader)
 
-const API_KEY = '578bd3c6b2ac39a432cb440a7c152ef6'; // Remplace par ta clé TMDB
+const API_KEY = '578bd3c6b2ac39a432cb440a7c152ef6'; // Ta clé TMDB fonctionnelle
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const LANG = 'fr-FR';
@@ -13,11 +13,13 @@ const modalDetails = document.getElementById('modalDetails');
 const videoContainer = document.getElementById('videoContainer');
 const videoPlayer = document.getElementById('videoPlayer');
 const playBtn = document.getElementById('playBtn');
+const filterButtons = document.querySelectorAll('.filter-btn');
 
-let activeMovieId = null; // On stocke l'ID TMDB du film sélectionné
+let activeMovieId = null;
 
-// 1. Aller chercher les films tendances du moment au chargement
+// 1. Aller chercher les films tendances du moment
 async function getTrendingMovies() {
+    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Recherche des meilleures ondes...</div>`;
     const url = `${BASE_URL}/trending/movie/week?api_key=${API_KEY}&language=${LANG}`;
     try {
         const response = await fetch(url);
@@ -25,21 +27,34 @@ async function getTrendingMovies() {
         displayMovies(data.results);
     } catch (error) {
         console.error("Erreur lors de la récupération des films:", error);
+        grid.innerHTML = `<p class="no-results">Impossible de se connecter au refuge. Vérifie ta connexion.</p>`;
     }
 }
 
-// 2. Afficher les films dans la grille UX
+// 2. Récupérer les films par catégorie/genre via TMDB
+async function getMoviesByGenre(genreId) {
+    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Tri de la pellicule...</div>`;
+    const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=${LANG}&with_genres=${genreId}&sort_by=popularity.desc&include_adult=false`;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        displayMovies(data.results);
+    } catch (error) {
+        console.error("Erreur lors du filtrage par genre:", error);
+        grid.innerHTML = `<p class="no-results">Une erreur est survenue lors du filtrage.</p>`;
+    }
+}
+
+// 3. Afficher les films dans la grille
 function displayMovies(movies) {
     grid.innerHTML = "";
     
-    // Si aucun film n'est trouvé
     if(movies.length === 0) {
         grid.innerHTML = `<p class="no-results">Aucun film trouvé pour votre mood actuel...</p>`;
         return;
     }
 
     movies.forEach(movie => {
-        // Sécurité si le film n'a pas d'affiche
         const poster = movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image';
         const year = movie.release_date ? movie.release_date.split('-')[0] : '2026';
 
@@ -58,25 +73,44 @@ function displayMovies(movies) {
     });
 }
 
-// 3. Recherche en temps réel (Déclenchée quand l'utilisateur tape)
+// 4. Écouteur d'événements sur les boutons de filtre
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        searchInput.value = "";
+
+        const genre = btn.getAttribute('data-genre');
+        if (genre === 'trending') {
+            getTrendingMovies();
+        } else {
+            getMoviesByGenre(genre);
+        }
+    });
+});
+
+// 5. Recherche en temps réel
 searchInput.addEventListener('input', async (e) => {
     const query = e.target.value.trim();
     
     if(query.length > 2) {
-        // Recherche active (Filtre adulte désactivé par défaut via &include_adult=false)
+        filterButtons.forEach(b => b.classList.remove('active'));
+        
         const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&language=${LANG}&query=${encodeURIComponent(query)}&include_adult=false`;
         const response = await fetch(url);
         const data = await response.json();
         displayMovies(data.results);
     } else if (query.length === 0) {
-        // Si la barre est vidée, on remet les tendances
+        filterButtons.forEach(b => b.classList.remove('active'));
+        const trendingBtn = document.querySelector('[data-genre="trending"]');
+        if(trendingBtn) trendingBtn.classList.add('active');
         getTrendingMovies();
     }
 });
 
-// 4. Ouvrir la modale et préparer les données du film
+// 6. Ouvrir la modale
 function openModal(movie) {
-    activeMovieId = movie.id; // On garde l'ID pour chercher la vidéo plus tard
+    activeMovieId = movie.id;
     const poster = movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image';
     const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
 
@@ -86,29 +120,25 @@ function openModal(movie) {
     document.getElementById('modalGenre').textContent = "🍿 Populaire";
     document.getElementById('modalDesc').textContent = movie.overview || "Aucun synopsis disponible pour ce film.";
     
-    // Reset de l'état de la modale
     modalDetails.style.display = "flex";
     videoContainer.style.display = "none";
-    videoPlayer.src = ""; 
+    videoPlayer.src = "";
 
     modal.classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
-// 5. L'ACTION DU BOUTON : Aller chercher le trailer/film sur TMDB et le lancer
+// 7. Action du bouton : Lancer la vidéo officielle
 playBtn.addEventListener('click', async () => {
     if (!activeMovieId) return;
 
-    // On demande à TMDB les vidéos liées à ce film
     const url = `${BASE_URL}/movie/${activeMovieId}/videos?api_key=${API_KEY}&language=${LANG}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
         
-        // On cherche en priorité un "Trailer" (Bande-annonce) sur YouTube
         let video = data.results.find(v => v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser'));
         
-        // Si pas de vidéo en français, on cherche la version globale (souvent en anglais)
         if (!video) {
             const resEn = await fetch(`${BASE_URL}/movie/${activeMovieId}/videos?api_key=${API_KEY}`);
             const dataEn = await resEn.json();
@@ -116,24 +146,21 @@ playBtn.addEventListener('click', async () => {
         }
 
         if (video) {
-            modalDetails.style.display = "none"; 
-            videoContainer.style.display = "block"; 
-            // On injecte l'URL embed YouTube officielle du film avec Autoplay
+            modalDetails.style.display = "none";
+            videoContainer.style.display = "block";
             videoPlayer.src = `https://www.youtube.com/embed/${video.key}?autoplay=1`;
         } else {
             alert("Désolé, aucune vidéo n'est disponible pour ce film pour le moment !");
         }
-
     } catch (error) {
         console.error("Erreur lors de la récupération de la vidéo:", error);
     }
 });
 
-// Fermeture
 function resetAndCloseModal() {
     modal.classList.remove('active');
     document.body.style.overflow = 'auto';
-    videoPlayer.src = ""; 
+    videoPlayer.src = "";
 }
 
 closeModalBtn.addEventListener('click', resetAndCloseModal);
