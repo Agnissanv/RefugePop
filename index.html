@@ -41,6 +41,9 @@
     <div class="modal-overlay" id="movieModal">
         <div class="modal-content cinematic-layout">
             <button class="close-modal" id="closeModal">&times;</button>
+            <button class="close-modal mute-toggle" id="muteToggle" title="Activer/Couper le son">
+                <i class="fas fa-volume-mute"></i>
+            </button>
             
             <!-- Arrière-plan Vidéo (Trailer YouTube) -->
             <div class="video-background-wrapper">
@@ -81,7 +84,8 @@
                 <div class="player-placeholder">
                     <i class="fas fa-shield-alt player-icon-glow"></i>
                     <h3>Lecteur Vidéo Sécurisé</h3>
-                    <p>Connexion au serveur de streaming en cours... Le flux vidéo se lancera ici dès que tes configurations de liens libres de droits seront prêtes.</p>
+                    <p class="player-message">Connexion au serveur de streaming en cours...</p>
+                    <p class="player-message-error">Désolé, le flux vidéo n'est pas encore disponible.</p>
                     <div class="loading-bar-ux"><div></div></div>
                 </div>
             </div>

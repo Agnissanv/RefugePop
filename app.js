@@ -14,6 +14,7 @@ const filterButtons = document.querySelectorAll('.filter-btn');
 // Modales & Lecteurs
 const movieModal = document.getElementById('movieModal');
 const closeModalBtn = document.getElementById('closeModal');
+const muteToggleBtn = document.getElementById('muteToggle');
 const videoPlayer = document.getElementById('videoPlayer');
 const modalTitle = document.getElementById('modalTitle');
 const modalYear = document.getElementById('modalYear');
@@ -23,6 +24,7 @@ const watchMovieBtn = document.getElementById('watchMovieBtn');
 const playerModal = document.getElementById('playerModal');
 const closePlayerModalBtn = document.getElementById('closePlayerModal');
 
+let isMuted = true; // état du son de la bande-annonce en arrière-plan
 let activeMovieData = null; 
 async function fetchMovieLogo(movieId) {
     const url = `${BASE_URL}/movie/${movieId}/images?api_key=${API_KEY}`;
@@ -39,6 +41,26 @@ async function fetchMovieLogo(movieId) {
         return null;
     }
 }
+
+// --- FONCTIONS DE LECTURE VIDÉO ---
+function sendPlayerCommand(func) {
+    videoPlayer.contentWindow?.postMessage(
+        JSON.stringify({ event: 'command', func: func, args: [] }),
+        '*'
+    );
+}
+
+function updateMuteButton() {
+    muteToggleBtn.innerHTML = isMuted
+        ? '<i class="fas fa-volume-mute"></i>'
+        : '<i class="fas fa-volume-up"></i>';
+}
+
+muteToggleBtn.addEventListener('click', () => {
+    isMuted = !isMuted;
+    sendPlayerCommand(isMuted ? 'mute' : 'unMute');
+    updateMuteButton();
+});
 
 // Utilitaires
 function debounce(func, delay) {
@@ -178,12 +200,12 @@ async function openCinematicModal(movie) {
     fetchMovieLogo(movie.id).then(logoUrl => {
         if (activeMovieData?.id !== movie.id) return;
         if (logoUrl) {
-            modalTitle.innerHTML = `<img src="${logoUrl}" alt="${movie.title}" class="title-logo-img">`;
+            modalTitle.innerHTML = `<div class="title-logo-wrap"><img src="${logoUrl}" alt="${movie.title}" class="title-logo-img"></div>`;
             modalTitle.classList.add('as-logo');
         }
     });
     modalYear.textContent = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
-    modalDesc.textContent = movie.overview || "Aucun synopsis disponible.";
+    modalDesc.textContent = movie.overview || "Aucune description disponible.";
 
     videoPlayer.src = ""; 
     movieModal.classList.add('active');
@@ -202,7 +224,9 @@ async function openCinematicModal(movie) {
         }
 
         if (video) {
-            videoPlayer.src = `https://www.youtube.com/embed/${video.key}?autoplay=1&mute=1&loop=1&playlist=${video.key}&controls=0&modestbranding=1`;
+            videoPlayer.src = `https://www.youtube.com/embed/${video.key}?autoplay=1&mute=1&loop=1&playlist=${video.key}&controls=0&modestbranding=1&enablejsapi=1&origin=${window.location.origin}`;
+            isMuted = true;
+            updateMuteButton();
         }
     } catch (error) {
         console.error("Erreur lors de la récupération du trailer:", error);

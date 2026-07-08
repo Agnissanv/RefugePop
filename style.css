@@ -399,6 +399,9 @@ header {
     background: var(--accent);
     border-color: var(--accent);
 }
+.mute-toggle {
+    right: 72px; /* se place à côté du bouton de fermeture (40px + marge) */
+}
 
 /* Disposition immersive de la modale principale */
 .cinematic-layout {
@@ -464,13 +467,20 @@ header {
     margin-bottom: 18px;
 }
 
-.title-logo-img {
-    max-height: 90px;
-    max-width: 100%;
-    display: block;
-    object-fit: contain;
+.title-logo-wrap {
+    height: 90px;
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    align-items: center;
 }
 
+.title-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: left center;
+}
 
 .tag-accent {
     padding: 6px 14px;
@@ -559,6 +569,16 @@ header {
     background: var(--accent);
     border-radius: 2px;
     animation: loadingUX 1.6s infinite ease-in-out;
+}
+.player-message {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-top: 8px;
+}
+.player-message-error {
+    color: var(--accent);
+    font-weight: 600;
+    margin-top: 12px;
 }
 
 @keyframes loadingUX {
