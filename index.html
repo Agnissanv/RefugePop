@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refuge Pop | Ton Cinéma Sans Pression</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🎬 Refuge<span>Pop</span></div>
+        <div class="search-container">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="Une envie douce, un frisson, une série ?...">
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Installe-toi, on s'occupe du reste.</h1>
+        <p>Pas de stress. Pas de choix infini. Juste les bonnes ondes pour ta soirée.</p>
+    </section>
+
+    <main class="movie-grid" id="movieGrid">
+        </main>
+
+    <div class="modal-overlay" id="movieModal">
+        <div class="modal-content">
+            <button class="close-modal" id="closeModal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImg" src="" alt="Affiche">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modalTitle">Titre</h2>
+                    <div class="tags">
+                        <span id="modalYear" class="tag">2026</span>
+                        <span id="modalGenre" class="tag-accent">Safe Place</span>
+                    </div>
+                    <p id="modalDesc" class="synopsis">Synopsis ici...</p>
+                    <button class="play-btn"><i class="fas fa-play"></i> Lancer la soirée</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
