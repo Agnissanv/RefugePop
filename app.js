@@ -17,6 +17,13 @@ const hoverImg = document.getElementById('hoverImg');
 const hoverTitle = document.getElementById('hoverTitle');
 const hoverYear = document.getElementById('hoverYear');
 const hoverDesc = document.getElementById('hoverDesc');
+const hoverPlayBtn = document.getElementById('hoverPlayBtn');
+const hoverFavBtn = document.getElementById('hoverFavBtn');
+
+
+let hoverTimeout = null;  // Gère le délai avant ouverture
+let closeTimeout = null;  // Gère le délai avant fermeture
+
 
 // Modale 2 : Détails cinématiques
 const movieModal = document.getElementById('movieModal');
@@ -39,6 +46,40 @@ function debounce(func, delay) {
         timeoutId = setTimeout(() => func.apply(this, args), delay);
     };
 }
+
+// --- FONCTIONS DE GESTION DES FAVORIS ---
+function getFavorites() {
+    return JSON.parse(localStorage.getItem('refugePopFavorites')) || [];
+}
+
+function toggleFavorite(movie) {
+    let favs = getFavorites();
+    const index = favs.findIndex(f => f.id === movie.id);
+    
+    if (index > -1) {
+        favs.splice(index, 1); // Retire des favoris s'il y est déjà
+    } else {
+        favs.push(movie); // Ajoute le film complet
+    }
+    localStorage.setItem('refugePopFavorites', JSON.stringify(favs));
+}
+
+function isFavorite(movieId) {
+    return getFavorites().some(f => f.id === movieId);
+}
+
+function updateFavButtonState(movie) {
+    if (isFavorite(movie.id)) {
+        hoverFavBtn.innerHTML = '<i class="fas fa-check"></i>';
+        hoverFavBtn.style.borderColor = 'var(--accent)';
+        hoverFavBtn.style.color = 'var(--accent)';
+    } else {
+        hoverFavBtn.innerHTML = '<i class="fas fa-plus"></i>';
+        hoverFavBtn.style.borderColor = 'rgba(255, 255, 255, 0.2)';
+        hoverFavBtn.style.color = 'white';
+    }
+}
+
 
 // Initialisation : Chargement des tendances
 async function getTrendingMovies() {
@@ -68,36 +109,32 @@ function displayMovies(movies) {
 
         const card = document.createElement('div');
         card.classList.add('movie-card');
+        
+        // NOUVELLE STRUCTURE DE CARTE POUR L'ACCORDÉON
         card.innerHTML = `
-            <img src="${poster}" alt="${movie.title}" loading="lazy">
-            <div class="card-info">
-                <div class="card-title">${movie.title}</div>
-                <div class="card-year">${year}</div>
+            <div class="card-visual">
+                <img src="${poster}" alt="${movie.title}" loading="lazy">
+            </div>
+            <div class="card-content">
+                <h3 class="card-inline-title">${movie.title}</h3>
+                <span class="card-inline-year">🍿 ${year}</span>
+                <p class="card-inline-desc">${movie.overview || "Aucun résumé disponible."}</p>
             </div>
         `;
-        
-        // GESTION DU SURVOL (Petite modale d'aperçu)
-        card.addEventListener('mouseenter', () => {
-            hoverImg.src = poster;
-            hoverTitle.textContent = movie.title;
-            hoverYear.textContent = year;
-            hoverDesc.textContent = movie.overview || "Aucun résumé disponible pour le moment.";
-            hoverPreview.classList.add('active');
-        });
 
-        card.addEventListener('mouseleave', () => {
-            hoverPreview.classList.remove('active');
-        });
-
-        // GESTION DU CLIC (Grande modale cinématique)
+        // Gestion du clic pour ouvrir la grande modale de détails actuelle
         card.addEventListener('click', () => {
-            hoverPreview.classList.remove('active'); // Ferme l'aperçu instantanément
             openCinematicModal(movie);
         });
 
         grid.appendChild(card);
     });
 }
+
+// Empêche la fermeture de l'aperçu si la souris est entrée à l'intérieur
+hoverPreview.addEventListener('mouseenter', () => { clearTimeout(closeTimeout); });
+hoverPreview.addEventListener('mouseleave', () => { hoverPreview.classList.remove('active'); });
+
 
 // Filtrage par genre ou tendances
 async function getMoviesByGenre(genreId) {
@@ -179,11 +216,17 @@ searchInput.addEventListener('input', debounce((e) => {
     searchMovies(e.target.value);
 }, 1000));
 
+// Écouteur des boutons filtres mis à jour pour intercepter le filtre "Mes Favoris"
 filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        getMoviesByGenre(btn.dataset.genre);
+        
+        if (btn.dataset.genre === 'favorites') {
+            displayMovies(getFavorites()); // Charge les favoris locaux
+        } else {
+            getMoviesByGenre(btn.dataset.genre); // Charge via l'API TMDB
+        }
     });
 });
 

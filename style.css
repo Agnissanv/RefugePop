@@ -92,48 +92,156 @@ header {
 
 /* Grille UX 100% */
 .movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 2rem;
-    padding: 2rem 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: 20px 5%;
+    width: 100%;
 }
 
+/* 2. La carte dans son état normal (équivalent de ton flex: 1) */
+/* La carte dans son état normal (Taille portrait harmonieuse) */
 .movie-card {
-    background: var(--bg-card);
+    background-color: var(--bg-card);
     border-radius: var(--radius);
+    height: 300px;
+    display: flex;
+    flex-direction: row;
     overflow: hidden;
     cursor: pointer;
-    transition: var(--transition);
-    position: relative;
+    
+    /* 🔒 LES CADENAS FLEXBOX SÉCURISÉS */
+    width: 180px;         /* 1. Largeur de départ fixe pour aligner toutes les cartes */
+    flex-grow: 1;         /* 2. Permet de combler subtilement l'espace de la ligne */
+    flex-shrink: 1;       /* 3. Autorise la carte à se serrer si sa voisine est survolée */
+    max-width: 220px;     /* 4. BLOQUE le grandissement automatique sur la dernière ligne */
+    
+    /* Transition ultra-lisse synchronisée */
+    transition: flex-grow 0.5s cubic-bezier(0.25, 1, 0.4, 1), 
+                max-width 0.5s cubic-bezier(0.25, 1, 0.4, 1), 
+                box-shadow 0.4s ease;
 }
 
+/* 3. L'état survolé (équivalent de ton flex: 5) */
 .movie-card:hover {
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+    flex-grow: 5;         /* Demande une priorité maximale sur la ligne */
+    max-width: 450px;     /* Autorise la carte à monter STRICTEMENT jusqu'à 450px (Image 150px + Texte 240px + Marges) */
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.6);
+}
+/* 1. On passe la carte elle-même en flex horizontal */
+.movie-card {
+    display: flex;
+    flex-direction: row;
 }
 
-.movie-card img {
+/* 2. La zone de l'image (garde sa base stable) */
+.card-visual {
+    flex-shrink: 0;
+    width: 150px; /* Aligné sur le min-width initial de la carte */
+    height: 100%;
+}
+
+.card-visual img {
     width: 100%;
-    height: 300px;
+    height: 100%;
     object-fit: cover;
-    display: block;
 }
 
-.card-info {
-    padding: 1rem;
+/* 3. Le panneau de texte (Le masque qui glisse) */
+.card-content {
+    flex: 0; 
+    opacity: 0;
+    overflow: hidden;
+    background: #151518; /* Un fond sombre légèrement plus clair pour détacher la zone */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    
+    transition: flex 0.5s cubic-bezier(0.25, 1, 0.4, 1), 
+                opacity 0.2s ease, 
+                padding 0.5s cubic-bezier(0.25, 1, 0.4, 1);
+}
+.card-content > * {
+    width: 240px; /* Largeur finale de la zone textuelle */
+    flex-shrink: 0; /* Interdiction formelle de se faire écraser */
 }
 
-.card-title {
-    font-weight: 600;
-    font-size: 1.1rem;
+/* --------------------------------------------------
+   🔥 ACTIVATION DU DÉPLOIEMENT TEXTUEL AU SURVOL
+----------------------------------------------------- */
+/* Activation propre au survol */
+.movie-card:hover .card-content {
+    flex: 2.2; /* Déploie le masque */
+    opacity: 1;
+    padding: 20px;
+}
+
+/* Un peu de style propre pour le texte à l'intérieur */
+.card-inline-title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.card-year {
+.card-inline-year {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-inline-desc {
+    font-size: 0.75rem;
     color: var(--text-muted);
-    font-size: 0.9rem;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* Coupe proprement après 5 lignes */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Force l'image à garder son ratio parfait sans se déformer */
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+    aspect-ratio: 2 / 3; /* Le ratio parfait des affiches de cinéma */
+}
+
+.card-info {
+    padding: 12px;
+    background: linear-gradient(180deg, transparent, rgba(0,0,0,0.9));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0; /* Masqué par défaut pour un look épuré style Netflix */
+    transition: opacity 0.3s ease;
+}
+/* Le titre et l'année apparaissent subtilement uniquement si on survole la carte */
+.movie-card:hover .card-info {
+    opacity: 1;
+}
+
+.card-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Coupe proprement si le titre est trop long */
+}
+
+.card-year {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-top: 4px;
 }
 
 /* Modale (Le point de conversion) */
@@ -312,69 +420,133 @@ header {
 /* ==========================================================================
    VISION NETFLIX : HOVER PREVIEW & BACKGROUND VIDÉO
    ========================================================================== */
-
-/* Fenêtre de survol grand format style HUD */
-.hover-preview {
+/* Fenêtre de survol ajustée dynamiquement sur la carte d'origine */
+#hoverPreview {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.9);
-    width: 90%;
-    max-width: 700px;
-    background: #09090d;
-    border: 2px solid var(--accent);
-    border-radius: var(--radius);
-    box-shadow: 0 0 40px rgba(255, 71, 87, 0.25);
+    z-index: 1000;
+    background-color: #141414; /* Noir mat premium */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.9);
+    
+    /* État initial invisible */
     opacity: 0;
-    visibility: hidden;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    z-index: 500;
-    pointer-events: none; /* Crucial : la souris passe à travers pour ne pas casser le hover */
+    pointer-events: none;
+    
+    /* MAGIE DE FLUIDITÉ : Le bloc va glisser, s'élargir et morpher en temps réel */
+    transition: top 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+                left 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+                width 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+                opacity 0.2s ease;
 }
 
-.hover-preview.active {
+#hoverPreview.active {
     opacity: 1;
-    visibility: visible;
-    transform: translate(-50%, -50%) scale(1);
+    pointer-events: auto;
+}
+
+/* Force l'image de l'aperçu à se caler au format cinéma horizontal */
+#hoverImg {
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Format écran large Netflix */
+    object-fit: cover;
+    display: block;
 }
 
 .hover-preview-content {
     display: flex;
-    flex-wrap: wrap;
-    overflow: hidden;
+    flex-direction: column;
+    height: 100%;
 }
 
 .hover-preview-image {
-    flex: 1; 
-    min-width: 250px; 
+    width: 100%;
+    height: 150px;
 }
+
 .hover-preview-image img { 
     width: 100%; 
     height: 100%; 
     object-fit: cover; 
-    max-height: 350px; 
 }
+
 .hover-preview-info { 
-    flex: 1.2; 
-    padding: 2rem; 
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
+    padding: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
+
 .hover-preview-info h3 { 
-    font-size: 1.8rem; 
-    margin-bottom: 10px; 
+    font-size: 1.1rem; 
+    font-weight: 700;
     color: #fff; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.hover-metadata { 
-    display: flex; 
-    gap: 10px; 
-    margin-bottom: 15px; 
-}
+
 .hover-synopsis { 
     color: var(--text-muted); 
-    font-size: 0.95rem; 
-    line-height: 1.5; 
+    font-size: 0.8rem; 
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Coupe proprement à la 3ème ligne */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 5px;
+}
+
+/* Alignement des nouveaux boutons sur l'aperçu */
+.hover-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.hover-btn-play {
+    flex: 1;
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: var(--transition);
+}
+
+.hover-btn-play:hover {
+    background: #ff2a3f;
+    transform: translateY(-1px);
+}
+
+.hover-btn-fav {
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.hover-btn-fav:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: rgba(255, 71, 87, 0.1);
+    transform: scale(1.05);
 }
 
 /* Grande Modale Cinématique avec Vidéo en Fond */
@@ -460,5 +632,5 @@ header {
 @media (max-width: 768px) {
     .cinematic-details { padding: 1.5rem; }
     .cinematic-details h2 { font-size: 1.8rem; }
-    .hover-preview { display: none; } /* On désactive le hover sur mobile (pas de souris) */
+    #hoverPreview { display: none; } /* Désactivation propre sur mobile */
 }

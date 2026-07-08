@@ -22,9 +22,9 @@
         <p>Pas de stress. Pas de choix infini. Juste les bonnes ondes pour ta soirée.</p>
     </section>
 
-    <!-- À insérer à la ligne 23, juste avant <main class="movie-grid" id="movieGrid"> -->
     <div class="filters-container">
         <button class="filter-btn active" data-genre="trending">✨ Tendances</button>
+        <button class="filter-btn" data-genre="favorites">❤️ Mes Favoris</button>
         <button class="filter-btn" data-genre="28">🔥 Action</button>
         <button class="filter-btn" data-genre="35">😂 Comédie</button>
         <button class="filter-btn" data-genre="18">🎭 Drame</button>
@@ -32,10 +32,9 @@
         <button class="filter-btn" data-genre="16">🧸 Animation</button>
     </div>
 
-    <main class="movie-grid" id="movieGrid">
-        </main>
+    <main class="movie-grid" id="movieGrid"> </main>
 
-    <!-- 1. ZONE DE PRÉVISUALISATION AU SURVOL (Hover Preview) -->
+    <!-- 1. ZONE DE PRÉVISUALISATION LOCALISÉE (Hover Expansion Style Netflix) -->
     <div class="hover-preview" id="hoverPreview">
         <div class="hover-preview-content">
             <div class="hover-preview-image">
@@ -45,9 +44,18 @@
                 <h3 id="hoverTitle">Titre</h3>
                 <div class="hover-metadata">
                     <span id="hoverYear" class="tag">2026</span>
-                    <span class="tag-accent"><i class="fas fa-eye"></i> Zoom Mood</span>
                 </div>
                 <p id="hoverDesc" class="hover-synopsis">Synopsis au survol...</p>
+                
+                <!-- Nouvelle barre d'actions de la carte étendue -->
+                <div class="hover-actions">
+                    <button class="hover-btn-play" id="hoverPlayBtn">
+                        <i class="fas fa-play"></i> Bande-annonce
+                    </button>
+                    <button class="hover-btn-fav" id="hoverFavBtn" title="Ajouter aux favoris">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
