@@ -4,6 +4,7 @@ const API_KEY = '578bd3c6b2ac39a432cb440a7c152ef6';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const LANG = 'fr-FR';
+const STREAM_TIMEOUT_MS = 30000; // délai avant d'afficher "flux non disponible" (30000 = 30 secondes)
 let currentMovies = []; // la liste actuellement affichée, sert de base au filtrage local
 
 // Éléments du DOM
@@ -23,6 +24,8 @@ const watchMovieBtn = document.getElementById('watchMovieBtn');
 
 const playerModal = document.getElementById('playerModal');
 const closePlayerModalBtn = document.getElementById('closePlayerModal');
+const playerMessageError = document.querySelector('.player-message-error');
+let streamTimeoutId = null;
 
 let isMuted = true; // état du son de la bande-annonce en arrière-plan
 let activeMovieData = null; 
@@ -237,6 +240,12 @@ watchMovieBtn.addEventListener('click', () => {
     videoPlayer.src = "";
     movieModal.classList.remove('active');
     playerModal.classList.add('active');
+
+    playerMessageError.classList.remove('visible');
+    clearTimeout(streamTimeoutId);
+    streamTimeoutId = setTimeout(() => {
+        playerMessageError.classList.add('visible');
+    }, STREAM_TIMEOUT_MS);
 });
 
 function closeAllModals() {
@@ -244,6 +253,9 @@ function closeAllModals() {
     playerModal.classList.remove('active');
     document.body.style.overflow = 'auto';
     videoPlayer.src = "";
+
+    clearTimeout(streamTimeoutId);
+    playerMessageError.classList.remove('visible');
 }
 
 closeModalBtn.addEventListener('click', closeAllModals);

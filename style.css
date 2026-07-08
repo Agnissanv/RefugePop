@@ -575,11 +575,18 @@ header {
     font-size: 1rem;
     margin-top: 8px;
 }
+
 .player-message-error {
     color: var(--accent);
     font-weight: 600;
     margin-top: 12px;
+    display: none;
 }
+
+.player-message-error.visible {
+    display: block;
+}
+
 
 @keyframes loadingUX {
     0% { transform: translateX(-100%); }
