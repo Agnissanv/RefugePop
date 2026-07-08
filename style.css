@@ -308,3 +308,131 @@ header {
         padding: 1rem 20px;
     }
 }
+
+/* ==========================================================================
+   VISION NETFLIX : HOVER PREVIEW & BACKGROUND VIDÉO
+   ========================================================================== */
+
+/* Fenêtre de survol grand format style HUD */
+.hover-preview {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9);
+    width: 90%;
+    max-width: 700px;
+    background: #09090d;
+    border: 2px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: 0 0 40px rgba(255, 71, 87, 0.25);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 500;
+    pointer-events: none; /* Crucial : la souris passe à travers pour ne pas casser le hover */
+}
+
+.hover-preview.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.hover-preview-content {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.hover-preview-image { flex: 1; min-width: 250px; }
+.hover-preview-image img { width: 100%; height: 100%; object-fit: cover; max-height: 350px; }
+.hover-preview-info { flex: 1.2; padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+.hover-preview-info h3 { font-size: 1.8rem; margin-bottom: 10px; color: #fff; }
+.hover-metadata { display: flex; gap: 10px; margin-bottom: 15px; }
+.hover-synopsis { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+
+/* Grande Modale Cinématique avec Vidéo en Fond */
+.cinematic-layout {
+    max-width: 950px;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: #000;
+}
+
+.video-background-wrapper {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: 1;
+}
+
+.video-background-wrapper iframe {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    pointer-events: none; /* Évite les clics accidentels sur l'iframe YouTube */
+    transform: scale(1.3); /* Masque les bordures et logos YouTube */
+}
+
+.video-dark-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(180deg, rgba(15,15,19,0.2) 0%, rgba(15,15,19,0.95) 90%);
+    z-index: 2;
+}
+
+.cinematic-details {
+    position: relative;
+    z-index: 3;
+    padding: 3rem;
+    max-width: 700px;
+}
+
+.cinematic-details h2 { font-size: 3rem; font-weight: 800; margin-bottom: 15px; text-shadow: 0 2px 10px rgba(0,0,0,0.5); }
+
+/* Interface du Lecteur Final */
+.player-layout {
+    max-width: 900px;
+    background: #050508;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.secure-player-container {
+    padding: 6rem 3rem;
+    text-align: center;
+    background: radial-gradient(circle at center, rgba(255, 71, 87, 0.03) 0%, transparent 70%);
+}
+
+.player-icon-glow {
+    font-size: 4rem;
+    color: var(--accent);
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 15px rgba(255, 71, 87, 0.4));
+}
+
+.loading-bar-ux {
+    width: 200px;
+    height: 4px;
+    background: rgba(255,255,255,0.05);
+    margin: 25px auto 0;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.loading-bar-ux div {
+    width: 50%; height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    animation: loadingUX 1.5s infinite ease-in-out;
+}
+
+@keyframes loadingUX {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(200%); }
+}
+
+@media (max-width: 768px) {
+    .cinematic-details { padding: 1.5rem; }
+    .cinematic-details h2 { font-size: 1.8rem; }
+    .hover-preview { display: none; } /* On désactive le hover sur mobile (pas de souris) */
+}

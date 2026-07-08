@@ -1,58 +1,54 @@
-// app.js - Version Propulsée par TMDB (Avec Filtres UX et Loader)
+// app.js - Moteur d'immersion cinématique style Netflix
 
-const API_KEY = '578bd3c6b2ac39a432cb440a7c152ef6'; // Ta clé TMDB fonctionnelle
+const API_KEY = '578bd3c6b2ac39a432cb440a7c152ef6';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const LANG = 'fr-FR';
 
+// Éléments du DOM
 const grid = document.getElementById('movieGrid');
 const searchInput = document.getElementById('searchInput');
-const modal = document.getElementById('movieModal');
-const closeModalBtn = document.getElementById('closeModal');
-const modalDetails = document.getElementById('modalDetails');
-const videoContainer = document.getElementById('videoContainer');
-const videoPlayer = document.getElementById('videoPlayer');
-const playBtn = document.getElementById('playBtn');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
-let activeMovieId = null;
+// Modale 1 : Aperçu au survol
+const hoverPreview = document.getElementById('hoverPreview');
+const hoverImg = document.getElementById('hoverImg');
+const hoverTitle = document.getElementById('hoverTitle');
+const hoverYear = document.getElementById('hoverYear');
+const hoverDesc = document.getElementById('hoverDesc');
 
-// 1. Aller chercher les films tendances du moment
+// Modale 2 : Détails cinématiques
+const movieModal = document.getElementById('movieModal');
+const closeModalBtn = document.getElementById('closeModal');
+const videoPlayer = document.getElementById('videoPlayer');
+const modalTitle = document.getElementById('modalTitle');
+const modalYear = document.getElementById('modalYear');
+const modalDesc = document.getElementById('modalDesc');
+const watchMovieBtn = document.getElementById('watchMovieBtn');
+
+// Modale 3 : Lecteur final
+const playerModal = document.getElementById('playerModal');
+const closePlayerModalBtn = document.getElementById('closePlayerModal');
+
+let activeMovieData = null; 
+
+// Initialisation : Chargement des tendances
 async function getTrendingMovies() {
-    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Recherche des meilleures ondes...</div>`;
+    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Initialisation du refuge...</div>`;
     const url = `${BASE_URL}/trending/movie/week?api_key=${API_KEY}&language=${LANG}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
         displayMovies(data.results);
     } catch (error) {
-        console.error("Erreur lors de la récupération des films:", error);
-        grid.innerHTML = `<p class="no-results">Impossible de se connecter au refuge. Vérifie ta connexion.</p>`;
+        console.error("Erreur d'accès à l'API:", error);
     }
 }
 
-// 2. Récupérer les films par catégorie/genre via TMDB
-async function getMoviesByGenre(genreId) {
-    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Tri de la pellicule...</div>`;
-    const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=${LANG}&with_genres=${genreId}&sort_by=popularity.desc&include_adult=false`;
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        displayMovies(data.results);
-    } catch (error) {
-        console.error("Erreur lors du filtrage par genre:", error);
-        grid.innerHTML = `<p class="no-results">Une erreur est survenue lors du filtrage.</p>`;
-    }
-}
-
-// 3. Afficher les films dans la grille
+// Injection des cartes et gestion des événements de survol/clic
 function displayMovies(movies) {
     grid.innerHTML = "";
-    
-    if(movies.length === 0) {
-        grid.innerHTML = `<p class="no-results">Aucun film trouvé pour votre mood actuel...</p>`;
-        return;
-    }
+    if(movies.length === 0) return;
 
     movies.forEach(movie => {
         const poster = movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image';
@@ -68,103 +64,87 @@ function displayMovies(movies) {
             </div>
         `;
         
-        card.addEventListener('click', () => openModal(movie));
+        // GESTION DU SURVOL (Petite modale d'aperçu)
+        card.addEventListener('mouseenter', () => {
+            hoverImg.src = poster;
+            hoverTitle.textContent = movie.title;
+            hoverYear.textContent = year;
+            hoverDesc.textContent = movie.overview || "Aucun résumé disponible pour le moment.";
+            hoverPreview.classList.add('active');
+        });
+
+        card.addEventListener('mouseleave', () => {
+            hoverPreview.classList.remove('active');
+        });
+
+        // GESTION DU CLIC (Grande modale cinématique)
+        card.addEventListener('click', () => {
+            hoverPreview.classList.remove('active'); // Ferme l'aperçu instantanément
+            openCinematicModal(movie);
+        });
+
         grid.appendChild(card);
     });
 }
 
-// 4. Écouteur d'événements sur les boutons de filtre
-filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        searchInput.value = "";
-
-        const genre = btn.getAttribute('data-genre');
-        if (genre === 'trending') {
-            getTrendingMovies();
-        } else {
-            getMoviesByGenre(genre);
-        }
-    });
-});
-
-// 5. Recherche en temps réel
-searchInput.addEventListener('input', async (e) => {
-    const query = e.target.value.trim();
+// Logique d'ouverture de la grande modale avec fond vidéo automatique
+async function openCinematicModal(movie) {
+    activeMovieData = movie;
     
-    if(query.length > 2) {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        
-        const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&language=${LANG}&query=${encodeURIComponent(query)}&include_adult=false`;
-        const response = await fetch(url);
-        const data = await response.json();
-        displayMovies(data.results);
-    } else if (query.length === 0) {
-        filterButtons.forEach(b => b.classList.remove('active'));
-        const trendingBtn = document.querySelector('[data-genre="trending"]');
-        if(trendingBtn) trendingBtn.classList.add('active');
-        getTrendingMovies();
-    }
-});
+    modalTitle.textContent = movie.title;
+    modalYear.textContent = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
+    modalDesc.textContent = movie.overview || "Aucun synopsis disponible.";
 
-// 6. Ouvrir la modale
-function openModal(movie) {
-    activeMovieId = movie.id;
-    const poster = movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image';
-    const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
-
-    document.getElementById('modalImg').src = poster;
-    document.getElementById('modalTitle').textContent = movie.title;
-    document.getElementById('modalYear').textContent = year;
-    document.getElementById('modalGenre').textContent = "🍿 Populaire";
-    document.getElementById('modalDesc').textContent = movie.overview || "Aucun synopsis disponible pour ce film.";
-    
-    modalDetails.style.display = "flex";
-    videoContainer.style.display = "none";
-    videoPlayer.src = "";
-
-    modal.classList.add('active');
+    // Préparation de l'état visuel et affichage de la modale
+    videoPlayer.src = ""; 
+    movieModal.classList.add('active');
     document.body.style.overflow = 'hidden';
-}
 
-// 7. Action du bouton : Lancer la vidéo officielle
-playBtn.addEventListener('click', async () => {
-    if (!activeMovieId) return;
-
-    const url = `${BASE_URL}/movie/${activeMovieId}/videos?api_key=${API_KEY}&language=${LANG}`;
+    // Récupération de la bande-annonce sur l'API TMDB
+    const url = `${BASE_URL}/movie/${movie.id}/videos?api_key=${API_KEY}&language=${LANG}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
         
         let video = data.results.find(v => v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser'));
-        
         if (!video) {
-            const resEn = await fetch(`${BASE_URL}/movie/${activeMovieId}/videos?api_key=${API_KEY}`);
+            const resEn = await fetch(`${BASE_URL}/movie/${movie.id}/videos?api_key=${API_KEY}`);
             const dataEn = await resEn.json();
             video = dataEn.results.find(v => v.site === 'YouTube');
         }
 
         if (video) {
-            modalDetails.style.display = "none";
-            videoContainer.style.display = "block";
-            videoPlayer.src = `https://www.youtube.com/embed/${video.key}?autoplay=1`;
-        } else {
-            alert("Désolé, aucune vidéo n'est disponible pour ce film pour le moment !");
+            // Injection de la vidéo en tâche de fond avec autoplay, mute et boucle
+            videoPlayer.src = `https://www.youtube.com/embed/${video.key}?autoplay=1&mute=1&loop=1&playlist=${video.key}&controls=0&modestbranding=1`;
         }
     } catch (error) {
-        console.error("Erreur lors de la récupération de la vidéo:", error);
+        console.error("Erreur lors de la récupération du trailer:", error);
     }
+}
+
+// Passage à la troisième modale : Le lecteur final
+watchMovieBtn.addEventListener('click', () => {
+    // 1. On coupe le son et le flux de la bande-annonce en arrière-plan
+    videoPlayer.src = "";
+    // 2. On ferme la modale cinématique
+    movieModal.classList.remove('active');
+    // 3. On ouvre le lecteur final sécurisé
+    playerModal.classList.add('active');
 });
 
-function resetAndCloseModal() {
-    modal.classList.remove('active');
+// Fonctions de fermeture standards
+function closeAllModals() {
+    movieModal.classList.remove('active');
+    playerModal.classList.remove('active');
     document.body.style.overflow = 'auto';
     videoPlayer.src = "";
 }
 
-closeModalBtn.addEventListener('click', resetAndCloseModal);
-modal.addEventListener('click', (e) => { if (e.target === modal) resetAndCloseModal(); });
+closeModalBtn.addEventListener('click', closeAllModals);
+closePlayerModalBtn.addEventListener('click', closeAllModals);
+[movieModal, playerModal].forEach(m => {
+    m.addEventListener('click', (e) => { if (e.target === m) closeAllModals(); });
+});
 
-// Démarrage de l'application
+// Initialisation globale de l'application
 getTrendingMovies();
