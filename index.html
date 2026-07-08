@@ -35,31 +35,7 @@
 
     <main class="movie-grid" id="movieGrid"> </main>
 
-    <!-- 1. ZONE DE PRÉVISUALISATION LOCALISÉE (Hover Expansion Style Netflix) -->
-    <div class="hover-preview" id="hoverPreview">
-        <div class="hover-preview-content">
-            <div class="hover-preview-image">
-                <img id="hoverImg" src="" alt="Aperçu">
-            </div>
-            <div class="hover-preview-info">
-                <h3 id="hoverTitle">Titre</h3>
-                <div class="hover-metadata">
-                    <span id="hoverYear" class="tag">2026</span>
-                </div>
-                <p id="hoverDesc" class="hover-synopsis">Synopsis au survol...</p>
-                
-                <!-- Nouvelle barre d'actions de la carte étendue -->
-                <div class="hover-actions">
-                    <button class="hover-btn-play" id="hoverPlayBtn">
-                        <i class="fas fa-play"></i> Bande-annonce
-                    </button>
-                    <button class="hover-btn-fav" id="hoverFavBtn" title="Ajouter aux favoris">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 
     <!-- 2. LA GRANDE MODALE CINÉMATIQUE (Déclenchée au Clic) -->
     <div class="modal-overlay" id="movieModal">
@@ -74,13 +50,22 @@
 
             <!-- Infos textuelles positionnées en bas de la vidéo -->
             <div class="cinematic-details">
-                <h2 id="modalTitle">Titre du Film</h2>
+
+
+                <div class="title-row">
+    <h2 id="modalTitle">Titre du Film</h2>
+    <div class="tags">
+        <span id="modalYear" class="tag-accent">2026</span>
+        <span id="modalGenre" class="tag-accent">🍿 Sélection</span>
+    </div>
+</div>
+                <!-- <h2 id="modalTitle">Titre du Film</h2>
                 <div class="tags">
                     <span id="modalYear" class="tag">2026</span>
                     <span id="modalGenre" class="tag-accent">🍿 Sélection</span>
-                </div>
+                </div> -->
+
                 <p id="modalDesc" class="synopsis">Description complète...</p>
-                <!-- Bouton d'action principal -->
                 <button class="play-btn" id="watchMovieBtn">
                     <i class="fas fa-play"></i> Regarder le film
                 </button>

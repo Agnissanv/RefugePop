@@ -24,6 +24,21 @@ const playerModal = document.getElementById('playerModal');
 const closePlayerModalBtn = document.getElementById('closePlayerModal');
 
 let activeMovieData = null; 
+async function fetchMovieLogo(movieId) {
+    const url = `${BASE_URL}/movie/${movieId}/images?api_key=${API_KEY}`;
+    try {
+        const res = await fetch(url);
+        const data = await res.json();
+        const logos = data.logos || [];
+        const logo = logos.find(l => l.iso_639_1 === 'fr')
+                  || logos.find(l => l.iso_639_1 === null)
+                  || logos.find(l => l.iso_639_1 === 'en');
+        return logo ? `https://image.tmdb.org/t/p/w500${logo.file_path}` : null;
+    } catch (e) {
+        console.error('Erreur logo:', e);
+        return null;
+    }
+}
 
 // Utilitaires
 function debounce(func, delay) {
@@ -158,6 +173,15 @@ async function openCinematicModal(movie) {
     activeMovieData = movie;
     
     modalTitle.textContent = movie.title;
+    modalTitle.classList.remove('as-logo');
+
+    fetchMovieLogo(movie.id).then(logoUrl => {
+        if (activeMovieData?.id !== movie.id) return;
+        if (logoUrl) {
+            modalTitle.innerHTML = `<img src="${logoUrl}" alt="${movie.title}" class="title-logo-img">`;
+            modalTitle.classList.add('as-logo');
+        }
+    });
     modalYear.textContent = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
     modalDesc.textContent = movie.overview || "Aucun synopsis disponible.";
 
