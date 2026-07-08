@@ -4,6 +4,7 @@ const API_KEY = '578bd3c6b2ac39a432cb440a7c152ef6';
 const BASE_URL = 'https://api.themoviedb.org/3';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const LANG = 'fr-FR';
+let currentMovies = []; // la liste actuellement affichée, sert de base au filtrage local
 
 // Éléments du DOM
 const grid = document.getElementById('movieGrid');
@@ -31,6 +32,13 @@ const playerModal = document.getElementById('playerModal');
 const closePlayerModalBtn = document.getElementById('closePlayerModal');
 
 let activeMovieData = null; 
+function debounce(func, delay) {
+    let timeoutId;
+    return function(...args) {
+        clearTimeout(timeoutId);
+        timeoutId = setTimeout(() => func.apply(this, args), delay);
+    };
+}
 
 // Initialisation : Chargement des tendances
 async function getTrendingMovies() {
@@ -47,8 +55,12 @@ async function getTrendingMovies() {
 
 // Injection des cartes et gestion des événements de survol/clic
 function displayMovies(movies) {
+    currentMovies = movies; // Met à jour la liste actuelle
     grid.innerHTML = "";
-    if(movies.length === 0) return;
+    if (!movies || movies.length === 0) {
+        grid.innerHTML = `<div class="loader">Aucun film trouvé. Essaie une autre recherche ou un autre filtre 🎬</div>`;
+        return;
+    }
 
     movies.forEach(movie => {
         const poster = movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image';
@@ -85,6 +97,23 @@ function displayMovies(movies) {
 
         grid.appendChild(card);
     });
+}
+
+// Filtrage par genre ou tendances
+async function getMoviesByGenre(genreId) {
+    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement...</div>`;
+    
+    const url = genreId === 'trending'
+        ? `${BASE_URL}/trending/movie/week?api_key=${API_KEY}&language=${LANG}`
+        : `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=${LANG}&with_genres=${genreId}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        displayMovies(data.results);
+    } catch (error) {
+        console.error("Erreur lors du filtrage:", error);
+    }
 }
 
 // Logique d'ouverture de la grande modale avec fond vidéo automatique
@@ -145,6 +174,36 @@ closePlayerModalBtn.addEventListener('click', closeAllModals);
 [movieModal, playerModal].forEach(m => {
     m.addEventListener('click', (e) => { if (e.target === m) closeAllModals(); });
 });
+
+searchInput.addEventListener('input', debounce((e) => {
+    searchMovies(e.target.value);
+}, 1000));
+
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        getMoviesByGenre(btn.dataset.genre);
+    });
+});
+
+async function searchMovies(query) {
+    if (query.trim() === '') {
+        getTrendingMovies(); // retour aux tendances si le champ est vidé
+        return;
+    }
+
+    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Recherche...</div>`;
+    const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&language=${LANG}&query=${encodeURIComponent(query)}`;
+
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        displayMovies(data.results);
+    } catch (error) {
+        console.error("Erreur lors de la recherche:", error);
+    }
+}
 
 // Initialisation globale de l'application
 getTrendingMovies();

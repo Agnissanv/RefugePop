@@ -344,12 +344,38 @@ header {
     overflow: hidden;
 }
 
-.hover-preview-image { flex: 1; min-width: 250px; }
-.hover-preview-image img { width: 100%; height: 100%; object-fit: cover; max-height: 350px; }
-.hover-preview-info { flex: 1.2; padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
-.hover-preview-info h3 { font-size: 1.8rem; margin-bottom: 10px; color: #fff; }
-.hover-metadata { display: flex; gap: 10px; margin-bottom: 15px; }
-.hover-synopsis { color: var(--text-muted); font-size: 0.95rem; line-height: 1.5; }
+.hover-preview-image {
+    flex: 1; 
+    min-width: 250px; 
+}
+.hover-preview-image img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    max-height: 350px; 
+}
+.hover-preview-info { 
+    flex: 1.2; 
+    padding: 2rem; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+}
+.hover-preview-info h3 { 
+    font-size: 1.8rem; 
+    margin-bottom: 10px; 
+    color: #fff; 
+}
+.hover-metadata { 
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 15px; 
+}
+.hover-synopsis { 
+    color: var(--text-muted); 
+    font-size: 0.95rem; 
+    line-height: 1.5; 
+}
 
 /* Grande Modale Cinématique avec Vidéo en Fond */
 .cinematic-layout {
