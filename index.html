@@ -25,10 +25,13 @@
     <main class="movie-grid" id="movieGrid">
         </main>
 
+    <!-- La Modale synchronisée avec app.js -->
     <div class="modal-overlay" id="movieModal">
         <div class="modal-content">
             <button class="close-modal" id="closeModal">&times;</button>
-            <div class="modal-body">
+            
+            <!-- ZONE INFO (Recherche id="modalDetails" dans le JS) -->
+            <div class="modal-body" id="modalDetails">
                 <div class="modal-image">
                     <img id="modalImg" src="" alt="Affiche">
                 </div>
@@ -39,9 +42,16 @@
                         <span id="modalGenre" class="tag-accent">Safe Place</span>
                     </div>
                     <p id="modalDesc" class="synopsis">Synopsis ici...</p>
-                    <button class="play-btn"><i class="fas fa-play"></i> Lancer la soirée</button>
+                    <!-- Correction : Ajout de l'id="playBtn" pour éviter le crash JS -->
+                    <button class="play-btn" id="playBtn"><i class="fas fa-play"></i> Lancer la soirée</button>
                 </div>
             </div>
+
+            <!-- ZONE VIDÉO (Recherche id="videoContainer" et "videoPlayer" dans le JS) -->
+            <div class="video-player-container" id="videoContainer" style="display: none; position: relative; width: 100%; padding-top: 56.25%; background: #000;">
+                <iframe id="videoPlayer" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
         </div>
     </div>
 
