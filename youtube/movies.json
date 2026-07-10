@@ -3,11 +3,11 @@
     "id": "yt-1",
     "source": "youtube",
     "title": "La Vie en un An",
-    "poster": "youtube/posters/la_vie_en_un_an_verticale.jpg",
-    "backdrop": "youtube/posters/la_vie_en_un_an_horizontale.jpg",
+    "poster": "youtube/posters/la_vie_en_un_an_verticale.jpeg",
+    "backdrop": "youtube/posters/la_vie_en_un_an_horizontale.avif",
     "overview": "Description du film...",
     "release_date": "2020-05-01",
-    "youtubeId": "dQw4w9WgXcQ"
+    "youtubeId": "DvPqi3q-Zv8"
   },
   {
     "id": "yt-2",
