@@ -1,8 +1,28 @@
 [
   {
-    "id": "yt-1",
+    "id": "yt-4",
     "source": "youtube",
-    "title": "La Vie en un An",
+    "title": "Title |genre|",
+    "poster": "youtube/posters/title_verticale.jpg",
+    "backdrop": "youtube/posters/title_horizontale.vif",
+    "overview": "description du film",
+    "release_date": "2020-11-27",
+    "youtubeId": "link_youtube juste après le watch?v="
+  },
+  {
+    "id": "yt-3",
+    "source": "youtube",
+    "title": "Kung Fu Jungle |Action, Art marcial, Policier|",
+    "poster": "youtube/posters/la_vie_en_un_an_verticale.jpg",
+    "backdrop": "youtube/posters/la_vie_en_un_an_horizontale.vif",
+    "overview": "Porté par les superstars des arts marciaux Donnie Yen et Wang Baoqiang, ce thriller d'action intense suit Hahou Mo, un redoutable expert en kung-fu incarcéré après un combat mortel involontaire. Lorsqu'un tueur en série impitoyable commence à traquer et assassiner les plus grands maîtres d'arts marciaux du pays, Hahou propose son aide à la police pour le capturer en échange de sa liberté. Une chasse à l'homme brutale et spectaculaire commence alors, rythmée par des combats d'une rare intensité.",
+    "release_date": "2014-10-12",
+    "youtubeId": "uEiVj6jF8oU"
+  },
+  {
+    "id": "yt-2",
+    "source": "youtube",
+    "title": "La Vie en un An |Romance|",
     "poster": "youtube/posters/la_vie_en_un_an_verticale.jpeg",
     "backdrop": "youtube/posters/la_vie_en_un_an_horizontale.avif",
     "overview": "Porté par Jaden Smith et Cara Delevingne, ce drame romantique poignant suit Daryn, un jeune athlète prometteur. Lorsqu'il découvre que la fille de ses rêves n'a plus qu'un an à vivre, il décide de bousculer tous ses plans pour lui faire vivre une vie entière d'expériences et d'émotions intenses, condensée en seulement 365 jours. Une course contre la montre bouleversante face à la maladie.",
@@ -10,7 +30,7 @@
     "youtubeId": "DvPqi3q-Zv8"
   },
   {
-    "id": "yt-2",
+    "id": "yt-1",
     "source": "youtube",
     "title": "Transformation Royale |Comédie, Romance|",
     "poster": "youtube/posters/transformation_royale_img_verticale.jpeg",

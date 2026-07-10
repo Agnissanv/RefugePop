@@ -155,7 +155,7 @@ function displayMovies(movies) {
     grid.innerHTML = "";
     
     if (!movies || movies.length === 0) {
-        grid.innerHTML = `<div class="loader">Aucun film trouvé. Essaie une autre recherche ou un autre filtre 🎬</div>`;
+        grid.innerHTML = `<div class="loader">Aucun film trouvé. les films toujours disponibles sont dans la catégorie 🎬Autres.</div>`;
         return;
     }
 
