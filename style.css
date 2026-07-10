@@ -649,8 +649,9 @@ header {
 
 .personal-player-wrapper iframe {
     width: 100%;
-    height: 100%;
+    height: 95%;
     border: 0;
+    transform: scale(1.35); /* Supprime l'affichage natif parasite */
 }
 .personal-player-overlay {
     position: absolute;
@@ -741,7 +742,7 @@ header {
 
     /* Modales adaptatives sur Mobile */
     .modal-content {
-        width: 95%;
+        width: 100%;
     }
 
     .cinematic-details {
