@@ -267,6 +267,9 @@ function displayMovies(movies) {
         
         const favIcon = isFavorite(movie.id) ? 'fas fa-check' : 'fas fa-plus';
         const favClass = isFavorite(movie.id) ? 'btn-fav active' : 'btn-fav';
+        const availableBadge = movie.source === 'youtube'
+            ? `<span class="badge-available"><i class="fas fa-check-circle"></i> Disponible</span>`
+            : '';
 
         const card = document.createElement('div');
         card.classList.add('movie-card');
@@ -275,6 +278,7 @@ function displayMovies(movies) {
         card.innerHTML = `
             <img class="poster-img" src="${poster}" alt="${movie.title}" loading="lazy">
             <img class="backdrop-img" src="${backdrop}" alt="${movie.title} fond" loading="lazy">
+            ${availableBadge}
             
             <div class="card-overlay">
                 <h3 class="card-title">${movie.title}</h3>
@@ -446,11 +450,22 @@ async function searchMovies(query) {
 
     grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Recherche...</div>`;
     const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&language=${LANG}&query=${encodeURIComponent(query)}`;
+    const normalizedQuery = query.trim().toLowerCase();
 
     try {
-        const response = await fetch(url);
+        const [response, personalMovies] = await Promise.all([
+            fetch(url),
+            getPersonalMovies()
+        ]);
         const data = await response.json();
-        displayMovies(data.results);
+        const tmdbResults = data.results || [];
+
+        const personalResults = personalMovies.filter(movie =>
+            movie.title.toLowerCase().includes(normalizedQuery)
+        );
+
+        // Tes films perso apparaissent en premier, suivis des résultats TMDB
+        displayMovies([...personalResults, ...tmdbResults]);
     } catch (error) {
         console.error("Erreur lors de la recherche:", error);
     }

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#0b0b0d"/>
+  <circle cx="50" cy="50" r="37" fill="none" stroke="#ff4757" stroke-width="3"/>
+  <circle cx="50" cy="14.5" r="2.4" fill="#ff4757"/>
+  <circle cx="76.2" cy="23.8" r="2.4" fill="#ff4757"/>
+  <circle cx="85.5" cy="50" r="2.4" fill="#ff4757"/>
+  <circle cx="76.2" cy="76.2" r="2.4" fill="#ff4757"/>
+  <circle cx="50" cy="85.5" r="2.4" fill="#ff4757"/>
+  <circle cx="23.8" cy="76.2" r="2.4" fill="#ff4757"/>
+  <circle cx="14.5" cy="50" r="2.4" fill="#ff4757"/>
+  <circle cx="23.8" cy="23.8" r="2.4" fill="#ff4757"/>
+  <text x="50" y="61" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="#f5f5f5" letter-spacing="-1.5">RP</text>
+</svg>

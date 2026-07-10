@@ -694,6 +694,24 @@ header {
     transform: translateY(-50%) scale(1);
 }
 
+/* Badge Disponible */
+.badge-available {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 3;
+    background: #1db954;
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
 /* ==========================================================================
    VERSION RESPONSIVE MOBILE EXTRÊME (21e SIÈCLE ADAPTÉ)
    ========================================================================== */
