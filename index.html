@@ -93,8 +93,9 @@
                     <div class="loading-bar-ux"><div></div></div>
                 </div>
                 <div class="personal-player-wrapper" id="personalPlayerWrapper">
-                    <iframe id="personalVideoPlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div id="personalVideoPlayer"></div>
                     <div class="personal-player-overlay" id="personalPlayerOverlay"></div>
+                    <div class="seek-indicator" id="seekIndicator"></div>
                     <button class="personal-fullscreen-btn" id="personalFullscreenBtn" title="Plein écran">
                         <i class="fas fa-expand"></i>
                     </button>
@@ -103,6 +104,8 @@
         </div>
     </div>
 
+
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="app.js"></script>
 </body>
 </html>

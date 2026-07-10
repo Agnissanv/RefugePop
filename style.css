@@ -664,6 +664,36 @@ header {
     cursor: pointer;
 }
 
+/* pointeur de recherche */
+.seek-indicator {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) scale(0.85);
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.1rem;
+    padding: 10px 16px;
+    border-radius: 50px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    z-index: 6;
+}
+
+.seek-indicator.left {
+    left: 8%;
+}
+
+.seek-indicator.right {
+    right: 8%;
+}
+
+.seek-indicator.visible {
+    opacity: 1;
+    transform: translateY(-50%) scale(1);
+}
+
 /* ==========================================================================
    VERSION RESPONSIVE MOBILE EXTRÊME (21e SIÈCLE ADAPTÉ)
    ========================================================================== */

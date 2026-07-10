@@ -1,20 +1,40 @@
 [
   {
-    "id": "yt-4",
+    "id": "yt-6",
     "source": "youtube",
     "title": "Title |genre|",
     "poster": "youtube/posters/title_verticale.jpg",
     "backdrop": "youtube/posters/title_horizontale.vif",
     "overview": "description du film",
     "release_date": "2020-11-27",
-    "youtubeId": "link_youtube juste après le watch?v="
+    "youtubeId": "link après watch?v="
+  },
+  {
+    "id": "yt-5",
+    "source": "youtube",
+    "title": "Un Nouveau Lycée |Comédie dramatique, Romance|",
+    "poster": "youtube/posters/Un_Nouveau_Lycee_verticale.webp",
+    "backdrop": "youtube/posters/Un_Nouveau_Lycee_horizontale.webp",
+    "overview": "Porté par Charlotte Vega, Àlex Maruny et Ivana Baquero, ce film suit Valeria, une adolescente dont la vie est bouleversée après le divorce de ses parents. Forcée de déménager à Madrid, elle se retrouve scolarisée dans un nouvel établissement où elle ne connaît personne. Contrainte de participer à des séances de médiation pour les élèves en difficulté, Valeria y fait la rencontre d'autres jeunes marginaux. Ensemble, ils décident de s'unir pour former « le club des incompris », une amitié soudée qui les aidera à affronter les épreuves, les premiers amours et les secrets de l'adolescence.",
+    "release_date": "2014-12-01",
+    "youtubeId": "KAgyTxbTNxw"
+  },
+  {
+    "id": "yt-4",
+    "source": "youtube",
+    "title": "Rendel 1: Le Cycle de la Vengeance |Action, Thriller|",
+    "poster": "youtube/posters/The_Masked_Avenger_verticale.jpg",
+    "backdrop": "youtube/posters/The_Masked_Avenger_horizontale.jpg",
+    "overview": "Réalisé par Jesse Haaja et porté par Kris Gummerus, ce premier film de super-héros finlandais introduit Rendel, un justicier masqué sombre et impitoyable. Après le massacre sauvage de sa famille par VALA, une organisation criminelle internationale qui s'apprête à commercialiser un vaccin mortel non testé, un homme brisé enfile un masque pour se lancer dans une vendetta sanglante. Une traque ultra-violente et nocturne commence.",
+    "release_date": "2017-09-22",
+    "youtubeId": "RoyfFq1uPTo"
   },
   {
     "id": "yt-3",
     "source": "youtube",
     "title": "Kung Fu Jungle |Action, Art marcial, Policier|",
-    "poster": "youtube/posters/la_vie_en_un_an_verticale.jpg",
-    "backdrop": "youtube/posters/la_vie_en_un_an_horizontale.vif",
+    "poster": "youtube/posters/Kung_Fu_Jungle_verticale.webp",
+    "backdrop": "youtube/posters/Kung_Fu_Jungle_horizontale.avif",
     "overview": "Porté par les superstars des arts marciaux Donnie Yen et Wang Baoqiang, ce thriller d'action intense suit Hahou Mo, un redoutable expert en kung-fu incarcéré après un combat mortel involontaire. Lorsqu'un tueur en série impitoyable commence à traquer et assassiner les plus grands maîtres d'arts marciaux du pays, Hahou propose son aide à la police pour le capturer en échange de sa liberté. Une chasse à l'homme brutale et spectaculaire commence alors, rythmée par des combats d'une rare intensité.",
     "release_date": "2014-10-12",
     "youtubeId": "uEiVj6jF8oU"

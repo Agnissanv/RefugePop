@@ -45,11 +45,108 @@ const playerPlaceholder = document.querySelector('.player-placeholder');
 const personalPlayerWrapper = document.getElementById('personalPlayerWrapper');
 const personalVideoPlayer = document.getElementById('personalVideoPlayer');
 const personalPlayerOverlay = document.getElementById('personalPlayerOverlay');
+const seekIndicator = document.getElementById('seekIndicator');
 let isPersonalPlaying = true;
+let personalPlayer = null;
+let ytApiReady = false;
 
-personalPlayerOverlay.addEventListener('click', () => {
+// Appelée automatiquement par le script YouTube une fois chargé
+function onYouTubeIframeAPIReady() {
+    ytApiReady = true;
+}
+
+function loadPersonalVideo(videoId) {
+    if (!ytApiReady || typeof YT === 'undefined' || !YT.Player) {
+        // Script YouTube pas encore prêt (connexion lente) : on réessaie un peu plus tard
+        setTimeout(() => loadPersonalVideo(videoId), 200);
+        return;
+    }
+    if (!personalPlayer) {
+        personalPlayer = new YT.Player('personalVideoPlayer', {
+            host: 'https://www.youtube-nocookie.com',
+            videoId: videoId,
+            playerVars: {
+                autoplay: 1,
+                controls: 0,
+                rel: 0,
+                modestbranding: 1,
+                iv_load_policy: 3,
+                origin: window.location.origin
+            },
+            events: {
+                onReady: (e) => {
+                    e.target.playVideo();
+                    isPersonalPlaying = true;
+                }
+            }
+        });
+    } else {
+        personalPlayer.loadVideoById(videoId);
+        isPersonalPlaying = true;
+    }
+}
+
+function togglePersonalPlayPause() {
+    if (!personalPlayer) return;
     isPersonalPlaying = !isPersonalPlaying;
-    sendPlayerCommand(isPersonalPlaying ? 'playVideo' : 'pauseVideo', personalVideoPlayer);
+    if (isPersonalPlaying) {
+        personalPlayer.playVideo();
+    } else {
+        personalPlayer.pauseVideo();
+    }
+}
+
+function showSeekIndicator(text, isRight) {
+    seekIndicator.textContent = text;
+    seekIndicator.className = 'seek-indicator visible ' + (isRight ? 'right' : 'left');
+    clearTimeout(showSeekIndicator.timeoutId);
+    showSeekIndicator.timeoutId = setTimeout(() => {
+        seekIndicator.classList.remove('visible');
+    }, 600);
+}
+
+function seekPersonalPlayer(seconds) {
+    if (!personalPlayer || !personalPlayer.getCurrentTime) return;
+    const current = personalPlayer.getCurrentTime();
+    const target = Math.max(0, current + seconds);
+    personalPlayer.seekTo(target, true);
+    showSeekIndicator(seconds > 0 ? '+10s' : '-10s', seconds > 0);
+}
+
+let personalClickTimer = null;
+
+personalPlayerOverlay.addEventListener('click', (e) => {
+    if (personalClickTimer) {
+        // Deuxième clic dans le délai => c'était un double-clic, on avance/recule
+        clearTimeout(personalClickTimer);
+        personalClickTimer = null;
+
+        const rect = personalPlayerOverlay.getBoundingClientRect();
+        const clickX = e.clientX - rect.left;
+        const isRightSide = clickX > rect.width / 2;
+        seekPersonalPlayer(isRightSide ? 10 : -10);
+    } else {
+        // Premier clic : on attend un peu pour voir s'il y en a un deuxième
+        personalClickTimer = setTimeout(() => {
+            personalClickTimer = null;
+            togglePersonalPlayPause();
+        }, 280);
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (!playerModal.classList.contains('active') || activeMovieData?.source !== 'youtube' || !personalPlayer) return;
+
+    if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        seekPersonalPlayer(10);
+    } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        seekPersonalPlayer(-10);
+    } else if (e.key === ' ') {
+        e.preventDefault();
+        togglePersonalPlayPause();
+    }
 });
 
 const personalFullscreenBtn = document.getElementById('personalFullscreenBtn');
@@ -301,11 +398,9 @@ watchMovieBtn.addEventListener('click', () => {
     playerModal.classList.add('active');
 
     if (activeMovieData?.source === 'youtube') {
-        // Film perso : vraie lecture, son + contrôles, démarre à 0:00
         playerPlaceholder.style.display = 'none';
         personalPlayerWrapper.classList.add('active');
-        personalVideoPlayer.src = `https://www.youtube-nocookie.com/embed/${activeMovieData.youtubeId}?autoplay=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1&origin=${window.location.origin}`;
-            isPersonalPlaying = true;
+        loadPersonalVideo(activeMovieData.youtubeId);
     } else {
         // Film TMDB : comportement existant (placeholder + timeout)
         playerPlaceholder.style.display = '';
@@ -330,7 +425,9 @@ function closeAllModals() {
     playerMessageError.classList.remove('visible');
 
     personalPlayerWrapper.classList.remove('active');
-    personalVideoPlayer.src = '';
+    if (personalPlayer && personalPlayer.stopVideo) {
+        personalPlayer.stopVideo();
+    }
     playerPlaceholder.style.display = '';
 }
 
