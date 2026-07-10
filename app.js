@@ -5,6 +5,21 @@ const BASE_URL = 'https://api.themoviedb.org/3';
 const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const LANG = 'fr-FR';
 const STREAM_TIMEOUT_MS = 30000; // délai avant d'afficher "flux non disponible" (30000 = 30 secondes)
+const PERSONAL_MOVIES_URL = 'youtube/movies.json';
+let personalMoviesCache = null;
+
+async function getPersonalMovies() {
+    if (personalMoviesCache) return personalMoviesCache;
+    try {
+        const res = await fetch(PERSONAL_MOVIES_URL);
+        const data = await res.json();
+        personalMoviesCache = data;
+        return data;
+    } catch (e) {
+        console.error('Erreur chargement films perso:', e);
+        return [];
+    }
+}
 let currentMovies = []; // la liste actuellement affichée, sert de base au filtrage local
 
 // Éléments du DOM
@@ -20,11 +35,38 @@ const videoPlayer = document.getElementById('videoPlayer');
 const modalTitle = document.getElementById('modalTitle');
 const modalYear = document.getElementById('modalYear');
 const modalDesc = document.getElementById('modalDesc');
+const modalGenre = document.getElementById('modalGenre');
 const watchMovieBtn = document.getElementById('watchMovieBtn');
 
 const playerModal = document.getElementById('playerModal');
 const closePlayerModalBtn = document.getElementById('closePlayerModal');
 const playerMessageError = document.querySelector('.player-message-error');
+const playerPlaceholder = document.querySelector('.player-placeholder');
+const personalPlayerWrapper = document.getElementById('personalPlayerWrapper');
+const personalVideoPlayer = document.getElementById('personalVideoPlayer');
+const personalPlayerOverlay = document.getElementById('personalPlayerOverlay');
+let isPersonalPlaying = true;
+
+personalPlayerOverlay.addEventListener('click', () => {
+    isPersonalPlaying = !isPersonalPlaying;
+    sendPlayerCommand(isPersonalPlaying ? 'playVideo' : 'pauseVideo', personalVideoPlayer);
+});
+
+const personalFullscreenBtn = document.getElementById('personalFullscreenBtn');
+
+personalFullscreenBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // évite de déclencher aussi le play/pause de l'overlay en dessous
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        personalPlayerWrapper.requestFullscreen();
+    }
+});
+
+document.addEventListener('fullscreenchange', () => {
+    const icon = personalFullscreenBtn.querySelector('i');
+    icon.className = document.fullscreenElement ? 'fas fa-compress' : 'fas fa-expand';
+});
 let streamTimeoutId = null;
 
 let isMuted = true; // état du son de la bande-annonce en arrière-plan
@@ -46,8 +88,8 @@ async function fetchMovieLogo(movieId) {
 }
 
 // --- FONCTIONS DE LECTURE VIDÉO ---
-function sendPlayerCommand(func) {
-    videoPlayer.contentWindow?.postMessage(
+function sendPlayerCommand(func, targetIframe = videoPlayer) {
+    targetIframe.contentWindow?.postMessage(
         JSON.stringify({ event: 'command', func: func, args: [] }),
         '*'
     );
@@ -118,8 +160,12 @@ function displayMovies(movies) {
     }
 
     movies.forEach(movie => {
-        const poster = movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image';
-        const backdrop = movie.backdrop_path ? `${IMG_URL}${movie.backdrop_path}` : poster;
+        const poster = movie.source === 'youtube'
+            ? movie.poster
+            : (movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image');
+        const backdrop = movie.source === 'youtube'
+            ? (movie.backdrop || movie.poster)
+            : (movie.backdrop_path ? `${IMG_URL}${movie.backdrop_path}` : poster);
         const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
         
         const favIcon = isFavorite(movie.id) ? 'fas fa-check' : 'fas fa-plus';
@@ -196,7 +242,26 @@ async function getMoviesByGenre(genreId) {
 // --- MODALES ET LECTEURS DE VIDÉO ---
 async function openCinematicModal(movie) {
     activeMovieData = movie;
-    
+
+    modalYear.textContent = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
+    modalDesc.textContent = movie.overview || "Aucune description disponible.";
+    videoPlayer.src = "";
+    movieModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+
+    // --- FILM PERSO (YouTube) : tout est déjà dans le JSON, pas d'appel TMDB ---
+    if (movie.source === 'youtube') {
+        modalTitle.textContent = movie.title;
+        modalTitle.classList.remove('as-logo');
+        modalGenre.textContent = '🎬 Ma sélection';
+
+        videoPlayer.src = `https://www.youtube.com/embed/${movie.youtubeId}?autoplay=1&mute=1&loop=1&playlist=${movie.youtubeId}&controls=0&modestbranding=1&enablejsapi=1&origin=${window.location.origin}`;
+        isMuted = true;
+        updateMuteButton();
+        return;
+    }
+
+    // --- FILM TMDB : comportement existant, inchangé ---
     modalTitle.textContent = movie.title;
     modalTitle.classList.remove('as-logo');
 
@@ -207,18 +272,12 @@ async function openCinematicModal(movie) {
             modalTitle.classList.add('as-logo');
         }
     });
-    modalYear.textContent = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
-    modalDesc.textContent = movie.overview || "Aucune description disponible.";
-
-    videoPlayer.src = ""; 
-    movieModal.classList.add('active');
-    document.body.style.overflow = 'hidden';
 
     const url = `${BASE_URL}/movie/${movie.id}/videos?api_key=${API_KEY}&language=${LANG}`;
     try {
         const response = await fetch(url);
         const data = await response.json();
-        
+
         let video = data.results.find(v => v.site === 'YouTube' && (v.type === 'Trailer' || v.type === 'Teaser'));
         if (!video) {
             const resEn = await fetch(`${BASE_URL}/movie/${movie.id}/videos?api_key=${API_KEY}`);
@@ -241,11 +300,24 @@ watchMovieBtn.addEventListener('click', () => {
     movieModal.classList.remove('active');
     playerModal.classList.add('active');
 
-    playerMessageError.classList.remove('visible');
-    clearTimeout(streamTimeoutId);
-    streamTimeoutId = setTimeout(() => {
-        playerMessageError.classList.add('visible');
-    }, STREAM_TIMEOUT_MS);
+    if (activeMovieData?.source === 'youtube') {
+        // Film perso : vraie lecture, son + contrôles, démarre à 0:00
+        playerPlaceholder.style.display = 'none';
+        personalPlayerWrapper.classList.add('active');
+        personalVideoPlayer.src = `https://www.youtube-nocookie.com/embed/${activeMovieData.youtubeId}?autoplay=1&controls=0&rel=0&modestbranding=1&iv_load_policy=3&enablejsapi=1&origin=${window.location.origin}`;
+            isPersonalPlaying = true;
+    } else {
+        // Film TMDB : comportement existant (placeholder + timeout)
+        playerPlaceholder.style.display = '';
+        personalPlayerWrapper.classList.remove('active');
+        personalVideoPlayer.src = '';
+
+        playerMessageError.classList.remove('visible');
+        clearTimeout(streamTimeoutId);
+        streamTimeoutId = setTimeout(() => {
+            playerMessageError.classList.add('visible');
+        }, STREAM_TIMEOUT_MS);
+    }
 });
 
 function closeAllModals() {
@@ -256,6 +328,10 @@ function closeAllModals() {
 
     clearTimeout(streamTimeoutId);
     playerMessageError.classList.remove('visible');
+
+    personalPlayerWrapper.classList.remove('active');
+    personalVideoPlayer.src = '';
+    playerPlaceholder.style.display = '';
 }
 
 closeModalBtn.addEventListener('click', closeAllModals);
@@ -289,12 +365,16 @@ searchInput.addEventListener('input', debounce((e) => {
 
 // --- ÉCOUTEURS D'ÉVÉNEMENTS FILTRES ---
 filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', async () => {
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        
+
         if (btn.dataset.genre === 'favorites') {
             displayMovies(getFavorites());
+        } else if (btn.dataset.genre === 'perso') {
+            grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement...</div>`;
+            const movies = await getPersonalMovies();
+            displayMovies(movies);
         } else {
             getMoviesByGenre(btn.dataset.genre);
         }

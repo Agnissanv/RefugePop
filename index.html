@@ -23,6 +23,7 @@
     </section>
 
     <div class="filters-container">
+        <button class="filter-btn" data-genre="perso">🎬 Autre</button>
         <button class="filter-btn active" data-genre="trending">✨ Tendances</button>
         <button class="filter-btn" data-genre="favorites">❤️ Mes Favoris</button>
         <button class="filter-btn" data-genre="28">🔥 Action</button>
@@ -87,6 +88,13 @@
                     <p class="player-message">Connexion au serveur de streaming en cours...</p>
                     <p class="player-message-error">Désolé, le flux vidéo n'est pas encore disponible.</p>
                     <div class="loading-bar-ux"><div></div></div>
+                </div>
+                <div class="personal-player-wrapper" id="personalPlayerWrapper">
+                    <iframe id="personalVideoPlayer" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="personal-player-overlay" id="personalPlayerOverlay"></div>
+                    <button class="personal-fullscreen-btn" id="personalFullscreenBtn" title="Plein écran">
+                        <i class="fas fa-expand"></i>
+                    </button>
                 </div>
             </div>
         </div>

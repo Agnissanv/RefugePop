@@ -1,0 +1,23 @@
+[
+  {
+    "id": "yt-1",
+    "source": "youtube",
+    "title": "La Vie en un An",
+    "poster": "youtube/posters/la_vie_en_un_an_verticale.jpg",
+    "backdrop": "youtube/posters/la_vie_en_un_an_horizontale.jpg",
+    "overview": "Description du film...",
+    "release_date": "2020-05-01",
+    "youtubeId": "dQw4w9WgXcQ"
+  },
+  {
+    "id": "yt-2",
+    "source": "youtube",
+    "title": "Transformation Royale",
+    "poster": "youtube/posters/transformation_royale_img_verticale.jpeg",
+    "backdrop": "youtube/posters/transformation_royale_img_horizontale.jpeg",
+    "overview": "Description du film...",
+    "release_date": "2021-03-12",
+    "youtubeId": "IdAiew_yoB0"
+  }
+]
+
