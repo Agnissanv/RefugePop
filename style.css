@@ -505,6 +505,13 @@ header {
     object-position: left center;
 }
 
+.brand-logo-img {
+    height: 60px;
+    width: 60px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
 .tag-accent {
     padding: 6px 14px;
     border-radius: 20px;
