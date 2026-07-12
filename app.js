@@ -394,7 +394,9 @@ function buildChannelCard(channel) {
     const card = document.createElement('div');
     card.classList.add('channel-card');
     card.innerHTML = `
-        <img src="${channel.logo}" alt="${channel.nom}" loading="lazy" class="channel-logo">
+        <div class="channel-logo-frame">
+            <img src="${channel.logo}" alt="${channel.nom}" loading="lazy" class="channel-logo">
+        </div>
         <span class="channel-name">${channel.nom}</span>
     `;
     card.addEventListener('click', () => openLiveModal(channel));

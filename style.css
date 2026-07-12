@@ -802,9 +802,21 @@ header {
     background: #232325;
 }
 
+.channel-logo-frame {
+    width: 80%;
+    aspect-ratio: 16 / 10;
+    background: #fff;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    overflow: hidden;
+}
+
 .channel-logo {
-    max-width: 65%;
-    max-height: 55%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
