@@ -1,22 +1,22 @@
 [
   {
-    "id": "2m_monde_1",
-    "nom": "2M Monde 1",
+    "id": "2mmonde_ma",
+    "nom": "2M Monde",
     "logo": "https://i.imgur.com/MvpntzA.png",
     "url": "https://stream-lb.livemediama.com/2m/hls/master.m3u8",
     "langue": "français",
     "categorie": "Général"
   },
   {
-    "id": "2m_monde_1_2",
-    "nom": "2M Monde +1",
-    "logo": "https://i.imgur.com/MvpntzA.png",
-    "url": "https://d2qh3gh0k5vp3v.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-n6pess5lwbghr/2M_ES.m3u8",
+    "id": "2stv_sn",
+    "nom": "2STV",
+    "logo": "https://i.imgur.com/WByVBZf.png",
+    "url": "http://69.64.57.208/2stv/playlist.m3u8",
     "langue": "français",
-    "categorie": "Général"
+    "categorie": "Culture"
   },
   {
-    "id": "3abn_french",
+    "id": "3abnfrench_us",
     "nom": "3ABN French",
     "logo": "https://i.imgur.com/B5gsM7m.png",
     "url": "https://3abn.bozztv.com/3abn2/Fre_live/smil:Fre_live.smil/playlist.m3u8",
@@ -24,15 +24,15 @@
     "categorie": "Religieux"
   },
   {
-    "id": "7_info",
+    "id": "7info_ci",
     "nom": "7 Info",
     "logo": "https://i.imgur.com/jcl1nNR.png",
     "url": "https://video1.getstreamhosting.com:1936/8042/8042/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "20_minutes_tv",
+    "id": "20minutestv_fr",
     "nom": "20 Minutes TV",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/20_Minutes_TV_IDF_logo_%282023%29.png/960px-20_Minutes_TV_IDF_logo_%282023%29.png",
     "url": "https://live-20minutestv.digiteka.com/1961167769/index.m3u8",
@@ -40,7 +40,7 @@
     "categorie": "Général"
   },
   {
-    "id": "a2i_music",
+    "id": "a2imusic_sn",
     "nom": "A2i Music",
     "logo": "https://i.imgur.com/Fykhzxh.jpg",
     "url": "https://stream.sen-gt.com/A2iMusic/myStream/playlist.m3u8",
@@ -48,7 +48,15 @@
     "categorie": "Musique"
   },
   {
-    "id": "a2i_religion",
+    "id": "a2inaija_sn",
+    "nom": "A2i Naija",
+    "logo": "https://i.imgur.com/yq7ghPE.jpg",
+    "url": "https://stream.sen-gt.com/A2iNaija/myStream/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Éducation"
+  },
+  {
+    "id": "a2ireligion_sn",
     "nom": "A2i Religion",
     "logo": "https://i.imgur.com/54WrwyN.jpg",
     "url": "https://stream.sen-gt.com/A2iReligion/myStream/playlist.m3u8",
@@ -56,7 +64,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "a2i_tv",
+    "id": "a2itv_it",
     "nom": "A2i TV",
     "logo": "https://i.imgur.com/YlDFir7.jpg",
     "url": "https://stream.sen-gt.com/A2itv/myStream/playlist.m3u8",
@@ -64,7 +72,7 @@
     "categorie": "Général"
   },
   {
-    "id": "a12_tv",
+    "id": "a12tv_ci",
     "nom": "A12 TV",
     "logo": "https://i.imgur.com/JgnjgvF.png",
     "url": "https://video1.getstreamhosting.com:1936/8250/8250/manifest.m3u8",
@@ -72,7 +80,39 @@
     "categorie": "Général"
   },
   {
-    "id": "actv",
+    "id": "aplusivoire_ci",
+    "nom": "A+ Ivoire",
+    "logo": "https://i.imgur.com/yOW0vyP.png",
+    "url": "http://69.64.57.208/atv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Culture"
+  },
+  {
+    "id": "actv_tg",
+    "nom": "AC TV",
+    "logo": "https://i.imgur.com/SYugK7Y.png",
+    "url": "https://ssh101stream.ssh101.com/akamaissh101/ssh101/actvstream/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "acerfitv_cm",
+    "nom": "Acerfi TV",
+    "logo": "https://i.imgur.com/exX5djJ.png",
+    "url": "https://streamtv.acerfi.net/hls/acerfitv/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "action_fr",
+    "nom": "Action HD",
+    "logo": "https://i.imgur.com/Zv9VsVq.png",
+    "url": "http://rezofoot.tv/Action/index.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "actv_be",
     "nom": "ACTV",
     "logo": "https://files.catbox.moe/8v2y8m.png",
     "url": "https://dlgt0tdl2hpq3.cloudfront.net/rtbf/clr-rtbf/4db788c7/index.m3u8",
@@ -80,7 +120,7 @@
     "categorie": "Général"
   },
   {
-    "id": "adn_tv",
+    "id": "adntvplus_fr",
     "nom": "ADN TV+",
     "logo": "https://i.imgur.com/HQZQyWt.png",
     "url": "https://d3b73b34o7cvkq.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gz2sgqzp076kf/adn.m3u8",
@@ -88,63 +128,87 @@
     "categorie": "Animation"
   },
   {
-    "id": "ado_tv",
+    "id": "adotv_bj",
     "nom": "ADO TV",
     "logo": "https://i.imgur.com/pxFamLr.png",
     "url": "https://strhls.streamakaci.tv/ortb/ortb2-multi/playlist.m3u8",
     "langue": "français",
-    "categorie": "Sportif"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "africa_24",
+    "id": "africa24_fr",
     "nom": "Africa 24",
     "logo": "https://africa24tv.com/wp-content/uploads/2021/09/logo.png",
     "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24/manifest.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "africa_24_sport",
+    "id": "africa24sport_fr",
     "nom": "Africa 24 Sport",
     "logo": "https://i0.wp.com/africa24tv.com/wp-content/uploads/2023/12/LOGO-AFRICASPORT-4-HD-sans-fond.png?fit=512%2C107&ssl=1",
     "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24sport/manifest.m3u8",
     "langue": "français",
-    "categorie": "Sportif"
+    "categorie": "Actualités"
   },
   {
-    "id": "africanews_french",
+    "id": "africabletv_ml",
+    "nom": "Africable TV",
+    "logo": "https://i.imgur.com/iQE57Z2.png",
+    "url": "http://69.64.57.208/africable/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "africanewsfrench_fr",
     "nom": "Africanews French",
     "logo": "https://i.imgur.com/5UxU4zc.png",
     "url": "https://cdn-euronews.akamaized.net/live/eds/africanews-fr/25050/index.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "afrik_info_tv",
+    "id": "afrikinfotv_gn",
     "nom": "Afrik Info TV",
     "logo": "https://i.imgur.com/hz2LOD8.jpeg",
     "url": "https://kali.vdopanel.com:3119/hybrid/play.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "afro_magic_channel",
+    "id": "afrique54tv_cm",
+    "nom": "Afrique54 TV",
+    "logo": "https://i.imgur.com/WIaRpiS.png",
+    "url": "https://video1.getstreamhosting.com:1936/8318/8318/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "afriquemedia_cm",
+    "nom": "Afrique Media",
+    "logo": "https://i.imgur.com/spQgX7X.png",
+    "url": "https://cloud.odysee.live/content/fe06b3cdc9412e359368b2455b6ea5e93856e382/master.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "afromagicchannel_ci",
     "nom": "Afro Magic Channel",
     "logo": "https://i.imgur.com/yQzXErU.png",
     "url": "https://video1.getstreamhosting.com:1936/8306/8306/playlist.m3u8",
     "langue": "français",
-    "categorie": "Documentaire"
+    "categorie": "Culture"
   },
   {
-    "id": "afroculture_tv",
+    "id": "afroculturetv_ci",
     "nom": "Afroculture TV",
     "logo": "https://i.imgur.com/bjaZ3kO.png",
     "url": "https://streamtv.cmediahosthosting.net:3836/live/myafroculturelive.m3u8",
     "langue": "français",
-    "categorie": "Documentaire"
+    "categorie": "Culture"
   },
   {
-    "id": "afroturk_tv",
+    "id": "afroturktv_tr",
     "nom": "Afroturk TV",
     "logo": "https://i.imgur.com/fWlLvRA.png",
     "url": "https://edge.socialsmart.tv/naturaltv/bant1/playlist.m3u8",
@@ -152,15 +216,15 @@
     "categorie": "Général"
   },
   {
-    "id": "al24_news",
+    "id": "al24news_dz",
     "nom": "AL24 News",
     "logo": "https://i.imgur.com/vyVEXYL.png",
     "url": "https://cdn.live.easybroadcast.io/abr_corp/66_al24_u4yga6h/corp/66_al24_u4yga6h_240p/chunks.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "al_aoula",
+    "id": "alaoula_ma",
     "nom": "Al Aoula",
     "logo": "https://i.imgur.com/nq53d2N.png",
     "url": "https://stream-lb.livemediama.com/alaoula-tnt/hls/master.m3u8",
@@ -168,15 +232,7 @@
     "categorie": "Général"
   },
   {
-    "id": "al_aoula_inter",
-    "nom": "Al Aoula Inter",
-    "logo": "https://i.imgur.com/nq53d2N.png",
-    "url": "https://stream-lb.livemediama.com/alaoula/hls/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "alerte_a_malibu",
+    "id": "alerteamalibu_us",
     "nom": "Alerte à Malibu",
     "logo": "https://i.imgur.com/hBiB6uk.png",
     "url": "https://jmp2.uk/plu-60afaa535580be0007ac9ee4.m3u8",
@@ -184,7 +240,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "alpe_dhuez_tv",
+    "id": "alpedhueztv_fr",
     "nom": "Alpe d’Huez TV",
     "logo": "https://i.imgur.com/090tCQ5.png",
     "url": "https://edge13.vedge.infomaniak.com/livecast/ik:adhtv/manifest.m3u8",
@@ -192,7 +248,39 @@
     "categorie": "Général"
   },
   {
-    "id": "antenne_reunion",
+    "id": "amanitv_sn",
+    "nom": "Amani TV",
+    "logo": "https://i.imgur.com/0cY4K7G.png",
+    "url": "https://goccn.cloud/hls/amanitv/index.m3u8",
+    "langue": "français",
+    "categorie": "Culture"
+  },
+  {
+    "id": "amouyazidtv_dz",
+    "nom": "Amou Yazid TV",
+    "logo": "https://i.imgur.com/L8UPGPC.png",
+    "url": "http://mkstream.servehttp.com:1940/AmouYazid/ay1/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "angerstele_fr",
+    "nom": "Angers Tele",
+    "logo": "https://i.imgur.com/CMKKbaP.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/angerstele.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "antennea_cd",
+    "nom": "Antenne A",
+    "logo": "https://i.imgur.com/tgxrcv7.png",
+    "url": "http://51.254.199.122:8080/antenne_a-plus/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "antennereunion_fr",
     "nom": "Antenne Réunion",
     "logo": "https://i.imgur.com/EPIMMaB.png",
     "url": "https://live-antenne-reunion.zeop.tv/live/c3eds/antreunihd/hls_fta/antreunihd.m3u8?location=ZEOP01",
@@ -200,7 +288,31 @@
     "categorie": "Général"
   },
   {
-    "id": "atv",
+    "id": "arabel_fr",
+    "nom": "AraBel",
+    "logo": "https://www.arabel.fm/wp-content/uploads/2021/10/Logo-AraBel.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/arabel.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "arte_fr",
+    "nom": "Arte [Geo-blocked]",
+    "logo": "https://i.imgur.com/ecXMjNl.png",
+    "url": "https://artesimulcast.akamaized.net/hls/live/2031003/artelive_fr/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "assadissa_ma",
+    "nom": "Assadissa",
+    "logo": "https://freebox.cdn.scw.iliad.fr/medium_Assadissa_f8b25de821.png",
+    "url": "https://snrtworker.kharazbelaid.workers.dev/?id=assadisa.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "atv_gn",
     "nom": "ATV",
     "logo": "https://i.imgur.com/YkJPCfR.jpeg",
     "url": "https://guineetvdirect.online:3320/live/atvguineelive.m3u8",
@@ -208,15 +320,39 @@
     "categorie": "Général"
   },
   {
-    "id": "bam_tv",
+    "id": "bsmarttv_fr",
+    "nom": "B Smart TV",
+    "logo": "https://i.imgur.com/RyVEFcG.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/bsmart.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "babyfirst_us",
+    "nom": "BabyFirst",
+    "logo": "https://i.imgur.com/WxLHBwu.png",
+    "url": "http://206.212.244.63/639/index.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "babytv_uk",
+    "nom": "BabyTV France HD",
+    "logo": "https://i.imgur.com/4BDJ5FT.png",
+    "url": "http://41.223.30.230/BABYTV/index.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "bamtv_be",
     "nom": "BAM-TV",
     "logo": "https://i.imgur.com/9UmR6cs.png",
     "url": "https://belafrikamediatv.vedge.infomaniak.com/livecast/ik:belafrikamediatv/manifest.m3u8",
     "langue": "français",
-    "categorie": "Documentaire"
+    "categorie": "Culture"
   },
   {
-    "id": "banijay_mr_bean_anime",
+    "id": "mrbeananimated_uk",
     "nom": "Banijay Mr Bean Animé",
     "logo": "https://static.wikia.nocookie.net/logopedia/images/2/25/Mr._Bean_Animated_Series_stacked_logo.png",
     "url": "https://amg00627-amg00627c31-rakuten-fr-3991.playouts.now.amagi.tv/playlist/amg00627-banijayfast-mrbeanfrcc-rakutenfr/playlist.m3u8",
@@ -224,15 +360,31 @@
     "categorie": "Animation"
   },
   {
-    "id": "baraka_television",
+    "id": "barakatelevision_cd",
     "nom": "Baraka Television",
     "logo": "https://i.imgur.com/IKXddHN.png",
     "url": "https://stream.berosat.live:19360/baraka-hd/baraka-hd.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "benie_tv",
+    "id": "bebtv_cg",
+    "nom": "Beb TV",
+    "logo": "https://i.imgur.com/3XOk1lP.jpeg",
+    "url": "https://live-hls-qunv.livepush.io/live_cdn/em8A-kbzIfHqu73/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "belrtl_be",
+    "nom": "Bel RTL",
+    "logo": "https://i.imgur.com/0DUprIW.png",
+    "url": "https://bel-live-hls.akamaized.net/hls/live/2038650/BEL-Live-HLS/master.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "benietv_ci",
     "nom": "Benie TV",
     "logo": "https://i.imgur.com/7FXi05e.jpeg",
     "url": "https://tv.voozmedia.fun/benietv/index.m3u8",
@@ -240,119 +392,127 @@
     "categorie": "Religieux"
   },
   {
-    "id": "bfm2",
+    "id": "beninwebtv_bj",
+    "nom": "Bénin Web TV",
+    "logo": "https://i.imgur.com/CYy4n0N.png",
+    "url": "https://stream.beninwebtv.bj/2/live/stream.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "bfm2_fr",
     "nom": "BFM2",
     "logo": "https://alloforfait.fr/wp-content/uploads/2024/03/logo-bfm2-300x200.jpg",
     "url": "https://d1ib1gsg71oarf.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-scp7wda722jph/BFM2_FR.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_alsace",
-    "nom": "BFM Alsace",
+    "id": "bfmalsace_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"General\",BFM Alsace",
     "logo": "https://i.imgur.com/iRsbEpg.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_ALSACE/index.m3u8?end=END&start=LIVE",
     "langue": "français",
     "categorie": "Général"
   },
   {
-    "id": "bfm_business",
-    "nom": "BFM Business",
+    "id": "bfmbusiness_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"Business;News\",BFM Business",
     "logo": "https://i.imgur.com/psqIHn4.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_BUSINESS/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Entreprise"
   },
   {
-    "id": "bfm_dici_alpes_du_sud",
-    "nom": "BFM DICI Alpes du Sud",
+    "id": "bfmdicialpesdusud_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM DICI Alpes du Sud",
     "logo": "https://i.imgur.com/bV77l68.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_DICI_ALPESDUSUD/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_dici_haute_provence",
-    "nom": "BFM DICI Haute-Provence",
+    "id": "bfmdicihauteprovence_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM DICI Haute-Provence",
     "logo": "https://i.imgur.com/bV77l68.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_DICI_HAUTEPROVENCE/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_grand_lille",
-    "nom": "BFM Grand Lille",
+    "id": "bfmgrandlille_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Grand Lille",
     "logo": "https://i.imgur.com/HE5xP0r.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFMGRANDLILLE/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_grand_littoral",
-    "nom": "BFM Grand Littoral",
+    "id": "bfmgrandlittoral_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Grand Littoral",
     "logo": "https://i.imgur.com/j7F9MwH.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFMGRANDLITTORAL/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_lyon",
-    "nom": "BFM Lyon",
+    "id": "bfmlyon_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Lyon",
     "logo": "https://i.imgur.com/0uiiZRo.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_LYON/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_marseille",
-    "nom": "BFM Marseille",
+    "id": "bfmmarseille_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Marseille",
     "logo": "https://i.imgur.com/h7t0l6q.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_MARSEILLEPROV/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_nice_cote_d_azur",
-    "nom": "BFM Nice Côte d'Azur",
+    "id": "bfmcotedazur_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Nice Côte d'Azur",
     "logo": "https://i.imgur.com/iiVFvIw.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_NICECOTEDAZUR/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_normandie",
-    "nom": "BFM Normandie",
+    "id": "bfmnormandie_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Normandie",
     "logo": "https://i.imgur.com/WWWQ44G.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_NORMANDIE/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_tech_co",
-    "nom": "BFM Tech & Co",
+    "id": "bfmtechco_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News;Science\",BFM Tech & Co",
     "logo": "https://i.imgur.com/FQ0FpXV.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TECHANDCO/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_toulon_var",
-    "nom": "BFM Toulon Var",
+    "id": "bfmvar_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Toulon Var",
     "logo": "https://i.imgur.com/vp1oVj3.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TOULONVAR/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "bfm_tv",
-    "nom": "BFM TV",
+    "id": "bfmtv_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM TV",
     "logo": "https://i.imgur.com/YJCcczD.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TV/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "blue_bloods",
+    "id": "bluebloods_de",
     "nom": "Blue Bloods",
     "logo": "https://images.pluto.tv/channels/66f55a9a747bfa0008521859/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-66f55a9a747bfa0008521859.m3u8",
@@ -360,15 +520,23 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "bob_l_eponge",
+    "id": "bobleponge_de",
     "nom": "Bob l'éponge",
     "logo": "https://images.pluto.tv/channels/5ffc8c345822750007e167de/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-5ffc8c345822750007e167de.m3u8",
     "langue": "français",
-    "categorie": "Animation"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "bouke",
+    "id": "bossbrotherstv_cd",
+    "nom": "Boss Brothers TV",
+    "logo": "https://i.imgur.com/rc9MXm5.png",
+    "url": "http://51.254.199.122:8080/bossbrothersTV/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "bouke_be",
     "nom": "Bouke",
     "logo": "https://i.imgur.com/STLavel.png",
     "url": "https://dlgt0tdl2hpq3.cloudfront.net/rtbf/clr-rtbf/e1ccc6aa/index.m3u8",
@@ -376,7 +544,7 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "bpx_tv_radio",
+    "id": "bpxtvradio_us",
     "nom": "BPX TV Radio",
     "logo": "https://i.imgur.com/86VXni8.jpeg",
     "url": "https://video1.getstreamhosting.com:1936/8212/8212/playlist.m3u8",
@@ -384,7 +552,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "brionnais_tv",
+    "id": "brionnaistv_fr",
     "nom": "Brionnais TV",
     "logo": "https://i.imgur.com/y94bhqX.jpg",
     "url": "https://stream2.mandarine.media/brionnaistv/brionnaistv/playlist.m3u8",
@@ -392,7 +560,31 @@
     "categorie": "Général"
   },
   {
-    "id": "bx1",
+    "id": "bruzz_be",
+    "nom": "Bruzz",
+    "logo": "https://i.imgur.com/OYlYidF.png",
+    "url": "https://hls-origin01-bruzz.cdn02.rambla.be/main/adliveorigin-bruzz/_definst_/V3n5YY.smil/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "burkinainfotv_bf",
+    "nom": "Burkina Info TV",
+    "logo": "https://i.imgur.com/a9v5CbU.png",
+    "url": "http://69.64.57.208/burkinainfo/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "business24africa_ci",
+    "nom": "Business 24 Africa",
+    "logo": "https://i.imgur.com/zZFl3vy.png",
+    "url": "https://cdn-globecast.akamaized.net/live/eds/business24_tv/hls_video/index.m3u8",
+    "langue": "français",
+    "categorie": "Entreprise"
+  },
+  {
+    "id": "bx1_be",
     "nom": "BX1",
     "logo": "https://i.imgur.com/0OkSa6c.png",
     "url": "https://59959724487e3.streamlock.net/stream/live/playlist.m3u8",
@@ -400,7 +592,7 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "c_star",
+    "id": "cstar_fr",
     "nom": "C Star",
     "logo": "https://i.imgur.com/w4kAX1V.png",
     "url": "https://raw.githubusercontent.com/Paradise-91/ParaTV/refs/heads/main/streams/canalplus/cstar-dm.m3u8",
@@ -408,7 +600,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "caillou",
+    "id": "caillou_fr",
     "nom": "Caillou",
     "logo": "https://i.imgur.com/RgKaoe4.png",
     "url": "https://do7nccdsswstc.cloudfront.net/v1/manifest/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-1aso0bc668saa/a5233c83-f772-4a81-959a-45ec7877ef61/5.m3u8",
@@ -416,7 +608,7 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "cam_10_tv",
+    "id": "cam10tv_cm",
     "nom": "CAM 10 TV",
     "logo": "https://i.imgur.com/xspb9uY.png",
     "url": "https://stream.it-innov.com/cam10tv/index.m3u8",
@@ -424,7 +616,55 @@
     "categorie": "Général"
   },
   {
-    "id": "canal_savoir",
+    "id": "canaf54tv_uk",
+    "nom": "Canaf54 TV",
+    "logo": "https://i.imgur.com/viB0FS2.png",
+    "url": "https://5caf24a595d94.streamlock.net:1937/pvyugfkzkc/pvyugfkzkc/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "canal2international_cm",
+    "nom": "Canal 2 International",
+    "logo": "https://i.imgur.com/BzA2z7m.png",
+    "url": "http://69.64.57.208/canal2international/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "canal3_bf",
+    "nom": "Canal 3",
+    "logo": "https://i.imgur.com/WIrVAa2.png",
+    "url": "https://cs2.push2stream.com/CANAL3BENIN/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "canal9_ch",
+    "nom": "Canal 9 en Français",
+    "logo": "https://i.imgur.com/TNciMh2.png",
+    "url": "https://livehd.vedge.infomaniak.com/livecast/livehd/master.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "canal32_fr",
+    "nom": "Canal 32",
+    "logo": "https://i.imgur.com/lAsE6kN.png",
+    "url": "https://event.vedge.infomaniak.com/livecast/ik:canal32_4/manifest.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "canalj_fr",
+    "nom": "Canal J HD",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Canal_J_2019_Logo.png/960px-Canal_J_2019_Logo.png",
+    "url": "http://41.205.77.102/CANALJ/index.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "cftudt_ca",
     "nom": "Canal Savoir",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/9/97/Savoir_m%C3%A9dia_logo_3.png",
     "url": "https://hls.savoir.media/live/stream.m3u8",
@@ -432,7 +672,63 @@
     "categorie": "Éducation"
   },
   {
-    "id": "cannes_lerins_tv",
+    "id": "canalzoom_be",
+    "nom": "Canal Zoom [Geo-blocked]",
+    "logo": "https://i.imgur.com/JUNP8Rx.png",
+    "url": "https://tvlocales-live.freecaster.com/live/95d2e3af-5ab8-45a9-9dc9-f544d006b5d5/95d2e3af-5ab8-45a9-9dc9-f544d006b5d5.isml/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "canalplus_fr",
+    "nom": "Canal+",
+    "logo": "https://i.imgur.com/5HcyMnW.png",
+    "url": "http://151.80.18.177:86/Canal+_HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "canalpluscinemas_fr",
+    "nom": "Canal+ Cinemas",
+    "logo": "https://i.imgur.com/fvPoNEa.jpeg",
+    "url": "http://151.80.18.177:86/Canal+_cinema_HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "canalplusfamily_fr",
+    "nom": "Canal+ Family",
+    "logo": "https://i.imgur.com/TXI8hM1.png",
+    "url": "http://151.80.18.177:86/Canal+_Family_HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Famille"
+  },
+  {
+    "id": "canalplusfoot_fr",
+    "nom": "Canal+ Foot",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Canal%2BFoot.png",
+    "url": "https://test.946985.filegear-sg.me/proxy/ef3174f16d4557d2",
+    "langue": "français",
+    "categorie": "Sportif"
+  },
+  {
+    "id": "canalplushaiti_ht",
+    "nom": "Canal+ Haiti [Geo-blocked]",
+    "logo": "https://i.imgur.com/Gad5qrd.png",
+    "url": "https://vdo.pro-fhi.net:3605/live/dgenlcpmlive.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "canalplussport_fr",
+    "nom": "Canal+ Sport",
+    "logo": "https://i.imgur.com/EOXnU15.png",
+    "url": "http://151.80.18.177:86/Canal+_sport_HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Sportif"
+  },
+  {
+    "id": "canneslerinstv_fr",
     "nom": "Cannes Lérins TV",
     "logo": "https://i.imgur.com/atlgnum.png",
     "url": "https://vdo2.pro-fhi.net:3628/live/uppodsfqlive.m3u8",
@@ -440,7 +736,7 @@
     "categorie": "Général"
   },
   {
-    "id": "carac_1",
+    "id": "carac1_ch",
     "nom": "Carac 1",
     "logo": "https://i.imgur.com/TSc35U6.png",
     "url": "https://edge13.vedge.infomaniak.com/livecast/ik:event/manifest.m3u8",
@@ -448,7 +744,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "carac_2",
+    "id": "carac2_ch",
     "nom": "Carac 2",
     "logo": "https://i.imgur.com/hCoIPen.png",
     "url": "https://onefmhd.vedge.infomaniak.com/livecast/ik:onefmhd/manifest.m3u8",
@@ -456,7 +752,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "carac_3",
+    "id": "carac3_ch",
     "nom": "Carac 3",
     "logo": "https://i.imgur.com/C4e8cjt.png",
     "url": "https://lfmhd.vedge.infomaniak.com/livecast/lfmhd/playlist.m3u8",
@@ -464,7 +760,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "carac_4",
+    "id": "carac4_ch",
     "nom": "Carac 4",
     "logo": "https://i.imgur.com/Dj5LPy3.png",
     "url": "https://edge17.vedge.infomaniak.com/livecast/ik:compack_media_1/playlist.m3u8",
@@ -472,7 +768,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "carac_5",
+    "id": "carac5_ch",
     "nom": "Carac 5",
     "logo": "https://i.imgur.com/giDfku4.png",
     "url": "https://lfmmd.vedge.infomaniak.com/livecast/ik:carac5/manifest.m3u8",
@@ -480,7 +776,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "catfish_tv",
+    "id": "mtvcatfishtvshow_de",
     "nom": "CATFISH TV",
     "logo": "https://images.pluto.tv/channels/6093f9ed2c75660007322bb7/colorLogoPNG_1750862971704.png",
     "url": "https://jmp2.uk/plu-5f8eb66537867f0007146953.m3u8",
@@ -488,7 +784,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "ccpv_tv",
+    "id": "ccpvtelevision_cd",
     "nom": "CCPV TV",
     "logo": "https://i.imgur.com/VRhkEqz.jpg",
     "url": "https://tnt-television.com/CCPV-TV/index.m3u8",
@@ -496,23 +792,39 @@
     "categorie": "Religieux"
   },
   {
-    "id": "cgtn_francais",
+    "id": "centelevision_cm",
+    "nom": "CEN Télévision",
+    "logo": "https://i.ibb.co/2vJfdgN/unnamed.jpg",
+    "url": "https://strhlslb01.streamakaci.tv/cen/cen-multi/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cgtnfrench_cn",
     "nom": "CGTN Français",
     "logo": "https://i.imgur.com/BwhledK.png",
     "url": "https://amg01314-cgtn-amg01314c2-rakuten-us-1319.playouts.now.amagi.tv/cgtn-fr-rakuten/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "chamber_tv",
+    "id": "chabibatv_sn",
+    "nom": "Chabiba TV",
+    "logo": "https://i.imgur.com/qVTOklV.png",
+    "url": "https://endour.net/hls/RUgLAPCbPdF5oPSTX2Hvl/index.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "chambertv_lu",
     "nom": "Chamber TV",
     "logo": "https://i.imgur.com/0QHb3bc.png",
     "url": "https://media02.webtvlive.eu/chd-edge/smil:chamber_tv_hd.smil/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "chandel_tv",
+    "id": "chandeltv_tg",
     "nom": "Chandel TV",
     "logo": "https://i.imgur.com/jQO7dVE.png",
     "url": "https://kali.vdopanel.com:3660/live/vj6jlam1rlive.m3u8",
@@ -520,7 +832,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "cheers",
+    "id": "cheers_de",
     "nom": "Cheers",
     "logo": "https://images.pluto.tv/channels/611e7f224676bf00076a4d8d/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-65cce14060eb870008dbd003.m3u8",
@@ -528,7 +840,15 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "cine_666_by_pluto_tv",
+    "id": "cheriflatv_ml",
+    "nom": "Cherifla TV",
+    "logo": "https://i.imgur.com/V8nuoEW.png",
+    "url": "http://69.64.57.208/cherifla/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cine666byplutotv_de",
     "nom": "Ciné 666 by Pluto TV",
     "logo": "https://images.pluto.tv/channels/6823648580b2665220d9e69a/colorLogoPNG-1757404141.png",
     "url": "https://jmp2.uk/plu-6823648580b2665220d9e69a.m3u8",
@@ -536,7 +856,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_action_by_pluto_tv",
+    "id": "cineactionbyplutotv_de",
     "nom": "Ciné Action by Pluto TV",
     "logo": "https://images.pluto.tv/channels/5f8ed1ff5c39700007e2204a/colorLogoPNG_1752228138963.png",
     "url": "https://jmp2.uk/plu-5f8ed1ff5c39700007e2204a.m3u8",
@@ -544,7 +864,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_by_pluto_tv",
+    "id": "cinebyplutotv_de",
     "nom": "Ciné by Pluto TV",
     "logo": "https://images.pluto.tv/channels/5f8ed0f17564a300082b676a/colorLogoPNG_1775048900088.png",
     "url": "https://jmp2.uk/plu-5f8ed0f17564a300082b676a.m3u8",
@@ -552,7 +872,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_catastrophe_by_pluto_tv",
+    "id": "cinecatastrophebyplutotv_de",
     "nom": "Ciné Catastrophe by Pluto TV",
     "logo": "https://images.pluto.tv/channels/65a69ef53af63d000825e0ee/colorLogoPNG_1751272916058.png",
     "url": "https://jmp2.uk/plu-65a69ef53af63d000825e0ee.m3u8",
@@ -560,7 +880,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_d_asie_by_pluto_tv",
+    "id": "cinedasiebyplutotv_de",
     "nom": "Ciné d'Asie by Pluto TV",
     "logo": "https://images.pluto.tv/channels/62f3e2d000418d00070f7dbc/colorLogoPNG_1751272759694.png",
     "url": "https://jmp2.uk/plu-62f3e2d000418d00070f7dbc.m3u8",
@@ -568,7 +888,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_horreur_by_pluto_tv",
+    "id": "cinehorreurbyplutotv_de",
     "nom": "Ciné Horreur by Pluto TV",
     "logo": "https://images.pluto.tv/channels/66e1978babec540008ce41ac/colorLogoPNG_1751272165674.png",
     "url": "https://jmp2.uk/plu-66e1978babec540008ce41ac.m3u8",
@@ -576,7 +896,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_retro_by_pluto_tv",
+    "id": "cineretrobyplutotv_de",
     "nom": "Ciné Rétro by Pluto TV",
     "logo": "https://images.pluto.tv/channels/5f8ed168f72fcd0007e56269/colorLogoPNG_1751272859383.png",
     "url": "https://jmp2.uk/plu-5f8ed168f72fcd0007e56269.m3u8",
@@ -584,7 +904,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_romance_by_pluto_tv",
+    "id": "cineromancebyplutotv_de",
     "nom": "Ciné Romance by Pluto TV",
     "logo": "https://images.pluto.tv/channels/60812fc8539963000707d1e1/colorLogoPNG_1775048649580.png",
     "url": "https://jmp2.uk/plu-60812fc8539963000707d1e1.m3u8",
@@ -592,7 +912,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_sci_fi_by_pluto_tv",
+    "id": "cinescifibyplutotv_de",
     "nom": "Ciné Sci-Fi by Pluto TV",
     "logo": "https://images.pluto.tv/channels/60c34592c911890007f29a73/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-60c34592c911890007f29a73.m3u8",
@@ -600,7 +920,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_thrillers_by_pluto_tv",
+    "id": "cinethrillersbyplutotv_de",
     "nom": "Ciné Thrillers by Pluto TV",
     "logo": "https://images.pluto.tv/channels/60c3472a51a2050008dad272/colorLogoPNG_1751272093012.png",
     "url": "https://jmp2.uk/plu-60c3472a51a2050008dad272.m3u8",
@@ -608,7 +928,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cine_western_by_pluto_tv",
+    "id": "cinewesternbyplutotv_de",
     "nom": "Ciné Western by Pluto TV",
     "logo": "https://images.pluto.tv/channels/65cca3e2ec452d0008af3a65/colorLogoPNG_1751272826143.png",
     "url": "https://jmp2.uk/plu-65cca3e2ec452d0008af3a65.m3u8",
@@ -616,7 +936,31 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "cna",
+    "id": "cineplusclassic_fr",
+    "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"Movies\",Cine+ Classic",
+    "logo": "https://i.imgur.com/y2zeLS3.jpeg",
+    "url": "http://99.27.51.147/CineClassic/index.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "cineplusfrisson_fr",
+    "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"Movies\",Cine+ Frisson",
+    "logo": "https://i.imgur.com/MwFtbnR.jpeg",
+    "url": "http://99.27.51.147:8080/CineFrisson/index.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "clubbingtv_us",
+    "nom": "Clubbing TV France",
+    "logo": "https://i.imgur.com/MyiA92q.png",
+    "url": "https://d1j2csarxnwazk.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-uze1m6xh4fiyr-ssai-prd/master.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "cna_dz",
     "nom": "CNA",
     "logo": "https://i.imgur.com/Ki3ySUE.png",
     "url": "https://live.creacast.com/cna/stream/playlist.m3u8",
@@ -624,23 +968,31 @@
     "categorie": "Religieux"
   },
   {
-    "id": "cnews",
+    "id": "cnews_fr",
     "nom": "CNews",
     "logo": "https://i.imgur.com/sSNhk2g.png",
     "url": "https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/canalplus/cnews-dm.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "cnews_prime",
+    "id": "cnewsprime_fr",
     "nom": "CNEWS PRIME",
     "logo": "https://www.cnews.fr/themes/cnews/img/cnews-prime.png",
     "url": "https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/canalplus/cnews-prime-dm.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "compassion_tv",
+    "id": "cnmtv_sn",
+    "nom": "CNM TV",
+    "logo": "https://i.ibb.co/0cfdGKv/1630802325205.jpg",
+    "url": "https://stream.sen-gt.com/cnmtv/myStream/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "compassiontv_cd",
     "nom": "Compassion TV",
     "logo": "https://i.imgur.com/lfoUsyR.jpeg",
     "url": "https://tnt-television.com/COMPASSION_FM/index.m3u8",
@@ -648,7 +1000,15 @@
     "categorie": "Religieux"
   },
   {
-    "id": "couleur_3",
+    "id": "congoplanettelevision_cd",
+    "nom": "Congo Planet Télévision",
+    "logo": "https://i.imgur.com/9IIIvPf.png",
+    "url": "https://radio.congoplanet.com/Congo_Planet_TV.sdp/Congo_Planet_TV/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "couleur3_ch",
     "nom": "Couleur 3",
     "logo": "https://i.imgur.com/VOIwYYd.png",
     "url": "https://visualradio-rts-couleur3-d.akamaized.net/out/v1/6a1472634ad745f59a9e63ee8adbbc00/index.m3u8",
@@ -656,15 +1016,31 @@
     "categorie": "Musique"
   },
   {
-    "id": "crtv_news",
+    "id": "crtv_cm",
+    "nom": "CRTV",
+    "logo": "https://i.imgur.com/cQWNh3L.png",
+    "url": "http://69.64.57.208/crtv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "crtvnews_cm",
     "nom": "CRTV News",
     "logo": "https://i.imgur.com/5CshVf9.png",
     "url": "https://live1.acangroup.org:1929/publiclive/crtv_news/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "daria",
+    "id": "d3tv_ml",
+    "nom": "D3 TV",
+    "logo": "https://i.imgur.com/uFEIBtB.png",
+    "url": "https://live20.bozztv.com/akamaissh101/ssh101/d3tvnet/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "daria_de",
     "nom": "Daria",
     "logo": "https://images.pluto.tv/channels/6683b680efa2a10008e8a393/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-6683b680efa2a10008e8a393.m3u8",
@@ -672,7 +1048,7 @@
     "categorie": "Animation"
   },
   {
-    "id": "dbm_tv",
+    "id": "dbmtv_fr",
     "nom": "DBM TV",
     "logo": "https://i.imgur.com/ab6p2SW.png",
     "url": "https://dbmtv.vedge.infomaniak.com/livecast/dbmtv/playlist.m3u8",
@@ -680,7 +1056,15 @@
     "categorie": "Musique"
   },
   {
-    "id": "detective_conan_france",
+    "id": "degatv_us",
+    "nom": "Dega TV",
+    "logo": "https://i.ibb.co/ZTYvHyR/DEGA-TV-TELEPACK.jpg",
+    "url": "https://59d39900ebfb8.streamlock.net/saintlouisltv/saintlouisltv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "detectiveconan_us",
     "nom": "Detective Conan France",
     "logo": "https://images.pluto.tv/channels/62f3e8ad2a8e8000077b013d/colorLogoPNG.png?w=512",
     "url": "https://jmp2.uk/plu-62f3e8ad2a8e8000077b013d.m3u8",
@@ -688,15 +1072,47 @@
     "categorie": "Animation"
   },
   {
-    "id": "diaspora_24",
-    "nom": "Diaspora 24",
+    "id": "diaspora24_sn",
+    "nom": "Diaspora 24 [Geo-blocked]",
     "logo": "https://i.imgur.com/4devfx1.png",
     "url": "https://vdo3.pro-fhi.net:3218/stream/play.m3u8",
     "langue": "français",
     "categorie": "Indéfini"
   },
   {
-    "id": "dossiers_fbi",
+    "id": "digitalcongotv_cd",
+    "nom": "Digital Congo TV",
+    "logo": "https://i.imgur.com/uz2Rsu7.png",
+    "url": "http://51.254.199.122:8080/DigitalCongoTV/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "disneyjr_fr",
+    "nom": "Disney Jr.",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/36/2019_Disney_Junior_logo.svg",
+    "url": "http://151.80.18.177:86/Disney_Junior_HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "divinamourtv_ci",
+    "nom": "Divin Amour TV",
+    "logo": "https://i.imgur.com/UUSAQET.png",
+    "url": "https://voozmedia.fun/divinamourtv/livestream/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "dntv_ci",
+    "nom": "DNTV",
+    "logo": "https://i.imgur.com/Pw1ifln.png",
+    "url": "https://tv.num221tech.com:5443/LiveApp/streams/dntv.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "dossiersfbi_us",
     "nom": "Dossiers FBI",
     "logo": "https://i.imgur.com/8Zx6dA7.png",
     "url": "https://jmp2.uk/plu-5f8edad922b10b000753bc37.m3u8",
@@ -704,23 +1120,47 @@
     "categorie": "Documentaire"
   },
   {
-    "id": "ebs",
+    "id": "douniatv_ne",
+    "nom": "Dounia TV",
+    "logo": "https://i.imgur.com/ENBCDaQ.png",
+    "url": "https://live20.bozztv.com/dvrfl06/astv/astv-douniatv/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "dynamicgospeltv_tg",
+    "nom": "Dynamic Gospel TV",
+    "logo": "https://i.imgur.com/e36BNNK.jpg",
+    "url": "https://ssh101stream.ssh101.com/akamaissh101/ssh101/tvdynamicstream/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "ebs_be",
     "nom": "EBS",
     "logo": "https://i.imgur.com/DIIRPNN.png",
     "url": "https://streams.prd.commavservices.eu/live/ebs/index.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "ebs_plus",
+    "id": "ebsplus_be",
     "nom": "EBS Plus",
     "logo": "https://i.imgur.com/7V012zQ.png",
     "url": "https://streams.prd.commavservices.eu/live/ebsplus/index.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "eden_tv",
+    "id": "ecclesiatv_ci",
+    "nom": "Ecclesia TV",
+    "logo": "https://i.imgur.com/mgabVFd.png",
+    "url": "https://video1.getstreamhosting.com:1936/8294/8294/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "edentv_bj",
     "nom": "Eden TV",
     "logo": "https://i.imgur.com/4ClnG0x.png",
     "url": "https://rtmp.edentv.bj/hls/stream.m3u8",
@@ -728,7 +1168,31 @@
     "categorie": "Général"
   },
   {
-    "id": "equidia",
+    "id": "emcitv_fr",
+    "nom": "EMCI TV",
+    "logo": "",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/emciafrique.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "emcitvamerica_ca",
+    "nom": "EMCI TV America",
+    "logo": "",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/emciamerique.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "emcitveurope_fr",
+    "nom": "EMCI TV Europe",
+    "logo": "https://i.imgur.com/KagDKKB.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/emcieurope.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "equidia_fr",
     "nom": "Equidia",
     "logo": "https://i.imgur.com/QPpbRcZ.png",
     "url": "https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/equidia/live2.m3u8",
@@ -736,7 +1200,15 @@
     "categorie": "Sportif"
   },
   {
-    "id": "esaie_45_tele",
+    "id": "equinoxetv_cm",
+    "nom": "Equinoxe TV",
+    "logo": "https://i.imgur.com/GKbnBlo.png",
+    "url": "http://69.64.57.208/equinoxtv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "esaie45tele_cg",
     "nom": "Esaie 45 Tele",
     "logo": "https://i.imgur.com/nc9QBnD.png",
     "url": "https://stream.berosat.live/hls/esaie45-tv/esaie45-tv.m3u8",
@@ -744,15 +1216,15 @@
     "categorie": "Religieux"
   },
   {
-    "id": "espace_tv",
+    "id": "espacetv_gn",
     "nom": "Espace TV",
     "logo": "https://i.imgur.com/R5tbzFI.png",
     "url": "https://edge11.vedge.infomaniak.com/livecast/ik:espacetv/manifest.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "etv",
+    "id": "etv_gp",
     "nom": "ETV",
     "logo": "https://i.imgur.com/m5E2VP0.png",
     "url": "https://edge12.vedge.infomaniak.com/livecast/ik:etvgp/manifest.m3u8",
@@ -760,15 +1232,31 @@
     "categorie": "Général"
   },
   {
-    "id": "euronews_french",
+    "id": "euronewsfrench_fr",
     "nom": "Euronews French",
     "logo": "https://i.imgur.com/8t9mdg9.png",
     "url": "https://2f6c5bf4.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmxheHhUVi1ldV9FdXJvbmV3c0ZyYW5jYWlzX0hMUw/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "evi_tv",
+    "id": "evtele_cg",
+    "nom": "Ev-tele",
+    "logo": "https://i.imgur.com/iBlXl2T.png",
+    "url": "https://playtv4k.live/live/EVTELE/index.m3u8",
+    "langue": "français",
+    "categorie": "Culture"
+  },
+  {
+    "id": "evasiontv_gn",
+    "nom": "Evasion TV",
+    "logo": "https://i.imgur.com/TTWl2Iy.png",
+    "url": "https://kali.vdopanel.com:3090/hybrid/play.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "evitv_cd",
     "nom": "EVI TV",
     "logo": "https://i.imgur.com/fBc9JSM.png",
     "url": "https://stream.berosat.live:19360/evi-tv/evi-tv.m3u8",
@@ -776,7 +1264,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "ewtn_canada",
+    "id": "ewtn_us",
     "nom": "EWTN Canada",
     "logo": "https://i.imgur.com/sua70RO.png",
     "url": "https://cdn3.wowza.com/1/YW5wSWZiRGd2eFlU/bGV0aVBq/hls/live/playlist.m3u8",
@@ -784,7 +1272,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "fashiontv_paris_l_original",
+    "id": "fashiontvparisloriginal_fr",
     "nom": "FashionTV Paris L'Original",
     "logo": "https://i.imgur.com/GFTAN5Q.png",
     "url": "https://edge-fast3.evrideo.tv/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8",
@@ -792,7 +1280,15 @@
     "categorie": "Style de vie"
   },
   {
-    "id": "fifa_french",
+    "id": "fideletv_us",
+    "nom": "Fidele TV",
+    "logo": "https://i.ibb.co/YtBZ0Lc/FIDELE-TV.png",
+    "url": "https://59d39900ebfb8.streamlock.net/FIDELETV/FIDELETV/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "fifaplus_uk",
     "nom": "FIFA+ French",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/FIFA%2B_(2025).svg/960px-FIFA%2B_(2025).svg.png",
     "url": "https://37b4c228.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmFrdXRlblRWLWZyX0ZJRkFQbHVzRnJlbmNoX0hMUw/playlist.m3u8",
@@ -800,31 +1296,79 @@
     "categorie": "Sportif"
   },
   {
-    "id": "filinfo_tv",
+    "id": "filinfotv_bf",
     "nom": "Filinfo TV",
     "logo": "https://i.imgur.com/KG93Tvn.png",
     "url": "https://d2iqjnqfr8pv3b.cloudfront.net/out/v1/d09d2fc718404cd8bccd3eba2444dd70/index.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "for_you_tv",
+    "id": "foryoutv_cm",
     "nom": "For You TV",
     "logo": "https://i.imgur.com/1oMboXL.png",
     "url": "https://stream.az-multimedia.com:3325/live/foryoutvlive.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "france_24_french",
+    "id": "france2_fr",
+    "nom": "France 2",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/France_2_2018.svg/960px-France_2_2018.svg.png",
+    "url": "http://69.64.57.208/france2/mono.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "france3_fr",
+    "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"General\",France 3",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/France_3_2018.svg/960px-France_3_2018.svg.png",
+    "url": "http://85.14.32.26:8800/udp/239.100.10.144:5000",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "france4_fr",
+    "nom": "France 4 HD",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/France_4_2018.svg/960px-France_4_2018.svg.png",
+    "url": "https://sv1.data-stream.top/8c0a287e56a6e1843143904778be3775b4d3edd4fba4ffcc3f72638c7a71d4d4/hls/francetv4.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "france5_fr",
+    "nom": "France 5",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/France_5_2018.svg/960px-France_5_2018.svg.png",
+    "url": "http://69.64.57.208/france5/mono.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "france24_fr",
     "nom": "France 24 French",
     "logo": "https://i.imgur.com/u8N6uoj.png",
     "url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "francophonie24",
+    "id": "franceinter_fr",
+    "nom": "France Inter",
+    "logo": "https://i.imgur.com/MgBeU52.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/franceinter.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "franceinfo_fr",
+    "nom": "Franceinfo",
+    "logo": "https://i.imgur.com/eITXz6A.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/franceinfotv.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "francophonie24_fr",
     "nom": "Francophonie24",
     "logo": "https://i.imgur.com/uM1v1sd.png",
     "url": "https://5421175365ea3.streamlock.net/live/smil:switch.smil/playlist.m3u8",
@@ -832,7 +1376,15 @@
     "categorie": "Documentaire"
   },
   {
-    "id": "fun_vision",
+    "id": "funradio_fr",
+    "nom": "Fun Radio",
+    "logo": "https://i.imgur.com/wgxuYsQ.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/funradiofr.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "funvision_be",
     "nom": "Fun Vision",
     "logo": "https://i.imgur.com/AhkKr7Y.png",
     "url": "https://funradiovisionhd.vedge.infomaniak.com/livecast/ik:funradiovisionhd/manifest.m3u8",
@@ -840,7 +1392,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "fusion_tv",
+    "id": "fusiontv_mq",
     "nom": "FUSION TV",
     "logo": "https://i.imgur.com/WMrYEgH.png",
     "url": "https://edge20.vedge.infomaniak.com/livecast/ik:fusiontv/manifest.m3u8",
@@ -848,7 +1400,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "generations_tv",
+    "id": "generationstv_fr",
     "nom": "Generations TV",
     "logo": "https://i.imgur.com/NgBrDMe.png",
     "url": "https://event.vedge.infomaniak.com/livecast/ik:generation-tv/manifest.m3u8",
@@ -856,7 +1408,15 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "gms_tv",
+    "id": "geopolistv_cd",
+    "nom": "Géopolis TV",
+    "logo": "https://i.imgur.com/WzGAIYe.jpg",
+    "url": "https://tnt-television.com/Geopolis_tv/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "gmstv_sn",
     "nom": "GMS TV",
     "logo": "https://i.imgur.com/Ue02CIH.png",
     "url": "https://acasmedia6.acangroup.org/gmstv/gmstv_output/playlist.m3u8",
@@ -864,7 +1424,23 @@
     "categorie": "Général"
   },
   {
-    "id": "guide_love_tv",
+    "id": "gong_fr",
+    "nom": "Gong",
+    "logo": "https://i.imgur.com/lA9UFMG.png",
+    "url": "https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/1080p-vtt/index.m3u8",
+    "langue": "français",
+    "categorie": "Animation"
+  },
+  {
+    "id": "gtv_gh",
+    "nom": "GTV",
+    "logo": "https://i.imgur.com/5cFLWKO.png",
+    "url": "https://g2qd3exjy7an-hls-live.5centscdn.com/gtvghana/ghanaweb.stream/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "guidelovetv_ci",
     "nom": "Guide Love TV",
     "logo": "https://i.ibb.co/9gS2Y4G/guidelove-logo.png",
     "url": "https://video1.getstreamhosting.com:1936/8056/8056/playlist.m3u8",
@@ -872,15 +1448,23 @@
     "categorie": "Style de vie"
   },
   {
-    "id": "haiti_news_channel",
+    "id": "gulli_fr",
+    "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"Kids\",Gulli",
+    "logo": "https://i.imgur.com/kqYssbW.png",
+    "url": "http://99.27.51.147:8080/Gulli/index.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "haitinewschannel_ht",
     "nom": "Haiti News Channel",
     "logo": "https://m.media-amazon.com/images/I/51bJg+c7vRL.png",
     "url": "https://cdn.haititivi.com/website/haitinews/index.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "handicap_tv_france",
+    "id": "handicaptv_fr",
     "nom": "HANDICAP TV France",
     "logo": "https://i.imgur.com/vXbAeD0.png",
     "url": "https://srv.webtvmanager.fr:3697/stream/play.m3u8",
@@ -888,15 +1472,15 @@
     "categorie": "Style de vie"
   },
   {
-    "id": "hc2_tv",
+    "id": "hc2tv_bj",
     "nom": "HC2 TV",
     "logo": "https://i.imgur.com/CV38429.jpeg",
     "url": "https://stream.hc2tv.bj/2/live/stream.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "helene_et_les_garcons",
+    "id": "heleneetlesgarcons_us",
     "nom": "Hélène et les garçons",
     "logo": "https://i.imgur.com/EjjzjF9.png",
     "url": "https://jmp2.uk/plu-604f8de01b479400078fb1e7.m3u8",
@@ -904,7 +1488,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "hmi_promz_news",
+    "id": "hmipromznews_us",
     "nom": "HMI PROMZ NEWS",
     "logo": "https://i.imgur.com/gwPaw3v.png",
     "url": "https://video1.getstreamhosting.com:1936/8326/8326/playlist.m3u8",
@@ -912,31 +1496,135 @@
     "categorie": "Musique"
   },
   {
-    "id": "i24news_french",
+    "id": "i24newsfrench_il",
     "nom": "i24NEWS French",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/LOGO_i24NEWS.png/960px-LOGO_i24NEWS.png",
     "url": "https://i24newsfrench-cdn.encoders.immergo.tv/master.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "ici_rdi",
+    "id": "icarly_de",
+    "nom": "iCarly TV",
+    "logo": "https://images.pluto.tv/channels/5e8b580a233dc90007f0cb9d/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-5f8ecc7aa44d9c00081fca29.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "cbftdt_ca",
+    "nom": "Ici Radio-Canada Télé [Geo-blocked]",
+    "logo": "https://i.imgur.com/pFCJGj4.png",
+    "url": "https://rcavlive-dai.akamaized.net/hls/live/696614/cancbftprem/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cbuftdt_ca",
+    "nom": "Ici Radio-Canada Télé Colombie-Britannique/Yukon (CBUFT-DT) [Geo-blocked]",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Current_Logo_of_Ici_Radio-Canada_T%C3%A9l%C3%A9_%282016-present%29.svg/960px-Current_Logo_of_Ici_Radio-Canada_T%C3%A9l%C3%A9_%282016-present%29.svg.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/704017/cancbuft/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cjbrdt_ca",
+    "nom": "Ici Radio-Canada Télé Est du Québec (CJBR-DT) [Geo-blocked]",
+    "logo": "https://i.imgur.com/1B3d8Jc.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/704024/cancjbr/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "ckshdt_ca",
+    "nom": "Ici Radio-Canada Télé Estrie (CKSH-DT) [Geo-blocked]",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/SRC-TV.svg/960px-SRC-TV.svg.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/704016/cancksh/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cbwftdt_ca",
+    "nom": "Ici Radio-Canada Télé Manitoba (CBWFT-DT) [Geo-blocked]",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/ICI_Manitoba_logo_2018.svg/960px-ICI_Manitoba_logo_2018.svg.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/704018/cancbwft/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cktmdt_ca",
+    "nom": "Ici Radio-Canada Télé Mauricie/Centre-du-Québec (CKTM-DT) [Geo-blocked]",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/SRC-TV.svg/960px-SRC-TV.svg.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/704021/cancktm/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cblftdt_ca",
+    "nom": "Ici Radio-Canada Télé Ontario (CBLFT-DT) [Geo-blocked]",
+    "logo": "https://i.imgur.com/1f798e8.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/704022/cancblft/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cboftdt_ca",
+    "nom": "Ici Radio-Canada Télé Ottawa/Gatineau (CBOFT-DT) [Geo-blocked]",
+    "logo": "https://i.imgur.com/373Y8Py.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/664046/cancboft/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cbvtdt_ca",
+    "nom": "Ici Radio-Canada Télé Québec (CBVT-DT) [Geo-blocked]",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Current_Logo_of_Ici_Radio-Canada_T%C3%A9l%C3%A9_%282016-present%29.svg/960px-Current_Logo_of_Ici_Radio-Canada_T%C3%A9l%C3%A9_%282016-present%29.svg.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/664045/cancbvt/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cktvdt_ca",
+    "nom": "Ici Radio-Canada Télé Saguenay/Lac-St-Jean (CKTV-DT) [Geo-blocked]",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/SRC-TV.svg/960px-SRC-TV.svg.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/704023/cancktv/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cbkftdt_ca",
+    "nom": "Ici Radio-Canada Télé Saskatchewan (CBKFT-DT) [Geo-blocked]",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ICI_Saskatchewan_logo_2018.svg/960px-ICI_Saskatchewan_logo_2018.svg.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/704019/cancbkft/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "cbaftdt_ca",
+    "nom": "Ici Radio-Canada Télé Terre-Neuve-et-Labrador (CBAFT-DT) [Geo-blocked]",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/ICI_Acadie_logo_2018.svg/960px-ICI_Acadie_logo_2018.svg.png",
+    "url": "https://rcavlive.akamaized.net/hls/live/704014/cancbaft/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "icirdi_ca",
     "nom": "ICI RDI",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/ICI_RDI_logo.svg/960px-ICI_RDI_logo.svg.png",
     "url": "https://rcavlive.akamaized.net/hls/live/704025/xcanrdi/master.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "icone_tv",
+    "id": "iconetv_bj",
     "nom": "ICONE TV",
     "logo": "https://i.imgur.com/Aws11wj.jpeg",
     "url": "https://lecteur.iconetv.bj/hls/stream.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "identite_tele_caraibes",
+    "id": "identitetelecaraibes_mq",
     "nom": "Identité Télé Caraïbes",
     "logo": "https://i.imgur.com/Atsf6Cd.png",
     "url": "https://vdo2.pro-fhi.net:3769/stream/play.m3u8",
@@ -944,7 +1632,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "iltv",
+    "id": "iltv_fr",
     "nom": "ILTV",
     "logo": "https://i.imgur.com/fVhrJHK.png",
     "url": "https://live.creacast.com/iltv/smil:iltv.smil/playlist.m3u8",
@@ -952,7 +1640,7 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "impact_tv",
+    "id": "impacttv_bf",
     "nom": "Impact TV",
     "logo": "https://i.imgur.com/nynh5LY.png",
     "url": "https://edge11.vedge.infomaniak.com/livecast/ik:impacttv-2/manifest.m3u8",
@@ -960,15 +1648,15 @@
     "categorie": "Religieux"
   },
   {
-    "id": "inazuma_eleven",
+    "id": "inazumaeleven_us",
     "nom": "Inazuma Eleven",
     "logo": "https://i.imgur.com/pLv0T3D.png",
     "url": "https://jmp2.uk/plu-632c6df43d2bc5000751f621.m3u8",
     "langue": "français",
-    "categorie": "Animation"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "instant_saga",
+    "id": "instantsaga_us",
     "nom": "Instant Saga",
     "logo": "https://i.imgur.com/PMpwaQN.png",
     "url": "https://jmp2.uk/plu-60549e98061b5f000776866a.m3u8",
@@ -976,7 +1664,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "investigation_by_pluto_tv",
+    "id": "investigationbyplutotv_de",
     "nom": "Investigation by Pluto TV",
     "logo": "https://images.pluto.tv/channels/6683cd2fca74680008772545/colorLogoPNG_1747399523793.png",
     "url": "https://jmp2.uk/plu-6683cd2fca74680008772545.m3u8",
@@ -984,7 +1672,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "iqraa_africa_europe",
+    "id": "iqraaafricaeurope_sa",
     "nom": "Iqraa Africa & Europe",
     "logo": "https://i.imgur.com/nUlZvSe.png",
     "url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv1/playlist.m3u8",
@@ -992,7 +1680,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "iqraa_quran",
+    "id": "iqraaquran_sa",
     "nom": "Iqraa Quran",
     "logo": "https://i.imgur.com/HPVsIa4.png",
     "url": "https://playlist.fasttvcdn.com/pl/dlkqw1ftuvuuzkcb4pxdcg/Iqraafasttv2/playlist.m3u8",
@@ -1000,7 +1688,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "ivoire_channel",
+    "id": "ivoirechannel_ci",
     "nom": "Ivoire Channel",
     "logo": "https://i.imgur.com/gKbNqQv.png",
     "url": "https://video1.getstreamhosting.com:1936/8244/8244/playlist.m3u8",
@@ -1008,7 +1696,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "jag",
+    "id": "jag_de",
     "nom": "JAG",
     "logo": "https://images.pluto.tv/channels/65ccd26060eb870008db95fc/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-65ccd26060eb870008db95fc.m3u8",
@@ -1016,7 +1704,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "japanim_tv",
+    "id": "japanimtv_be",
     "nom": "Japanim TV",
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
     "url": "https://foxkidstv.be:3369/stream/play.m3u8",
@@ -1024,7 +1712,15 @@
     "categorie": "Animation"
   },
   {
-    "id": "just_tattoo_of_us",
+    "id": "jostvhd_cg",
+    "nom": "JOS TV HD",
+    "logo": "https://i.imgur.com/Ai9kpuu.jpeg",
+    "url": "https://stream.berosat.live:19360/jos-tv-stream/jos-tv-stream.m3u8",
+    "langue": "français",
+    "categorie": "Culture"
+  },
+  {
+    "id": "justtattooofus_de",
     "nom": "Just Tattoo of Us",
     "logo": "https://images.pluto.tv/channels/6304f20c941c5d00089634e7/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-6304f20c941c5d00089634e7.m3u8",
@@ -1032,15 +1728,23 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "kajou_tv",
+    "id": "kabacktv_gn",
+    "nom": "Kaback TV",
+    "logo": "https://i.imgur.com/oIe98p4.png",
+    "url": "https://guineetvdirect.online:3842/live/kabacktvlive.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "kajoutv_us",
     "nom": "Kajou TV",
     "logo": "https://i.imgur.com/2XzghdT.png",
     "url": "https://video1.getstreamhosting.com:1936/8055/8055/playlist.m3u8",
     "langue": "français",
-    "categorie": "Documentaire"
+    "categorie": "Culture"
   },
   {
-    "id": "kalac_tv",
+    "id": "kalactv_gn",
     "nom": "Kalac TV",
     "logo": "https://i.imgur.com/FgKJiHZ.png",
     "url": "https://edge13.vedge.infomaniak.com/livecast/ik:kalactv/chunklist_w280736538.m3u8",
@@ -1048,7 +1752,15 @@
     "categorie": "Général"
   },
   {
-    "id": "kassouatv",
+    "id": "kanal9_ch",
+    "nom": "Kanal 9 auf Deutsch",
+    "logo": "https://i.imgur.com/TNciMh2.png",
+    "url": "https://edge21.vedge.infomaniak.com/livecast/ik:livesd2/manifest.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "kassouatv_bj",
     "nom": "KassouaTV",
     "logo": "https://i.imgur.com/EfX3HNG.png",
     "url": "https://playtv4k.live/live/kassouatv/index.m3u8",
@@ -1056,15 +1768,87 @@
     "categorie": "Général"
   },
   {
-    "id": "kozoom_tv",
-    "nom": "KOZOOM TV",
+    "id": "kc2_rw",
+    "nom": "KC2",
+    "logo": "https://i.imgur.com/PsYPzNc.png",
+    "url": "http://197.243.19.131:1935/kc2/kc2/chunklist.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "kemettv_cm",
+    "nom": "Kemet TV",
+    "logo": "https://i.imgur.com/NZ0YqOb.jpeg",
+    "url": "https://kemettv.cm/memfs/4e7fb105-9f92-4e8d-a7cd-09923f17a577.m3u8",
+    "langue": "français",
+    "categorie": "Culture"
+  },
+  {
+    "id": "kin24_cd",
+    "nom": "Kin24",
+    "logo": "https://i.imgur.com/Lak10Wo.png",
+    "url": "http://51.254.199.122:8080/kin24/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "kozoomtv_fr",
+    "nom": "like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\" group-title=\"Sports\",KOZOOM TV",
     "logo": "https://i.imgur.com/M1Ee79b.png",
     "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/kozoom-tv/manifest.m3u8?ads.vf=CAJPqH6STD0",
     "langue": "français",
     "categorie": "Sportif"
   },
   {
-    "id": "laura_dave_media_tv",
+    "id": "kto_fr",
+    "nom": "KTO",
+    "logo": "https://i.imgur.com/EY6TsdV.png",
+    "url": "http://41.205.77.102/KTO/index.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "lequipe_fr",
+    "nom": "L'Equipe",
+    "logo": "https://i.imgur.com/t35zhM9.png",
+    "url": "https://dshn8inoshngm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gac2i63dmu8b7/LEquipe_FR.m3u8",
+    "langue": "français",
+    "categorie": "Sportif"
+  },
+  {
+    "id": "latrois_be",
+    "nom": "La Trois",
+    "logo": "https://i.imgur.com/jMs4h9F.png",
+    "url": "http://193.111.198.85:8589/stream/mstv/rtbflatroislive26/master.m3u8?u=Oleg&p=967e33767f592e1aaf3d4019f38f380bf784e113b193d89c412d047059d6300d",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "laune_be",
+    "nom": "La Une",
+    "logo": "https://i.imgur.com/jMwZp7z.png",
+    "url": "http://193.111.198.85:8589/stream/mstv/rtbflaunelive26/master.m3u8?u=Oleg&p=967e33767f592e1aaf3d4019f38f380bf784e113b193d89c412d047059d6300d",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "lavoixduroutiertv_bj",
+    "nom": "La Voix du Routier TV",
+    "logo": "https://i.imgur.com/mCt6AI7.png",
+    "url": "https://webtv.lavoixduroutiertv.bj/hls/stream.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "laayounetv_ma",
+    "nom": "Laayoune TV",
+    "logo": "https://www.snrt.ma/sites/default/files/2023-04/laayoune.png",
+    "url": "https://snrtworker.kharazbelaid.workers.dev/?id=laayoune.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "lauradavemediatv_cm",
     "nom": "Laura Dave Media TV",
     "logo": "https://i.imgur.com/zzG1S2n.png",
     "url": "https://streaming.lauradavemedia.com/ldm/index.m3u8",
@@ -1072,7 +1856,7 @@
     "categorie": "Général"
   },
   {
-    "id": "lbfd_rtv",
+    "id": "lbfdrtv_cd",
     "nom": "LBFD RTV",
     "logo": "https://i.imgur.com/buMvLJc.jpeg",
     "url": "https://tnt-television.com/LBFD_RTV/index.m3u8",
@@ -1080,7 +1864,23 @@
     "categorie": "Religieux"
   },
   {
-    "id": "le_figaro_idf",
+    "id": "lci_fr",
+    "nom": "LCI HD",
+    "logo": "https://i.imgur.com/DED8EXs.png",
+    "url": "http://151.80.18.177:86/LCI_HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lcn_ca",
+    "nom": "LCN [Geo-blocked]",
+    "logo": "https://i.imgur.com/iKDLgOG.png",
+    "url": "https://tvalive.akamaized.net/hls/live/2014213/tvan01/tvan01.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lefigarotviledefrance_fr",
     "nom": "Le Figaro IDF",
     "logo": "https://i.imgur.com/a8RuRUQ.png",
     "url": "https://figarotv-live.freecaster.com/live/freecaster/figarotv.m3u8",
@@ -1088,7 +1888,15 @@
     "categorie": "Général"
   },
   {
-    "id": "le_miracle_de_l_amour",
+    "id": "lemediatv_fr",
+    "nom": "Le Media TV",
+    "logo": "https://i.imgur.com/OK20oyl.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/lemedia.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lemiracledelamour_us",
     "nom": "Le miracle de l'amour",
     "logo": "https://i.imgur.com/3Xz4hjD.png",
     "url": "https://jmp2.uk/plu-60549c238c3f21000753d3e0.m3u8",
@@ -1096,15 +1904,39 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "legislative_assembly_of_ontario",
+    "id": "lemondeen24h_cd",
+    "nom": "Le Monde en 24h",
+    "logo": "https://i.imgur.com/2igwi7g.png",
+    "url": "https://stream.berosat.live/hls/monde24h-tv-index/monde24h-tv-index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lenouveaumanagertv_bj",
+    "nom": "Le Nouveau Manager TV",
+    "logo": "https://i.imgur.com/pEoOtEf.jpeg",
+    "url": "https://lnmlive.com/live/lnmtv.m3u8",
+    "langue": "français",
+    "categorie": "Entreprise"
+  },
+  {
+    "id": "legislativeassemblyofontario_ca",
     "nom": "Legislative Assembly of Ontario",
     "logo": "https://i.imgur.com/n24MrsX.png",
     "url": "https://temp3.isilive.ca/live/_definst_/ontla/house-en/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "les_annees_fac",
+    "id": "lemanbleu_ch",
+    "nom": "Léman Bleu",
+    "logo": "https://i.imgur.com/6ijbSTr.png",
+    "url": "http://livevideo.infomaniak.com/streaming/livecast/naxoo/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lesanneesfac_us",
     "nom": "Les Années fac",
     "logo": "https://i.imgur.com/M1OjaB0.png",
     "url": "https://jmp2.uk/plu-60afae68a7fc50000737186d.m3u8",
@@ -1112,7 +1944,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "les_filles_d_a_cote",
+    "id": "lesfillesdacote_us",
     "nom": "Les filles d'à côté",
     "logo": "https://i.imgur.com/dxipSaQ.png",
     "url": "https://jmp2.uk/plu-60549d97cd7b090007c73314.m3u8",
@@ -1120,7 +1952,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "les_nouveaux_detectives",
+    "id": "lesnouveauxdetectives_us",
     "nom": "Les Nouveaux Detectives",
     "logo": "https://i.imgur.com/ego8ozn.png",
     "url": "https://jmp2.uk/plu-5f8edb6df1ebb800072edf10.m3u8",
@@ -1128,7 +1960,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "littoral_fm",
+    "id": "littoralfmtv_fr",
     "nom": "Littoral FM",
     "logo": "https://i.imgur.com/DCZKAQ1.png",
     "url": "https://live.creacast.com/littoralfm-ch1/stream/playlist.m3u8",
@@ -1136,7 +1968,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "lmtv_french",
+    "id": "lmtvfrench_ci",
     "nom": "LMTV French",
     "logo": "https://i.imgur.com/FVnq2cQ.png",
     "url": "https://video1.getstreamhosting.com:1936/8282/8282/playlist.m3u8",
@@ -1144,7 +1976,15 @@
     "categorie": "Religieux"
   },
   {
-    "id": "lollywood_hd_tv",
+    "id": "ln24_be",
+    "nom": "LN24",
+    "logo": "https://i.imgur.com/1EkZRwn.png",
+    "url": "https://live-ln24.digiteka.com/1911668011/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lollywoodhdtv_cd",
     "nom": "Lollywood HD TV",
     "logo": "https://i.imgur.com/fQhrsdr.png",
     "url": "https://stream.berosat.live/hls/lollywood-hd/lollywood-hd.m3u8",
@@ -1152,7 +1992,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "louga_tv",
+    "id": "lougatv_sn",
     "nom": "Louga TV",
     "logo": "https://i.ibb.co/xXZ5kFy/unnamed.jpg",
     "url": "https://stream.sen-gt.com/Mbacke/myStream/playlist.m3u8",
@@ -1160,7 +2000,7 @@
     "categorie": "Général"
   },
   {
-    "id": "louis_la_brocante",
+    "id": "louislabrocante_us",
     "nom": "Louis La Brocante",
     "logo": "https://i.imgur.com/I1w7rFb.png",
     "url": "https://jmp2.uk/plu-5f8ed6d569d2d4000864a976.m3u8",
@@ -1168,7 +2008,39 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "macgyver",
+    "id": "luxetv_lu",
+    "nom": "Luxe TV",
+    "logo": "https://i.imgur.com/24ehonx.png",
+    "url": "http://103.154.3.101:5001/live/1736.m3u8",
+    "langue": "français",
+    "categorie": "Style de vie"
+  },
+  {
+    "id": "lyoncapitaletv_fr",
+    "nom": "Lyon Capitale TV",
+    "logo": "https://i.imgur.com/4WfnEaj.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/lyoncapitale.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "m6_fr",
+    "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"Entertainment\",M6",
+    "logo": "https://i.imgur.com/7GVp3fW.png",
+    "url": "http://99.27.51.147:8080/M6/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "m6music_fr",
+    "nom": "M6 Music",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/c9/M6_Music_%282012%29.png",
+    "url": "https://test.946985.filegear-sg.me/proxy/803c517b325bfafc",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "macgyver_de",
     "nom": "MacGyver",
     "logo": "https://images.pluto.tv/channels/6245ccd0c6cdb800074632e4/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-6245ccd0c6cdb800074632e4.m3u8",
@@ -1176,7 +2048,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "madras_fm_tv",
+    "id": "madrasfmtv_gp",
     "nom": "Madras FM TV",
     "logo": "https://i.imgur.com/spGg1CZ.png",
     "url": "https://edge12.vedge.infomaniak.com/livecast/ik:madrasfmtv/manifest.m3u8",
@@ -1184,7 +2056,15 @@
     "categorie": "Musique"
   },
   {
-    "id": "mana_eglise_online",
+    "id": "maisontravauxtv_fr",
+    "nom": "Maison & Travaux TV",
+    "logo": "https://i.imgur.com/uYpc6nE.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/maisonettravaux.m3u8",
+    "langue": "français",
+    "categorie": "Style de vie"
+  },
+  {
+    "id": "manaegliseonline_pt",
     "nom": "Maná Église Online",
     "logo": "https://i.imgur.com/xQYly8O.png",
     "url": "https://w2.manasat.com/eglise-online/smil:eglise-online.smil/playlist.m3u8",
@@ -1192,7 +2072,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "matele",
+    "id": "matele_be",
     "nom": "MaTele",
     "logo": "https://i.imgur.com/rw72POr.png",
     "url": "https://live.matele.be/hls/live.m3u8",
@@ -1200,7 +2080,7 @@
     "categorie": "Général"
   },
   {
-    "id": "maxtv_dieu_tv",
+    "id": "maxtv_ch",
     "nom": "MaxTV/Dieu TV",
     "logo": "https://i.imgur.com/13PjEk8.png",
     "url": "https://cdn.katapy.io/cache/stream/katapytv/dieu/playlist.m3u8",
@@ -1208,23 +2088,71 @@
     "categorie": "Général"
   },
   {
-    "id": "medi1tv_afrique",
+    "id": "mcmtop_fr",
+    "nom": "MCM Top",
+    "logo": "https://i.imgur.com/EVtWQLd.png",
+    "url": "http://rezofoot.tv/MCM/index.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "mcmtop_ru",
+    "nom": "MCM Top",
+    "logo": "https://i.imgur.com/EVtWQLd.png",
+    "url": "http://46.32.176.50/mcmtop/index.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "mdl_fr",
+    "nom": "MDL",
+    "logo": "https://i.imgur.com/REN30bx.png",
+    "url": "http://tv.mondeduloisir.fr:1935/tixtv/smil:web.smil/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "medi1tvafrique_ma",
     "nom": "Medi1TV Afrique",
     "logo": "https://i.imgur.com/a20DHnj.png",
     "url": "https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-afrique_tm7tu45/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "medi_1_tv_maghreb",
+    "id": "medi1tvmaghreb_ma",
     "nom": "Medi 1 TV Maghreb",
     "logo": "https://i.imgur.com/F5OFQsp.jpeg",
     "url": "https://cdn.live.easybroadcast.io/abr_corp/83_medi1tv-maghreb_jnbspmg/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "miracle_tv",
+    "id": "melody_fr",
+    "nom": "Melody",
+    "logo": "https://i.imgur.com/9GVyQ6x.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/radiokaraoke.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "mensuptv_fr",
+    "nom": "Men's UP TV",
+    "logo": "https://i.imgur.com/5BZwRFs.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/mensuptv.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "mikubatv_cd",
+    "nom": "Mikuba TV",
+    "logo": "https://i.imgur.com/yJehCQM.png",
+    "url": "http://51.254.199.122:8080/MIKUBATV/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "miracletvplus_ci",
     "nom": "Miracle TV+",
     "logo": "https://i.imgur.com/AQ60OYO.png",
     "url": "https://strhlslb01.streamakaci.tv/str_mtv_mtv/str_mtv_multi/playlist.m3u8",
@@ -1232,7 +2160,15 @@
     "categorie": "Religieux"
   },
   {
-    "id": "mission_impossible",
+    "id": "mishapivoicetv_cd",
+    "nom": "Mishapi Voice TV",
+    "logo": "https://i.imgur.com/GfOy2ok.png",
+    "url": "https://tnt-television.com/MISHAPI-STREAM1/index.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "missionimpossible_de",
     "nom": "Mission Impossible",
     "logo": "https://images.pluto.tv/channels/634fe5afece2e60007c9d8b8/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-6671b21ffc3a46000857fe75.m3u8",
@@ -1240,7 +2176,31 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "mta1_world",
+    "id": "monacoinfo_mc",
+    "nom": "Monaco Info",
+    "logo": "https://i.imgur.com/dIrKYH7.png",
+    "url": "https://webtv.monacoinfo.com/live/prod/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "montrealgreektv_ca",
+    "nom": "Montreal Greek TV",
+    "logo": "https://i.imgur.com/Y5YnUit.png",
+    "url": "http://live.greektv.ca/hls1/greektv.m3u8",
+    "langue": "français",
+    "categorie": "Culture"
+  },
+  {
+    "id": "mouvtv_fr",
+    "nom": "Mouv' TV",
+    "logo": "https://i.imgur.com/64nzKEu.jpg",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/mouv.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "mta1world_uk",
     "nom": "MTA1 World",
     "logo": "https://i.imgur.com/bYiRfAg.png",
     "url": "https://chlivemta1.akamaized.net/hls/live/2008145/mta1/playlist.m3u8",
@@ -1248,7 +2208,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "mta2_europe",
+    "id": "mta2europe_uk",
     "nom": "MTA2 Europe",
     "logo": "https://i.imgur.com/aVts0sz.png",
     "url": "https://chlivemta1.akamaized.net/hls/live/2008145/mta2/playlist.m3u8",
@@ -1256,7 +2216,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "mta4_africa",
+    "id": "mta4africa_uk",
     "nom": "MTA4 Africa",
     "logo": "https://i.imgur.com/lmVeQQX.png",
     "url": "https://chlivemta.akamaized.net/hls/live/2010555/mtaafrica1/playlist.m3u8",
@@ -1264,7 +2224,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "mta5_africa",
+    "id": "mta5africa_uk",
     "nom": "MTA5 Africa",
     "logo": "https://i.imgur.com/9Cobb2i.png",
     "url": "https://chlivemta.akamaized.net/hls/live/2010555/mtaafrica2/playlist.m3u8",
@@ -1272,7 +2232,15 @@
     "categorie": "Religieux"
   },
   {
-    "id": "mtv_classics",
+    "id": "mtv_fr",
+    "nom": "MTV",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png",
+    "url": "http://41.205.70.146/MTVFRANCE/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "mtvclassics_de",
     "nom": "MTV CLASSICS",
     "logo": "https://images.pluto.tv/channels/5f92b56a367e170007cd43f4/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-5f92b56a367e170007cd43f4.m3u8",
@@ -1280,15 +2248,31 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "my_gospel_tv",
+    "id": "museumtvfrench_fr",
+    "nom": "Museum TV [Geo-blocked]",
+    "logo": "https://i.imgur.com/WbjURLo.png",
+    "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01492-secomsasmediart-museumtv-eng-samsungit/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Culture"
+  },
+  {
+    "id": "mygospeltv_fr",
     "nom": "My Gospel TV",
     "logo": "https://mygospeltv.fr/wp-content/uploads/2022/05/MY-GODPEL-TV-e1652783900988.png",
     "url": "https://streamtv.cmediahosthosting.net:3046/live/mygospeltvlive.m3u8",
     "langue": "français",
-    "categorie": "Religieux"
+    "categorie": "Musique"
   },
   {
-    "id": "myzen_tv",
+    "id": "mytvchannel_cm",
+    "nom": "My TV Channel",
+    "logo": "https://i.imgur.com/vh2373L.png",
+    "url": "http://connectiktv.ddns.net:5000/mytvchannel/@mytvchannel/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "myzentv_fr",
     "nom": "MyZen TV",
     "logo": "https://i.imgur.com/fIi8o0C.png",
     "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01255-secomcofites-my-myzen-en-plex/playlist.m3u8",
@@ -1296,7 +2280,23 @@
     "categorie": "Style de vie"
   },
   {
-    "id": "nature_time_france",
+    "id": "nationalgeographicwild_fr",
+    "nom": "National Geographic Wild",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/National_Geographic_Wild_logo.svg/960px-National_Geographic_Wild_logo.svg.png",
+    "url": "http://41.205.77.102/NATGEO-WILD/index.m3u8",
+    "langue": "français",
+    "categorie": "Documentaire"
+  },
+  {
+    "id": "naturaltv_tr",
+    "nom": "Natural TV",
+    "logo": "https://i.imgur.com/rfcJ674.png",
+    "url": "http://broadcasttr.com:1935/naturaltv/bant1/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Culture"
+  },
+  {
+    "id": "naturetime_ca",
     "nom": "Nature Time France",
     "logo": "https://i.imgur.com/72JmyjM.png",
     "url": "https://bamusa-naturetime-emea-fra-rakuten.amagi.tv/playlist.m3u8",
@@ -1304,7 +2304,7 @@
     "categorie": "Documentaire"
   },
   {
-    "id": "nautical_channel",
+    "id": "nauticalchannel_it",
     "nom": "Nautical Channel",
     "logo": "https://i.imgur.com/2ByDyzL.png",
     "url": "https://a-cdn.klowdtv.com/live2/nautical_720p/playlist.m3u8",
@@ -1312,15 +2312,79 @@
     "categorie": "Sportif"
   },
   {
-    "id": "novo_comedy",
-    "nom": "Novo Comedy",
+    "id": "nazalishdtv_cg",
+    "nom": "Nazali's HDTV",
+    "logo": "https://i.imgur.com/SrdRtqn.png",
+    "url": "http://194.163.135.238:5080/WebRTCApp/streams/590264631485484547459082.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "nci_ci",
+    "nom": "NCI",
+    "logo": "https://i.imgur.com/I3pv69r.png",
+    "url": "https://cs2.push2stream.com/NCI-DVR/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "netalkoletv_ht",
+    "nom": "NETALKOLE TV",
+    "logo": "https://i.imgur.com/SdVrpzY.png",
+    "url": "https://watch.haitilive.net/naktvhd/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "nickelodeon_fr",
+    "nom": "Nickelodeon",
+    "logo": "https://i.imgur.com/E84jnP8.png",
+    "url": "http://151.80.18.177:86/Nickelodeon_FR/index.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "nickelodeonjunior_fr",
+    "nom": "Nickelodeon Junior",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Nickelodeon_Junior.png/960px-Nickelodeon_Junior.png",
+    "url": "http://151.80.18.177:86/Nickelodeon_Junior/index.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "nietatv_ml",
+    "nom": "Nieta TV",
+    "logo": "https://i.imgur.com/5RoXTaN.png",
+    "url": "http://69.64.57.208/nieta/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "novelachannel_ci",
+    "nom": "Novela Channel",
+    "logo": "https://i.ibb.co/V3pfjfB/novela-channel-telepack.jpg",
+    "url": "https://video1.getstreamhosting.com:1936/8284/8284/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "novocomedy_fr",
+    "nom": "like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\" group-title=\"Comedy\",Novo Comedy",
     "logo": "https://novocomedy.com/wp-content/uploads/LogoNovocomedy.png",
     "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/novo-comedy/video.m3u8?ads.vf=CMRSFvusYbe",
     "langue": "français",
     "categorie": "Divertissement"
   },
   {
-    "id": "ntv_afrique",
+    "id": "nrjhits_fr",
+    "nom": "NRJ Hits",
+    "logo": "https://i.imgur.com/2xDVwOh.png",
+    "url": "https://test.946985.filegear-sg.me/proxy/a23981548880f405",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "ntv_ci",
     "nom": "NTV Afrique",
     "logo": "https://i.imgur.com/qqLXdHz.png",
     "url": "https://strhlslb01.streamakaci.tv/str_ntv_ntv/str_ntv_ntv_multi/playlist.m3u8",
@@ -1328,7 +2392,7 @@
     "categorie": "Général"
   },
   {
-    "id": "numerica_tv",
+    "id": "numericatv_cd",
     "nom": "Numerica TV",
     "logo": "https://i.imgur.com/ZUPJJ59.png",
     "url": "https://tnt-television.com/NUMERICA/index.m3u8",
@@ -1336,7 +2400,7 @@
     "categorie": "Général"
   },
   {
-    "id": "nw_economie",
+    "id": "nweconomie_tg",
     "nom": "NW Economie",
     "logo": "https://i.imgur.com/OmlFQa8.png",
     "url": "https://hls.newworldtv.com/nw-economie/video/live.m3u8",
@@ -1344,15 +2408,15 @@
     "categorie": "Entreprise"
   },
   {
-    "id": "nw_info_fr",
+    "id": "nwinfo_tg",
     "nom": "NW Info FR",
     "logo": "https://i.imgur.com/UDEY91v.png",
     "url": "https://hls.newworldtv.com/nw-info/video/live.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "nw_magazine",
+    "id": "nwmagazine_tg",
     "nom": "NW Magazine",
     "logo": "https://i.imgur.com/RZNJZYN.png",
     "url": "https://hls.newworldtv.com/nw-magazine/video/live.m3u8",
@@ -1360,7 +2424,31 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "one_piece",
+    "id": "nwsport1_tg",
+    "nom": "NW Sport 1",
+    "logo": "https://i.imgur.com/gIR8iap.png",
+    "url": "http://41.205.70.146/BEINSPORT1/index.m3u8",
+    "langue": "français",
+    "categorie": "Sportif"
+  },
+  {
+    "id": "nwsport2_tg",
+    "nom": "NW Sport 2",
+    "logo": "",
+    "url": "http://41.205.70.146/M6/index.m3u8",
+    "langue": "français",
+    "categorie": "Sportif"
+  },
+  {
+    "id": "onenationtv_sn",
+    "nom": "One Nation TV",
+    "logo": "https://i.imgur.com/RGHbkZU.png",
+    "url": "https://endour.net/hls/One_nationtv/index.m3u8",
+    "langue": "français",
+    "categorie": "Culture"
+  },
+  {
+    "id": "onepiece_us",
     "nom": "One Piece",
     "logo": "https://i.imgur.com/XsvbAWR.png",
     "url": "https://jmp2.uk/plu-6380c94947c72b0007ee9a13.m3u8",
@@ -1368,7 +2456,39 @@
     "categorie": "Animation"
   },
   {
-    "id": "otv",
+    "id": "onetv_cd",
+    "nom": "ONE-TV",
+    "logo": "https://i.imgur.com/Wob7gjp.png",
+    "url": "https://core.live-apc.eu:5443/LiveApp/streams/backup.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "ortbtv_bj",
+    "nom": "ORTB TV",
+    "logo": "https://i.imgur.com/o6zAR88.png",
+    "url": "http://69.64.57.208/ortb/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "ortm1_ml",
+    "nom": "ORTM 1",
+    "logo": "https://i.imgur.com/eKUpcls.png",
+    "url": "http://69.64.57.208/ortm/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "ortm2_ml",
+    "nom": "ORTM 2",
+    "logo": "https://i.imgur.com/GQ4fHsv.png",
+    "url": "http://69.64.57.208/tm2/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "otv_lb",
     "nom": "OTV",
     "logo": "https://i.imgur.com/toxFMeY.png",
     "url": "https://otv.hibridcdn.net/otv/tv_abr/playlist.m3u8",
@@ -1376,7 +2496,7 @@
     "categorie": "Général"
   },
   {
-    "id": "p2m_tv",
+    "id": "p2mtv_fr",
     "nom": "P2M TV",
     "logo": "https://i.imgur.com/TrecSeG.png",
     "url": "https://vdo2.pro-fhi.net:3207/stream/play.m3u8",
@@ -1384,7 +2504,47 @@
     "categorie": "Musique"
   },
   {
-    "id": "pluto_tv_90_s_classics",
+    "id": "panafricanmediatv_cm",
+    "nom": "Panafrican Media TV",
+    "logo": "https://i.imgur.com/wneSSYM.png",
+    "url": "https://live20.bozztv.com/giatv/giatv-pmtv/pmtv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "parispremiere_fr",
+    "nom": "Paris Premiere",
+    "logo": "https://i.imgur.com/ily4bEm.png",
+    "url": "http://cdn.haititivi.com/PARIS-PREMIERE/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "passionnovelas_ci",
+    "nom": "Passion Novelas",
+    "logo": "https://i.imgur.com/boo9jmf.png",
+    "url": "http://41.223.30.230/PASSIONTV/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "playtv_cm",
+    "nom": "Play TV",
+    "logo": "https://i.imgur.com/1dmBqpf.png",
+    "url": "http://connectiktv.ddns.net:5000/playtv/@playtv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "plextv_cm",
+    "nom": "PLEX TV",
+    "logo": "https://i.ibb.co/H4VktvG/Plex-TV-237.jpg",
+    "url": "http://connectiktv.ddns.net:5000/plextv/@plextv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "plutotv90sclassics_de",
     "nom": "Pluto TV 90's Classics",
     "logo": "https://images.pluto.tv/channels/66b4990746762a00084c2f78/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-66b4990746762a00084c2f78.m3u8",
@@ -1392,7 +2552,15 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "pluto_tv_animaux",
+    "id": "plutotv2010sclassics_de",
+    "nom": "Pluto TV 2010's Classics",
+    "logo": "https://images.pluto.tv/channels/66b498bc14a2bb00086965bc/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-66b498bc14a2bb00086965bc.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "plutotvanimaux_de",
     "nom": "Pluto TV Animaux",
     "logo": "https://images.pluto.tv/channels/60925a44f0350600075a1fdc/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-60925a44f0350600075a1fdc.m3u8",
@@ -1400,7 +2568,7 @@
     "categorie": "Documentaire"
   },
   {
-    "id": "pluto_tv_anime_go",
+    "id": "plutotvanimego_de",
     "nom": "Pluto TV ANIME GO!",
     "logo": "https://images.pluto.tv/channels/691b3669c48674840c3b832a/colorLogoPNG_1778491402325.png",
     "url": "https://jmp2.uk/plu-691b3669c48674840c3b832a.m3u8",
@@ -1408,7 +2576,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "pluto_tv_aventure",
+    "id": "plutotvaventure_de",
     "nom": "Pluto TV Aventure",
     "logo": "https://images.pluto.tv/channels/611e7811eb9daf000764cbfd/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-611e7811eb9daf000764cbfd.m3u8",
@@ -1416,7 +2584,7 @@
     "categorie": "Documentaire"
   },
   {
-    "id": "pluto_tv_brigade_criminelle",
+    "id": "plutotvbrigadecriminelle_de",
     "nom": "Pluto TV Brigade Criminelle",
     "logo": "https://images.pluto.tv/channels/684bf01df7d8b74b625b7dd1/colorLogoPNG_1753890939606.png",
     "url": "https://jmp2.uk/plu-684bf01df7d8b74b625b7dd1.m3u8",
@@ -1424,7 +2592,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "pluto_tv_comedie",
+    "id": "plutotvcomedie_de",
     "nom": "Pluto TV Comédie",
     "logo": "https://images.pluto.tv/channels/5f8eb91bb9b9e7000817e67f/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-5f8eb91bb9b9e7000817e67f.m3u8",
@@ -1432,15 +2600,15 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "pluto_tv_comedies_cultes",
+    "id": "plutotvcomediescultes_de",
     "nom": "Pluto TV Comédies Cultes",
     "logo": "https://images.pluto.tv/channels/67b4b2d976a934282e92d71c/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-67b4b2d976a934282e92d71c.m3u8",
     "langue": "français",
-    "categorie": "Films-Série"
+    "categorie": "Divertissement"
   },
   {
-    "id": "pluto_tv_cuisine",
+    "id": "plutotvcuisine_de",
     "nom": "Pluto TV Cuisine",
     "logo": "https://images.pluto.tv/channels/5f8ed48146ba9e00078424b6/colorLogoPNG_1733440509319.png",
     "url": "https://jmp2.uk/plu-5f8ed48146ba9e00078424b6.m3u8",
@@ -1448,7 +2616,7 @@
     "categorie": "Cuisine"
   },
   {
-    "id": "pluto_tv_dating",
+    "id": "plutotvdating_de",
     "nom": "Pluto TV Dating",
     "logo": "https://images.pluto.tv/channels/682318568e6c0f2f6c6e0038/colorLogoPNG_1750772750435.png",
     "url": "https://jmp2.uk/plu-682318568e6c0f2f6c6e0038.m3u8",
@@ -1456,7 +2624,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "pluto_tv_footanim",
+    "id": "plutotvfootanim_de",
     "nom": "Pluto TV Footanim'",
     "logo": "https://images.pluto.tv/channels/69c2ae0d1f1accd54916c825/colorLogoPNG_1776860789196.png",
     "url": "https://jmp2.uk/plu-69c2ae0d1f1accd54916c825.m3u8",
@@ -1464,7 +2632,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "pluto_tv_french_collection",
+    "id": "plutotvfrenchcollection_de",
     "nom": "Pluto TV French Collection",
     "logo": "https://images.pluto.tv/channels/62f3e0522443200008c567d7/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-62f3e0522443200008c567d7.m3u8",
@@ -1472,7 +2640,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "pluto_tv_histoire",
+    "id": "plutotvhistoire_de",
     "nom": "Pluto TV Histoire",
     "logo": "https://images.pluto.tv/channels/611e771e2f5f180007002224/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-611e771e2f5f180007002224.m3u8",
@@ -1480,7 +2648,7 @@
     "categorie": "Documentaire"
   },
   {
-    "id": "pluto_tv_inside",
+    "id": "plutotvinside_de",
     "nom": "Pluto TV Inside",
     "logo": "https://images.pluto.tv/channels/5f8ed3892ed7bb000741a1d2/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-5f8ed3892ed7bb000741a1d2.m3u8",
@@ -1488,31 +2656,31 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "pluto_tv_junior",
+    "id": "plutotvjunior_de",
     "nom": "Pluto TV Junior",
     "logo": "https://images.pluto.tv/channels/5f1aa9bcd8160700076d45d1/colorLogoPNG_1747402544424.png",
     "url": "https://jmp2.uk/plu-5f8ecb336537e8000764a17f.m3u8",
     "langue": "français",
-    "categorie": "Animation"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "pluto_tv_kids_classics",
+    "id": "plutotvkidsclassics_de",
     "nom": "Pluto TV Kids Classics",
     "logo": "https://images.pluto.tv/channels/609e7e423e9173000706a681/colorLogoPNG_1750147033956.png",
     "url": "https://jmp2.uk/plu-654a58dbf9cc82000868f0fb.m3u8",
     "langue": "français",
-    "categorie": "Animation"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "pluto_tv_kids_club",
+    "id": "plutotvkidsclub_de",
     "nom": "Pluto TV Kids Club",
     "logo": "https://images.pluto.tv/channels/611e6ddc7fcd580007d1eb5f/colorLogoPNG_1748852055317.png",
     "url": "https://jmp2.uk/plu-611e6ddc7fcd580007d1eb5f.m3u8",
     "langue": "français",
-    "categorie": "Animation"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "pluto_tv_paranormal",
+    "id": "plutotvparanormal_de",
     "nom": "Pluto TV Paranormal",
     "logo": "https://images.pluto.tv/channels/5f98487036af340008da1e37/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-5f8ed9461b35690007a0bc3a.m3u8",
@@ -1520,7 +2688,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "pluto_tv_polar",
+    "id": "plutotvpolar_de",
     "nom": "Pluto TV Polar",
     "logo": "https://images.pluto.tv/channels/5f8ed4dbf6bb0800071ffbcb/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-5f8ed4dbf6bb0800071ffbcb.m3u8",
@@ -1528,7 +2696,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "pluto_tv_reality",
+    "id": "plutotvreality_de",
     "nom": "Pluto TV Reality",
     "logo": "https://images.pluto.tv/channels/67ebc1b6432a0e406f141341/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-6092544e7639460007d4835e.m3u8",
@@ -1536,7 +2704,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "pluto_tv_retro_toons",
+    "id": "plutotvretrotoons_de",
     "nom": "Pluto TV Retro Toons",
     "logo": "https://images.pluto.tv/channels/611e6a9b4bb5790007a6f0f8/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-611e6a9b4bb5790007a6f0f8.m3u8",
@@ -1544,7 +2712,7 @@
     "categorie": "Animation"
   },
   {
-    "id": "pluto_tv_series_fantastiques",
+    "id": "plutotvseriesfantastiques_de",
     "nom": "Pluto TV Séries Fantastiques",
     "logo": "https://images.pluto.tv/channels/625ec7a1c853fd00073b38fd/colorLogoPNG_1775048560569.png",
     "url": "https://jmp2.uk/plu-625ec7a1c853fd00073b38fd.m3u8",
@@ -1552,7 +2720,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "pluto_tv_snooker_900",
+    "id": "plutotvsnooker900_de",
     "nom": "Pluto TV Snooker 900",
     "logo": "https://images.pluto.tv/channels/68ac5543a1ac0c90f2c8943e/colorLogoPNG_1760517341343.png",
     "url": "https://jmp2.uk/plu-66fd35e44ca31f0008060b77.m3u8",
@@ -1560,23 +2728,23 @@
     "categorie": "Sportif"
   },
   {
-    "id": "pluto_tv_super_kids",
+    "id": "plutotvsuperkids_de",
     "nom": "Pluto TV Super Kids",
     "logo": "https://images.pluto.tv/channels/652557d93fd33c000802f995/colorLogoPNG_1733440546104.png",
     "url": "https://jmp2.uk/plu-652557d93fd33c000802f995.m3u8",
     "langue": "français",
-    "categorie": "Animation"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "pluto_tv_teen",
+    "id": "plutotvteen_de",
     "nom": "Pluto TV Teen",
     "logo": "https://images.pluto.tv/channels/63eb944dc111bc0008fe7021/colorLogoPNG_1761820520562.png",
     "url": "https://jmp2.uk/plu-5f8eb99ff17815000784a3b0.m3u8",
     "langue": "français",
-    "categorie": "Animation"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "pluto_tv_telerealite_france",
+    "id": "plutotvtelerealitefrance_de",
     "nom": "Pluto TV Téléréalité France",
     "logo": "https://images.pluto.tv/channels/699865ccac36b147e74619fe/colorLogoPNG_1779788356699.png",
     "url": "https://jmp2.uk/plu-699865ccac36b147e74619fe.m3u8",
@@ -1584,23 +2752,39 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "pluto_tv_toons",
+    "id": "plutotvtoons_de",
     "nom": "Pluto TV Toons",
     "logo": "https://images.pluto.tv/channels/6880aa28164eb4890282e803/colorLogoPNG_1760522020317.png",
     "url": "https://jmp2.uk/plu-5f8eba14a4ffb8000764e950.m3u8",
     "langue": "français",
-    "categorie": "Animation"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "press_tv_french",
+    "id": "presstvfrench_ir",
     "nom": "Press TV French",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Press_TV_logo.svg/960px-Press_TV_logo.svg.png",
     "url": "https://live4.presstv.ir/live/smil:presstvfr.smil/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "puissance_tv",
+    "id": "pstvhd_cd",
+    "nom": "PSTV HD",
+    "logo": "https://i.imgur.com/xQlkuAa.png",
+    "url": "http://51.254.199.122:8080/PSTV/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "publicsenat2424_fr",
+    "nom": "Public Senat 24/24",
+    "logo": "https://i.imgur.com/nHWWLBP.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/publicsenat.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "puissancetv_fr",
     "nom": "Puissance TV",
     "logo": "https://pbs.twimg.com/profile_images/1274572654016675842/A6v8Qo_X_400x400.jpg",
     "url": "https://event.vedge.infomaniak.com/livecast/ik:puissancetelevision/manifest.m3u8",
@@ -1608,7 +2792,47 @@
     "categorie": "Général"
   },
   {
-    "id": "radio_tele_4veh",
+    "id": "qu4treliegemedia_be",
+    "nom": "Qu4tre",
+    "logo": "https://i.imgur.com/GHFuvmZ.png",
+    "url": "https://tvlocales-live.freecaster.com/rtc/95d2f6ec-22f7-4027-b23d-d5372116b2ad/95d2f6ec-22f7-4027-b23d-d5372116b2ad.isml/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "radiocontact_be",
+    "nom": "Radio Contact",
+    "logo": "https://i.imgur.com/32mmGvB.png",
+    "url": "https://contact-live-hls.akamaized.net/hls/live/2038650/CONTACT-Live-HLS/master.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "radiofrontieres_fr",
+    "nom": "Radio Frontieres",
+    "logo": "https://www.frontieresmedia.fr/img/logo.svg",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/radiofrontieres.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "radiokaraoke_fr",
+    "nom": "Radio Karaoke",
+    "logo": "https://i.imgur.com/9uRggjD.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/radiokaraoke-2.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "radiotele6univers_ht",
+    "nom": "Radio Tele 6 Univers",
+    "logo": "https://i.imgur.com/aeVXn7p.jpeg",
+    "url": "https://acwstream.com/lakay/tele6/tracks-v1a1/mono.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "radiotele4veh_ht",
     "nom": "Radio Télé 4VEH",
     "logo": "https://i.imgur.com/AnOjqaS.png",
     "url": "https://uni01rtmp.tulix.tv/4vehtv/4vehtv-firetv/playlist.m3u8",
@@ -1616,7 +2840,23 @@
     "categorie": "Religieux"
   },
   {
-    "id": "radio_tele_evangile_sans_limite",
+    "id": "radioteleamenfm_ht",
+    "nom": "Radio Télé Amen FM",
+    "logo": "https://i.imgur.com/MTaFdHE.png",
+    "url": "http://184.173.179.163:1935/daniel/daniel/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "radioteleeclair_ht",
+    "nom": "Radio Tele Eclair",
+    "logo": "https://i.imgur.com/jV30pSq.png",
+    "url": "https://play.streamhaiti.com:3585/live/radioteleeclairlive.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "radioteleevangilesanslimite_ca",
     "nom": "Radio Tele Evangile Sans Limite",
     "logo": "https://i.imgur.com/CL32kFA.png",
     "url": "https://5790d294af2dc.streamlock.net/8124/8124/chunklist.m3u8",
@@ -1624,7 +2864,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "radio_tele_full_gospel",
+    "id": "radiotelefullgospel_ht",
     "nom": "Radio Tele Full Gospel",
     "logo": "https://i.imgur.com/WbwIp9y.jpeg",
     "url": "https://f-tx-edge-87.christianworldmedia.com/EJCFG/mp4:EJCFG/playlist.m3u8",
@@ -1632,7 +2872,15 @@
     "categorie": "Religieux"
   },
   {
-    "id": "radio_tele_hit",
+    "id": "radioteleginen_ht",
+    "nom": "Radio Tele Ginen",
+    "logo": "https://i.imgur.com/ESlt16G.png",
+    "url": "http://teleginen.srfms.com:1935/teleginen/livestream/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "radiotelehit_ht",
     "nom": "Radio Télé Hit",
     "logo": "https://i.ibb.co/Gt2QDgf/cropped-transparent2-103x70.png",
     "url": "https://59d39900ebfb8.streamlock.net/RadioTelehit/RadioTelehit/playlist.m3u8",
@@ -1640,7 +2888,15 @@
     "categorie": "Musique"
   },
   {
-    "id": "radio_tele_planet_compas",
+    "id": "radiotelekajou_us",
+    "nom": "Radio Télé Kajou",
+    "logo": "https://i.ibb.co/1MhvJ3B/logork.png",
+    "url": "https://59d39900ebfb8.streamlock.net/RadioTelekAJOU/RadioTelekAJOU/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "radioteleplanetcompas_ht",
     "nom": "Radio Tele Planet Compas",
     "logo": "https://i.imgur.com/ddb4lsa.png",
     "url": "https://5dcab9aed5331.streamlock.net/mrcompas1/livestream/playlist.m3u8",
@@ -1648,7 +2904,7 @@
     "categorie": "Général"
   },
   {
-    "id": "radio_tele_puissance",
+    "id": "radiotelepuissance_us",
     "nom": "Radio Tele Puissance",
     "logo": "https://i.imgur.com/ZLPwJug.png",
     "url": "https://video1.getstreamhosting.com:1936/8560/8560/playlist.m3u8",
@@ -1656,7 +2912,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "radio_tele_sentinel",
+    "id": "radiotelesentinel_us",
     "nom": "Radio Tele Sentinel",
     "logo": "https://i.imgur.com/hy3BJxj.png",
     "url": "https://59d39900ebfb8.streamlock.net/radiotelesentinel/radiotelesentinel/playlist.m3u8",
@@ -1664,7 +2920,23 @@
     "categorie": "Religieux"
   },
   {
-    "id": "radio_tv_basse_terre",
+    "id": "radiotelewisdom_us",
+    "nom": "Radio Télé Wisdom",
+    "logo": "https://i.ibb.co/DQksC23/unnamed-1.jpg",
+    "url": "https://59d39900ebfb8.streamlock.net/daniel/daniel/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "radiotelevisionshilo_ht",
+    "nom": "Radio Télévision Shilo",
+    "logo": "https://cdn.onlineradiobox.com/img/l/0/98960.v3.png",
+    "url": "https://watch.haitilive.net/freehb/rtvs/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "radiotvbasseterre_gp",
     "nom": "Radio TV Basse-Terre",
     "logo": "https://i.imgur.com/OvnRplq.png",
     "url": "https://vdo.ssl-stream.com:3412/stream/play.m3u8",
@@ -1672,7 +2944,7 @@
     "categorie": "Général"
   },
   {
-    "id": "reflet_tv",
+    "id": "reflettv_ci",
     "nom": "REFLET TV",
     "logo": "https://i.imgur.com/EauXR22.png",
     "url": "https://edge-a3.evrideo.tv/8f37c9f0-fe22-44f4-b64a-76ad11730daf_1000026630_HLS/manifest.m3u8",
@@ -1680,7 +2952,23 @@
     "categorie": "Général"
   },
   {
-    "id": "rht_guadeloupe",
+    "id": "rfmtv_fr",
+    "nom": "RFM TV",
+    "logo": "https://i.imgur.com/FVDTJxW.png",
+    "url": "http://315e5a5d.ottrast.com/iptv/MM4E93NGF5LADZ/1038/index.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "rhonetv_ch",
+    "nom": "Rhône TV [Geo-blocked]",
+    "logo": "https://i.imgur.com/YyXJaBN.png",
+    "url": "https://edge14.vedge.infomaniak.com/livecast/ik:rhonetv/manifest.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "rhtguadeloupe_gp",
     "nom": "RHT Guadeloupe",
     "logo": "https://i.imgur.com/hQ0Q6nE.png",
     "url": "https://edge12.vedge.infomaniak.com/livecast/ik:livehautetension/manifest.m3u8",
@@ -1688,7 +2976,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "ridiculousness",
+    "id": "ridiculousness_de",
     "nom": "Ridiculousness",
     "logo": "https://images.pluto.tv/channels/5f8eb8a8b2619a000710605c/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-5f8eb8a8b2619a000710605c.m3u8",
@@ -1696,7 +2984,31 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "rmc_story",
+    "id": "rlprotv_cd",
+    "nom": "RL PRO TV",
+    "logo": "https://i.imgur.com/PIBtCEN.jpeg",
+    "url": "https://stream.berosat.live:19360/rlpro-tv/rlpro-tv.m3u8",
+    "langue": "français",
+    "categorie": "Documentaire"
+  },
+  {
+    "id": "rmcdecouverte_fr",
+    "nom": "RMC Decouverte",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/b/b3/RMC_D%C3%A9couverte_logo_2017.svg/960px-RMC_D%C3%A9couverte_logo_2017.svg.png",
+    "url": "http://41.205.77.102/RMCDECOUVERTE/index.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "rmclife_fr",
+    "nom": "RMC Life",
+    "logo": "https://img1.dc2.oqee.net/channel_pictures/3606/w512",
+    "url": "http://41.205.77.102/CHERIE25/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "rmcstory_fr",
     "nom": "RMC Story",
     "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/4/43/Logo_RMC_Story_2025.png/960px-Logo_RMC_Story_2025.png",
     "url": "https://d15aro46bnpfm8.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-fqkqiax1078up/RMC_Story_FR.m3u8",
@@ -1704,15 +3016,15 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "rt_france",
-    "nom": "RT France",
+    "id": "rtfrance_fr",
+    "nom": "RT France [Geo-blocked]",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/RT-France-logo.svg/960px-RT-France-logo.svg.png",
     "url": "https://rt-fra.rttv.com/dvr/rtfrance/playlist.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "rt_jva",
+    "id": "rtjva_tg",
     "nom": "RT JVA",
     "logo": "https://i.imgur.com/Ja3HVLB.jpg",
     "url": "https://cdn140m.panaccess.com/HLS/RTVJA/index.m3u8",
@@ -1720,7 +3032,31 @@
     "categorie": "Religieux"
   },
   {
-    "id": "rth_tv1",
+    "id": "rtb_bf",
+    "nom": "RTB",
+    "logo": "https://i.imgur.com/BFfLV0y.png",
+    "url": "https://edge12.vedge.infomaniak.com/livecast/ik:rtblive1_8/manifest.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "rtb2hautsbasins_bf",
+    "nom": "RTB2 Hauts-Basins",
+    "logo": "https://i0.wp.com/www.rtb.bf/wp-content/uploads/2020/01/images.jpg",
+    "url": "https://edge20.vedge.infomaniak.com/livecast/ik:rtbguiriko-1/manifest.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "rtg1_gn",
+    "nom": "RTG 1",
+    "logo": "https://i.imgur.com/E1sMcXz.png",
+    "url": "http://69.64.57.208/rtg/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "rthtv1_us",
     "nom": "RTH-TV1",
     "logo": "https://i.imgur.com/4z0FiEA.png",
     "url": "https://2-fss-2.streamhoster.com/pl_120/amlst:206708-4203440/playlist.m3u8",
@@ -1728,7 +3064,7 @@
     "categorie": "Général"
   },
   {
-    "id": "rth_tv2_gospel",
+    "id": "rthtv2gospel_us",
     "nom": "RTH-TV2 Gospel",
     "logo": "https://i.imgur.com/4z0FiEA.png",
     "url": "https://2-fss-2.streamhoster.com/pl_120/amlst:206708-4202592/playlist.m3u8",
@@ -1736,7 +3072,47 @@
     "categorie": "Religieux"
   },
   {
-    "id": "rtl_zwee",
+    "id": "rti1_ci",
+    "nom": "RTI 1",
+    "logo": "https://i.imgur.com/TybQZQS.png",
+    "url": "http://69.64.57.208:8080/rti1/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "rti2_ci",
+    "nom": "RTI 2",
+    "logo": "https://i.imgur.com/73ueXrp.png",
+    "url": "http://69.64.57.208:8080/rti2/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "rtila3_ci",
+    "nom": "RTI La 3",
+    "logo": "https://i.imgur.com/HdNshgF.png",
+    "url": "http://69.64.57.208/la3/index.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "rtl2_fr",
+    "nom": "RTL2",
+    "logo": "https://i.imgur.com/deC4z34.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/rtl2.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "rtl9_lu",
+    "nom": "RTL9",
+    "logo": "https://i.imgur.com/nFqjVNW.png",
+    "url": "http://cdn.haititivi.com/rtl-9/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "rtlzwee_lu",
     "nom": "RTL Zwee",
     "logo": "https://i.imgur.com/7SmCtyy.png",
     "url": "https://live-edge.rtl.lu/channel2/smil:channel2/playlist.m3u8",
@@ -1744,15 +3120,71 @@
     "categorie": "Général"
   },
   {
-    "id": "rts_info",
+    "id": "rtltvi_be",
+    "nom": "RTL-TVI",
+    "logo": "https://i.imgur.com/2CimAAN.png",
+    "url": "https://tvi-live-hls.akamaized.net/hls/live/2038650/TVI-Live-HLS/master.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "rtnc_cd",
+    "nom": "RTNC",
+    "logo": "https://i.imgur.com/oVXO950.jpeg",
+    "url": "http://69.64.57.208/rtnc/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "rtnc3_cd",
+    "nom": "RTNC 3",
+    "logo": "https://i.imgur.com/rr9Zsno.jpeg",
+    "url": "http://51.254.199.122:8080/e-cableRTNC3/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "rts1_ch",
+    "nom": "RTS 1",
+    "logo": "https://i.imgur.com/OP5lHv9.png",
+    "url": "http://41.205.70.146/RTSUN/index.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "rts1_sn",
+    "nom": "RTS 1",
+    "logo": "https://i.imgur.com/HHGktpF.png",
+    "url": "http://69.64.57.208/rts1/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "rts2_sn",
+    "nom": "RTS 2",
+    "logo": "https://i.imgur.com/YypHsF4.png",
+    "url": "http://69.64.57.208/rts2/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "rtsinfo_ch",
     "nom": "RTS Info",
     "logo": "https://raw.githubusercontent.com/tv-logo/tv-logos/refs/heads/main/countries/switzerland/rts-info-ch.png",
     "url": "https://rtsinfo-d.akamaized.net/out/v1/2b7ae2e1ba3f43c6aba15bced153baf5/index.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "rtvc",
+    "id": "rwandatv_rw",
+    "nom": "RTV Rwanda",
+    "logo": "https://i.imgur.com/4nbGvxW.png",
+    "url": "http://197.243.19.131:1935/rtv25/rtv/chunklist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "rtvc_ci",
     "nom": "RTVC",
     "logo": "https://i.imgur.com/oXuSkHz.png",
     "url": "https://cdn140m.panaccess.com/HLS/RTVC/index.m3u8",
@@ -1760,15 +3192,47 @@
     "categorie": "Religieux"
   },
   {
-    "id": "seneweb_tv",
-    "nom": "Seneweb TV",
+    "id": "rtvs1_cd",
+    "nom": "RTVS1",
+    "logo": "https://i.imgur.com/doaZCzy.png",
+    "url": "http://51.254.199.122:8080/RTVS1/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "saraouniatv_ne",
+    "nom": "Saraounia TV",
+    "logo": "https://i.imgur.com/O8XIcpH.png",
+    "url": "https://live20.bozztv.com/dvrfl06/astv/astv-saraouna/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "savanetv_bf",
+    "nom": "Savane TV",
+    "logo": "https://i.imgur.com/mv3S1Zc.png",
+    "url": "https://savane24.tv:5443/LiveApp/streams/Y4fyif69Q0ll6MeH2190896734859843.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "sentv_sn",
+    "nom": "Sen TV",
+    "logo": "https://i.imgur.com/beVCugh.png",
+    "url": "http://69.64.57.208/sentv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "senewebtv_sn",
+    "nom": "Seneweb TV [Geo-blocked]",
     "logo": "https://i.imgur.com/i9P2qjs.png",
     "url": "https://vdo2.pro-fhi.net:3297/stream/play.m3u8",
     "langue": "français",
     "categorie": "Général"
   },
   {
-    "id": "senjeunes_tv",
+    "id": "senjeunestv_sn",
     "nom": "SenJeunes TV",
     "logo": "https://i.imgur.com/MeCSPsI.jpg",
     "url": "https://stream.sen-gt.com/senjeunestv/myStream/playlist.m3u8",
@@ -1776,7 +3240,7 @@
     "categorie": "Général"
   },
   {
-    "id": "serie_max",
+    "id": "seriemax_ci",
     "nom": "Serie Max",
     "logo": "https://i.imgur.com/GaRQXHT.png",
     "url": "https://video1.getstreamhosting.com:1936/8330/8330/playlist.m3u8",
@@ -1784,7 +3248,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "series_by_pluto_tv",
+    "id": "seriesbyplutotv_de",
     "nom": "Series by Pluto TV",
     "logo": "https://images.pluto.tv/channels/5f8ed2d1c34c2300073bf02c/colorLogoPNG_1775048963457.png",
     "url": "https://jmp2.uk/plu-5f8ed2d1c34c2300073bf02c.m3u8",
@@ -1792,7 +3256,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "sony_one_blacklist",
+    "id": "sonyoneblacklist_fr",
     "nom": "Sony One Blacklist",
     "logo": "https://i.imgur.com/uJC8rXr.png",
     "url": "https://06cb85ad6ccb4a6b97f561e62d16ad3f.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-822-FR-SONYONETHEBLACKLIST-LG_FR/playlist.m3u8",
@@ -1800,7 +3264,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "sony_one_favoris",
+    "id": "sonyonefavoris_fr",
     "nom": "Sony One Favoris",
     "logo": "https://i.imgur.com/RO4AM4b.png",
     "url": "https://49d735318d6b4c30a24a7997ea594e1b.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-820-FR-SONYONEFAVORIS-LG_FR/playlist.m3u8",
@@ -1808,7 +3272,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "sony_one_hits_action",
+    "id": "sonyonehitsaction_fr",
     "nom": "Sony One Hits Action",
     "logo": "https://i.imgur.com/pXsZEsR.png",
     "url": "https://5098a8b860504a3690fd2e7c0a18d68f.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-817-FR-SONYONEHITSACTION-LG_FR/playlist.m3u8",
@@ -1816,7 +3280,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "sony_one_hits_comedie",
+    "id": "sonyonehitscomedie_fr",
     "nom": "Sony One Hits Comedie",
     "logo": "https://i.imgur.com/8sHuxxS.png",
     "url": "https://7aa9671895264ec9a384dfed1b992171.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-818-FR-SONYONEHITSCOMDIE-LG_FR/playlist.m3u8",
@@ -1824,7 +3288,23 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "sophia_tv_francais",
+    "id": "sonyoneseriescomedie_fr",
+    "nom": "Sony One Series Comedie",
+    "logo": "https://i.ibb.co/ns4Md77B/FR-FAST-Plex-Comedy-TV-logo-dark.png",
+    "url": "https://4f2a3e1ff5274297b115cf0f7da1c2cd.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-819-FR-SONYONESRIESCOMDIE-LG_FR/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "sonyoneseriesthriller_fr",
+    "nom": "Sony One Series Thriller",
+    "logo": "https://i.imgur.com/RVS8LDj.png",
+    "url": "https://483a1e90c18641c9a6d27becd41ad892.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-821-FR-SONYONESRIESTHRILLER-LG_FR/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "sophiatvfrancais_de",
     "nom": "Sophia TV Français",
     "logo": "https://i.imgur.com/T2JPCq2.png",
     "url": "https://bild-und-ton.stream/sophiatv-fr/smil:sophia-tv-fr.smil/playlist.m3u8",
@@ -1832,7 +3312,15 @@
     "categorie": "Religieux"
   },
   {
-    "id": "speedline_tv",
+    "id": "sosdocteurtv_tg",
+    "nom": "SOS Docteur TV",
+    "logo": "https://i.imgur.com/wQpooHw.png",
+    "url": "https://wmoy82n4y2a7-hls-live.5centscdn.com/sostv/live.stream/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Style de vie"
+  },
+  {
+    "id": "speedlinetv_bj",
     "nom": "Speedline TV",
     "logo": "https://i.imgur.com/1lXShsh.png",
     "url": "https://cdn-us-east-prod-ingest-infra-dacast-com.akamaized.net/dbe59037-07a0-4f1c-82a2-7de94b4b62d2/index.m3u8",
@@ -1840,7 +3328,15 @@
     "categorie": "Général"
   },
   {
-    "id": "stingray_classica",
+    "id": "startrektheoriginalseries_de",
+    "nom": "Star Trek: The Original Series",
+    "logo": "https://images.pluto.tv/channels/69776b58036e883f39e5ab8a/colorLogoPNG_1769434091096.png",
+    "url": "https://jmp2.uk/plu-67b4b3c51a5ca760802cc1c7.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "stingrayclassica_ca",
     "nom": "Stingray Classica",
     "logo": "https://i.imgur.com/nh1k5RC.png",
     "url": "https://lotus.stingray.com/manifest/classica-cla008-montreal/samsungtvplus/master.m3u8",
@@ -1848,15 +3344,23 @@
     "categorie": "Musique"
   },
   {
-    "id": "storychannel_tv",
+    "id": "storychanneltv_ma",
     "nom": "StoryChannel TV",
     "logo": "https://i.imgur.com/ZBV6xph.png",
     "url": "https://136044159.r.cdnsun.net/storychannel.m3u8",
     "langue": "français",
-    "categorie": "Documentaire"
+    "categorie": "Culture"
   },
   {
-    "id": "sun_tv",
+    "id": "sudradio_fr",
+    "nom": "Sud Radio",
+    "logo": "https://www.sudradio.fr/wp-content/themes/sud-2023/assets/img/logo-fondblanc-parlons.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/sudradio.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "sunplustv_cm",
     "nom": "Sun+ TV",
     "logo": "https://i.imgur.com/5XCXWy7.png",
     "url": "https://livemaraboo.com/hls/stream.m3u8",
@@ -1864,7 +3368,23 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "t18",
+    "id": "sunulabeltv_sn",
+    "nom": "Sunu Label TV",
+    "logo": "https://i.imgur.com/Ibp7IBk.jpeg",
+    "url": "https://live3.acangroup.org:1929/publiclive/sunulabel/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "syfy_fr",
+    "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"Undefined\",Syfy",
+    "logo": "https://i.imgur.com/gUOXdjv.png",
+    "url": "http://99.27.51.147:8080/SYFY/index.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "t18_fr",
     "nom": "T18",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Logo_de_la_chaine_T18.svg/500px-Logo_de_la_chaine_T18.svg.png",
     "url": "https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/t18/t18-dm.m3u8",
@@ -1872,7 +3392,7 @@
     "categorie": "Général"
   },
   {
-    "id": "tal_tv",
+    "id": "taltv_ne",
     "nom": "Tal TV",
     "logo": "https://i.imgur.com/KWMP0t1.png",
     "url": "https://mediaserver1.castpin.com/hls/taltv/index.m3u8",
@@ -1880,7 +3400,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "teen_mom",
+    "id": "teenmom_de",
     "nom": "Teen Mom",
     "logo": "https://images.pluto.tv/channels/62e7fc8c0d061100083946a9/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-62f3f05505e621000783df2f.m3u8",
@@ -1888,7 +3408,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "tele_boston",
+    "id": "teleboston_us",
     "nom": "Tele Boston",
     "logo": "https://i.imgur.com/xeTtup8.png",
     "url": "https://tv2.fastcast4u.com:3238/live/radiotelebostonlive.m3u8",
@@ -1896,7 +3416,23 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "tele_louange",
+    "id": "telecongo_cg",
+    "nom": "Tele Congo",
+    "logo": "https://i.imgur.com/r4B5zq4.png",
+    "url": "http://69.64.57.208/telecongo/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "telehaiti_ht",
+    "nom": "Tele Haiti",
+    "logo": "https://i.imgur.com/Hso9j58.png",
+    "url": "http://66.175.238.147:1935/live/myStream/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "telelouange_ht",
     "nom": "Tele Louange",
     "logo": "https://i.imgur.com/DjnMUuL.png",
     "url": "https://5790d294af2dc.streamlock.net/8124/8124/playlist.m3u8",
@@ -1904,7 +3440,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "tele_pam",
+    "id": "telepam_us",
     "nom": "Tele Pam",
     "logo": "https://i.ibb.co/xMYMyHh/telepammmm.png",
     "url": "https://watch.haitilive.net/app/2020/telepam/index.fmp4.m3u8",
@@ -1912,7 +3448,7 @@
     "categorie": "Général"
   },
   {
-    "id": "tele_peyi",
+    "id": "telepeyi_gf",
     "nom": "Télé Péyi",
     "logo": "https://i.imgur.com/LJ9sXaB.png",
     "url": "https://edge20.vedge.infomaniak.com/livecast/ik:33dm06/manifest.m3u8",
@@ -1920,7 +3456,7 @@
     "categorie": "Général"
   },
   {
-    "id": "tele_sahel",
+    "id": "telesahel_ne",
     "nom": "Tele Sahel",
     "logo": "https://i.imgur.com/vboq428.png",
     "url": "https://mediaserver1.castpin.com/hls/telesahel/index.m3u8",
@@ -1928,7 +3464,7 @@
     "categorie": "Général"
   },
   {
-    "id": "tele_tchad",
+    "id": "teletchad_td",
     "nom": "Tele Tchad",
     "logo": "https://i.imgur.com/udSzfHD.png",
     "url": "https://strhlslb01.streamakaci.tv/str_tchad_tchad/str_tchad_multi/playlist.m3u8",
@@ -1936,7 +3472,15 @@
     "categorie": "Général"
   },
   {
-    "id": "tele_zoukla",
+    "id": "televariete_ht",
+    "nom": "Tele Variete",
+    "logo": "https://i.imgur.com/0J5MzTB.png",
+    "url": "https://acwstream.com/hb/chaine30/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "telezoukla_mq",
     "nom": "Tele Zoukla",
     "logo": "https://i.imgur.com/lWYKgPC.png",
     "url": "https://vdo.pro-fhi.net:3228/stream/play.m3u8",
@@ -1944,15 +3488,55 @@
     "categorie": "Musique"
   },
   {
-    "id": "telepace_2",
+    "id": "telegohelle_fr",
+    "nom": "TéléGohelle",
+    "logo": "https://i.imgur.com/Oa3Pwbf.png",
+    "url": "https://videas.agglo-lenslievin.fr/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "telemb_be",
+    "nom": "TeleMB",
+    "logo": "https://i.imgur.com/XAggjM4.png",
+    "url": "https://tvlocales-live.freecaster.com/telemb/95d2f6ca-817a-48c0-aba5-6323a621c2d6/95d2f6ca-817a-48c0-aba5-6323a621c2d6.isml/master.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "telemix_us",
+    "nom": "TeleMIX",
+    "logo": "https://i.ibb.co/HpX99Ks/unnamed.jpg",
+    "url": "https://haititivi.com/haiti/telemix1/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "telemusiksenegal_sn",
+    "nom": "TeleMusik Senegal",
+    "logo": "https://i.imgur.com/dPAPLsd.png",
+    "url": "https://58c04fb1d143f.streamlock.net/rezopropartner_1_live/rezopropartner_1_live/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "telenantes_fr",
+    "nom": "Telenantes",
+    "logo": "https://i.imgur.com/G1SCqNI.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/telenantes.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "telepace2_it",
     "nom": "Telepace 2",
     "logo": "https://i.imgur.com/qvcf6QC.png",
     "url": "https://zkpywrbgdbeg-hls-live.mariatvcdn.it/teleradiopace2/254c9b5c52a73a94ef0f6169cbd05dc2.sdp/playlist.m3u8",
     "langue": "français",
-    "categorie": "Religieux"
+    "categorie": "Culture"
   },
   {
-    "id": "telepace_4",
+    "id": "telepace4_it",
     "nom": "Telepace 4",
     "logo": "https://i.imgur.com/JKHEL1H.png",
     "url": "https://j78dpr7nyq5r-hls-live.mariatvcdn.it/teleradiopace4/13d74f2cfe921bfbc262697203d47d8f.sdp/playlist.m3u8",
@@ -1960,7 +3544,7 @@
     "categorie": "Religieux"
   },
   {
-    "id": "telesambre",
+    "id": "telesambre_be",
     "nom": "Telesambre",
     "logo": "https://i.imgur.com/TuIAkA3.png",
     "url": "https://dlgt0tdl2hpq3.cloudfront.net/rtbf/clr-rtbf/2f00284b/index.m3u8",
@@ -1968,7 +3552,15 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "television_espoir_47",
+    "id": "teletoonplus_fr",
+    "nom": "Teletoon+",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/T%C3%A9l%C3%A9toon%2B_Logo.png/960px-T%C3%A9l%C3%A9toon%2B_Logo.png",
+    "url": "http://cdn.haititivi.com/TELETOON-HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Animation"
+  },
+  {
+    "id": "televisionespoir47_tg",
     "nom": "Television Espoir 47",
     "logo": "https://i.imgur.com/utBh0xL.png",
     "url": "https://cdn140m.panaccess.com/HLS/Espoir47/index.m3u8",
@@ -1976,15 +3568,95 @@
     "categorie": "Général"
   },
   {
-    "id": "tivi5_monde",
-    "nom": "TiVi5 Monde",
+    "id": "tempoafrictv_us",
+    "nom": "Tempo Afric TV",
+    "logo": "https://i.imgur.com/mggN4mS.jpg",
+    "url": "https://streamspace.live/hls/tempoafrictv/livestream.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "teva_fr",
+    "nom": "Teva",
+    "logo": "https://i.imgur.com/kDW0hN5.png",
+    "url": "http://41.205.77.102/TEVA/index.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tf1_fr",
+    "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.36\" group-title=\"Entertainment\",TF1",
+    "logo": "https://i.imgur.com/QxHt9NC.png",
+    "url": "http://151.80.18.177:86/TF1_HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "tfm_sn",
+    "nom": "TFM",
+    "logo": "https://i.imgur.com/TQWBlXn.png",
+    "url": "http://69.64.57.208/tfm/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tiji_fr",
+    "nom": "TiJi HD",
+    "logo": "https://i.imgur.com/ZjsfAGb.png",
+    "url": "http://41.205.77.102/TIJI/index.m3u8",
+    "langue": "français",
+    "categorie": "Jeunesse"
+  },
+  {
+    "id": "tipik_be",
+    "nom": "Tipik",
+    "logo": "https://i.imgur.com/LKLjnrp.png",
+    "url": "http://193.111.198.85:8589/stream/mstv/rtbftipiklive26/master.m3u8?u=Oleg&p=967e33767f592e1aaf3d4019f38f380bf784e113b193d89c412d047059d6300d",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tivi5monde_fr",
+    "nom": "TiVi5 Monde [Geo-blocked]",
     "logo": "https://i.imgur.com/fVVKpmk.png",
     "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(tivi5)/variant.m3u8",
     "langue": "français",
     "categorie": "Indéfini"
   },
   {
-    "id": "tntv",
+    "id": "tm1tv_ml",
+    "nom": "TM1",
+    "logo": "https://i.imgur.com/83BgaBa.png",
+    "url": "http://69.64.57.208/tm1/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tma_gp",
+    "nom": "TMA",
+    "logo": "https://i.imgur.com/1iOAl2j.png",
+    "url": "http://hls.tmacaraibes.com/live/index.m3u8",
+    "langue": "français",
+    "categorie": "Musique"
+  },
+  {
+    "id": "tmc_fr",
+    "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.36\" group-title=\"General\",TMC",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/54/TMC_logo.svg/960px-TMC_logo.svg.png",
+    "url": "http://151.80.18.177:86/TMC/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tnh_ht",
+    "nom": "TNH",
+    "logo": "https://i.imgur.com/8nvCXzt.png",
+    "url": "https://bozztv.com/dvrfl03/hdirect/hdirect-telecaraibes/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tntv_pf",
     "nom": "TNTV",
     "logo": "https://i.imgur.com/e5eVHam.png",
     "url": "https://tntv-samsung-fr.amagi.tv/playlist.m3u8",
@@ -1992,15 +3664,15 @@
     "categorie": "Général"
   },
   {
-    "id": "tortues_ninja_tv",
+    "id": "tortuesninjatv_de",
     "nom": "Tortues Ninja TV",
     "logo": "https://images.pluto.tv/channels/5f8ecc1b37867f00071469e9/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-5f8ecc1b37867f00071469e9.m3u8",
     "langue": "français",
-    "categorie": "Animation"
+    "categorie": "Jeunesse"
   },
   {
-    "id": "tout_le_monde_deteste_chris",
+    "id": "toutlemondedetestechris_de",
     "nom": "Tout le monde déteste Chris",
     "logo": "https://images.pluto.tv/channels/67b4b4a21a5ca760802d25fd/colorLogoPNG_1747394750060.png",
     "url": "https://jmp2.uk/plu-67b4b4a21a5ca760802d25fd.m3u8",
@@ -2008,7 +3680,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "tr24",
+    "id": "tr24television_cm",
     "nom": "TR24",
     "logo": "https://i.ibb.co/fQrBY1M/tr24-telepack.jpg",
     "url": "https://stream.it-innov.com/tr24/index.m3u8",
@@ -2016,7 +3688,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "trace_africa",
+    "id": "traceafrica_fr",
     "nom": "Trace Africa",
     "logo": "https://i.imgur.com/kPUkoS7.png",
     "url": "https://channels.trace.plus/Traceprod/AFRICA_FR_hd/index.m3u8",
@@ -2024,7 +3696,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_afrikora",
+    "id": "traceafrikora_fr",
     "nom": "Trace Afrikora",
     "logo": "https://i.imgur.com/CQDdnhp.png",
     "url": "https://channels.trace.plus/Traceprod/TERANGA_hd/index.m3u8",
@@ -2032,7 +3704,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_ayiti",
+    "id": "traceayiti_fr",
     "nom": "Trace Ayiti",
     "logo": "https://i.imgur.com/KkJ6fet.png",
     "url": "https://channels.trace.plus/Traceprod/AYITI_hd/index.m3u8",
@@ -2040,7 +3712,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_caribbean",
+    "id": "tracecaribbean_fr",
     "nom": "Trace Caribbean",
     "logo": "https://i.imgur.com/ZHD7Vxy.png",
     "url": "https://channels.trace.plus/Traceprod/CARIBBEAN_hd/index.m3u8",
@@ -2048,23 +3720,15 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_gospel",
+    "id": "tracegospel_fr",
     "nom": "Trace Gospel",
     "logo": "https://i.imgur.com/X0UmU3K.png",
     "url": "https://channels.trace.plus/Traceprod/GOSPEL_FR/.m3u8",
     "langue": "français",
-    "categorie": "Religieux"
+    "categorie": "Musique"
   },
   {
-    "id": "trace_gospel_southern_africa",
-    "nom": "Trace Gospel Southern Africa",
-    "logo": "https://i.imgur.com/X0UmU3K.png",
-    "url": "https://channels.trace.plus/Traceprod/GOSPEL_SA_ld/index.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
-    "id": "trace_ivoire",
+    "id": "traceivoire_fr",
     "nom": "Trace Ivoire",
     "logo": "https://ibb.co/JwMs0bFF",
     "url": "https://channels.trace.plus/Traceprod/TRACE_IVOIRE_hd/index.m3u8",
@@ -2072,7 +3736,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_kitoko",
+    "id": "tracekitoko_fr",
     "nom": "Trace Kitoko",
     "logo": "https://i.imgur.com/q6vkMrU.png",
     "url": "https://channels.trace.plus/Traceprod/KITOKO_hd/index.m3u8",
@@ -2080,7 +3744,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_latina",
+    "id": "tracelatina_fr",
     "nom": "Trace Latina",
     "logo": "https://i.imgur.com/CUVAi4u.png",
     "url": "https://amg01131-tracetv-tracelatina-glewed-vtnk7.amagi.tv/playlist.m3u8",
@@ -2088,7 +3752,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_mboa",
+    "id": "tracemboa_fr",
     "nom": "Trace Mboa",
     "logo": "https://i.imgur.com/cYwkCj2.png",
     "url": "https://channels.trace.plus/Traceprod/MBOA_hd/index.m3u8",
@@ -2096,7 +3760,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_muzika",
+    "id": "tracemuzika_fr",
     "nom": "Trace Muzika",
     "logo": "https://i.imgur.com/xsEGIXO.png",
     "url": "https://channels.trace.plus/Traceprod/MUZIKA_hd/index.m3u8",
@@ -2104,7 +3768,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_sport_stars_australia",
+    "id": "tracesportstars_fr",
     "nom": "Trace Sport Stars (Australia)",
     "logo": "https://i.imgur.com/FabFP5A.png",
     "url": "https://lightning-tracesport-samsungau.amagi.tv/playlist.m3u8",
@@ -2112,7 +3776,7 @@
     "categorie": "Sportif"
   },
   {
-    "id": "trace_urban_australia",
+    "id": "traceurban_fr",
     "nom": "Trace Urban (Australia)",
     "logo": "https://i.imgur.com/DLIbUMx.png",
     "url": "https://lightning-traceurban-samsungau.amagi.tv/playlist.m3u8",
@@ -2120,39 +3784,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trace_urban_africa_franco",
-    "nom": "Trace Urban Africa Franco",
-    "logo": "https://i.imgur.com/DLIbUMx.png",
-    "url": "https://channels.trace.plus/Traceprod/URBAN_AFRIC_FR_hd/index.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "trace_urban_caribbean_and_indian_ocean",
-    "nom": "Trace Urban Caribbean And Indian Ocean",
-    "logo": "https://i.imgur.com/DLIbUMx.png",
-    "url": "https://channels.trace.plus/Traceprod/URBAN_DOM_hd/index.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "trace_urban_hd",
-    "nom": "Trace Urban HD",
-    "logo": "https://i.imgur.com/DLIbUMx.png",
-    "url": "https://channels.trace.plus/Traceprod/URBAN_FR_hd/index.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "trace_urban_southern_africa",
-    "nom": "Trace Urban Southern Africa",
-    "logo": "https://i.imgur.com/DLIbUMx.png",
-    "url": "https://channels.trace.plus/Traceprod/URBAN_SA_hd/index.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "trace_vanilla_islands",
+    "id": "tracevanillaislands_fr",
     "nom": "Trace Vanilla Islands",
     "logo": "https://i.imgur.com/ngF58fe.png",
     "url": "https://channels.trace.plus/Traceprod/VANILLA_hd/index.m3u8",
@@ -2160,7 +3792,7 @@
     "categorie": "Musique"
   },
   {
-    "id": "trends_z",
+    "id": "canalz_be",
     "nom": "Trends Z",
     "logo": "https://i.imgur.com/qtiGLzZ.png",
     "url": "https://d1hz1p2gea2zy4.cloudfront.net/live/rmgtv/RMG-TRENDSZFR-LIVE/index.m3u8",
@@ -2168,7 +3800,7 @@
     "categorie": "Entreprise"
   },
   {
-    "id": "true_crime_by_pluto_tv",
+    "id": "truecrimebyplutotv_de",
     "nom": "True Crime by Pluto TV",
     "logo": "https://images.pluto.tv/channels/5f914f4b36d67d0007a91a04/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-5f914f4b36d67d0007a91a04.m3u8",
@@ -2176,7 +3808,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "turbo",
+    "id": "turbo_de",
     "nom": "Turbo",
     "logo": "https://images.pluto.tv/channels/66f55c3955567d0008ef9b68/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-66f55c3955567d0008ef9b68.m3u8",
@@ -2184,7 +3816,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "turkmenistan",
+    "id": "turkmenistan_tm",
     "nom": "Türkmenistan",
     "logo": "https://i.imgur.com/iBBpBx4.png",
     "url": "https://alpha.tv.online.tm/hls/ch007.m3u8",
@@ -2192,7 +3824,15 @@
     "categorie": "Général"
   },
   {
-    "id": "tv3v",
+    "id": "tv2_dz",
+    "nom": "TV2",
+    "logo": "https://i.imgur.com/VEb631f.png",
+    "url": "http://185.9.2.18/chid_347/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tv3v_fr",
     "nom": "TV3V",
     "logo": "https://i.ibb.co/X2yd0zL/logo-tv3v.jpg",
     "url": "https://tv3v.live-kd.com/live/tv3v/livestream/index.m3u8",
@@ -2200,7 +3840,23 @@
     "categorie": "Général"
   },
   {
-    "id": "tv5monde_chefs",
+    "id": "tv5mondeafrica_fr",
+    "nom": "TV5Monde Africa",
+    "logo": "https://i.imgur.com/0N64Ddn.png",
+    "url": "http://5.9.121.178:80/tv5monde/index.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tv5mondeasia_fr",
+    "nom": "TV5Monde Asia",
+    "logo": "https://i.imgur.com/FRsRXRR.png",
+    "url": "http://54.37.19.157:80/TV5MONDE/index.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tv5mondechefs_fr",
     "nom": "TV5MONDE Chefs",
     "logo": "https://psi.tv5monde.com/media/static/default/lives/tv5monde-chef.png",
     "url": "https://tvf-tv5ch.otteravision.com/tvf/tv5ch/tv5ch.m3u8",
@@ -2208,15 +3864,63 @@
     "categorie": "Cuisine"
   },
   {
-    "id": "tv5monde_info",
-    "nom": "TV5Monde Info",
+    "id": "tv5mondeeurope_fr",
+    "nom": "TV5Monde Europe",
+    "logo": "https://i.imgur.com/rPAbMSu.png",
+    "url": "http://45.14.84.37:80/tv5monde/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tv5mondefrancebelgiumswitzerlandmonaco_fr",
+    "nom": "TV5Monde France Belgique Suisse Monaco [Geo-blocked]",
+    "logo": "https://i.imgur.com/WmRbudc.png",
+    "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(fbs)/variant.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tv5mondeinfo_fr",
+    "nom": "TV5Monde Info [Geo-blocked]",
     "logo": "https://i.imgur.com/AJx5Fy2.png",
     "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8",
     "langue": "français",
-    "categorie": "information"
+    "categorie": "Actualités"
   },
   {
-    "id": "tv7_colmar",
+    "id": "tv5mondelatinamerica_fr",
+    "nom": "TV5Monde Latin America",
+    "logo": "https://i.imgur.com/x8rjGhp.png",
+    "url": "http://45.235.0.78/TV5_Monde/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tv5mondepacific_fr",
+    "nom": "TV5Monde Pacifique [Geo-blocked]",
+    "logo": "https://i.imgur.com/mfZOYZI.png",
+    "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(pacifique)/variant.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tv5mondestyle_fr",
+    "nom": "TV5Monde Style [Geo-blocked]",
+    "logo": "https://i.imgur.com/cwC7Q2V.png",
+    "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(style1)/variant.m3u8",
+    "langue": "français",
+    "categorie": "Style de vie"
+  },
+  {
+    "id": "tv5quebeccanada_ca",
+    "nom": "TV5 Quebec Canada",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/TV5_%28logo%29.svg/960px-TV5_%28logo%29.svg.png",
+    "url": "http://23.133.220.149/TV5/index.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tv7colmar_fr",
     "nom": "TV7 Colmar",
     "logo": "https://i.imgur.com/kSdGi43.png",
     "url": "https://tv7.live-kd.com/live/tv7/livestream/playlist.m3u8",
@@ -2224,7 +3928,47 @@
     "categorie": "Général"
   },
   {
-    "id": "tv_monaco",
+    "id": "tv78_fr",
+    "nom": "TV78",
+    "logo": "https://i.imgur.com/stzE1Ij.png",
+    "url": "https://streamtv.cdn.dvmr.fr/TV78/ngrp:tv78.stream_all/master.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tvalbayane_ci",
+    "nom": "TV Al Bayane",
+    "logo": "https://i.imgur.com/Xs9oEG8.png",
+    "url": "http://69.64.57.208/albayanetv/index.m3u8",
+    "langue": "français",
+    "categorie": "Religieux"
+  },
+  {
+    "id": "tvfamille_mq",
+    "nom": "TV Famille",
+    "logo": "https://i.imgur.com/Kbfihk5.png",
+    "url": "https://streamer1.streamhost.org/salive/GMItvfh/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Famille"
+  },
+  {
+    "id": "tvlacapitale_ci",
+    "nom": "TV La Capitale",
+    "logo": "https://i.imgur.com/zZJzNjM.jpeg",
+    "url": "https://stream.berosat.live:19360/tv-capitale-tream/tv-capitale-tream.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "tvlux_be",
+    "nom": "TV Lux",
+    "logo": "https://i.imgur.com/ljbdWkC.png",
+    "url": "https://tvlocales-live.freecaster.com/tvlux/95d2f632-0780-4ac1-9895-9e50212dd3b6/95d2f632-0780-4ac1-9895-9e50212dd3b6.isml/master.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tvmonaco_mc",
     "nom": "TV Monaco",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TVMonaco_2023.svg/960px-TVMonaco_2023.svg.png",
     "url": "https://production-fast-mcrtv.content.okast.tv/channels/2116dc08-1959-465d-857f-3619daefb66b/b702b2b9-aebd-436c-be69-2118f56f3d86/master.m3u8",
@@ -2232,7 +3976,15 @@
     "categorie": "Général"
   },
   {
-    "id": "tvc_benin",
+    "id": "cftmdt_ca",
+    "nom": "TVA [Geo-blocked]",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/TVA_logo_2020.svg/960px-TVA_logo_2020.svg.png",
+    "url": "https://tvalive-dai01.akamaized.net/Content/HLS/Live/channel(575b93c5-be31-ee34-6285-14620fd14048)/index.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tvcbenin_bj",
     "nom": "TVC Bénin",
     "logo": "https://i.imgur.com/oUnEYl5.png",
     "url": "https://live.tvcbenin.com/direct/729c37a1d3319ee21991227b1f84c687.sdp/playlist.m3u8",
@@ -2240,7 +3992,15 @@
     "categorie": "Général"
   },
   {
-    "id": "tvcarib_gospel",
+    "id": "tvcarib_sx",
+    "nom": "TVCARiB",
+    "logo": "https://i.imgur.com/fvGlwKo.png",
+    "url": "https://cdn.mycloudstream.io/hls/live/broadcast/s6nitpvn/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "tvcaribgospel_sx",
     "nom": "TVCARiB Gospel",
     "logo": "https://i.imgur.com/fvGlwKo.png",
     "url": "https://cdn.mycloudstream.io/hls/live/broadcast/wokrhjkd/index.m3u8",
@@ -2248,7 +4008,55 @@
     "categorie": "Religieux"
   },
   {
-    "id": "viamatele",
+    "id": "tvcom_be",
+    "nom": "TVcom",
+    "logo": "https://i.imgur.com/3KuRD19.png",
+    "url": "https://tvlocales-live.freecaster.com/tvcom/95d2f656-ba85-4e13-affc-f1936be1a86d/95d2f656-ba85-4e13-affc-f1936be1a86d.isml/master.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "tvm3_ch",
+    "nom": "TVM 3",
+    "logo": "https://i.imgur.com/zNJlFMg.png",
+    "url": "https://cache1a.netplus.ch/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzY4MTg5NzQyIiwic2lwIjoiIiwicGF0aCI6Ii9saXZlL2Vkcy90dm0zL2Jyb3dzZXItSExTOC8iLCJzZXNzaW9uX2Nkbl9pZCI6IjNhZmJlZTIxMmU1NjUyODEiLCJzZXNzaW9uX2lkIjoiIiwiY2xpZW50X2lkIjoiIiwiZGV2aWNlX2lkIjoiIiwibWF4X3Nlc3Npb25zIjowLCJzZXNzaW9uX2R1cmF0aW9uIjowLCJ1cmwiOiJodHRwczovLzEwLjAuMjI5LjE5Iiwic2Vzc2lvbl90aW1lb3V0IjowLCJhdWQiOiI1MyIsInNvdXJjZXMiOls0OF19.N29uj_Xo3YmdQUboW5e45wx4lUey-utXtC6RpbbCGgJ8uCl2ngejd8tu_S-3tv7s02OtkHo4Rkf7mitOx_7lcA==/live/eds/tvm3/browser-HLS8/tvm3.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tvr_fr",
+    "nom": "TVR (Bretagne)",
+    "logo": "https://www.tvr.bzh/favicon-1024.png",
+    "url": "https://streamtv.cdn.dvmr.fr/TVR/ngrp:tvr.stream_all/master.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "tvt_tg",
+    "nom": "TVT",
+    "logo": "https://i.imgur.com/WtXonN9.png",
+    "url": "http://69.64.57.208/tvt/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "vedia_be",
+    "nom": "Vedia",
+    "logo": "https://i.imgur.com/7LnH6yu.png",
+    "url": "https://tvlocales-live.freecaster.com/vedia/95d2f480-b0b0-4027-9f4a-057183312305/95d2f480-b0b0-4027-9f4a-057183312305.isml/master.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "viaatv_mq",
+    "nom": "ViàATV [Geo-blocked]",
+    "logo": "https://i.imgur.com/Ua6rOXo.png",
+    "url": "https://streamer01.myvideoplace.tv/streamer02/hls/ATV_DIRECT_EV_111018.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "viamatele_fr",
     "nom": "ViàMatélé",
     "logo": "https://i.imgur.com/XVCV9rj.png",
     "url": "https://5dd226f8f01e8.streamlock.net/via-matele-live/matelelive_1080/playlist.m3u8",
@@ -2256,7 +4064,23 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "viatelepaese",
+    "id": "moselletv_fr",
+    "nom": "viàMoselleTV",
+    "logo": "https://i.imgur.com/hrm5QnU.png",
+    "url": "https://live.creacast.com/mirabelletv/smil:mirabelletv.smil/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "viaoccitanie_fr",
+    "nom": "viàOccitanie",
+    "logo": "https://i.imgur.com/NzuKt1R.png",
+    "url": "https://streamer01.myvideoplace.tv/streamer02/hls/MDS_VIA_PAD_301117.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "viatelepaese_fr",
     "nom": "viàTéléPaese",
     "logo": "https://i.imgur.com/TLZsAKK.png",
     "url": "https://srv.webtvmanager.fr:3970/live/viatelepaeselive.m3u8",
@@ -2264,7 +4088,7 @@
     "categorie": "Général"
   },
   {
-    "id": "vosges_television",
+    "id": "vosgestv_fr",
     "nom": "Vosges Télévision",
     "logo": "https://i.imgur.com/7y7ancc.png",
     "url": "https://vosgestv.live-kd.com/live/vosgestv/vosgestv/playlist.m3u8",
@@ -2272,15 +4096,39 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "voyages_saveurs",
+    "id": "voxafrica_uk",
+    "nom": "VoxAfrica",
+    "logo": "https://upload.wikimedia.org/wikipedia/fr/thumb/6/63/Voxafrica-1.png/960px-Voxafrica-1.png",
+    "url": "http://69.64.57.208/voxafrica/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Indéfini"
+  },
+  {
+    "id": "voyagessaveurs_es",
     "nom": "Voyages & Saveurs",
     "logo": "https://images.pluto.tv/channels/680291e38e1ff89c2427aefd/colorLogoPNG_1749650211442.png",
     "url": "https://jmp2.uk/plu-680291e38e1ff89c2427aefd.m3u8",
     "langue": "français",
-    "categorie": "Voyage & Plein air"
+    "categorie": "Style de vie"
   },
   {
-    "id": "walker_texas_ranger",
+    "id": "w9_fr",
+    "nom": "W9",
+    "logo": "https://i.imgur.com/reYeMuE.png",
+    "url": "https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-w9/cmaf_q2hyb21h/hls-short-hd.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "walftv_sn",
+    "nom": "Walf TV",
+    "logo": "https://i.imgur.com/IrBAqIJ.png",
+    "url": "http://69.64.57.208/walftv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "walkertexasranger_us",
     "nom": "Walker Texas Ranger",
     "logo": "https://i.imgur.com/0N7EhuD.png",
     "url": "https://jmp2.uk/plu-635659445b4c4700076d2ad1.m3u8",
@@ -2288,7 +4136,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "wangu_rtv",
+    "id": "wangurtv_cd",
     "nom": "Wangu RTV",
     "logo": "https://i.imgur.com/BE8DWvh.png",
     "url": "https://stream.berosat.live/hls/wangu-tv/wangu-tv.m3u8",
@@ -2296,7 +4144,15 @@
     "categorie": "Général"
   },
   {
-    "id": "y_a_que_la_verite_qui_compte",
+    "id": "wildsidetv_fr",
+    "nom": "Wild Side TV",
+    "logo": "https://i.imgur.com/cQkfRhH.png",
+    "url": "https://jmp2.uk/plu-60b4d6c806ad2a00073b3108.m3u8",
+    "langue": "français",
+    "categorie": "Films-Série"
+  },
+  {
+    "id": "yaquelaveritequicompte_us",
     "nom": "Y'a que la vérité qui compte",
     "logo": "https://i.imgur.com/MDHN2Vc.png",
     "url": "https://jmp2.uk/plu-612e044c970e6f00083bcf3b.m3u8",
@@ -2304,7 +4160,7 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "zee_one_francais",
+    "id": "zeeone_uk",
     "nom": "Zee One Français",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Zee_One_Logo_2025.png",
     "url": "https://7689426c.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/U2Ftc3VuZy1mcl9aZWVNYWdpY19ITFM/playlist.m3u8",
@@ -2312,15 +4168,15 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "zenith",
+    "id": "zenith_fr",
     "nom": "zenith",
     "logo": "https://znth.tv/images/logo.png",
     "url": "https://live.azenagroup.com/zenith/index.ll.m3u8",
     "langue": "français",
-    "categorie": "Documentaire"
+    "categorie": "Culture"
   },
   {
-    "id": "zylo_cine_nanar",
+    "id": "cinenanar_fr",
     "nom": "Zylo Ciné Nanar",
     "logo": "https://i.imgur.com/YnUZd3W.png",
     "url": "https://zylo-cinenanar-rakuten.amagi.tv/playlist.m3u8",
@@ -2328,7 +4184,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "zylo_cine_western",
+    "id": "cinewestern_fr",
     "nom": "Zylo Ciné Western",
     "logo": "https://i.imgur.com/tteOFkL.png",
     "url": "https://amg00711-zylo-amg00711c8-rakuten-uk-2686.playouts.now.amagi.tv/playlist/amg00711-zylofast-cinewestern-rakutenuk/playlist.m3u8",
@@ -2336,7 +4192,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "zylo_emotion_l",
+    "id": "emotionl_fr",
     "nom": "Zylo Emotion' L",
     "logo": "https://i.imgur.com/MP34aaj.png",
     "url": "https://rakutenaa-zylo-emotional-rakuten-r1zkm.amagi.tv/playlist/rakutenAA-zylo-emotional-rakuten/playlist.m3u8",
@@ -2344,7 +4200,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "zylo_frequence_novelas",
+    "id": "frequencenovelas_fr",
     "nom": "Zylo Fréquence Novelas",
     "logo": "https://i.imgur.com/fEjNAps.png",
     "url": "https://d20oth1416y9a1.cloudfront.net/playlist/amg00711-zylofast-frequencenovelas-rakutenus/playlist.m3u8",
@@ -2352,7 +4208,7 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "zylo_into_crime",
+    "id": "intocrime_fr",
     "nom": "Zylo Into Crime",
     "logo": "https://i.imgur.com/43at4M2.png",
     "url": "https://amg00711-zylo-amg00711c10-rakuten-fr-6731.playouts.now.amagi.tv/playlist.m3u8",
@@ -2360,7 +4216,7 @@
     "categorie": "Documentaire"
   },
   {
-    "id": "zylo_screamin",
+    "id": "screamin_fr",
     "nom": "Zylo ScreamIN",
     "logo": "https://i.imgur.com/tGmKbil.png",
     "url": "https://rakutenaa-zylo-screamin-rakuten-p11ej.amagi.tv/playlist/rakutenAA-zylo-screamin-rakuten/playlist.m3u8",
