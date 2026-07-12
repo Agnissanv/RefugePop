@@ -118,6 +118,28 @@ def get_video_details(video_ids):
     return details
 
 
+
+def backfill_genres(movies):
+    """Ajoute genre_ids aux films déjà présents qui ne l'ont pas encore (via leur tmdbId)."""
+    updated = 0
+    for movie in movies:
+        if movie.get("source") == "youtube" and movie.get("tmdbId") and "genre_ids" not in movie:
+            url = f"https://api.themoviedb.org/3/movie/{movie['tmdbId']}"
+            params = {"api_key": TMDB_API_KEY, "language": "fr-FR"}
+            try:
+                res = requests.get(url, params=params).json()
+                genres = res.get("genres", [])
+                movie["genre_ids"] = [g["id"] for g in genres]
+                updated += 1
+                time.sleep(0.15)
+            except Exception as e:
+                print(f"⚠️  Impossible de récupérer le genre pour tmdbId {movie['tmdbId']}: {e}")
+    if updated:
+        print(f"🔄 Genres rattrapés pour {updated} film(s) déjà présents.")
+    return movies
+
+
+
 def search_tmdb(title):
     """Cherche sur TMDB et ne retourne un résultat que si son titre ressemble vraiment à la requête."""
     url = "https://api.themoviedb.org/3/search/movie"
@@ -153,6 +175,7 @@ def main():
         needs_review = json.loads(NEEDS_REVIEW_PATH.read_text(encoding="utf-8"))
 
     existing_ids = {m["youtubeId"] for m in existing_movies if m.get("source") == "youtube"}
+    existing_movies = backfill_genres(existing_movies)
     already_reviewed_ids = {r["youtubeId"] for r in needs_review}
     skip_ids = existing_ids | already_reviewed_ids
 
@@ -199,6 +222,7 @@ def main():
                     "release_date": tmdb_match.get("release_date") or "",
                     "youtubeId": video_id,
                     "tmdbId": tmdb_match["id"],
+                    "genre_ids": tmdb_match.get("genre_ids", []),
                 }
                 new_movies.append(entry)
                 year = (tmdb_match.get("release_date") or "----")[:4]

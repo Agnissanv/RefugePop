@@ -29,6 +29,32 @@ const PAGE_SIZE = 20; // nombre de cartes affichées par lot
 let paginationQueue = [];
 let paginationIndex = 0;
 const searchInput = document.getElementById('searchInput');
+const GENRE_KEYWORDS = {
+    action: 28,
+    horreur: 27, horror: 27, epouvante: 27, epouvantail: 27,
+    comedie: 35, comique: 35, drole: 35, humour: 35,
+    drame: 18,
+    amour: 10749, romance: 10749, romantique: 10749,
+    animation: 16, anime: 16, dessinanime: 16,
+};
+
+function normalizeSearchText(s) {
+    return s
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // enlève les accents
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, ''); // enlève espaces/ponctuation
+}
+
+function detectSearchIntent(rawQuery) {
+    const cleaned = normalizeSearchText(rawQuery);
+    if (/^\d{4}$/.test(cleaned)) {
+        return { type: 'year', value: cleaned };
+    }
+    if (GENRE_KEYWORDS[cleaned] !== undefined) {
+        return { type: 'genre', value: GENRE_KEYWORDS[cleaned] };
+    }
+    return { type: 'title', value: rawQuery };
+}
 const filterButtons = document.querySelectorAll('.filter-btn');
 
 // Modales & Lecteurs
@@ -462,20 +488,42 @@ async function searchMovies(query) {
     }
 
     grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Recherche...</div>`;
-    const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&language=${LANG}&query=${encodeURIComponent(query)}`;
-    const normalizedQuery = query.trim().toLowerCase();
+    const intent = detectSearchIntent(query);
 
     try {
-        const [response, personalMovies] = await Promise.all([
-            fetch(url),
-            getPersonalMovies()
-        ]);
-        const data = await response.json();
-        const tmdbResults = data.results || [];
+        const personalMovies = await getPersonalMovies();
+        let tmdbResults = [];
+        let personalResults = [];
 
-        const personalResults = personalMovies.filter(movie =>
-            movie.title.toLowerCase().includes(normalizedQuery)
-        );
+        if (intent.type === 'genre') {
+            const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=${LANG}&with_genres=${intent.value}`;
+            const res = await fetch(url);
+            const data = await res.json();
+            tmdbResults = data.results || [];
+
+            personalResults = personalMovies.filter(movie =>
+                Array.isArray(movie.genre_ids) && movie.genre_ids.includes(intent.value)
+            );
+        } else if (intent.type === 'year') {
+            const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=${LANG}&primary_release_year=${intent.value}`;
+            const res = await fetch(url);
+            const data = await res.json();
+            tmdbResults = data.results || [];
+
+            personalResults = personalMovies.filter(movie =>
+                (movie.release_date || '').startsWith(intent.value)
+            );
+        } else {
+            const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&language=${LANG}&query=${encodeURIComponent(query)}`;
+            const res = await fetch(url);
+            const data = await res.json();
+            tmdbResults = data.results || [];
+
+            const normalizedQuery = query.trim().toLowerCase();
+            personalResults = personalMovies.filter(movie =>
+                movie.title.toLowerCase().includes(normalizedQuery)
+            );
+        }
 
         // Tes films perso apparaissent en premier, suivis des résultats TMDB
         displayMovies([...personalResults, ...tmdbResults]);
