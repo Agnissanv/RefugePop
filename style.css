@@ -719,6 +719,33 @@ header {
     box-shadow: 0 2px 8px rgba(0,0,0,0.4);
 }
 
+
+
+.load-more-container {
+    text-align: center;
+    padding: 10px 5% 60px;
+}
+
+.load-more-btn {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 12px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.load-more-btn:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+.load-more-btn.hidden {
+    display: none;
+}
+
 /* ==========================================================================
    VERSION RESPONSIVE MOBILE EXTRÊME (21e SIÈCLE ADAPTÉ)
    ========================================================================== */

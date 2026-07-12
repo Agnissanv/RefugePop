@@ -24,6 +24,10 @@ let currentMovies = []; // la liste actuellement affichée, sert de base au filt
 
 // Éléments du DOM
 const grid = document.getElementById('movieGrid');
+const loadMoreBtn = document.getElementById('loadMoreBtn');
+const PAGE_SIZE = 20; // nombre de cartes affichées par lot
+let paginationQueue = [];
+let paginationIndex = 0;
 const searchInput = document.getElementById('searchInput');
 const filterButtons = document.querySelectorAll('.filter-btn');
 
@@ -247,81 +251,90 @@ async function getTrendingMovies() {
     }
 }
 
+function buildMovieCard(movie) {
+    const poster = movie.source === 'youtube'
+        ? movie.poster
+        : (movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image');
+    const backdrop = movie.source === 'youtube'
+        ? (movie.backdrop || movie.poster)
+        : (movie.backdrop_path ? `${IMG_URL}${movie.backdrop_path}` : poster);
+    const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
+
+    const favIcon = isFavorite(movie.id) ? 'fas fa-check' : 'fas fa-plus';
+    const favClass = isFavorite(movie.id) ? 'btn-fav active' : 'btn-fav';
+    const availableBadge = movie.source === 'youtube'
+        ? `<span class="badge-available"><i class="fas fa-check-circle"></i> Disponible</span>`
+        : '';
+
+    const card = document.createElement('div');
+    card.classList.add('movie-card');
+
+    card.innerHTML = `
+        <img class="poster-img" src="${poster}" alt="${movie.title}" loading="lazy">
+        <img class="backdrop-img" src="${backdrop}" alt="${movie.title} fond" loading="lazy">
+        ${availableBadge}
+        <div class="card-overlay">
+            <h3 class="card-title">${movie.title}</h3>
+            <span class="card-year">🍿 ${year}</span>
+            <p class="card-desc">${movie.overview || "Aucun résumé disponible."}</p>
+            <div class="card-actions">
+                <button class="btn-play" title="Bande-annonce"><i class="fas fa-play"></i></button>
+                <button class="${favClass}" title="Ajouter aux favoris"><i class="${favIcon}"></i></button>
+            </div>
+        </div>
+    `;
+
+    const playBtn = card.querySelector('.btn-play');
+    playBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openCinematicModal(movie);
+    });
+
+    const favBtn = card.querySelector('.btn-fav');
+    favBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        toggleFavorite(movie);
+
+        const icon = favBtn.querySelector('i');
+        if (isFavorite(movie.id)) {
+            icon.className = 'fas fa-check';
+            favBtn.classList.add('active');
+        } else {
+            icon.className = 'fas fa-plus';
+            favBtn.classList.remove('active');
+        }
+    });
+
+    card.addEventListener('click', () => {
+        openCinematicModal(movie);
+    });
+
+    return card;
+}
+
+function renderNextBatch() {
+    const batch = paginationQueue.slice(paginationIndex, paginationIndex + PAGE_SIZE);
+    batch.forEach(movie => grid.appendChild(buildMovieCard(movie)));
+    paginationIndex += batch.length;
+    loadMoreBtn.classList.toggle('hidden', paginationIndex >= paginationQueue.length);
+}
+
 function displayMovies(movies) {
-    currentMovies = movies; 
+    currentMovies = movies;
     grid.innerHTML = "";
-    
-    if (!movies || movies.length === 0) {
+    paginationQueue = movies || [];
+    paginationIndex = 0;
+
+    if (!paginationQueue.length) {
         grid.innerHTML = `<div class="loader">Aucun film trouvé. les films toujours disponibles sont dans la catégorie 🎬Autres.</div>`;
+        loadMoreBtn.classList.add('hidden');
         return;
     }
 
-    movies.forEach(movie => {
-        const poster = movie.source === 'youtube'
-            ? movie.poster
-            : (movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image');
-        const backdrop = movie.source === 'youtube'
-            ? (movie.backdrop || movie.poster)
-            : (movie.backdrop_path ? `${IMG_URL}${movie.backdrop_path}` : poster);
-        const year = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
-        
-        const favIcon = isFavorite(movie.id) ? 'fas fa-check' : 'fas fa-plus';
-        const favClass = isFavorite(movie.id) ? 'btn-fav active' : 'btn-fav';
-        const availableBadge = movie.source === 'youtube'
-            ? `<span class="badge-available"><i class="fas fa-check-circle"></i> Disponible</span>`
-            : '';
-
-        const card = document.createElement('div');
-        card.classList.add('movie-card');
-        
-        // Structure Premium : Poster vertical + Backdrop horizontal secret + Textes & Actions
-        card.innerHTML = `
-            <img class="poster-img" src="${poster}" alt="${movie.title}" loading="lazy">
-            <img class="backdrop-img" src="${backdrop}" alt="${movie.title} fond" loading="lazy">
-            ${availableBadge}
-            
-            <div class="card-overlay">
-                <h3 class="card-title">${movie.title}</h3>
-                <span class="card-year">🍿 ${year}</span>
-                <p class="card-desc">${movie.overview || "Aucun résumé disponible."}</p>
-                <div class="card-actions">
-                    <button class="btn-play" title="Bande-annonce"><i class="fas fa-play"></i></button>
-                    <button class="${favClass}" title="Ajouter aux favoris"><i class="${favIcon}"></i></button>
-                </div>
-            </div>
-        `;
-
-        // Événement Bouton Lecture / Bande-annonce
-        const playBtn = card.querySelector('.btn-play');
-        playBtn.addEventListener('click', (e) => {
-            e.stopPropagation(); 
-            openCinematicModal(movie);
-        });
-
-        // Événement Bouton Favoris
-        const favBtn = card.querySelector('.btn-fav');
-        favBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            toggleFavorite(movie);
-            
-            const icon = favBtn.querySelector('i');
-            if (isFavorite(movie.id)) {
-                icon.className = 'fas fa-check';
-                favBtn.classList.add('active');
-            } else {
-                icon.className = 'fas fa-plus';
-                favBtn.classList.remove('active');
-            }
-        });
-
-        // Clic sur le reste de la carte ouvre aussi les détails
-        card.addEventListener('click', () => {
-            openCinematicModal(movie);
-        });
-
-        grid.appendChild(card);
-    });
+    renderNextBatch();
 }
+
+loadMoreBtn.addEventListener('click', renderNextBatch);
 
 // --- FILTRAGE ---
 async function getMoviesByGenre(genreId) {
