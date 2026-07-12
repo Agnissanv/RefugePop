@@ -40,11 +40,20 @@ def main():
     if INDISPONIBLES_PATH.exists():
         indisponibles = json.loads(INDISPONIBLES_PATH.read_text(encoding="utf-8"))
 
+    # On regroupe tout ce qui existe (actives + indisponibles) pour un test complet,
+    # en évitant les doublons si une chaîne apparaît dans les deux fichiers.
+    seen_ids = set()
+    all_channels = []
+    for ch in channels + indisponibles:
+        if ch["id"] not in seen_ids:
+            all_channels.append(ch)
+            seen_ids.add(ch["id"])
+
     still_working = []
     newly_dead = []
 
-    for i, channel in enumerate(channels, 1):
-        print(f"[{i}/{len(channels)}] Test de {channel['nom']}...", end=" ")
+    for i, channel in enumerate(all_channels, 1):
+        print(f"[{i}/{len(all_channels)}] Test de {channel['nom']}...", end=" ")
         if check_stream(channel["url"]):
             print("✅")
             still_working.append(channel)
@@ -52,13 +61,13 @@ def main():
             print("❌")
             newly_dead.append(channel)
 
-    all_indisponibles = indisponibles + newly_dead
-
     CHAINES_PATH.write_text(json.dumps(still_working, ensure_ascii=False, indent=2), encoding="utf-8")
-    INDISPONIBLES_PATH.write_text(json.dumps(all_indisponibles, ensure_ascii=False, indent=2), encoding="utf-8")
+    INDISPONIBLES_PATH.write_text(json.dumps(newly_dead, ensure_ascii=False, indent=2), encoding="utf-8")
 
+    recovered = len([c for c in still_working if c in indisponibles])
     print(f"\n✅ {len(still_working)} chaîne(s) fonctionnelle(s), conservée(s) dans chaines.json")
-    print(f"❌ {len(newly_dead)} chaîne(s) hors service, déplacée(s) vers chaines_indisponibles.json")
+    print(f"🔄 dont {recovered} récupérée(s) qui étaient marquées indisponibles")
+    print(f"❌ {len(newly_dead)} chaîne(s) toujours hors service dans chaines_indisponibles.json")
 
 
 if __name__ == "__main__":

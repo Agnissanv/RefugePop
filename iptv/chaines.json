@@ -8,14 +8,6 @@
     "categorie": "Général"
   },
   {
-    "id": "2m_monde_2",
-    "nom": "2M Monde 2",
-    "logo": "https://i.imgur.com/MvpntzA.png",
-    "url": "https://cdn-globecast.akamaized.net/live/eds/2m_monde/hls_video_ts_tuhawxpiemz257adfc/2m_monde.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "2m_monde_1_2",
     "nom": "2M Monde +1",
     "logo": "https://i.imgur.com/MvpntzA.png",
@@ -56,14 +48,6 @@
     "categorie": "Musique"
   },
   {
-    "id": "a2i_naija",
-    "nom": "A2i Naija",
-    "logo": "https://i.imgur.com/yq7ghPE.jpg",
-    "url": "https://stream.sen-gt.com/A2iNaija/myStream/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Éducation"
-  },
-  {
     "id": "a2i_religion",
     "nom": "A2i Religion",
     "logo": "https://i.imgur.com/54WrwyN.jpg",
@@ -84,22 +68,6 @@
     "nom": "A12 TV",
     "logo": "https://i.imgur.com/JgnjgvF.png",
     "url": "https://video1.getstreamhosting.com:1936/8250/8250/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ac_tv",
-    "nom": "AC TV",
-    "logo": "https://i.imgur.com/SYugK7Y.png",
-    "url": "https://ssh101stream.ssh101.com/akamaissh101/ssh101/actvstream/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
-    "id": "acerfi_tv",
-    "nom": "Acerfi TV",
-    "logo": "https://i.imgur.com/exX5djJ.png",
-    "url": "https://streamtv.acerfi.net/hls/acerfitv/index.m3u8",
     "langue": "français",
     "categorie": "Général"
   },
@@ -160,22 +128,6 @@
     "categorie": "information"
   },
   {
-    "id": "afrique54_tv",
-    "nom": "Afrique54 TV",
-    "logo": "https://i.imgur.com/WIaRpiS.png",
-    "url": "https://video1.getstreamhosting.com:1936/8318/8318/playlist.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
-    "id": "afrique_media",
-    "nom": "Afrique Media",
-    "logo": "https://i.imgur.com/spQgX7X.png",
-    "url": "https://cloud.odysee.live/content/fe06b3cdc9412e359368b2455b6ea5e93856e382/master.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
     "id": "afro_magic_channel",
     "nom": "Afro Magic Channel",
     "logo": "https://i.imgur.com/yQzXErU.png",
@@ -216,14 +168,6 @@
     "categorie": "Général"
   },
   {
-    "id": "al_aoula_2",
-    "nom": "Al Aoula",
-    "logo": "https://i.imgur.com/nq53d2N.png",
-    "url": "https://snrtworker.kharazbelaid.workers.dev/?id=alaoula.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "al_aoula_inter",
     "nom": "Al Aoula Inter",
     "logo": "https://i.imgur.com/nq53d2N.png",
@@ -248,22 +192,6 @@
     "categorie": "Général"
   },
   {
-    "id": "amani_tv",
-    "nom": "Amani TV",
-    "logo": "https://i.imgur.com/0cY4K7G.png",
-    "url": "https://goccn.cloud/hls/amanitv/index.m3u8",
-    "langue": "français",
-    "categorie": "Documentaire"
-  },
-  {
-    "id": "angers_tele",
-    "nom": "Angers Tele",
-    "logo": "https://i.imgur.com/CMKKbaP.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/angerstele.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "antenne_reunion",
     "nom": "Antenne Réunion",
     "logo": "https://i.imgur.com/EPIMMaB.png",
@@ -272,44 +200,12 @@
     "categorie": "Général"
   },
   {
-    "id": "arabel",
-    "nom": "AraBel",
-    "logo": "https://www.arabel.fm/wp-content/uploads/2021/10/Logo-AraBel.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/arabel.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "arte",
-    "nom": "Arte",
-    "logo": "https://i.imgur.com/ecXMjNl.png",
-    "url": "https://artesimulcast.akamaized.net/hls/live/2031003/artelive_fr/index.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
-  {
-    "id": "assadissa",
-    "nom": "Assadissa",
-    "logo": "https://freebox.cdn.scw.iliad.fr/medium_Assadissa_f8b25de821.png",
-    "url": "https://snrtworker.kharazbelaid.workers.dev/?id=assadisa.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
     "id": "atv",
     "nom": "ATV",
     "logo": "https://i.imgur.com/YkJPCfR.jpeg",
     "url": "https://guineetvdirect.online:3320/live/atvguineelive.m3u8",
     "langue": "français",
     "categorie": "Général"
-  },
-  {
-    "id": "b_smart_tv",
-    "nom": "B Smart TV",
-    "logo": "https://i.imgur.com/RyVEFcG.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/bsmart.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
   },
   {
     "id": "bam_tv",
@@ -336,36 +232,12 @@
     "categorie": "information"
   },
   {
-    "id": "beb_tv",
-    "nom": "Beb TV",
-    "logo": "https://i.imgur.com/3XOk1lP.jpeg",
-    "url": "https://live-hls-qunv.livepush.io/live_cdn/em8A-kbzIfHqu73/index.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "bel_rtl",
-    "nom": "Bel RTL",
-    "logo": "https://i.imgur.com/0DUprIW.png",
-    "url": "https://bel-live-hls.akamaized.net/hls/live/2038650/BEL-Live-HLS/master.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
     "id": "benie_tv",
     "nom": "Benie TV",
     "logo": "https://i.imgur.com/7FXi05e.jpeg",
     "url": "https://tv.voozmedia.fun/benietv/index.m3u8",
     "langue": "français",
     "categorie": "Religieux"
-  },
-  {
-    "id": "benin_web_tv",
-    "nom": "Bénin Web TV",
-    "logo": "https://i.imgur.com/CYy4n0N.png",
-    "url": "https://stream.beninwebtv.bj/2/live/stream.m3u8",
-    "langue": "français",
-    "categorie": "information"
   },
   {
     "id": "bfm2",
@@ -520,22 +392,6 @@
     "categorie": "Général"
   },
   {
-    "id": "bruzz",
-    "nom": "Bruzz",
-    "logo": "https://i.imgur.com/OYlYidF.png",
-    "url": "https://hls-origin01-bruzz.cdn02.rambla.be/main/adliveorigin-bruzz/_definst_/V3n5YY.smil/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "business_24_africa",
-    "nom": "Business 24 Africa",
-    "logo": "https://i.imgur.com/zZFl3vy.png",
-    "url": "https://cdn-globecast.akamaized.net/live/eds/business24_tv/hls_video/index.m3u8",
-    "langue": "français",
-    "categorie": "Entreprise"
-  },
-  {
     "id": "bx1",
     "nom": "BX1",
     "logo": "https://i.imgur.com/0OkSa6c.png",
@@ -568,68 +424,12 @@
     "categorie": "Général"
   },
   {
-    "id": "canaf54_tv",
-    "nom": "Canaf54 TV",
-    "logo": "https://i.imgur.com/viB0FS2.png",
-    "url": "https://5caf24a595d94.streamlock.net:1937/pvyugfkzkc/pvyugfkzkc/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "canal_3",
-    "nom": "Canal 3",
-    "logo": "https://i.imgur.com/WIrVAa2.png",
-    "url": "https://cs2.push2stream.com/CANAL3BENIN/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "canal_9_en_francais",
-    "nom": "Canal 9 en Français",
-    "logo": "https://i.imgur.com/TNciMh2.png",
-    "url": "https://livehd.vedge.infomaniak.com/livecast/livehd/master.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "canal_32",
-    "nom": "Canal 32",
-    "logo": "https://i.imgur.com/lAsE6kN.png",
-    "url": "https://event.vedge.infomaniak.com/livecast/ik:canal32_4/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "canal_savoir",
     "nom": "Canal Savoir",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/9/97/Savoir_m%C3%A9dia_logo_3.png",
     "url": "https://hls.savoir.media/live/stream.m3u8",
     "langue": "français",
     "categorie": "Éducation"
-  },
-  {
-    "id": "canal_zoom",
-    "nom": "Canal Zoom",
-    "logo": "https://i.imgur.com/JUNP8Rx.png",
-    "url": "https://tvlocales-live.freecaster.com/live/95d2e3af-5ab8-45a9-9dc9-f544d006b5d5/95d2e3af-5ab8-45a9-9dc9-f544d006b5d5.isml/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "canal_foot",
-    "nom": "Canal+ Foot",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/e/eb/Canal%2BFoot.png",
-    "url": "https://test.946985.filegear-sg.me/proxy/ef3174f16d4557d2",
-    "langue": "français",
-    "categorie": "Sportif"
-  },
-  {
-    "id": "canal_haiti",
-    "nom": "Canal+ Haiti",
-    "logo": "https://i.imgur.com/Gad5qrd.png",
-    "url": "https://vdo.pro-fhi.net:3605/live/dgenlcpmlive.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
   },
   {
     "id": "cannes_lerins_tv",
@@ -696,28 +496,12 @@
     "categorie": "Religieux"
   },
   {
-    "id": "cen_television",
-    "nom": "CEN Télévision",
-    "logo": "https://i.ibb.co/2vJfdgN/unnamed.jpg",
-    "url": "https://strhlslb01.streamakaci.tv/cen/cen-multi/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "cgtn_francais",
     "nom": "CGTN Français",
     "logo": "https://i.imgur.com/BwhledK.png",
     "url": "https://amg01314-cgtn-amg01314c2-rakuten-us-1319.playouts.now.amagi.tv/cgtn-fr-rakuten/playlist.m3u8",
     "langue": "français",
     "categorie": "information"
-  },
-  {
-    "id": "chabiba_tv",
-    "nom": "Chabiba TV",
-    "logo": "https://i.imgur.com/qVTOklV.png",
-    "url": "https://endour.net/hls/RUgLAPCbPdF5oPSTX2Hvl/index.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
   },
   {
     "id": "chamber_tv",
@@ -832,14 +616,6 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "clubbing_tv_france",
-    "nom": "Clubbing TV France",
-    "logo": "https://i.imgur.com/MyiA92q.png",
-    "url": "https://d1j2csarxnwazk.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-uze1m6xh4fiyr-ssai-prd/master.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
     "id": "cna",
     "nom": "CNA",
     "logo": "https://i.imgur.com/Ki3ySUE.png",
@@ -864,28 +640,12 @@
     "categorie": "information"
   },
   {
-    "id": "cnm_tv",
-    "nom": "CNM TV",
-    "logo": "https://i.ibb.co/0cfdGKv/1630802325205.jpg",
-    "url": "https://stream.sen-gt.com/cnmtv/myStream/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "compassion_tv",
     "nom": "Compassion TV",
     "logo": "https://i.imgur.com/lfoUsyR.jpeg",
     "url": "https://tnt-television.com/COMPASSION_FM/index.m3u8",
     "langue": "français",
     "categorie": "Religieux"
-  },
-  {
-    "id": "congo_planet_television",
-    "nom": "Congo Planet Télévision",
-    "logo": "https://i.imgur.com/9IIIvPf.png",
-    "url": "https://radio.congoplanet.com/Congo_Planet_TV.sdp/Congo_Planet_TV/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Général"
   },
   {
     "id": "couleur_3",
@@ -904,14 +664,6 @@
     "categorie": "information"
   },
   {
-    "id": "d3_tv",
-    "nom": "D3 TV",
-    "logo": "https://i.imgur.com/uFEIBtB.png",
-    "url": "https://live20.bozztv.com/akamaissh101/ssh101/d3tvnet/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
     "id": "daria",
     "nom": "Daria",
     "logo": "https://images.pluto.tv/channels/6683b680efa2a10008e8a393/colorLogoPNG.png",
@@ -924,14 +676,6 @@
     "nom": "DBM TV",
     "logo": "https://i.imgur.com/ab6p2SW.png",
     "url": "https://dbmtv.vedge.infomaniak.com/livecast/dbmtv/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "dega_tv",
-    "nom": "Dega TV",
-    "logo": "https://i.ibb.co/ZTYvHyR/DEGA-TV-TELEPACK.jpg",
-    "url": "https://59d39900ebfb8.streamlock.net/saintlouisltv/saintlouisltv/playlist.m3u8",
     "langue": "français",
     "categorie": "Musique"
   },
@@ -952,44 +696,12 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "divin_amour_tv",
-    "nom": "Divin Amour TV",
-    "logo": "https://i.imgur.com/UUSAQET.png",
-    "url": "https://voozmedia.fun/divinamourtv/livestream/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
-    "id": "dntv",
-    "nom": "DNTV",
-    "logo": "https://i.imgur.com/Pw1ifln.png",
-    "url": "https://tv.num221tech.com:5443/LiveApp/streams/dntv.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
-  {
     "id": "dossiers_fbi",
     "nom": "Dossiers FBI",
     "logo": "https://i.imgur.com/8Zx6dA7.png",
     "url": "https://jmp2.uk/plu-5f8edad922b10b000753bc37.m3u8",
     "langue": "français",
     "categorie": "Documentaire"
-  },
-  {
-    "id": "dounia_tv",
-    "nom": "Dounia TV",
-    "logo": "https://i.imgur.com/ENBCDaQ.png",
-    "url": "https://live20.bozztv.com/dvrfl06/astv/astv-douniatv/index.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "dynamic_gospel_tv",
-    "nom": "Dynamic Gospel TV",
-    "logo": "https://i.imgur.com/e36BNNK.jpg",
-    "url": "https://ssh101stream.ssh101.com/akamaissh101/ssh101/tvdynamicstream/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
   },
   {
     "id": "ebs",
@@ -1008,44 +720,12 @@
     "categorie": "information"
   },
   {
-    "id": "ecclesia_tv",
-    "nom": "Ecclesia TV",
-    "logo": "https://i.imgur.com/mgabVFd.png",
-    "url": "https://video1.getstreamhosting.com:1936/8294/8294/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
     "id": "eden_tv",
     "nom": "Eden TV",
     "logo": "https://i.imgur.com/4ClnG0x.png",
     "url": "https://rtmp.edentv.bj/hls/stream.m3u8",
     "langue": "français",
     "categorie": "Général"
-  },
-  {
-    "id": "emci_tv",
-    "nom": "EMCI TV",
-    "logo": "",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/emciafrique.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
-    "id": "emci_tv_america",
-    "nom": "EMCI TV America",
-    "logo": "",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/emciamerique.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
-    "id": "emci_tv_europe",
-    "nom": "EMCI TV Europe",
-    "logo": "https://i.imgur.com/KagDKKB.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/emcieurope.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
   },
   {
     "id": "equidia",
@@ -1088,22 +768,6 @@
     "categorie": "information"
   },
   {
-    "id": "ev_tele",
-    "nom": "Ev-tele",
-    "logo": "https://i.imgur.com/iBlXl2T.png",
-    "url": "https://playtv4k.live/live/EVTELE/index.m3u8",
-    "langue": "français",
-    "categorie": "Documentaire"
-  },
-  {
-    "id": "evasion_tv",
-    "nom": "Evasion TV",
-    "logo": "https://i.imgur.com/TTWl2Iy.png",
-    "url": "https://kali.vdopanel.com:3090/hybrid/play.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "evi_tv",
     "nom": "EVI TV",
     "logo": "https://i.imgur.com/fBc9JSM.png",
@@ -1126,14 +790,6 @@
     "url": "https://edge-fast3.evrideo.tv/bfdbb576-83f7-11f0-9f89-0200170e3e04_1000028043_HLS/manifest.m3u8",
     "langue": "français",
     "categorie": "Style de vie"
-  },
-  {
-    "id": "fidele_tv",
-    "nom": "Fidele TV",
-    "logo": "https://i.ibb.co/YtBZ0Lc/FIDELE-TV.png",
-    "url": "https://59d39900ebfb8.streamlock.net/FIDELETV/FIDELETV/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
   },
   {
     "id": "fifa_french",
@@ -1160,34 +816,10 @@
     "categorie": "information"
   },
   {
-    "id": "france_4_hd",
-    "nom": "France 4 HD",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/France_4_2018.svg/960px-France_4_2018.svg.png",
-    "url": "https://sv1.data-stream.top/8c0a287e56a6e1843143904778be3775b4d3edd4fba4ffcc3f72638c7a71d4d4/hls/francetv4.m3u8",
-    "langue": "français",
-    "categorie": "Animation"
-  },
-  {
     "id": "france_24_french",
     "nom": "France 24 French",
     "logo": "https://i.imgur.com/u8N6uoj.png",
     "url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
-    "id": "france_inter",
-    "nom": "France Inter",
-    "logo": "https://i.imgur.com/MgBeU52.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/franceinter.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "franceinfo",
-    "nom": "Franceinfo",
-    "logo": "https://i.imgur.com/eITXz6A.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/franceinfotv.m3u8",
     "langue": "français",
     "categorie": "information"
   },
@@ -1198,14 +830,6 @@
     "url": "https://5421175365ea3.streamlock.net/live/smil:switch.smil/playlist.m3u8",
     "langue": "français",
     "categorie": "Documentaire"
-  },
-  {
-    "id": "fun_radio",
-    "nom": "Fun Radio",
-    "logo": "https://i.imgur.com/wgxuYsQ.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/funradiofr.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
   },
   {
     "id": "fun_vision",
@@ -1232,34 +856,10 @@
     "categorie": "Indéfini"
   },
   {
-    "id": "geopolis_tv",
-    "nom": "Géopolis TV",
-    "logo": "https://i.imgur.com/WzGAIYe.jpg",
-    "url": "https://tnt-television.com/Geopolis_tv/index.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
     "id": "gms_tv",
     "nom": "GMS TV",
     "logo": "https://i.imgur.com/Ue02CIH.png",
     "url": "https://acasmedia6.acangroup.org/gmstv/gmstv_output/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "gong",
-    "nom": "Gong",
-    "logo": "https://i.imgur.com/lA9UFMG.png",
-    "url": "https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/1080p-vtt/index.m3u8",
-    "langue": "français",
-    "categorie": "Animation"
-  },
-  {
-    "id": "gtv",
-    "nom": "GTV",
-    "logo": "https://i.imgur.com/5cFLWKO.png",
-    "url": "https://g2qd3exjy7an-hls-live.5centscdn.com/gtvghana/ghanaweb.stream/playlist.m3u8",
     "langue": "français",
     "categorie": "Général"
   },
@@ -1318,110 +918,6 @@
     "url": "https://i24newsfrench-cdn.encoders.immergo.tv/master.m3u8",
     "langue": "français",
     "categorie": "information"
-  },
-  {
-    "id": "icarly_tv",
-    "nom": "iCarly TV",
-    "logo": "https://images.pluto.tv/channels/5e8b580a233dc90007f0cb9d/colorLogoPNG.png",
-    "url": "https://jmp2.uk/plu-5f8ecc7aa44d9c00081fca29.m3u8",
-    "langue": "français",
-    "categorie": "Animation"
-  },
-  {
-    "id": "ici_radio_canada_tele",
-    "nom": "Ici Radio-Canada Télé",
-    "logo": "https://i.imgur.com/pFCJGj4.png",
-    "url": "https://rcavlive-dai.akamaized.net/hls/live/696614/cancbftprem/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_colombie_britannique_yukon_cbuft_dt",
-    "nom": "Ici Radio-Canada Télé Colombie-Britannique/Yukon (CBUFT-DT)",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Current_Logo_of_Ici_Radio-Canada_T%C3%A9l%C3%A9_%282016-present%29.svg/960px-Current_Logo_of_Ici_Radio-Canada_T%C3%A9l%C3%A9_%282016-present%29.svg.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/704017/cancbuft/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_est_du_quebec_cjbr_dt",
-    "nom": "Ici Radio-Canada Télé Est du Québec (CJBR-DT)",
-    "logo": "https://i.imgur.com/1B3d8Jc.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/704024/cancjbr/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_estrie_cksh_dt",
-    "nom": "Ici Radio-Canada Télé Estrie (CKSH-DT)",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/SRC-TV.svg/960px-SRC-TV.svg.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/704016/cancksh/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_manitoba_cbwft_dt",
-    "nom": "Ici Radio-Canada Télé Manitoba (CBWFT-DT)",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/ICI_Manitoba_logo_2018.svg/960px-ICI_Manitoba_logo_2018.svg.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/704018/cancbwft/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_mauricie_centre_du_quebec_cktm_dt",
-    "nom": "Ici Radio-Canada Télé Mauricie/Centre-du-Québec (CKTM-DT)",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/SRC-TV.svg/960px-SRC-TV.svg.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/704021/cancktm/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_ontario_cblft_dt",
-    "nom": "Ici Radio-Canada Télé Ontario (CBLFT-DT)",
-    "logo": "https://i.imgur.com/1f798e8.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/704022/cancblft/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_ottawa_gatineau_cboft_dt",
-    "nom": "Ici Radio-Canada Télé Ottawa/Gatineau (CBOFT-DT)",
-    "logo": "https://i.imgur.com/373Y8Py.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/664046/cancboft/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_quebec_cbvt_dt",
-    "nom": "Ici Radio-Canada Télé Québec (CBVT-DT)",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Current_Logo_of_Ici_Radio-Canada_T%C3%A9l%C3%A9_%282016-present%29.svg/960px-Current_Logo_of_Ici_Radio-Canada_T%C3%A9l%C3%A9_%282016-present%29.svg.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/664045/cancbvt/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_saguenay_lac_st_jean_cktv_dt",
-    "nom": "Ici Radio-Canada Télé Saguenay/Lac-St-Jean (CKTV-DT)",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/SRC-TV.svg/960px-SRC-TV.svg.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/704023/cancktv/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_saskatchewan_cbkft_dt",
-    "nom": "Ici Radio-Canada Télé Saskatchewan (CBKFT-DT)",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/ICI_Saskatchewan_logo_2018.svg/960px-ICI_Saskatchewan_logo_2018.svg.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/704019/cancbkft/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "ici_radio_canada_tele_terre_neuve_et_labrador_cbaft_dt",
-    "nom": "Ici Radio-Canada Télé Terre-Neuve-et-Labrador (CBAFT-DT)",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/ICI_Acadie_logo_2018.svg/960px-ICI_Acadie_logo_2018.svg.png",
-    "url": "https://rcavlive.akamaized.net/hls/live/704014/cancbaft/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
   },
   {
     "id": "ici_rdi",
@@ -1528,28 +1024,12 @@
     "categorie": "Animation"
   },
   {
-    "id": "jos_tv_hd",
-    "nom": "JOS TV HD",
-    "logo": "https://i.imgur.com/Ai9kpuu.jpeg",
-    "url": "https://stream.berosat.live:19360/jos-tv-stream/jos-tv-stream.m3u8",
-    "langue": "français",
-    "categorie": "Documentaire"
-  },
-  {
     "id": "just_tattoo_of_us",
     "nom": "Just Tattoo of Us",
     "logo": "https://images.pluto.tv/channels/6304f20c941c5d00089634e7/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-6304f20c941c5d00089634e7.m3u8",
     "langue": "français",
     "categorie": "Divertissement"
-  },
-  {
-    "id": "kaback_tv",
-    "nom": "Kaback TV",
-    "logo": "https://i.imgur.com/oIe98p4.png",
-    "url": "https://guineetvdirect.online:3842/live/kabacktvlive.m3u8",
-    "langue": "français",
-    "categorie": "Général"
   },
   {
     "id": "kajou_tv",
@@ -1568,14 +1048,6 @@
     "categorie": "Général"
   },
   {
-    "id": "kanal_9_auf_deutsch",
-    "nom": "Kanal 9 auf Deutsch",
-    "logo": "https://i.imgur.com/TNciMh2.png",
-    "url": "https://edge21.vedge.infomaniak.com/livecast/ik:livesd2/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "kassouatv",
     "nom": "KassouaTV",
     "logo": "https://i.imgur.com/EfX3HNG.png",
@@ -1584,44 +1056,12 @@
     "categorie": "Général"
   },
   {
-    "id": "kemet_tv",
-    "nom": "Kemet TV",
-    "logo": "https://i.imgur.com/NZ0YqOb.jpeg",
-    "url": "https://kemettv.cm/memfs/4e7fb105-9f92-4e8d-a7cd-09923f17a577.m3u8",
-    "langue": "français",
-    "categorie": "Documentaire"
-  },
-  {
     "id": "kozoom_tv",
     "nom": "KOZOOM TV",
     "logo": "https://i.imgur.com/M1Ee79b.png",
     "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/kozoom-tv/manifest.m3u8?ads.vf=CAJPqH6STD0",
     "langue": "français",
     "categorie": "Sportif"
-  },
-  {
-    "id": "l_equipe",
-    "nom": "L'Equipe",
-    "logo": "https://i.imgur.com/t35zhM9.png",
-    "url": "https://dshn8inoshngm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gac2i63dmu8b7/LEquipe_FR.m3u8",
-    "langue": "français",
-    "categorie": "Sportif"
-  },
-  {
-    "id": "la_voix_du_routier_tv",
-    "nom": "La Voix du Routier TV",
-    "logo": "https://i.imgur.com/mCt6AI7.png",
-    "url": "https://webtv.lavoixduroutiertv.bj/hls/stream.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
-    "id": "laayoune_tv",
-    "nom": "Laayoune TV",
-    "logo": "https://www.snrt.ma/sites/default/files/2023-04/laayoune.png",
-    "url": "https://snrtworker.kharazbelaid.workers.dev/?id=laayoune.m3u8",
-    "langue": "français",
-    "categorie": "Général"
   },
   {
     "id": "laura_dave_media_tv",
@@ -1640,14 +1080,6 @@
     "categorie": "Religieux"
   },
   {
-    "id": "lcn",
-    "nom": "LCN",
-    "logo": "https://i.imgur.com/iKDLgOG.png",
-    "url": "https://tvalive.akamaized.net/hls/live/2014213/tvan01/tvan01.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
     "id": "le_figaro_idf",
     "nom": "Le Figaro IDF",
     "logo": "https://i.imgur.com/a8RuRUQ.png",
@@ -1656,36 +1088,12 @@
     "categorie": "Général"
   },
   {
-    "id": "le_media_tv",
-    "nom": "Le Media TV",
-    "logo": "https://i.imgur.com/OK20oyl.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/lemedia.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
     "id": "le_miracle_de_l_amour",
     "nom": "Le miracle de l'amour",
     "logo": "https://i.imgur.com/3Xz4hjD.png",
     "url": "https://jmp2.uk/plu-60549c238c3f21000753d3e0.m3u8",
     "langue": "français",
     "categorie": "Films-Série"
-  },
-  {
-    "id": "le_monde_en_24h",
-    "nom": "Le Monde en 24h",
-    "logo": "https://i.imgur.com/2igwi7g.png",
-    "url": "https://stream.berosat.live/hls/monde24h-tv-index/monde24h-tv-index.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
-    "id": "le_nouveau_manager_tv",
-    "nom": "Le Nouveau Manager TV",
-    "logo": "https://i.imgur.com/pEoOtEf.jpeg",
-    "url": "https://lnmlive.com/live/lnmtv.m3u8",
-    "langue": "français",
-    "categorie": "Entreprise"
   },
   {
     "id": "legislative_assembly_of_ontario",
@@ -1736,14 +1144,6 @@
     "categorie": "Religieux"
   },
   {
-    "id": "ln24",
-    "nom": "LN24",
-    "logo": "https://i.imgur.com/1EkZRwn.png",
-    "url": "https://live-ln24.digiteka.com/1911668011/index.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
     "id": "lollywood_hd_tv",
     "nom": "Lollywood HD TV",
     "logo": "https://i.imgur.com/fQhrsdr.png",
@@ -1768,22 +1168,6 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "lyon_capitale_tv",
-    "nom": "Lyon Capitale TV",
-    "logo": "https://i.imgur.com/4WfnEaj.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/lyoncapitale.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
-    "id": "m6_music",
-    "nom": "M6 Music",
-    "logo": "https://upload.wikimedia.org/wikipedia/en/c/c9/M6_Music_%282012%29.png",
-    "url": "https://test.946985.filegear-sg.me/proxy/803c517b325bfafc",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
     "id": "macgyver",
     "nom": "MacGyver",
     "logo": "https://images.pluto.tv/channels/6245ccd0c6cdb800074632e4/colorLogoPNG.png",
@@ -1798,14 +1182,6 @@
     "url": "https://edge12.vedge.infomaniak.com/livecast/ik:madrasfmtv/manifest.m3u8",
     "langue": "français",
     "categorie": "Musique"
-  },
-  {
-    "id": "maison_travaux_tv",
-    "nom": "Maison & Travaux TV",
-    "logo": "https://i.imgur.com/uYpc6nE.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/maisonettravaux.m3u8",
-    "langue": "français",
-    "categorie": "Style de vie"
   },
   {
     "id": "mana_eglise_online",
@@ -1848,34 +1224,10 @@
     "categorie": "information"
   },
   {
-    "id": "melody",
-    "nom": "Melody",
-    "logo": "https://i.imgur.com/9GVyQ6x.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/radiokaraoke.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "men_s_up_tv",
-    "nom": "Men's UP TV",
-    "logo": "https://i.imgur.com/5BZwRFs.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/mensuptv.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "miracle_tv",
     "nom": "Miracle TV+",
     "logo": "https://i.imgur.com/AQ60OYO.png",
     "url": "https://strhlslb01.streamakaci.tv/str_mtv_mtv/str_mtv_multi/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
-    "id": "mishapi_voice_tv",
-    "nom": "Mishapi Voice TV",
-    "logo": "https://i.imgur.com/GfOy2ok.png",
-    "url": "https://tnt-television.com/MISHAPI-STREAM1/index.m3u8",
     "langue": "français",
     "categorie": "Religieux"
   },
@@ -1886,22 +1238,6 @@
     "url": "https://jmp2.uk/plu-6671b21ffc3a46000857fe75.m3u8",
     "langue": "français",
     "categorie": "Films-Série"
-  },
-  {
-    "id": "monaco_info",
-    "nom": "Monaco Info",
-    "logo": "https://i.imgur.com/dIrKYH7.png",
-    "url": "https://webtv.monacoinfo.com/live/prod/index.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
-    "id": "mouv_tv",
-    "nom": "Mouv' TV",
-    "logo": "https://i.imgur.com/64nzKEu.jpg",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/mouv.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
   },
   {
     "id": "mta1_world",
@@ -1944,14 +1280,6 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "museum_tv",
-    "nom": "Museum TV",
-    "logo": "https://i.imgur.com/WbjURLo.png",
-    "url": "https://cdn-ue1-prod.tsv2.amagi.tv/linear/amg01492-secomsasmediart-museumtv-eng-samsungit/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Documentaire"
-  },
-  {
     "id": "my_gospel_tv",
     "nom": "My Gospel TV",
     "logo": "https://mygospeltv.fr/wp-content/uploads/2022/05/MY-GODPEL-TV-e1652783900988.png",
@@ -1984,44 +1312,12 @@
     "categorie": "Sportif"
   },
   {
-    "id": "nci",
-    "nom": "NCI",
-    "logo": "https://i.imgur.com/I3pv69r.png",
-    "url": "https://cs2.push2stream.com/NCI-DVR/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "netalkole_tv",
-    "nom": "NETALKOLE TV",
-    "logo": "https://i.imgur.com/SdVrpzY.png",
-    "url": "https://watch.haitilive.net/naktvhd/index.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "novela_channel",
-    "nom": "Novela Channel",
-    "logo": "https://i.ibb.co/V3pfjfB/novela-channel-telepack.jpg",
-    "url": "https://video1.getstreamhosting.com:1936/8284/8284/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Films-Série"
-  },
-  {
     "id": "novo_comedy",
     "nom": "Novo Comedy",
     "logo": "https://novocomedy.com/wp-content/uploads/LogoNovocomedy.png",
     "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/novo-comedy/video.m3u8?ads.vf=CMRSFvusYbe",
     "langue": "français",
     "categorie": "Divertissement"
-  },
-  {
-    "id": "nrj_hits",
-    "nom": "NRJ Hits",
-    "logo": "https://i.imgur.com/2xDVwOh.png",
-    "url": "https://test.946985.filegear-sg.me/proxy/a23981548880f405",
-    "langue": "français",
-    "categorie": "Musique"
   },
   {
     "id": "ntv_afrique",
@@ -2064,28 +1360,12 @@
     "categorie": "Divertissement"
   },
   {
-    "id": "one_nation_tv",
-    "nom": "One Nation TV",
-    "logo": "https://i.imgur.com/RGHbkZU.png",
-    "url": "https://endour.net/hls/One_nationtv/index.m3u8",
-    "langue": "français",
-    "categorie": "Documentaire"
-  },
-  {
     "id": "one_piece",
     "nom": "One Piece",
     "logo": "https://i.imgur.com/XsvbAWR.png",
     "url": "https://jmp2.uk/plu-6380c94947c72b0007ee9a13.m3u8",
     "langue": "français",
     "categorie": "Animation"
-  },
-  {
-    "id": "one_tv",
-    "nom": "ONE-TV",
-    "logo": "https://i.imgur.com/Wob7gjp.png",
-    "url": "https://core.live-apc.eu:5443/LiveApp/streams/backup.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
   },
   {
     "id": "otv",
@@ -2104,26 +1384,10 @@
     "categorie": "Musique"
   },
   {
-    "id": "panafrican_media_tv",
-    "nom": "Panafrican Media TV",
-    "logo": "https://i.imgur.com/wneSSYM.png",
-    "url": "https://live20.bozztv.com/giatv/giatv-pmtv/pmtv/playlist.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
     "id": "pluto_tv_90_s_classics",
     "nom": "Pluto TV 90's Classics",
     "logo": "https://images.pluto.tv/channels/66b4990746762a00084c2f78/colorLogoPNG.png",
     "url": "https://jmp2.uk/plu-66b4990746762a00084c2f78.m3u8",
-    "langue": "français",
-    "categorie": "Films-Série"
-  },
-  {
-    "id": "pluto_tv_2010_s_classics",
-    "nom": "Pluto TV 2010's Classics",
-    "logo": "https://images.pluto.tv/channels/66b498bc14a2bb00086965bc/colorLogoPNG.png",
-    "url": "https://jmp2.uk/plu-66b498bc14a2bb00086965bc.m3u8",
     "langue": "français",
     "categorie": "Films-Série"
   },
@@ -2336,58 +1600,10 @@
     "categorie": "information"
   },
   {
-    "id": "public_senat_24_24",
-    "nom": "Public Senat 24/24",
-    "logo": "https://i.imgur.com/nHWWLBP.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/publicsenat.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
     "id": "puissance_tv",
     "nom": "Puissance TV",
     "logo": "https://pbs.twimg.com/profile_images/1274572654016675842/A6v8Qo_X_400x400.jpg",
     "url": "https://event.vedge.infomaniak.com/livecast/ik:puissancetelevision/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "qu4tre",
-    "nom": "Qu4tre",
-    "logo": "https://i.imgur.com/GHFuvmZ.png",
-    "url": "https://tvlocales-live.freecaster.com/rtc/95d2f6ec-22f7-4027-b23d-d5372116b2ad/95d2f6ec-22f7-4027-b23d-d5372116b2ad.isml/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "radio_contact",
-    "nom": "Radio Contact",
-    "logo": "https://i.imgur.com/32mmGvB.png",
-    "url": "https://contact-live-hls.akamaized.net/hls/live/2038650/CONTACT-Live-HLS/master.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "radio_frontieres",
-    "nom": "Radio Frontieres",
-    "logo": "https://www.frontieresmedia.fr/img/logo.svg",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/radiofrontieres.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "radio_karaoke",
-    "nom": "Radio Karaoke",
-    "logo": "https://i.imgur.com/9uRggjD.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/radiokaraoke-2.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "radio_tele_6_univers",
-    "nom": "Radio Tele 6 Univers",
-    "logo": "https://i.imgur.com/aeVXn7p.jpeg",
-    "url": "https://acwstream.com/lakay/tele6/tracks-v1a1/mono.m3u8",
     "langue": "français",
     "categorie": "Général"
   },
@@ -2398,14 +1614,6 @@
     "url": "https://uni01rtmp.tulix.tv/4vehtv/4vehtv-firetv/playlist.m3u8",
     "langue": "français",
     "categorie": "Religieux"
-  },
-  {
-    "id": "radio_tele_eclair",
-    "nom": "Radio Tele Eclair",
-    "logo": "https://i.imgur.com/jV30pSq.png",
-    "url": "https://play.streamhaiti.com:3585/live/radioteleeclairlive.m3u8",
-    "langue": "français",
-    "categorie": "Général"
   },
   {
     "id": "radio_tele_evangile_sans_limite",
@@ -2428,14 +1636,6 @@
     "nom": "Radio Télé Hit",
     "logo": "https://i.ibb.co/Gt2QDgf/cropped-transparent2-103x70.png",
     "url": "https://59d39900ebfb8.streamlock.net/RadioTelehit/RadioTelehit/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "radio_tele_kajou",
-    "nom": "Radio Télé Kajou",
-    "logo": "https://i.ibb.co/1MhvJ3B/logork.png",
-    "url": "https://59d39900ebfb8.streamlock.net/RadioTelekAJOU/RadioTelekAJOU/playlist.m3u8",
     "langue": "français",
     "categorie": "Musique"
   },
@@ -2464,22 +1664,6 @@
     "categorie": "Religieux"
   },
   {
-    "id": "radio_tele_wisdom",
-    "nom": "Radio Télé Wisdom",
-    "logo": "https://i.ibb.co/DQksC23/unnamed-1.jpg",
-    "url": "https://59d39900ebfb8.streamlock.net/daniel/daniel/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
-    "id": "radio_television_shilo",
-    "nom": "Radio Télévision Shilo",
-    "logo": "https://cdn.onlineradiobox.com/img/l/0/98960.v3.png",
-    "url": "https://watch.haitilive.net/freehb/rtvs/index.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "radio_tv_basse_terre",
     "nom": "Radio TV Basse-Terre",
     "logo": "https://i.imgur.com/OvnRplq.png",
@@ -2492,14 +1676,6 @@
     "nom": "REFLET TV",
     "logo": "https://i.imgur.com/EauXR22.png",
     "url": "https://edge-a3.evrideo.tv/8f37c9f0-fe22-44f4-b64a-76ad11730daf_1000026630_HLS/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "rhone_tv",
-    "nom": "Rhône TV",
-    "logo": "https://i.imgur.com/YyXJaBN.png",
-    "url": "https://edge14.vedge.infomaniak.com/livecast/ik:rhonetv/manifest.m3u8",
     "langue": "français",
     "categorie": "Général"
   },
@@ -2518,14 +1694,6 @@
     "url": "https://jmp2.uk/plu-5f8eb8a8b2619a000710605c.m3u8",
     "langue": "français",
     "categorie": "Divertissement"
-  },
-  {
-    "id": "rl_pro_tv",
-    "nom": "RL PRO TV",
-    "logo": "https://i.imgur.com/PIBtCEN.jpeg",
-    "url": "https://stream.berosat.live:19360/rlpro-tv/rlpro-tv.m3u8",
-    "langue": "français",
-    "categorie": "Documentaire"
   },
   {
     "id": "rmc_story",
@@ -2552,22 +1720,6 @@
     "categorie": "Religieux"
   },
   {
-    "id": "rtb",
-    "nom": "RTB",
-    "logo": "https://i.imgur.com/BFfLV0y.png",
-    "url": "https://edge12.vedge.infomaniak.com/livecast/ik:rtblive1_8/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "rtb2_hauts_basins",
-    "nom": "RTB2 Hauts-Basins",
-    "logo": "https://i0.wp.com/www.rtb.bf/wp-content/uploads/2020/01/images.jpg",
-    "url": "https://edge20.vedge.infomaniak.com/livecast/ik:rtbguiriko-1/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "rth_tv1",
     "nom": "RTH-TV1",
     "logo": "https://i.imgur.com/4z0FiEA.png",
@@ -2584,28 +1736,12 @@
     "categorie": "Religieux"
   },
   {
-    "id": "rtl2",
-    "nom": "RTL2",
-    "logo": "https://i.imgur.com/deC4z34.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/rtl2.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
     "id": "rtl_zwee",
     "nom": "RTL Zwee",
     "logo": "https://i.imgur.com/7SmCtyy.png",
     "url": "https://live-edge.rtl.lu/channel2/smil:channel2/playlist.m3u8",
     "langue": "français",
     "categorie": "Général"
-  },
-  {
-    "id": "rtl_tvi",
-    "nom": "RTL-TVI",
-    "logo": "https://i.imgur.com/2CimAAN.png",
-    "url": "https://tvi-live-hls.akamaized.net/hls/live/2038650/TVI-Live-HLS/master.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
   },
   {
     "id": "rts_info",
@@ -2622,22 +1758,6 @@
     "url": "https://cdn140m.panaccess.com/HLS/RTVC/index.m3u8",
     "langue": "français",
     "categorie": "Religieux"
-  },
-  {
-    "id": "saraounia_tv",
-    "nom": "Saraounia TV",
-    "logo": "https://i.imgur.com/O8XIcpH.png",
-    "url": "https://live20.bozztv.com/dvrfl06/astv/astv-saraouna/index.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
-    "id": "savane_tv",
-    "nom": "Savane TV",
-    "logo": "https://i.imgur.com/mv3S1Zc.png",
-    "url": "https://savane24.tv:5443/LiveApp/streams/Y4fyif69Q0ll6MeH2190896734859843.m3u8",
-    "langue": "français",
-    "categorie": "Général"
   },
   {
     "id": "seneweb_tv",
@@ -2704,22 +1824,6 @@
     "categorie": "Films-Série"
   },
   {
-    "id": "sony_one_series_comedie",
-    "nom": "Sony One Series Comedie",
-    "logo": "https://i.ibb.co/ns4Md77B/FR-FAST-Plex-Comedy-TV-logo-dark.png",
-    "url": "https://4f2a3e1ff5274297b115cf0f7da1c2cd.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-819-FR-SONYONESRIESCOMDIE-LG_FR/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Films-Série"
-  },
-  {
-    "id": "sony_one_series_thriller",
-    "nom": "Sony One Series Thriller",
-    "logo": "https://i.imgur.com/RVS8LDj.png",
-    "url": "https://483a1e90c18641c9a6d27becd41ad892.mediatailor.us-west-2.amazonaws.com/v1/master/ba62fe743df0fe93366eba3a257d792884136c7f/LINEAR-821-FR-SONYONESRIESTHRILLER-LG_FR/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Films-Série"
-  },
-  {
     "id": "sophia_tv_francais",
     "nom": "Sophia TV Français",
     "logo": "https://i.imgur.com/T2JPCq2.png",
@@ -2728,28 +1832,12 @@
     "categorie": "Religieux"
   },
   {
-    "id": "sos_docteur_tv",
-    "nom": "SOS Docteur TV",
-    "logo": "https://i.imgur.com/wQpooHw.png",
-    "url": "https://wmoy82n4y2a7-hls-live.5centscdn.com/sostv/live.stream/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Style de vie"
-  },
-  {
     "id": "speedline_tv",
     "nom": "Speedline TV",
     "logo": "https://i.imgur.com/1lXShsh.png",
     "url": "https://cdn-us-east-prod-ingest-infra-dacast-com.akamaized.net/dbe59037-07a0-4f1c-82a2-7de94b4b62d2/index.m3u8",
     "langue": "français",
     "categorie": "Général"
-  },
-  {
-    "id": "star_trek_the_original_series",
-    "nom": "Star Trek: The Original Series",
-    "logo": "https://images.pluto.tv/channels/69776b58036e883f39e5ab8a/colorLogoPNG_1769434091096.png",
-    "url": "https://jmp2.uk/plu-67b4b3c51a5ca760802cc1c7.m3u8",
-    "langue": "français",
-    "categorie": "Films-Série"
   },
   {
     "id": "stingray_classica",
@@ -2768,28 +1856,12 @@
     "categorie": "Documentaire"
   },
   {
-    "id": "sud_radio",
-    "nom": "Sud Radio",
-    "logo": "https://www.sudradio.fr/wp-content/themes/sud-2023/assets/img/logo-fondblanc-parlons.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/sudradio.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
     "id": "sun_tv",
     "nom": "Sun+ TV",
     "logo": "https://i.imgur.com/5XCXWy7.png",
     "url": "https://livemaraboo.com/hls/stream.m3u8",
     "langue": "français",
     "categorie": "Divertissement"
-  },
-  {
-    "id": "sunu_label_tv",
-    "nom": "Sunu Label TV",
-    "logo": "https://i.imgur.com/Ibp7IBk.jpeg",
-    "url": "https://live3.acangroup.org:1929/publiclive/sunulabel/playlist.m3u8",
-    "langue": "français",
-    "categorie": "information"
   },
   {
     "id": "t18",
@@ -2864,60 +1936,12 @@
     "categorie": "Général"
   },
   {
-    "id": "tele_variete",
-    "nom": "Tele Variete",
-    "logo": "https://i.imgur.com/0J5MzTB.png",
-    "url": "https://acwstream.com/hb/chaine30/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "tele_zoukla",
     "nom": "Tele Zoukla",
     "logo": "https://i.imgur.com/lWYKgPC.png",
     "url": "https://vdo.pro-fhi.net:3228/stream/play.m3u8",
     "langue": "français",
     "categorie": "Musique"
-  },
-  {
-    "id": "telegohelle",
-    "nom": "TéléGohelle",
-    "logo": "https://i.imgur.com/Oa3Pwbf.png",
-    "url": "https://videas.agglo-lenslievin.fr/index.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "telemb",
-    "nom": "TeleMB",
-    "logo": "https://i.imgur.com/XAggjM4.png",
-    "url": "https://tvlocales-live.freecaster.com/telemb/95d2f6ca-817a-48c0-aba5-6323a621c2d6/95d2f6ca-817a-48c0-aba5-6323a621c2d6.isml/master.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "telemix",
-    "nom": "TeleMIX",
-    "logo": "https://i.ibb.co/HpX99Ks/unnamed.jpg",
-    "url": "https://haititivi.com/haiti/telemix1/index.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
-  {
-    "id": "telemusik_senegal",
-    "nom": "TeleMusik Senegal",
-    "logo": "https://i.imgur.com/dPAPLsd.png",
-    "url": "https://58c04fb1d143f.streamlock.net/rezopropartner_1_live/rezopropartner_1_live/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Musique"
-  },
-  {
-    "id": "telenantes",
-    "nom": "Telenantes",
-    "logo": "https://i.imgur.com/G1SCqNI.png",
-    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/telenantes.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
   },
   {
     "id": "telepace_2",
@@ -2952,28 +1976,12 @@
     "categorie": "Général"
   },
   {
-    "id": "tempo_afric_tv",
-    "nom": "Tempo Afric TV",
-    "logo": "https://i.imgur.com/mggN4mS.jpg",
-    "url": "https://streamspace.live/hls/tempoafrictv/livestream.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
     "id": "tivi5_monde",
     "nom": "TiVi5 Monde",
     "logo": "https://i.imgur.com/fVVKpmk.png",
     "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(tivi5)/variant.m3u8",
     "langue": "français",
     "categorie": "Indéfini"
-  },
-  {
-    "id": "tnh",
-    "nom": "TNH",
-    "logo": "https://i.imgur.com/8nvCXzt.png",
-    "url": "https://bozztv.com/dvrfl03/hdirect/hdirect-telecaraibes/index.m3u8",
-    "langue": "français",
-    "categorie": "Général"
   },
   {
     "id": "tntv",
@@ -3200,36 +2208,12 @@
     "categorie": "Cuisine"
   },
   {
-    "id": "tv5monde_france_belgique_suisse_monaco",
-    "nom": "TV5Monde France Belgique Suisse Monaco",
-    "logo": "https://i.imgur.com/WmRbudc.png",
-    "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(fbs)/variant.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "tv5monde_info",
     "nom": "TV5Monde Info",
     "logo": "https://i.imgur.com/AJx5Fy2.png",
     "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8",
     "langue": "français",
     "categorie": "information"
-  },
-  {
-    "id": "tv5monde_pacifique",
-    "nom": "TV5Monde Pacifique",
-    "logo": "https://i.imgur.com/mfZOYZI.png",
-    "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(pacifique)/variant.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "tv5monde_style",
-    "nom": "TV5Monde Style",
-    "logo": "https://i.imgur.com/cwC7Q2V.png",
-    "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(style1)/variant.m3u8",
-    "langue": "français",
-    "categorie": "Style de vie"
   },
   {
     "id": "tv7_colmar",
@@ -3240,50 +2224,10 @@
     "categorie": "Général"
   },
   {
-    "id": "tv78",
-    "nom": "TV78",
-    "logo": "https://i.imgur.com/stzE1Ij.png",
-    "url": "https://streamtv.cdn.dvmr.fr/TV78/ngrp:tv78.stream_all/master.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "tv_famille",
-    "nom": "TV Famille",
-    "logo": "https://i.imgur.com/Kbfihk5.png",
-    "url": "https://streamer1.streamhost.org/salive/GMItvfh/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Religieux"
-  },
-  {
-    "id": "tv_la_capitale",
-    "nom": "TV La Capitale",
-    "logo": "https://i.imgur.com/zZJzNjM.jpeg",
-    "url": "https://stream.berosat.live:19360/tv-capitale-tream/tv-capitale-tream.m3u8",
-    "langue": "français",
-    "categorie": "information"
-  },
-  {
-    "id": "tv_lux",
-    "nom": "TV Lux",
-    "logo": "https://i.imgur.com/ljbdWkC.png",
-    "url": "https://tvlocales-live.freecaster.com/tvlux/95d2f632-0780-4ac1-9895-9e50212dd3b6/95d2f632-0780-4ac1-9895-9e50212dd3b6.isml/master.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
     "id": "tv_monaco",
     "nom": "TV Monaco",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/TVMonaco_2023.svg/960px-TVMonaco_2023.svg.png",
     "url": "https://production-fast-mcrtv.content.okast.tv/channels/2116dc08-1959-465d-857f-3619daefb66b/b702b2b9-aebd-436c-be69-2118f56f3d86/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "tva",
-    "nom": "TVA",
-    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/TVA_logo_2020.svg/960px-TVA_logo_2020.svg.png",
-    "url": "https://tvalive-dai01.akamaized.net/Content/HLS/Live/channel(575b93c5-be31-ee34-6285-14620fd14048)/index.m3u8",
     "langue": "français",
     "categorie": "Général"
   },
@@ -3296,14 +2240,6 @@
     "categorie": "Général"
   },
   {
-    "id": "tvcarib",
-    "nom": "TVCARiB",
-    "logo": "https://i.imgur.com/fvGlwKo.png",
-    "url": "https://cdn.mycloudstream.io/hls/live/broadcast/s6nitpvn/index.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
-  {
     "id": "tvcarib_gospel",
     "nom": "TVCARiB Gospel",
     "logo": "https://i.imgur.com/fvGlwKo.png",
@@ -3312,68 +2248,12 @@
     "categorie": "Religieux"
   },
   {
-    "id": "tvcom",
-    "nom": "TVcom",
-    "logo": "https://i.imgur.com/3KuRD19.png",
-    "url": "https://tvlocales-live.freecaster.com/tvcom/95d2f656-ba85-4e13-affc-f1936be1a86d/95d2f656-ba85-4e13-affc-f1936be1a86d.isml/master.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "tvm_3",
-    "nom": "TVM 3",
-    "logo": "https://i.imgur.com/zNJlFMg.png",
-    "url": "https://cache1a.netplus.ch/tok_eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJleHAiOiIxNzY4MTg5NzQyIiwic2lwIjoiIiwicGF0aCI6Ii9saXZlL2Vkcy90dm0zL2Jyb3dzZXItSExTOC8iLCJzZXNzaW9uX2Nkbl9pZCI6IjNhZmJlZTIxMmU1NjUyODEiLCJzZXNzaW9uX2lkIjoiIiwiY2xpZW50X2lkIjoiIiwiZGV2aWNlX2lkIjoiIiwibWF4X3Nlc3Npb25zIjowLCJzZXNzaW9uX2R1cmF0aW9uIjowLCJ1cmwiOiJodHRwczovLzEwLjAuMjI5LjE5Iiwic2Vzc2lvbl90aW1lb3V0IjowLCJhdWQiOiI1MyIsInNvdXJjZXMiOls0OF19.N29uj_Xo3YmdQUboW5e45wx4lUey-utXtC6RpbbCGgJ8uCl2ngejd8tu_S-3tv7s02OtkHo4Rkf7mitOx_7lcA==/live/eds/tvm3/browser-HLS8/tvm3.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "tvr_bretagne",
-    "nom": "TVR (Bretagne)",
-    "logo": "https://www.tvr.bzh/favicon-1024.png",
-    "url": "https://streamtv.cdn.dvmr.fr/TVR/ngrp:tvr.stream_all/master.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "vedia",
-    "nom": "Vedia",
-    "logo": "https://i.imgur.com/7LnH6yu.png",
-    "url": "https://tvlocales-live.freecaster.com/vedia/95d2f480-b0b0-4027-9f4a-057183312305/95d2f480-b0b0-4027-9f4a-057183312305.isml/master.m3u8",
-    "langue": "français",
-    "categorie": "Indéfini"
-  },
-  {
-    "id": "viaatv",
-    "nom": "ViàATV",
-    "logo": "https://i.imgur.com/Ua6rOXo.png",
-    "url": "https://streamer01.myvideoplace.tv/streamer02/hls/ATV_DIRECT_EV_111018.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
     "id": "viamatele",
     "nom": "ViàMatélé",
     "logo": "https://i.imgur.com/XVCV9rj.png",
     "url": "https://5dd226f8f01e8.streamlock.net/via-matele-live/matelelive_1080/playlist.m3u8",
     "langue": "français",
     "categorie": "Indéfini"
-  },
-  {
-    "id": "viamoselletv",
-    "nom": "viàMoselleTV",
-    "logo": "https://i.imgur.com/hrm5QnU.png",
-    "url": "https://live.creacast.com/mirabelletv/smil:mirabelletv.smil/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Général"
-  },
-  {
-    "id": "viaoccitanie",
-    "nom": "viàOccitanie",
-    "logo": "https://i.imgur.com/NzuKt1R.png",
-    "url": "https://streamer01.myvideoplace.tv/streamer02/hls/MDS_VIA_PAD_301117.m3u8",
-    "langue": "français",
-    "categorie": "Général"
   },
   {
     "id": "viatelepaese",
@@ -3400,14 +2280,6 @@
     "categorie": "Voyage & Plein air"
   },
   {
-    "id": "w9",
-    "nom": "W9",
-    "logo": "https://i.imgur.com/reYeMuE.png",
-    "url": "https://origin-m6web.live.6cloud.fr/out/v1/6play/6play-w9/cmaf_q2hyb21h/hls-short-hd.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
-  {
     "id": "walker_texas_ranger",
     "nom": "Walker Texas Ranger",
     "logo": "https://i.imgur.com/0N7EhuD.png",
@@ -3422,14 +2294,6 @@
     "url": "https://stream.berosat.live/hls/wangu-tv/wangu-tv.m3u8",
     "langue": "français",
     "categorie": "Général"
-  },
-  {
-    "id": "wild_side_tv",
-    "nom": "Wild Side TV",
-    "logo": "https://i.imgur.com/cQkfRhH.png",
-    "url": "https://jmp2.uk/plu-60b4d6c806ad2a00073b3108.m3u8",
-    "langue": "français",
-    "categorie": "Films-Série"
   },
   {
     "id": "y_a_que_la_verite_qui_compte",
