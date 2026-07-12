@@ -786,6 +786,10 @@ header {
 .channel-card {
     background: var(--bg-card, #1a1a1c);
     border-radius: var(--radius-sm, 10px);
+    width: 170px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 210px;
     aspect-ratio: 1 / 1;
     display: flex;
     flex-direction: column;
@@ -942,7 +946,8 @@ header {
         padding: 0 16px 3rem;
     }
 
-    .movie-card {
+    .movie-card,
+    .channel-card {
         width: 100%;
         max-width: none;
         height: 240px; /* Hauteur ajustée pour écran mobile */
@@ -1008,7 +1013,8 @@ header {
         padding: 0 8px 2rem;
     }
     
-    .movie-card {
+    .movie-card,
+    .channel-card {
         height: 200px;
     }
 }
