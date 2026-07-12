@@ -189,7 +189,8 @@
     "logo": "https://i.imgur.com/spQgX7X.png",
     "url": "https://cloud.odysee.live/content/fe06b3cdc9412e359368b2455b6ea5e93856e382/master.m3u8",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "referer": "https://odysee.com"
   },
   {
     "id": "afromagicchannel_ci",
@@ -413,7 +414,8 @@
     "logo": "https://i.imgur.com/iRsbEpg.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_ALSACE/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Général"
+    "categorie": "Général",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmbusiness_fr",
@@ -421,7 +423,8 @@
     "logo": "https://i.imgur.com/psqIHn4.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_BUSINESS/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Entreprise"
+    "categorie": "Entreprise",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmdicialpesdusud_fr",
@@ -429,7 +432,8 @@
     "logo": "https://i.imgur.com/bV77l68.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_DICI_ALPESDUSUD/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmdicihauteprovence_fr",
@@ -437,7 +441,8 @@
     "logo": "https://i.imgur.com/bV77l68.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_DICI_HAUTEPROVENCE/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmgrandlille_fr",
@@ -445,7 +450,8 @@
     "logo": "https://i.imgur.com/HE5xP0r.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFMGRANDLILLE/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmgrandlittoral_fr",
@@ -453,7 +459,8 @@
     "logo": "https://i.imgur.com/j7F9MwH.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFMGRANDLITTORAL/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmlyon_fr",
@@ -461,7 +468,8 @@
     "logo": "https://i.imgur.com/0uiiZRo.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_LYON/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmmarseille_fr",
@@ -469,7 +477,8 @@
     "logo": "https://i.imgur.com/h7t0l6q.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_MARSEILLEPROV/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmcotedazur_fr",
@@ -477,7 +486,8 @@
     "logo": "https://i.imgur.com/iiVFvIw.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_NICECOTEDAZUR/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmnormandie_fr",
@@ -485,7 +495,8 @@
     "logo": "https://i.imgur.com/WWWQ44G.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_NORMANDIE/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmtechco_fr",
@@ -493,7 +504,8 @@
     "logo": "https://i.imgur.com/FQ0FpXV.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TECHANDCO/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmvar_fr",
@@ -501,7 +513,8 @@
     "logo": "https://i.imgur.com/vp1oVj3.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TOULONVAR/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bfmtv_fr",
@@ -509,7 +522,8 @@
     "logo": "https://i.imgur.com/YJCcczD.png",
     "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TV/index.m3u8?end=END&start=LIVE",
     "langue": "français",
-    "categorie": "Actualités"
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bluebloods_de",
@@ -941,7 +955,8 @@
     "logo": "https://i.imgur.com/y2zeLS3.jpeg",
     "url": "http://99.27.51.147/CineClassic/index.m3u8",
     "langue": "français",
-    "categorie": "Films-Série"
+    "categorie": "Films-Série",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3"
   },
   {
     "id": "cineplusfrisson_fr",
@@ -949,7 +964,8 @@
     "logo": "https://i.imgur.com/MwFtbnR.jpeg",
     "url": "http://99.27.51.147:8080/CineFrisson/index.m3u8",
     "langue": "français",
-    "categorie": "Films-Série"
+    "categorie": "Films-Série",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3"
   },
   {
     "id": "clubbingtv_us",
@@ -1325,7 +1341,8 @@
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/France_3_2018.svg/960px-France_3_2018.svg.png",
     "url": "http://85.14.32.26:8800/udp/239.100.10.144:5000",
     "langue": "français",
-    "categorie": "Général"
+    "categorie": "Général",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3"
   },
   {
     "id": "france4_fr",
@@ -1437,7 +1454,8 @@
     "logo": "https://i.imgur.com/5cFLWKO.png",
     "url": "https://g2qd3exjy7an-hls-live.5centscdn.com/gtvghana/ghanaweb.stream/playlist.m3u8",
     "langue": "français",
-    "categorie": "Général"
+    "categorie": "Général",
+    "referer": "https://liveghanatv.com/"
   },
   {
     "id": "guidelovetv_ci",
@@ -1453,7 +1471,8 @@
     "logo": "https://i.imgur.com/kqYssbW.png",
     "url": "http://99.27.51.147:8080/Gulli/index.m3u8",
     "langue": "français",
-    "categorie": "Jeunesse"
+    "categorie": "Jeunesse",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3"
   },
   {
     "id": "haitinewschannel_ht",
@@ -1797,7 +1816,8 @@
     "logo": "https://i.imgur.com/M1Ee79b.png",
     "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/kozoom-tv/manifest.m3u8?ads.vf=CAJPqH6STD0",
     "langue": "français",
-    "categorie": "Sportif"
+    "categorie": "Sportif",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0"
   },
   {
     "id": "kto_fr",
@@ -2029,7 +2049,8 @@
     "logo": "https://i.imgur.com/7GVp3fW.png",
     "url": "http://99.27.51.147:8080/M6/index.m3u8",
     "langue": "français",
-    "categorie": "Divertissement"
+    "categorie": "Divertissement",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3"
   },
   {
     "id": "m6music_fr",
@@ -2373,7 +2394,8 @@
     "logo": "https://novocomedy.com/wp-content/uploads/LogoNovocomedy.png",
     "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/novo-comedy/video.m3u8?ads.vf=CMRSFvusYbe",
     "langue": "français",
-    "categorie": "Divertissement"
+    "categorie": "Divertissement",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0"
   },
   {
     "id": "nrjhits_fr",
@@ -3381,7 +3403,8 @@
     "logo": "https://i.imgur.com/gUOXdjv.png",
     "url": "http://99.27.51.147:8080/SYFY/index.m3u8",
     "langue": "français",
-    "categorie": "Indéfini"
+    "categorie": "Indéfini",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3"
   },
   {
     "id": "t18_fr",
@@ -3589,7 +3612,8 @@
     "logo": "https://i.imgur.com/QxHt9NC.png",
     "url": "http://151.80.18.177:86/TF1_HD/index.m3u8",
     "langue": "français",
-    "categorie": "Divertissement"
+    "categorie": "Divertissement",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
   },
   {
     "id": "tfm_sn",
@@ -3645,7 +3669,8 @@
     "logo": "https://upload.wikimedia.org/wikipedia/en/thumb/5/54/TMC_logo.svg/960px-TMC_logo.svg.png",
     "url": "http://151.80.18.177:86/TMC/index.m3u8",
     "langue": "français",
-    "categorie": "Général"
+    "categorie": "Général",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36"
   },
   {
     "id": "tnh_ht",

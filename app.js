@@ -655,6 +655,12 @@ let hlsInstance = null;
 let currentChannel = null;
 let isLivePlaying = true;
 
+const PROXY_BASE = 'https://refugepop-proxy.valenbouge.workers.dev';
+
+function proxify(url) {
+    return `${PROXY_BASE}/?url=${encodeURIComponent(url)}`;
+}
+
 function playLiveStream(channel) {
     liveErrorMessage.classList.add('hidden');
     liveVideoPlayer.style.display = '';
@@ -666,7 +672,7 @@ function playLiveStream(channel) {
 
     if (Hls.isSupported()) {
         hlsInstance = new Hls();
-        hlsInstance.loadSource(channel.url);
+        hlsInstance.loadSource(proxify(channel.url));
         hlsInstance.attachMedia(liveVideoPlayer);
         hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => {
             liveVideoPlayer.play();
@@ -679,7 +685,7 @@ function playLiveStream(channel) {
             }
         });
     } else if (liveVideoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
-        liveVideoPlayer.src = channel.url;
+        liveVideoPlayer.src = proxify(channel.url);
         liveVideoPlayer.play();
         isLivePlaying = true;
     }
