@@ -6,7 +6,30 @@ const IMG_URL = 'https://image.tmdb.org/t/p/w500';
 const LANG = 'fr-FR';
 const STREAM_TIMEOUT_MS = 30000; // délai avant d'afficher "flux non disponible" (30000 = 30 secondes)
 const PERSONAL_MOVIES_URL = 'youtube/movies.json';
+const IPTV_CHANNELS_URL = 'iptv/chaines.json';
 let personalMoviesCache = null;
+let iptvChannelsCache = null;
+
+const CATEGORY_ICONS = {
+    'Général': '📺', 'information': '📰', 'Films-Série': '🎬', 'Religieux': '🙏',
+    'Musique': '🎵', 'Divertissement': '🎉', 'Indéfini': '❔', 'Documentaire': '🎥',
+    'Animation': '🧸', 'Sportif': '⚽', 'Style de vie': '🌿', 'Entreprise': '💼',
+    'Éducation': '📚', 'Cuisine': '🍳', 'Voyage & Plein air': '✈️'
+};
+let activeChannelCategory = null;
+
+async function getIptvChannels() {
+    if (iptvChannelsCache) return iptvChannelsCache;
+    try {
+        const res = await fetch(IPTV_CHANNELS_URL);
+        const data = await res.json();
+        iptvChannelsCache = data;
+        return data;
+    } catch (e) {
+        console.error('Erreur chargement chaînes IPTV:', e);
+        return [];
+    }
+}
 
 async function getPersonalMovies() {
     if (personalMoviesCache) return personalMoviesCache;
@@ -338,26 +361,74 @@ function buildMovieCard(movie) {
     return card;
 }
 
+let currentCardBuilder = null;
+
 function renderNextBatch() {
     const batch = paginationQueue.slice(paginationIndex, paginationIndex + PAGE_SIZE);
-    batch.forEach(movie => grid.appendChild(buildMovieCard(movie)));
+    batch.forEach(item => grid.appendChild(currentCardBuilder(item)));
     paginationIndex += batch.length;
     loadMoreBtn.classList.toggle('hidden', paginationIndex >= paginationQueue.length);
 }
 
-function displayMovies(movies) {
-    currentMovies = movies;
+function startPagedRender(items, cardBuilder, emptyMessage) {
     grid.innerHTML = "";
-    paginationQueue = movies || [];
+    paginationQueue = items || [];
     paginationIndex = 0;
+    currentCardBuilder = cardBuilder;
 
     if (!paginationQueue.length) {
-        grid.innerHTML = `<div class="loader">Aucun film trouvé. les films toujours disponibles sont dans la catégorie 🎬Autres.</div>`;
+        grid.innerHTML = `<div class="loader">${emptyMessage}</div>`;
         loadMoreBtn.classList.add('hidden');
         return;
     }
 
     renderNextBatch();
+}
+
+function displayMovies(movies) {
+    currentMovies = movies;
+    startPagedRender(movies, buildMovieCard, "Aucun film trouvé. les films toujours disponibles sont dans la catégorie 🎬Autres.");
+}
+
+function buildChannelCard(channel) {
+    const card = document.createElement('div');
+    card.classList.add('channel-card');
+    card.innerHTML = `
+        <img src="${channel.logo}" alt="${channel.nom}" loading="lazy" class="channel-logo">
+        <span class="channel-name">${channel.nom}</span>
+    `;
+    card.addEventListener('click', () => openLiveModal(channel));
+    return card;
+}
+
+function displayChannels(channels) {
+    startPagedRender(channels, buildChannelCard, "Aucune chaîne dans cette catégorie.");
+}
+
+async function renderCategoryFilters() {
+    const channels = await getIptvChannels();
+    const categories = [...new Set(channels.map(c => c.categorie))].sort();
+
+    const container = document.getElementById('categoryFiltersContainer');
+    container.innerHTML = `<button class="category-btn active" data-cat="all">Toutes</button>` +
+        categories.map(cat =>
+            `<button class="category-btn" data-cat="${cat}">${CATEGORY_ICONS[cat] || '📡'} ${cat}</button>`
+        ).join('');
+
+    container.querySelectorAll('.category-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            container.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeChannelCategory = btn.dataset.cat === 'all' ? null : btn.dataset.cat;
+            const filtered = activeChannelCategory
+                ? channels.filter(c => c.categorie === activeChannelCategory)
+                : channels;
+            displayChannels(filtered);
+        });
+    });
+
+    container.classList.remove('hidden');
+    displayChannels(channels);
 }
 
 loadMoreBtn.addEventListener('click', renderNextBatch);
@@ -542,6 +613,17 @@ filterButtons.forEach(btn => {
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
+        const categoryContainer = document.getElementById('categoryFiltersContainer');
+
+        if (btn.dataset.genre === 'live') {
+            categoryContainer.innerHTML = '';
+            grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement des chaînes...</div>`;
+            await renderCategoryFilters();
+            return;
+        }
+
+        categoryContainer.classList.add('hidden');
+
         if (btn.dataset.genre === 'favorites') {
             displayMovies(getFavorites());
         } else if (btn.dataset.genre === 'perso') {
@@ -553,6 +635,108 @@ filterButtons.forEach(btn => {
         }
     });
 });
+
+
+// --- LECTEUR EN DIRECT (chaînes IPTV) ---
+const liveModal = document.getElementById('liveModal');
+const closeLiveModalBtn = document.getElementById('closeLiveModal');
+const liveVideoPlayer = document.getElementById('liveVideoPlayer');
+const livePlayerOverlay = document.getElementById('livePlayerOverlay');
+const liveChannelLogo = document.getElementById('liveChannelLogo');
+const liveChannelName = document.getElementById('liveChannelName');
+const liveErrorMessage = document.getElementById('liveErrorMessage');
+const liveRetryBtn = document.getElementById('liveRetryBtn');
+const liveFullscreenBtn = document.getElementById('liveFullscreenBtn');
+const livePlayerWrapper = document.getElementById('livePlayerWrapper');
+
+let hlsInstance = null;
+let currentChannel = null;
+let isLivePlaying = true;
+
+function playLiveStream(channel) {
+    liveErrorMessage.classList.add('hidden');
+    liveVideoPlayer.style.display = '';
+
+    if (hlsInstance) {
+        hlsInstance.destroy();
+        hlsInstance = null;
+    }
+
+    if (Hls.isSupported()) {
+        hlsInstance = new Hls();
+        hlsInstance.loadSource(channel.url);
+        hlsInstance.attachMedia(liveVideoPlayer);
+        hlsInstance.on(Hls.Events.MANIFEST_PARSED, () => {
+            liveVideoPlayer.play();
+            isLivePlaying = true;
+        });
+        hlsInstance.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+                liveVideoPlayer.style.display = 'none';
+                liveErrorMessage.classList.remove('hidden');
+            }
+        });
+    } else if (liveVideoPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+        liveVideoPlayer.src = channel.url;
+        liveVideoPlayer.play();
+        isLivePlaying = true;
+    }
+}
+
+function openLiveModal(channel) {
+    currentChannel = channel;
+    liveChannelLogo.src = channel.logo;
+    liveChannelName.textContent = channel.nom;
+    liveModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+    playLiveStream(channel);
+}
+
+function closeLiveModal() {
+    liveModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    if (hlsInstance) {
+        hlsInstance.destroy();
+        hlsInstance = null;
+    }
+    liveVideoPlayer.pause();
+    liveVideoPlayer.removeAttribute('src');
+    liveVideoPlayer.load();
+}
+
+closeLiveModalBtn.addEventListener('click', closeLiveModal);
+liveModal.addEventListener('click', (e) => { if (e.target === liveModal) closeLiveModal(); });
+
+liveRetryBtn.addEventListener('click', () => {
+    if (currentChannel) playLiveStream(currentChannel);
+});
+
+livePlayerOverlay.addEventListener('click', () => {
+    isLivePlaying = !isLivePlaying;
+    if (isLivePlaying) {
+        liveVideoPlayer.play();
+    } else {
+        liveVideoPlayer.pause();
+    }
+});
+
+liveFullscreenBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        livePlayerWrapper.requestFullscreen();
+    }
+});
+
+document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement === livePlayerWrapper) {
+        liveFullscreenBtn.querySelector('i').className = 'fas fa-compress';
+    } else if (!document.fullscreenElement) {
+        liveFullscreenBtn.querySelector('i').className = 'fas fa-expand';
+    }
+});
+
 
 // Initialisation au démarrage
 getTrendingMovies();

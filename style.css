@@ -746,6 +746,146 @@ header {
     display: none;
 }
 
+
+/* --- Sous-filtres de catégories (Direct) --- */
+.category-filters-container {
+    display: flex;
+    gap: 8px;
+    padding: 0 5% 14px;
+    overflow-x: auto;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.category-filters-container.hidden {
+    display: none;
+}
+
+.category-btn {
+    flex-shrink: 0;
+    background: var(--bg-card, #1a1a1c);
+    border: 1px solid transparent;
+    color: #ccc;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.category-btn:hover {
+    border-color: var(--accent);
+}
+
+.category-btn.active {
+    background: var(--accent);
+    color: #fff;
+}
+
+/* --- Cartes de chaînes --- */
+.channel-card {
+    background: var(--bg-card, #1a1a1c);
+    border-radius: var(--radius-sm, 10px);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.channel-card:hover {
+    transform: scale(1.05);
+    background: #232325;
+}
+
+.channel-logo {
+    max-width: 65%;
+    max-height: 55%;
+    object-fit: contain;
+}
+
+.channel-name {
+    color: #eee;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* --- Modale de lecture en direct --- */
+.live-player-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.live-player-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.live-player-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.live-channel-info {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(0,0,0,0.55);
+    padding: 6px 14px;
+    border-radius: 50px;
+}
+
+.live-channel-info img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.live-channel-info span {
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.live-error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 7;
+    text-align: center;
+    color: #ccc;
+}
+
+.live-error-message i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.live-error-message.hidden {
+    display: none;
+}
+
 /* ==========================================================================
    VERSION RESPONSIVE MOBILE EXTRÊME (21e SIÈCLE ADAPTÉ)
    ========================================================================== */

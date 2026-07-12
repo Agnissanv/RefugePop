@@ -66,6 +66,7 @@
         <button class="filter-btn" data-genre="10749">💖 Amour</button>
         <button class="filter-btn" data-genre="16">🧸 Animation</button>
     </div>
+    <div class="category-filters-container hidden" id="categoryFiltersContainer"></div>
 
     <main class="movie-grid" id="movieGrid"> </main>
     <div class="load-more-container">
@@ -113,6 +114,31 @@
         </div>
     </div>
 
+
+
+    <!-- MODALE DE LECTURE EN DIRECT (chaînes IPTV) -->
+    <div class="modal-overlay" id="liveModal">
+        <div class="modal-content live-layout">
+            <button class="close-modal" id="closeLiveModal">&times;</button>
+            <div class="live-player-wrapper" id="livePlayerWrapper">
+                <video id="liveVideoPlayer" playsinline></video>
+                <div class="live-player-overlay" id="livePlayerOverlay"></div>
+                <div class="live-channel-info">
+                    <img id="liveChannelLogo" src="" alt="">
+                    <span id="liveChannelName"></span>
+                </div>
+                <button class="personal-fullscreen-btn" id="liveFullscreenBtn" title="Plein écran">
+                    <i class="fas fa-expand"></i>
+                </button>
+                <div class="live-error-message hidden" id="liveErrorMessage">
+                    <i class="fas fa-satellite-dish"></i>
+                    <p>Chaîne indisponible pour le moment.</p>
+                    <button id="liveRetryBtn" class="load-more-btn">Réessayer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- 3. LA MODALE DU LECTEUR FINAL (Interface d'attente de flux) -->
     <div class="modal-overlay" id="playerModal">
         <div class="modal-content player-layout">
@@ -141,6 +167,7 @@
 
 
     <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js"></script>
     <script src="app.js"></script>
 </body>
 </html>
