@@ -557,6 +557,10 @@ header {
     max-width: 800px;
     background: #050508;
 }
+.live-layout {
+    max-width: 900px;
+    background: #050508;
+}
 
 .secure-player-container {
     padding: 5rem 2rem;
