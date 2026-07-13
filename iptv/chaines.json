@@ -168,12 +168,20 @@
     "categorie": "Animation"
   },
   {
+    "id": "japanimtv_be",
+    "nom": "Japanim TV",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
+    "url": "https://foxkidstv.be:3369/stream/play.m3u8",
+    "langue": "français",
+    "categorie": "Animation"
+  },
+  {
     "id": "adotv_bj",
     "nom": "ADO TV",
     "logo": "https://i.imgur.com/pxFamLr.png",
     "url": "https://strhls.streamakaci.tv/ortb/ortb2-multi/playlist.m3u8",
     "langue": "français",
-    "categorie": "Jeunesse"
+    "categorie": "Divertissement"
   },
   
   {
@@ -915,14 +923,7 @@
     "langue": "français",
     "categorie": "Musique"
   },
-  {
-    "id": "daria_de",
-    "nom": "Daria",
-    "logo": "https://images.pluto.tv/channels/6683b680efa2a10008e8a393/colorLogoPNG.png",
-    "url": "https://jmp2.uk/plu-6683b680efa2a10008e8a393.m3u8",
-    "langue": "français",
-    "categorie": "Animation"
-  },
+  
   {
     "id": "dbmtv_fr",
     "nom": "DBM TV",
@@ -939,14 +940,7 @@
     "langue": "français",
     "categorie": "Musique"
   },
-  {
-    "id": "detectiveconan_us",
-    "nom": "Detective Conan France",
-    "logo": "https://images.pluto.tv/channels/62f3e8ad2a8e8000077b013d/colorLogoPNG.png?w=512",
-    "url": "https://jmp2.uk/plu-62f3e8ad2a8e8000077b013d.m3u8",
-    "langue": "français",
-    "categorie": "Animation"
-  },
+  
   {
     "id": "diaspora24_sn",
     "nom": "Diaspora 24 [Geo-blocked]",
@@ -1262,14 +1256,7 @@
     "langue": "français",
     "categorie": "Général"
   },
-  {
-    "id": "gong_fr",
-    "nom": "Gong",
-    "logo": "https://i.imgur.com/lA9UFMG.png",
-    "url": "https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/1080p-vtt/index.m3u8",
-    "langue": "français",
-    "categorie": "Animation"
-  },
+  
   {
     "id": "gtv_gh",
     "nom": "GTV",
@@ -1543,14 +1530,6 @@
     "url": "https://jmp2.uk/plu-65ccd26060eb870008db95fc.m3u8",
     "langue": "français",
     "categorie": "Films-Série"
-  },
-  {
-    "id": "japanimtv_be",
-    "nom": "Japanim TV",
-    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b97e19f-4243-4d48-b794-ff8cf54d795f-profile_image-300x300.png",
-    "url": "https://foxkidstv.be:3369/stream/play.m3u8",
-    "langue": "français",
-    "categorie": "Animation"
   },
   {
     "id": "jostvhd_cg",
@@ -3317,6 +3296,30 @@
     "nom": "Teletoon+",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/T%C3%A9l%C3%A9toon%2B_Logo.png/960px-T%C3%A9l%C3%A9toon%2B_Logo.png",
     "url": "http://cdn.haititivi.com/TELETOON-HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Animation"
+  },
+  {
+    "id": "daria_de",
+    "nom": "Daria",
+    "logo": "https://images.pluto.tv/channels/6683b680efa2a10008e8a393/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-6683b680efa2a10008e8a393.m3u8",
+    "langue": "français",
+    "categorie": "Animation"
+  },
+  {
+    "id": "detectiveconan_us",
+    "nom": "Detective Conan France",
+    "logo": "https://images.pluto.tv/channels/62f3e8ad2a8e8000077b013d/colorLogoPNG.png?w=512",
+    "url": "https://jmp2.uk/plu-62f3e8ad2a8e8000077b013d.m3u8",
+    "langue": "français",
+    "categorie": "Animation"
+  },
+  {
+    "id": "gong_fr",
+    "nom": "Gong",
+    "logo": "https://i.imgur.com/lA9UFMG.png",
+    "url": "https://amg01596-gongnetworks-gong-ono-vh5f2.amagi.tv/1080p-vtt/index.m3u8",
     "langue": "français",
     "categorie": "Animation"
   },
