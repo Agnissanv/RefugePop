@@ -1,0 +1,24 @@
+[
+  {
+    "id": "match_1",
+    "teamHome": "France",
+    "teamAway": "Espagne",
+    "flagHome": "🇫🇷",
+    "flagAway": "🇪🇸",
+    "date": "2026-07-14",
+    "heure": "21:00",
+    "viewerStart": 8852,
+    "iframeUrl": "URL_FOURNIE_PAR_TON_PARTENAIRE"
+  },
+  {
+    "id": "match_2",
+    "teamHome": "Angleterre",
+    "teamAway": "Argentine",
+    "flagHome": "🏴",
+    "flagAway": "🇦🇷",
+    "date": "2026-07-15",
+    "heure": "21:00",
+    "viewerStart": 7340,
+    "iframeUrl": "URL_FOURNIE_PAR_TON_PARTENAIRE"
+  }
+]
