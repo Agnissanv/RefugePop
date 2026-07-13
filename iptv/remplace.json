@@ -71,6 +71,22 @@
     "langue": "français",
     "categorie": "Actualités"
   },
+  {
+    "id": "publicsenat2424_fr",
+    "nom": "Public Senat 24/24",
+    "logo": "https://i.imgur.com/nHWWLBP.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/publicsenat.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "panafricanmediatv_cm",
+    "nom": "Panafrican Media TV",
+    "logo": "https://i.imgur.com/wneSSYM.png",
+    "url": "https://live20.bozztv.com/giatv/giatv-pmtv/pmtv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
 
 
 
