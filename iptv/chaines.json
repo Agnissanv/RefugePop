@@ -40,6 +40,22 @@
     "categorie": "Actualités"
   },
   {
+    "id": "africanewsfrench_fr",
+    "nom": "Africanews French",
+    "logo": "https://i.imgur.com/5UxU4zc.png",
+    "url": "https://cdn-euronews.akamaized.net/live/eds/africanews-fr/25050/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "afrikinfotv_gn",
+    "nom": "Afrik Info TV",
+    "logo": "https://i.imgur.com/hz2LOD8.jpeg",
+    "url": "https://kali.vdopanel.com:3119/hybrid/play.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
     "id": "20minutestv_fr",
     "nom": "20 Minutes TV",
     "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/20_Minutes_TV_IDF_logo_%282023%29.png/960px-20_Minutes_TV_IDF_logo_%282023%29.png",
@@ -143,22 +159,7 @@
     "langue": "français",
     "categorie": "Jeunesse"
   },
-  {
-    "id": "africa24_fr",
-    "nom": "Africa 24",
-    "logo": "https://africa24tv.com/wp-content/uploads/2021/09/logo.png",
-    "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
-  {
-    "id": "africa24sport_fr",
-    "nom": "Africa 24 Sport",
-    "logo": "https://i0.wp.com/africa24tv.com/wp-content/uploads/2023/12/LOGO-AFRICASPORT-4-HD-sans-fond.png?fit=512%2C107&ssl=1",
-    "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24sport/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
+  
   {
     "id": "africabletv_ml",
     "nom": "Africable TV",
@@ -166,22 +167,6 @@
     "url": "http://69.64.57.208/africable/playlist.m3u8",
     "langue": "français",
     "categorie": "Général"
-  },
-  {
-    "id": "africanewsfrench_fr",
-    "nom": "Africanews French",
-    "logo": "https://i.imgur.com/5UxU4zc.png",
-    "url": "https://cdn-euronews.akamaized.net/live/eds/africanews-fr/25050/index.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
-  {
-    "id": "afrikinfotv_gn",
-    "nom": "Afrik Info TV",
-    "logo": "https://i.imgur.com/hz2LOD8.jpeg",
-    "url": "https://kali.vdopanel.com:3119/hybrid/play.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
   },
   {
     "id": "afrique54tv_cm",
@@ -3989,6 +3974,22 @@
     "nom": "TV La Capitale",
     "logo": "https://i.imgur.com/zZJzNjM.jpeg",
     "url": "https://stream.berosat.live:19360/tv-capitale-tream/tv-capitale-tream.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "africa24_fr",
+    "nom": "Africa 24",
+    "logo": "https://africa24tv.com/wp-content/uploads/2021/09/logo.png",
+    "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24/manifest.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "africa24sport_fr",
+    "nom": "Africa 24 Sport",
+    "logo": "https://i0.wp.com/africa24tv.com/wp-content/uploads/2023/12/LOGO-AFRICASPORT-4-HD-sans-fond.png?fit=512%2C107&ssl=1",
+    "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24sport/manifest.m3u8",
     "langue": "français",
     "categorie": "Actualités"
   },
