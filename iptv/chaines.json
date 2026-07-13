@@ -169,23 +169,6 @@
     "categorie": "Général"
   },
   {
-    "id": "afrique54tv_cm",
-    "nom": "Afrique54 TV",
-    "logo": "https://i.imgur.com/WIaRpiS.png",
-    "url": "https://video1.getstreamhosting.com:1936/8318/8318/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
-  {
-    "id": "afriquemedia_cm",
-    "nom": "Afrique Media",
-    "logo": "https://i.imgur.com/spQgX7X.png",
-    "url": "https://cloud.odysee.live/content/fe06b3cdc9412e359368b2455b6ea5e93856e382/master.m3u8",
-    "langue": "français",
-    "categorie": "Actualités",
-    "referer": "https://odysee.com"
-  },
-  {
     "id": "afromagicchannel_ci",
     "nom": "Afro Magic Channel",
     "logo": "https://i.imgur.com/yQzXErU.png",
@@ -386,137 +369,12 @@
     "categorie": "Religieux"
   },
   {
-    "id": "beninwebtv_bj",
-    "nom": "Bénin Web TV",
-    "logo": "https://i.imgur.com/CYy4n0N.png",
-    "url": "https://stream.beninwebtv.bj/2/live/stream.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
-  {
     "id": "bfm2_fr",
     "nom": "BFM2",
     "logo": "https://alloforfait.fr/wp-content/uploads/2024/03/logo-bfm2-300x200.jpg",
     "url": "https://d1ib1gsg71oarf.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-scp7wda722jph/BFM2_FR.m3u8",
     "langue": "français",
     "categorie": "Actualités"
-  },
-  {
-    "id": "bfmalsace_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"General\",BFM Alsace",
-    "logo": "https://i.imgur.com/iRsbEpg.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_ALSACE/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Général",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmbusiness_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"Business;News\",BFM Business",
-    "logo": "https://i.imgur.com/psqIHn4.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_BUSINESS/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Entreprise",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmdicialpesdusud_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM DICI Alpes du Sud",
-    "logo": "https://i.imgur.com/bV77l68.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_DICI_ALPESDUSUD/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmdicihauteprovence_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM DICI Haute-Provence",
-    "logo": "https://i.imgur.com/bV77l68.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_DICI_HAUTEPROVENCE/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmgrandlille_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Grand Lille",
-    "logo": "https://i.imgur.com/HE5xP0r.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFMGRANDLILLE/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmgrandlittoral_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Grand Littoral",
-    "logo": "https://i.imgur.com/j7F9MwH.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFMGRANDLITTORAL/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmlyon_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Lyon",
-    "logo": "https://i.imgur.com/0uiiZRo.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_LYON/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmmarseille_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Marseille",
-    "logo": "https://i.imgur.com/h7t0l6q.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_MARSEILLEPROV/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmcotedazur_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Nice Côte d'Azur",
-    "logo": "https://i.imgur.com/iiVFvIw.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_NICECOTEDAZUR/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmnormandie_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Normandie",
-    "logo": "https://i.imgur.com/WWWQ44G.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_NORMANDIE/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmtechco_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News;Science\",BFM Tech & Co",
-    "logo": "https://i.imgur.com/FQ0FpXV.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TECHANDCO/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmvar_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Toulon Var",
-    "logo": "https://i.imgur.com/vp1oVj3.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TOULONVAR/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
-  },
-  {
-    "id": "bfmtv_fr",
-    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM TV",
-    "logo": "https://i.imgur.com/YJCcczD.png",
-    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TV/index.m3u8?end=END&start=LIVE",
-    "langue": "français",
-    "categorie": "Actualités",
-    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
   },
   {
     "id": "bluebloods_de",
@@ -574,14 +432,7 @@
     "langue": "français",
     "categorie": "Indéfini"
   },
-  {
-    "id": "burkinainfotv_bf",
-    "nom": "Burkina Info TV",
-    "logo": "https://i.imgur.com/a9v5CbU.png",
-    "url": "http://69.64.57.208/burkinainfo/index.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
+  
   {
     "id": "business24africa_ci",
     "nom": "Business 24 Africa",
@@ -1143,22 +994,6 @@
     "url": "https://ssh101stream.ssh101.com/akamaissh101/ssh101/tvdynamicstream/playlist.m3u8",
     "langue": "français",
     "categorie": "Religieux"
-  },
-  {
-    "id": "ebs_be",
-    "nom": "EBS",
-    "logo": "https://i.imgur.com/DIIRPNN.png",
-    "url": "https://streams.prd.commavservices.eu/live/ebs/index.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
-  {
-    "id": "ebsplus_be",
-    "nom": "EBS Plus",
-    "logo": "https://i.imgur.com/7V012zQ.png",
-    "url": "https://streams.prd.commavservices.eu/live/ebsplus/index.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
   },
   {
     "id": "ecclesiatv_ci",
@@ -3990,6 +3825,172 @@
     "nom": "Africa 24 Sport",
     "logo": "https://i0.wp.com/africa24tv.com/wp-content/uploads/2023/12/LOGO-AFRICASPORT-4-HD-sans-fond.png?fit=512%2C107&ssl=1",
     "url": "https://africa24.vedge.infomaniak.com/livecast/ik:africa24sport/manifest.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "afrique54tv_cm",
+    "nom": "Afrique54 TV",
+    "logo": "https://i.imgur.com/WIaRpiS.png",
+    "url": "https://video1.getstreamhosting.com:1936/8318/8318/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "afriquemedia_cm",
+    "nom": "Afrique Media",
+    "logo": "https://i.imgur.com/spQgX7X.png",
+    "url": "https://cloud.odysee.live/content/fe06b3cdc9412e359368b2455b6ea5e93856e382/master.m3u8",
+    "langue": "français",
+    "categorie": "Actualités",
+    "referer": "https://odysee.com"
+  },
+  {
+    "id": "beninwebtv_bj",
+    "nom": "Bénin Web TV",
+    "logo": "https://i.imgur.com/CYy4n0N.png",
+    "url": "https://stream.beninwebtv.bj/2/live/stream.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "bfmalsace_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"General\",BFM Alsace",
+    "logo": "https://i.imgur.com/iRsbEpg.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_ALSACE/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Général",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmbusiness_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"Business;News\",BFM Business",
+    "logo": "https://i.imgur.com/psqIHn4.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_BUSINESS/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Entreprise",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmdicialpesdusud_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM DICI Alpes du Sud",
+    "logo": "https://i.imgur.com/bV77l68.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_DICI_ALPESDUSUD/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmdicihauteprovence_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM DICI Haute-Provence",
+    "logo": "https://i.imgur.com/bV77l68.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_DICI_HAUTEPROVENCE/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmgrandlille_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Grand Lille",
+    "logo": "https://i.imgur.com/HE5xP0r.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFMGRANDLILLE/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmgrandlittoral_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Grand Littoral",
+    "logo": "https://i.imgur.com/j7F9MwH.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFMGRANDLITTORAL/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmlyon_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Lyon",
+    "logo": "https://i.imgur.com/0uiiZRo.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_LYON/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmmarseille_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Marseille",
+    "logo": "https://i.imgur.com/h7t0l6q.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_MARSEILLEPROV/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmcotedazur_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Nice Côte d'Azur",
+    "logo": "https://i.imgur.com/iiVFvIw.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_NICECOTEDAZUR/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmnormandie_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Normandie",
+    "logo": "https://i.imgur.com/WWWQ44G.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_NORMANDIE/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmtechco_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News;Science\",BFM Tech & Co",
+    "logo": "https://i.imgur.com/FQ0FpXV.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TECHANDCO/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmvar_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM Toulon Var",
+    "logo": "https://i.imgur.com/vp1oVj3.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TOULONVAR/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "bfmtv_fr",
+    "nom": "like Gecko) Chrome/108.0.0.0 Safari/537.36\" group-title=\"News\",BFM TV",
+    "logo": "https://i.imgur.com/YJCcczD.png",
+    "url": "https://ncdn-live-bfm.pfd.sfr.net/shls/LIVE$BFM_TV/index.m3u8?end=END&start=LIVE",
+    "langue": "français",
+    "categorie": "Actualités",
+    "userAgent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Safari/537.36"
+  },
+  {
+    "id": "burkinainfotv_bf",
+    "nom": "Burkina Info TV",
+    "logo": "https://i.imgur.com/a9v5CbU.png",
+    "url": "http://69.64.57.208/burkinainfo/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "ebs_be",
+    "nom": "EBS",
+    "logo": "https://i.imgur.com/DIIRPNN.png",
+    "url": "https://streams.prd.commavservices.eu/live/ebs/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "ebsplus_be",
+    "nom": "EBS Plus",
+    "logo": "https://i.imgur.com/7V012zQ.png",
+    "url": "https://streams.prd.commavservices.eu/live/ebsplus/index.m3u8",
     "langue": "français",
     "categorie": "Actualités"
   },
