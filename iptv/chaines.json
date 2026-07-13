@@ -32,6 +32,14 @@
     "categorie": "Religieux"
   },
   {
+    "id": "france24_fr",
+    "nom": "France 24 French",
+    "logo": "https://i.imgur.com/u8N6uoj.png",
+    "url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
     "id": "7info_ci",
     "nom": "7 Info",
     "logo": "https://i.imgur.com/jcl1nNR.png",
@@ -1140,14 +1148,6 @@
     "categorie": "Sportif"
   },
   {
-    "id": "filinfotv_bf",
-    "nom": "Filinfo TV",
-    "logo": "https://i.imgur.com/KG93Tvn.png",
-    "url": "https://d2iqjnqfr8pv3b.cloudfront.net/out/v1/d09d2fc718404cd8bccd3eba2444dd70/index.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
-  {
     "id": "foryoutv_cm",
     "nom": "For You TV",
     "logo": "https://i.imgur.com/1oMboXL.png",
@@ -1188,14 +1188,7 @@
     "langue": "français",
     "categorie": "Général"
   },
-  {
-    "id": "france24_fr",
-    "nom": "France 24 French",
-    "logo": "https://i.imgur.com/u8N6uoj.png",
-    "url": "https://live.france24.com/hls/live/2037179-b/F24_FR_HI_HLS/master_5000.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
+  
   {
     "id": "franceinter_fr",
     "nom": "France Inter",
@@ -3991,6 +3984,14 @@
     "nom": "EBS Plus",
     "logo": "https://i.imgur.com/7V012zQ.png",
     "url": "https://streams.prd.commavservices.eu/live/ebsplus/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "filinfotv_bf",
+    "nom": "Filinfo TV",
+    "logo": "https://i.imgur.com/KG93Tvn.png",
+    "url": "https://d2iqjnqfr8pv3b.cloudfront.net/out/v1/d09d2fc718404cd8bccd3eba2444dd70/index.m3u8",
     "langue": "français",
     "categorie": "Actualités"
   },
