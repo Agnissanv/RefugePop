@@ -3,6 +3,14 @@
     "id": "2mmonde_ma",
     "nom": "2M Monde",
     "logo": "https://i.imgur.com/MvpntzA.png",
+    "url": "https://jmp2.uk/plu-67f68bd2135aeda9ddf0ef54.m3u8",
+    "langue": "français",
+    "categorie": "Général"
+  },
+  {
+    "id": "2mmonde_ma",
+    "nom": "2M Monde",
+    "logo": "https://i.imgur.com/MvpntzA.png",
     "url": "https://stream-lb.livemediama.com/2m/hls/master.m3u8",
     "langue": "français",
     "categorie": "Général"
@@ -1831,7 +1839,7 @@
     "id": "lequipe_fr",
     "nom": "L'Equipe",
     "logo": "https://i.imgur.com/t35zhM9.png",
-    "url": "https://dshn8inoshngm.cloudfront.net/v1/master/3722c60a815c199d9c0ef36c5b73da68a62b09d1/cc-gac2i63dmu8b7/LEquipe_FR.m3u8",
+    "url": "https://raw.githubusercontent.com/ipstreet312/freeiptv/master/ressources/dmotion/py/eqpe/equipe.m3u8",
     "langue": "français",
     "categorie": "Sportif"
   },
@@ -2047,7 +2055,7 @@
     "id": "m6_fr",
     "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"Entertainment\",M6",
     "logo": "https://i.imgur.com/7GVp3fW.png",
-    "url": "http://99.27.51.147:8080/M6/index.m3u8",
+    "url": "http://cdn.haititivi.com/M6-HD/index.m3u8",
     "langue": "français",
     "categorie": "Divertissement",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3"
@@ -3097,7 +3105,7 @@
     "id": "rti1_ci",
     "nom": "RTI 1",
     "logo": "https://i.imgur.com/TybQZQS.png",
-    "url": "http://69.64.57.208:8080/rti1/playlist.m3u8",
+    "url": "https://video1.getstreamhosting.com:1936/8336/8336/playlist.m3u8",
     "langue": "français",
     "categorie": "Général"
   },
@@ -3105,7 +3113,7 @@
     "id": "rti2_ci",
     "nom": "RTI 2",
     "logo": "https://i.imgur.com/73ueXrp.png",
-    "url": "http://69.64.57.208:8080/rti2/playlist.m3u8",
+    "url": "https://video1.getstreamhosting.com:1936/8066/8066/playlist.m3u8",
     "langue": "français",
     "categorie": "Général"
   },
@@ -3129,7 +3137,7 @@
     "id": "rtl9_lu",
     "nom": "RTL9",
     "logo": "https://i.imgur.com/nFqjVNW.png",
-    "url": "http://cdn.haititivi.com/rtl-9/index.m3u8",
+    "url": "http://rezofoot.tv/rtl-9/index.m3u8",
     "langue": "français",
     "categorie": "Divertissement"
   },
