@@ -605,8 +605,32 @@ async function searchMovies(query) {
     }
 }
 
+let searchMode = 'movies'; // 'movies' ou 'live', selon le filtre actif
+
+function searchChannels(query) {
+    const normalizedQuery = query.trim().toLowerCase();
+
+    if (normalizedQuery === '') {
+        // Retour à la liste complète des chaînes (pas de filtre catégorie actif ici, comme convenu)
+        getIptvChannels().then(displayChannels);
+        return;
+    }
+
+    getIptvChannels().then(channels => {
+        const filtered = channels.filter(ch =>
+            ch.nom.toLowerCase().includes(normalizedQuery) ||
+            (ch.categorie || '').toLowerCase().includes(normalizedQuery)
+        );
+        displayChannels(filtered);
+    });
+}
+
 searchInput.addEventListener('input', debounce((e) => {
-    searchMovies(e.target.value);
+    if (searchMode === 'live') {
+        searchChannels(e.target.value);
+    } else {
+        searchMovies(e.target.value);
+    }
 }, 1000));
 
 // --- ÉCOUTEURS D'ÉVÉNEMENTS FILTRES ---
@@ -618,11 +642,19 @@ filterButtons.forEach(btn => {
         const categoryContainer = document.getElementById('categoryFiltersContainer');
 
         if (btn.dataset.genre === 'live') {
+            searchMode = 'live';
+            searchInput.value = '';
+            searchInput.placeholder = 'Cherche une chaîne (C Star, Sport, TV5Monde...)';
+
             categoryContainer.innerHTML = '';
             grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement des chaînes...</div>`;
             await renderCategoryFilters();
             return;
         }
+
+        searchMode = 'movies';
+        searchInput.value = '';
+        searchInput.placeholder = 'Une envie douce, un frisson, une série ?...';
 
         categoryContainer.classList.add('hidden');
 
