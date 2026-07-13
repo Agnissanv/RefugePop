@@ -56,6 +56,14 @@
     "categorie": "Actualités"
   },
   {
+    "id": "tv5mondeinfo_fr",
+    "nom": "TV5Monde Info [Geo-blocked]",
+    "logo": "https://i.imgur.com/AJx5Fy2.png",
+    "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
     "id": "afrikinfotv_gn",
     "nom": "Afrik Info TV",
     "logo": "https://i.imgur.com/hz2LOD8.jpeg",
@@ -2958,14 +2966,7 @@
     "langue": "français",
     "categorie": "Général"
   },
-  {
-    "id": "saraouniatv_ne",
-    "nom": "Saraounia TV",
-    "logo": "https://i.imgur.com/O8XIcpH.png",
-    "url": "https://live20.bozztv.com/dvrfl06/astv/astv-saraouna/index.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
+  
   {
     "id": "savanetv_bf",
     "nom": "Savane TV",
@@ -3328,14 +3329,6 @@
     "categorie": "Général"
   },
   {
-    "id": "tempoafrictv_us",
-    "nom": "Tempo Afric TV",
-    "logo": "https://i.imgur.com/mggN4mS.jpg",
-    "url": "https://streamspace.live/hls/tempoafrictv/livestream.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
-  {
     "id": "teva_fr",
     "nom": "Teva",
     "logo": "https://i.imgur.com/kDW0hN5.png",
@@ -3641,14 +3634,7 @@
     "langue": "français",
     "categorie": "Général"
   },
-  {
-    "id": "tv5mondeinfo_fr",
-    "nom": "TV5Monde Info [Geo-blocked]",
-    "logo": "https://i.imgur.com/AJx5Fy2.png",
-    "url": "https://ott.tv5monde.com/Content/HLS/Live/channel(info)/variant.m3u8",
-    "langue": "français",
-    "categorie": "Actualités"
-  },
+  
   {
     "id": "tv5mondelatinamerica_fr",
     "nom": "TV5Monde Latin America",
@@ -3908,6 +3894,110 @@
     "nom": "Filinfo TV",
     "logo": "https://i.imgur.com/KG93Tvn.png",
     "url": "https://d2iqjnqfr8pv3b.cloudfront.net/out/v1/d09d2fc718404cd8bccd3eba2444dd70/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "franceinfo_fr",
+    "nom": "Franceinfo",
+    "logo": "https://i.imgur.com/eITXz6A.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/franceinfotv.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "kin24_cd",
+    "nom": "Kin24",
+    "logo": "https://i.imgur.com/Lak10Wo.png",
+    "url": "http://51.254.199.122:8080/kin24/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lavoixduroutiertv_bj",
+    "nom": "La Voix du Routier TV",
+    "logo": "https://i.imgur.com/mCt6AI7.png",
+    "url": "https://webtv.lavoixduroutiertv.bj/hls/stream.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lci_fr",
+    "nom": "LCI HD",
+    "logo": "https://i.imgur.com/DED8EXs.png",
+    "url": "http://151.80.18.177:86/LCI_HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lemediatv_fr",
+    "nom": "Le Media TV",
+    "logo": "https://i.imgur.com/OK20oyl.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/lemedia.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lcn_ca",
+    "nom": "LCN [Geo-blocked]",
+    "logo": "https://i.imgur.com/iKDLgOG.png",
+    "url": "https://tvalive.akamaized.net/hls/live/2014213/tvan01/tvan01.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "monacoinfo_mc",
+    "nom": "Monaco Info",
+    "logo": "https://i.imgur.com/dIrKYH7.png",
+    "url": "https://webtv.monacoinfo.com/live/prod/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "lyoncapitaletv_fr",
+    "nom": "Lyon Capitale TV",
+    "logo": "https://i.imgur.com/4WfnEaj.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/lyoncapitale.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "ln24_be",
+    "nom": "LN24",
+    "logo": "https://i.imgur.com/1EkZRwn.png",
+    "url": "https://live-ln24.digiteka.com/1911668011/index.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "publicsenat2424_fr",
+    "nom": "Public Senat 24/24",
+    "logo": "https://i.imgur.com/nHWWLBP.png",
+    "url": "https://raw.githubusercontent.com/Sibprod/streams/main/ressources/dm/py/hls/publicsenat.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "panafricanmediatv_cm",
+    "nom": "Panafrican Media TV",
+    "logo": "https://i.imgur.com/wneSSYM.png",
+    "url": "https://live20.bozztv.com/giatv/giatv-pmtv/pmtv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "tempoafrictv_us",
+    "nom": "Tempo Afric TV",
+    "logo": "https://i.imgur.com/mggN4mS.jpg",
+    "url": "https://streamspace.live/hls/tempoafrictv/livestream.m3u8",
+    "langue": "français",
+    "categorie": "Actualités"
+  },
+  {
+    "id": "saraouniatv_ne",
+    "nom": "Saraounia TV",
+    "logo": "https://i.imgur.com/O8XIcpH.png",
+    "url": "https://live20.bozztv.com/dvrfl06/astv/astv-saraouna/index.m3u8",
     "langue": "français",
     "categorie": "Actualités"
   },
