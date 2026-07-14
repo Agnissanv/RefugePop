@@ -14,13 +14,19 @@ const HOUSE_ADS = [
     { type: 'image', src: 'ads/promo2.png', link: 'https://agnissanisaac.com', label: 'SENTIMENTALE' }
 ];
 
+function getNextAdIndex() {
+    const stored = parseInt(sessionStorage.getItem('houseAdIndex') || '0', 10);
+    sessionStorage.setItem('houseAdIndex', String(stored + 1));
+    return stored % HOUSE_ADS.length;
+}
+
 function maybeShowAdOverlay(wrapperEl, onDone) {
     if (HOUSE_ADS.length === 0 || Math.random() >= 0.25) {
         onDone();
         return;
     }
 
-    const ad = HOUSE_ADS[Math.floor(Math.random() * HOUSE_ADS.length)];
+    const ad = HOUSE_ADS[getNextAdIndex()];
     const overlay = document.createElement('div');
     overlay.className = 'house-ad-overlay';
     overlay.innerHTML = `
