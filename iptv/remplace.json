@@ -1,5 +1,70 @@
 [
     {
+    "id": "passionnovelas_ci",
+    "nom": "Passion Novelas",
+    "logo": "https://i.imgur.com/boo9jmf.png",
+    "url": "http://41.223.30.230/PASSIONTV/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "plextv_cm",
+    "nom": "PLEX TV",
+    "logo": "https://i.ibb.co/H4VktvG/Plex-TV-237.jpg",
+    "url": "http://connectiktv.ddns.net:5000/plextv/@plextv/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "plutotvanimego_de",
+    "nom": "Pluto TV ANIME GO!",
+    "logo": "https://images.pluto.tv/channels/691b3669c48674840c3b832a/colorLogoPNG_1778491402325.png",
+    "url": "https://jmp2.uk/plu-691b3669c48674840c3b832a.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+    {
+    "id": "mtv_fr",
+    "nom": "MTV",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/MTV_2021_%28brand_version%29.svg/960px-MTV_2021_%28brand_version%29.svg.png",
+    "url": "http://41.205.70.146/MTVFRANCE/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "mtvclassics_de",
+    "nom": "MTV CLASSICS",
+    "logo": "https://images.pluto.tv/channels/5f92b56a367e170007cd43f4/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-5f92b56a367e170007cd43f4.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "nazalishdtv_cg",
+    "nom": "Nazali's HDTV",
+    "logo": "https://i.imgur.com/SrdRtqn.png",
+    "url": "http://194.163.135.238:5080/WebRTCApp/streams/590264631485484547459082.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "novocomedy_fr",
+    "nom": "like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0\" group-title=\"Comedy\",Novo Comedy",
+    "logo": "https://novocomedy.com/wp-content/uploads/LogoNovocomedy.png",
+    "url": "https://d35j504z0x2vu2.cloudfront.net/v1/master/0bc8e8376bd8417a1b6761138aa41c26c7309312/novo-comedy/video.m3u8?ads.vf=CMRSFvusYbe",
+    "langue": "français",
+    "categorie": "Divertissement",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/145.0.0.0 Safari/537.36 Edg/145.0.0.0"
+  },
+  {
+    "id": "nwmagazine_tg",
+    "nom": "NW Magazine",
+    "logo": "https://i.imgur.com/RZNJZYN.png",
+    "url": "https://hls.newworldtv.com/nw-magazine/video/live.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+    {
     "id": "arte_fr",
     "nom": "Arte [Geo-blocked]",
     "logo": "https://i.imgur.com/ecXMjNl.png",
@@ -95,6 +160,86 @@
     "langue": "français",
     "categorie": "Divertissement",
     "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3"
+  },
+  {
+    "id": "plutotvcomedie_de",
+    "nom": "Pluto TV Comédie",
+    "logo": "https://images.pluto.tv/channels/5f8eb91bb9b9e7000817e67f/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-5f8eb91bb9b9e7000817e67f.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "plutotvcomediescultes_de",
+    "nom": "Pluto TV Comédies Cultes",
+    "logo": "https://images.pluto.tv/channels/67b4b2d976a934282e92d71c/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-67b4b2d976a934282e92d71c.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "plutotvfootanim_de",
+    "nom": "Pluto TV Footanim'",
+    "logo": "https://images.pluto.tv/channels/69c2ae0d1f1accd54916c825/colorLogoPNG_1776860789196.png",
+    "url": "https://jmp2.uk/plu-69c2ae0d1f1accd54916c825.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "plutotvfrenchcollection_de",
+    "nom": "Pluto TV French Collection",
+    "logo": "https://images.pluto.tv/channels/62f3e0522443200008c567d7/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-62f3e0522443200008c567d7.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "plutotvinside_de",
+    "nom": "Pluto TV Inside",
+    "logo": "https://images.pluto.tv/channels/5f8ed3892ed7bb000741a1d2/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-5f8ed3892ed7bb000741a1d2.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "plutotvreality_de",
+    "nom": "Pluto TV Reality",
+    "logo": "https://images.pluto.tv/channels/67ebc1b6432a0e406f141341/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-6092544e7639460007d4835e.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "plutotvtelerealitefrance_de",
+    "nom": "Pluto TV Téléréalité France",
+    "logo": "https://images.pluto.tv/channels/699865ccac36b147e74619fe/colorLogoPNG_1779788356699.png",
+    "url": "https://jmp2.uk/plu-699865ccac36b147e74619fe.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "ridiculousness_de",
+    "nom": "Ridiculousness",
+    "logo": "https://images.pluto.tv/channels/5f8eb8a8b2619a000710605c/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-5f8eb8a8b2619a000710605c.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "rtl9_lu",
+    "nom": "RTL9",
+    "logo": "https://i.imgur.com/nFqjVNW.png",
+    "url": "http://rezofoot.tv/rtl-9/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "rmclife_fr",
+    "nom": "RMC Life",
+    "logo": "https://img1.dc2.oqee.net/channel_pictures/3606/w512",
+    "url": "http://41.205.77.102/CHERIE25/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
   },
 
 
