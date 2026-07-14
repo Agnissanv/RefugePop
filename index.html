@@ -57,6 +57,7 @@
     <div class="filters-container">
         <button class="filter-btn" data-genre="perso">🎬 Autres</button>
         <button class="filter-btn" data-genre="live">📡Direct</button>
+        <button class="filter-btn" data-genre="mondial">⚽ Mondial</button>
         <button class="filter-btn active" data-genre="trending">✨ Tendances</button>
         <button class="filter-btn" data-genre="favorites">❤️ Mes Favoris</button>
         <button class="filter-btn" data-genre="28">🔥 Action</button>
@@ -68,7 +69,21 @@
     </div>
     <div class="category-filters-container hidden" id="categoryFiltersContainer"></div>
 
-    <main class="movie-grid" id="movieGrid"> </main>
+    <div class="content-layout" id="contentLayout">
+        <main class="movie-grid" id="movieGrid"> </main>
+        <aside class="mondial-sidebar hidden" id="mondialSidebar">
+            <div class="sidebar-ad-box">
+                <h3>🔥 Ton espace pub ici</h3>
+                <p>Remplace ce texte et ce lien par ta vraie promotion (Code A-Z, SENTIMENTALE, partenaire...).</p>
+                <a href="#" class="sidebar-ad-btn">En savoir plus</a>
+            </div>
+            <div class="sidebar-ad-box">
+                <h3>📣 Deuxième emplacement</h3>
+                <p>Un second encart, pour un deuxième partenaire ou une autre offre.</p>
+                <a href="#" class="sidebar-ad-btn">Découvrir</a>
+            </div>
+        </aside>
+    </div>
     <div class="load-more-container">
         <button class="load-more-btn hidden" id="loadMoreBtn">Voir Plus +</button>
     </div>
@@ -138,6 +153,25 @@
             </div>
         </div>
     </div>
+
+
+    <!-- MODALE DE LECTURE D'UN MATCH (Mondial) -->
+    <div class="modal-overlay" id="matchModal">
+        <div class="modal-content live-layout">
+            <button class="close-modal" id="closeMatchModal">&times;</button>
+            <div class="match-player-wrapper" id="matchPlayerWrapper">
+                <iframe id="matchIframe" src="" allowfullscreen frameborder="0"></iframe>
+                <div class="live-channel-info">
+                    <span id="matchModalTeams"></span>
+                    <span class="match-live-badge"><span class="live-dot">●</span> <span id="matchViewerCount"></span></span>
+                </div>
+                <button class="personal-fullscreen-btn" id="matchFullscreenBtn" title="Plein écran">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
 
     <!-- 3. LA MODALE DU LECTEUR FINAL (Interface d'attente de flux) -->
     <div class="modal-overlay" id="playerModal">

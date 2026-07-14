@@ -912,6 +912,150 @@ header {
     display: none;
 }
 
+
+/* --- Disposition avec sidebar (Mondial) --- */
+.content-layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.content-layout .movie-grid {
+    flex: 1;
+    min-width: 0;
+}
+
+.mondial-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-right: 5%;
+}
+
+.mondial-sidebar.hidden {
+    display: none;
+}
+
+.sidebar-ad-box {
+    background: var(--bg-card, #1a1a1c);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 16px;
+}
+
+.sidebar-ad-box h3 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+    color: #fff;
+}
+
+.sidebar-ad-box p {
+    font-size: 0.85rem;
+    color: #ccc;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.sidebar-ad-btn {
+    display: block;
+    text-align: center;
+    background: var(--accent);
+    color: #fff;
+    padding: 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+/* --- Cartes de match --- */
+.match-card {
+    background: var(--bg-card, #1a1a1c);
+    border-radius: var(--radius-sm, 10px);
+    width: 170px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 260px;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 16px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.match-card:hover {
+    transform: scale(1.05);
+    background: #232325;
+}
+
+.match-live-badge {
+    background: rgba(255, 71, 87, 0.12);
+    color: var(--accent);
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    white-space: nowrap;
+}
+
+.live-dot {
+    animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.match-teams {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 2rem;
+}
+
+.match-vs {
+    font-size: 0.75rem;
+    color: #888;
+    font-weight: 700;
+}
+
+.match-title {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #eee;
+    text-align: center;
+}
+
+.match-datetime {
+    font-size: 0.7rem;
+    color: #999;
+}
+
+/* --- Lecteur de match (iframe partenaire) --- */
+.match-player-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    background: #000;
+}
+
+.match-player-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
 /* ==========================================================================
    VERSION RESPONSIVE MOBILE EXTRÊME (21e SIÈCLE ADAPTÉ)
    ========================================================================== */
@@ -957,7 +1101,8 @@ header {
     }
 
     .movie-card,
-    .channel-card {
+    .channel-card,
+    .match-card {
         width: 100%;
         max-width: none;
         height: 240px; /* Hauteur ajustée pour écran mobile */
@@ -1024,7 +1169,18 @@ header {
     }
     
     .movie-card,
-    .channel-card {
+    .channel-card,
+    .match-card {
         height: 200px;
+    }
+    .content-layout {
+        flex-direction: column;
+    }
+
+    .mondial-sidebar {
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-right: 0;
     }
 }

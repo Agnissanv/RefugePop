@@ -7,8 +7,51 @@ const LANG = 'fr-FR';
 const STREAM_TIMEOUT_MS = 30000; // délai avant d'afficher "flux non disponible" (30000 = 30 secondes)
 const PERSONAL_MOVIES_URL = 'youtube/movies.json';
 const IPTV_CHANNELS_URL = 'iptv/chaines.json';
+const MATCHES_URL = 'foot_live_manuel/matches.json';
 let personalMoviesCache = null;
 let iptvChannelsCache = null;
+let matchesCache = null;
+
+const MONTHS_FR = ['janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre'];
+
+function formatMatchDate(isoDate) {
+    const [y, m, d] = isoDate.split('-').map(Number);
+    return `${d} ${MONTHS_FR[m - 1]} ${y}`;
+}
+
+async function getMatches() {
+    if (matchesCache) return matchesCache;
+    try {
+        const res = await fetch(MATCHES_URL);
+        const data = await res.json();
+        matchesCache = data;
+        return data;
+    } catch (e) {
+        console.error('Erreur chargement matchs:', e);
+        return [];
+    }
+}
+
+function buildMatchCard(match) {
+    const card = document.createElement('div');
+    card.classList.add('match-card');
+    card.innerHTML = `
+        <div class="match-live-badge"><span class="live-dot">●</span> ${match.viewerStart.toLocaleString('fr-FR')} spectateurs</div>
+        <div class="match-teams">
+            <span class="match-flag">${match.flagHome}</span>
+            <span class="match-vs">VS</span>
+            <span class="match-flag">${match.flagAway}</span>
+        </div>
+        <p class="match-title">${match.teamHome} - ${match.teamAway}</p>
+        <p class="match-datetime">${formatMatchDate(match.date)} à ${match.heure}</p>
+    `;
+    card.addEventListener('click', () => openMatchModal(match));
+    return card;
+}
+
+function displayMatches(matches) {
+    startPagedRender(matches, buildMatchCard, "Aucun match programmé pour le moment.");
+}
 
 const CATEGORY_ICONS = {
     'Général': '📺', 'information': '📰', 'Films-Série': '🎬', 'Religieux': '🙏',
@@ -640,15 +683,30 @@ filterButtons.forEach(btn => {
         btn.classList.add('active');
 
         const categoryContainer = document.getElementById('categoryFiltersContainer');
+        const mondialSidebar = document.getElementById('mondialSidebar');
 
         if (btn.dataset.genre === 'live') {
             searchMode = 'live';
             searchInput.value = '';
-            searchInput.placeholder = 'Cherche une chaîne (C Star, Sport, TV5Monde...)';
+            searchInput.placeholder = 'Cherche une chaîne (BFM2, Sport, TV5Monde...)';
 
+            mondialSidebar.classList.add('hidden');
             categoryContainer.innerHTML = '';
             grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement des chaînes...</div>`;
             await renderCategoryFilters();
+            return;
+        }
+
+        if (btn.dataset.genre === 'mondial') {
+            searchMode = 'movies';
+            searchInput.value = '';
+            searchInput.placeholder = 'Une envie douce, un frisson, une série ?...';
+
+            categoryContainer.classList.add('hidden');
+            mondialSidebar.classList.remove('hidden');
+            grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement des matchs...</div>`;
+            const matches = await getMatches();
+            displayMatches(matches);
             return;
         }
 
@@ -657,6 +715,7 @@ filterButtons.forEach(btn => {
         searchInput.placeholder = 'Une envie douce, un frisson, une série ?...';
 
         categoryContainer.classList.add('hidden');
+        mondialSidebar.classList.add('hidden');
 
         if (btn.dataset.genre === 'favorites') {
             displayMovies(getFavorites());
@@ -774,6 +833,63 @@ document.addEventListener('fullscreenchange', () => {
         liveFullscreenBtn.querySelector('i').className = 'fas fa-compress';
     } else if (!document.fullscreenElement) {
         liveFullscreenBtn.querySelector('i').className = 'fas fa-expand';
+    }
+});
+
+
+
+// --- LECTEUR DE MATCH (Mondial) ---
+const matchModal = document.getElementById('matchModal');
+const closeMatchModalBtn = document.getElementById('closeMatchModal');
+const matchIframe = document.getElementById('matchIframe');
+const matchModalTeams = document.getElementById('matchModalTeams');
+const matchViewerCountEl = document.getElementById('matchViewerCount');
+const matchFullscreenBtn = document.getElementById('matchFullscreenBtn');
+const matchPlayerWrapper = document.getElementById('matchPlayerWrapper');
+let matchViewerInterval = null;
+
+function openMatchModal(match) {
+    matchModalTeams.textContent = `${match.flagHome} ${match.teamHome} vs ${match.teamAway} ${match.flagAway}`;
+    matchIframe.src = match.iframeUrl;
+
+    let currentCount = match.viewerStart;
+    matchViewerCountEl.textContent = currentCount.toLocaleString('fr-FR');
+
+    clearInterval(matchViewerInterval);
+    matchViewerInterval = setInterval(() => {
+        const variation = Math.floor(Math.random() * 60) - 25;
+        currentCount = Math.max(3000, currentCount + variation);
+        matchViewerCountEl.textContent = currentCount.toLocaleString('fr-FR');
+    }, 4000);
+
+    matchModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeMatchModal() {
+    matchModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+    matchIframe.src = '';
+    clearInterval(matchViewerInterval);
+}
+
+closeMatchModalBtn.addEventListener('click', closeMatchModal);
+matchModal.addEventListener('click', (e) => { if (e.target === matchModal) closeMatchModal(); });
+
+matchFullscreenBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    } else {
+        matchPlayerWrapper.requestFullscreen();
+    }
+});
+
+document.addEventListener('fullscreenchange', () => {
+    if (document.fullscreenElement === matchPlayerWrapper) {
+        matchFullscreenBtn.querySelector('i').className = 'fas fa-compress';
+    } else if (!document.fullscreenElement) {
+        matchFullscreenBtn.querySelector('i').className = 'fas fa-expand';
     }
 });
 
