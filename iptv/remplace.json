@@ -31,7 +31,71 @@
     "langue": "français",
     "categorie": "Divertissement"
   },
-  
+  {
+    "id": "cheers_de",
+    "nom": "Cheers",
+    "logo": "https://images.pluto.tv/channels/611e7f224676bf00076a4d8d/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-65cce14060eb870008dbd003.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "dntv_ci",
+    "nom": "DNTV",
+    "logo": "https://i.imgur.com/Pw1ifln.png",
+    "url": "https://tv.num221tech.com:5443/LiveApp/streams/dntv.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "evitv_cd",
+    "nom": "EVI TV",
+    "logo": "https://i.imgur.com/fBc9JSM.png",
+    "url": "https://stream.berosat.live:19360/evi-tv/evi-tv.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "fideletv_us",
+    "nom": "Fidele TV",
+    "logo": "https://i.ibb.co/YtBZ0Lc/FIDELE-TV.png",
+    "url": "https://59d39900ebfb8.streamlock.net/FIDELETV/FIDELETV/playlist.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "justtattooofus_de",
+    "nom": "Just Tattoo of Us",
+    "logo": "https://images.pluto.tv/channels/6304f20c941c5d00089634e7/colorLogoPNG.png",
+    "url": "https://jmp2.uk/plu-6304f20c941c5d00089634e7.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "kc2_rw",
+    "nom": "KC2",
+    "logo": "https://i.imgur.com/PsYPzNc.png",
+    "url": "http://197.243.19.131:1935/kc2/kc2/chunklist.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "laune_be",
+    "nom": "La Une",
+    "logo": "https://i.imgur.com/jMwZp7z.png",
+    "url": "http://193.111.198.85:8589/stream/mstv/rtbflaunelive26/master.m3u8?u=Oleg&p=967e33767f592e1aaf3d4019f38f380bf784e113b193d89c412d047059d6300d",
+    "langue": "français",
+    "categorie": "Divertissement"
+  },
+  {
+    "id": "m6_fr",
+    "nom": "like Gecko) Chrome/149.0.0.0 Safari/537.3\" group-title=\"Entertainment\",M6",
+    "logo": "https://i.imgur.com/7GVp3fW.png",
+    "url": "http://cdn.haititivi.com/M6-HD/index.m3u8",
+    "langue": "français",
+    "categorie": "Divertissement",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.3"
+  },
 
 
 
