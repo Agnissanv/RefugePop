@@ -105,10 +105,10 @@ function displayMatches(matches) {
 }
 
 const CATEGORY_ICONS = {
-    'Général': '📺', 'information': '📰', 'Films-Série': '🎬', 'Religieux': '🙏',
+    'Général': '<i class="fa-solid fa-tv"></i>', 'Actualités': '📰', 'Films-Série': '🎬', 'Religieux': '🙏',
     'Musique': '🎵', 'Divertissement': '🎉', 'Indéfini': '❔', 'Documentaire': '🎥',
     'Animation': '🧸', 'Sportif': '⚽', 'Style de vie': '🌿', 'Entreprise': '💼',
-    'Éducation': '📚', 'Cuisine': '🍳', 'Voyage & Plein air': '✈️'
+    'Éducation': '📚', 'Cuisine': '🍳', 'Voyage & Plein air': '✈️', 'Culture': '✈️', 'Famille': '✈️'
 };
 let activeChannelCategory = null;
 

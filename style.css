@@ -29,6 +29,16 @@ body {
     overflow-x: hidden;
 }
 
+.filter-btn i {
+  margin-right: 8px; /* Espace parfait entre l'icône et le texte */
+  transition: transform 0.2s ease; /* Pour des micro-interactions sympas */
+}
+
+/* Effet interactif au survol */
+.filter-btn:hover i {
+  transform: scale(1.15); 
+  color: var(--accent-hover);
+}
 /* ==========================================================================
    HEADER & BARRE DE RECHERCHE
    ========================================================================== */
@@ -1125,6 +1135,8 @@ header {
     opacity: 0.6;
     cursor: not-allowed;
 }
+
+
 
 /* ==========================================================================
    VERSION RESPONSIVE MOBILE EXTRÊME (21e SIÈCLE ADAPTÉ)
