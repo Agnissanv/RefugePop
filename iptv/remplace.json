@@ -1,44 +1,5 @@
 [
-    {
-        "id": "bamtv_be",
-        "nom": "BAM-TV",
-        "logo": "https://i.imgur.com/9UmR6cs.png",
-        "url": "https://belafrikamediatv.vedge.infomaniak.com/livecast/ik:belafrikamediatv/manifest.m3u8",
-        "langue": "français",
-        "categorie": "Culture"
-    },
-    {
-        "id": "2stv_sn",
-        "nom": "2STV",
-        "logo": "https://i.imgur.com/WByVBZf.png",
-        "url": "http://69.64.57.208/2stv/playlist.m3u8",
-        "langue": "français",
-        "categorie": "Culture"
-    },
-    {
-        "id": "aplusivoire_ci",
-        "nom": "A+ Ivoire",
-        "logo": "https://i.imgur.com/yOW0vyP.png",
-        "url": "http://69.64.57.208/atv/playlist.m3u8",
-        "langue": "français",
-        "categorie": "Culture"
-    },
-    {
-        "id": "amanitv_sn",
-        "nom": "Amani TV",
-        "logo": "https://i.imgur.com/0cY4K7G.png",
-        "url": "https://goccn.cloud/hls/amanitv/index.m3u8",
-        "langue": "français",
-        "categorie": "Culture"
-    },
-    {
-        "id": "evtele_cg",
-        "nom": "Ev-tele",
-        "logo": "https://i.imgur.com/iBlXl2T.png",
-        "url": "https://playtv4k.live/live/EVTELE/index.m3u8",
-        "langue": "français",
-        "categorie": "Culture"
-    },
+    
 
 
 
