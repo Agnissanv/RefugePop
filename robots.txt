@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /api/
+
+Sitemap: https://refugepop.agnissanisaac.com/sitemap.xml
