@@ -1,13 +1,20 @@
 [
   {
-    "id": "yt-6",
+    "id": "yt-GCPHbI",
     "source": "youtube",
-    "title": "Title |genre|",
-    "poster": "youtube/posters/title_verticale.jpg",
-    "backdrop": "youtube/posters/title_horizontale.vif",
-    "overview": "description du film",
-    "release_date": "2020-11-27",
-    "youtubeId": "link après watch?v="
+    "title": "Avatar : La Voie de l'eau",
+    "poster": "https://image.tmdb.org/t/p/original/kQYx143yujkwyjJdZH2skOGeQfA.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/198vrF8k7mfQ4FjDJsBmdQcaiyq.jpg",
+    "overview": "Une dizaine d'années s'est écoulée depuis les précédents évènements survenus sur Pandora. Jake Sully et Neytiri sont devenus parents. Leur vie idyllique, proche de la nature, est menacée lorsque la « Ressources Développement Administration », dangereuse organisation non-gouvernementale, est de retour sur Pandora. Contraints de quitter leur habitat naturel, Jake et sa famille se rendent sur les récifs, où ils pensent trouver asile. Mais ils tombent sur un clan, les Metkayina, aux mœurs différentes des leurs.",
+    "release_date": "2022-08-11",
+    "youtubeId": "8wYbHJd0hqM",
+    "tmdbId": 76600,
+    "genre_ids": [
+      28,
+      53,
+      18,
+      80
+    ]
   },
   {
     "id": "yt-5",
