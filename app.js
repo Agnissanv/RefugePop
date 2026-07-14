@@ -1,4 +1,4 @@
-alert("RefugePop est en constant développement. Certaines fonctionnalités peuvent ne pas être disponibles. Merci de votre compréhension. En attendant, installez-vous et profitez, on s'occupe du reste.");
+// alert("RefugePop est en constant développement. Certaines fonctionnalités peuvent ne pas être disponibles. Merci de votre compréhension. En attendant, installez-vous et profitez, on s'occupe du reste.");
 
 // app.js - Moteur d'immersion cinématique - Code A-Z
 
