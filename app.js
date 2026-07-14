@@ -105,10 +105,10 @@ function displayMatches(matches) {
 }
 
 const CATEGORY_ICONS = {
-    'Général': '<i class="fa-solid fa-tv"></i>', 'Actualités': '📰', 'Films-Série': '🎬', 'Religieux': '🙏',
-    'Musique': '🎵', 'Divertissement': '🎉', 'Indéfini': '❔', 'Documentaire': '🎥',
-    'Animation': '🧸', 'Sportif': '⚽', 'Style de vie': '🌿', 'Entreprise': '💼',
-    'Éducation': '📚', 'Cuisine': '🍳', 'Voyage & Plein air': '✈️', 'Culture': '✈️', 'Famille': '✈️'
+    'Général': '<i class="fa-solid fa-tv"></i>', 'Actualités': '<i class="fa-solid fa-newspaper"></i>', 'Films-Série': '<i class="fa-solid fa-film"></i>', 'Religieux': '<i class="fa-solid fa-hands-praying"></i>',
+    'Musique': '<i class="fa-solid fa-music"></i>', 'Divertissement': '<i class="fa-solid fa-champagne-glasses"></i>', 'Indéfini': '❔', 'Documentaire': '<i class="fa-solid fa-book"></i>',
+    'Animation': '<i class="fa-solid fa-paw"></i>', 'Sportif': '<i class="fa-solid fa-futbol"></i>', 'Style de vie': '<i class="fa-solid fa-leaf"></i>', 'Entreprise': '<i class="fa-solid fa-briefcase"></i>',
+    'Éducation': '<i class="fa-solid fa-graduation-cap"></i>', 'Cuisine': '<i class="fa-solid fa-utensils"></i>', 'Voyage & Plein air': '<i class="fa-solid fa-plane"></i>', 'Culture': '<i class="fa-solid fa-theater-masks"></i>', 'Famille': '<i class="fa-solid fa-users"></i>'
 };
 let activeChannelCategory = null;
 
