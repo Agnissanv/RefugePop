@@ -2616,14 +2616,7 @@
     "langue": "français",
     "categorie": "Général"
   },
-  {
-    "id": "rts2_sn",
-    "nom": "RTS 2",
-    "logo": "https://i.imgur.com/YypHsF4.png",
-    "url": "http://69.64.57.208/rts2/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
+  
   {
     "id": "rtsinfo_ch",
     "nom": "RTS Info",
@@ -2809,14 +2802,7 @@
     "langue": "français",
     "categorie": "Indéfini"
   },
-  {
-    "id": "sunplustv_cm",
-    "nom": "Sun+ TV",
-    "logo": "https://i.imgur.com/5XCXWy7.png",
-    "url": "https://livemaraboo.com/hls/stream.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
+  
   {
     "id": "sunulabeltv_sn",
     "nom": "Sunu Label TV",
@@ -2841,30 +2827,6 @@
     "url": "https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/t18/t18-dm.m3u8",
     "langue": "français",
     "categorie": "Général"
-  },
-  {
-    "id": "taltv_ne",
-    "nom": "Tal TV",
-    "logo": "https://i.imgur.com/KWMP0t1.png",
-    "url": "https://mediaserver1.castpin.com/hls/taltv/index.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
-  {
-    "id": "teenmom_de",
-    "nom": "Teen Mom",
-    "logo": "https://images.pluto.tv/channels/62e7fc8c0d061100083946a9/colorLogoPNG.png",
-    "url": "https://jmp2.uk/plu-62f3f05505e621000783df2f.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
-  {
-    "id": "teleboston_us",
-    "nom": "Tele Boston",
-    "logo": "https://i.imgur.com/xeTtup8.png",
-    "url": "https://tv2.fastcast4u.com:3238/live/radiotelebostonlive.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
   },
   {
     "id": "telecongo_cg",
@@ -2954,14 +2916,7 @@
     "langue": "français",
     "categorie": "Indéfini"
   },
-  {
-    "id": "telemix_us",
-    "nom": "TeleMIX",
-    "logo": "https://i.ibb.co/HpX99Ks/unnamed.jpg",
-    "url": "https://haititivi.com/haiti/telemix1/index.m3u8",
-    "langue": "français",
-    "categorie": "Divertissement"
-  },
+  
   {
     "id": "telemusiksenegal_sn",
     "nom": "TeleMusik Senegal",
