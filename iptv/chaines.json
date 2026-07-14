@@ -16,10 +16,10 @@
     "categorie": "Général"
   },
   {
-    "id": "2stv_sn",
-    "nom": "2STV",
-    "logo": "https://i.imgur.com/WByVBZf.png",
-    "url": "http://69.64.57.208/2stv/playlist.m3u8",
+    "id": "afromagicchannel_ci",
+    "nom": "Afro Magic Channel",
+    "logo": "https://i.imgur.com/yQzXErU.png",
+    "url": "https://video1.getstreamhosting.com:1936/8306/8306/playlist.m3u8",
     "langue": "français",
     "categorie": "Culture"
   },
@@ -120,14 +120,6 @@
     "categorie": "Général"
   },
   {
-    "id": "aplusivoire_ci",
-    "nom": "A+ Ivoire",
-    "logo": "https://i.imgur.com/yOW0vyP.png",
-    "url": "http://69.64.57.208/atv/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Culture"
-  },
-  {
     "id": "actv_tg",
     "nom": "AC TV",
     "logo": "https://i.imgur.com/SYugK7Y.png",
@@ -193,14 +185,6 @@
     "categorie": "Général"
   },
   {
-    "id": "afromagicchannel_ci",
-    "nom": "Afro Magic Channel",
-    "logo": "https://i.imgur.com/yQzXErU.png",
-    "url": "https://video1.getstreamhosting.com:1936/8306/8306/playlist.m3u8",
-    "langue": "français",
-    "categorie": "Culture"
-  },
-  {
     "id": "afroculturetv_ci",
     "nom": "Afroculture TV",
     "logo": "https://i.imgur.com/bjaZ3kO.png",
@@ -247,14 +231,6 @@
     "url": "https://edge13.vedge.infomaniak.com/livecast/ik:adhtv/manifest.m3u8",
     "langue": "français",
     "categorie": "Général"
-  },
-  {
-    "id": "amanitv_sn",
-    "nom": "Amani TV",
-    "logo": "https://i.imgur.com/0cY4K7G.png",
-    "url": "https://goccn.cloud/hls/amanitv/index.m3u8",
-    "langue": "français",
-    "categorie": "Culture"
   },
   {
     "id": "amouyazidtv_dz",
@@ -343,14 +319,6 @@
     "url": "http://41.223.30.230/BABYTV/index.m3u8",
     "langue": "français",
     "categorie": "Jeunesse"
-  },
-  {
-    "id": "bamtv_be",
-    "nom": "BAM-TV",
-    "logo": "https://i.imgur.com/9UmR6cs.png",
-    "url": "https://belafrikamediatv.vedge.infomaniak.com/livecast/ik:belafrikamediatv/manifest.m3u8",
-    "langue": "français",
-    "categorie": "Culture"
   },
   {
     "id": "mrbeananimated_uk",
@@ -1092,14 +1060,6 @@
     "url": "https://2f6c5bf4.wurl.com/master/f36d25e7e52f1ba8d7e56eb859c636563214f541/UmxheHhUVi1ldV9FdXJvbmV3c0ZyYW5jYWlzX0hMUw/playlist.m3u8",
     "langue": "français",
     "categorie": "Actualités"
-  },
-  {
-    "id": "evtele_cg",
-    "nom": "Ev-tele",
-    "logo": "https://i.imgur.com/iBlXl2T.png",
-    "url": "https://playtv4k.live/live/EVTELE/index.m3u8",
-    "langue": "français",
-    "categorie": "Culture"
   },
   {
     "id": "evasiontv_gn",
