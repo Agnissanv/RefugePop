@@ -724,7 +724,7 @@ header {
 }
 
 
-
+/* Bouton "Charger plus" */
 .load-more-container {
     text-align: center;
     padding: 10px 5% 60px;
@@ -1070,6 +1070,60 @@ header {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+/* --- Overlay publicitaire --- */
+.house-ad-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.house-ad-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 0.7rem;
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+
+.house-ad-media {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.house-ad-media img,
+.house-ad-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+.house-ad-skip {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.8rem;
+}
+
+.house-ad-skip:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 /* ==========================================================================

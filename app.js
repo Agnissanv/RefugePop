@@ -8,6 +8,51 @@ const STREAM_TIMEOUT_MS = 30000; // délai avant d'afficher "flux non disponible
 const PERSONAL_MOVIES_URL = 'youtube/movies.json';
 const IPTV_CHANNELS_URL = 'iptv/chaines.json';
 const MATCHES_URL = 'foot_live_manuel/matches.json';
+// --- PUBLICITÉS ---
+const HOUSE_ADS = [
+    { type: 'image', src: 'ads/promo1.jpg', link: 'https://agnissanisaac.com', label: 'Découvre IDS Tech' },
+    { type: 'image', src: 'ads/promo2.jpg', link: 'https://agnissanisaac.com', label: 'SENTIMENTALE' }
+];
+
+function maybeShowAdOverlay(wrapperEl, onDone) {
+    if (HOUSE_ADS.length === 0 || Math.random() >= 0.25) {
+        onDone();
+        return;
+    }
+
+    const ad = HOUSE_ADS[Math.floor(Math.random() * HOUSE_ADS.length)];
+    const overlay = document.createElement('div');
+    overlay.className = 'house-ad-overlay';
+    overlay.innerHTML = `
+        <span class="house-ad-tag">Publicité</span>
+        <a href="${ad.link}" target="_blank" rel="noopener" class="house-ad-media">
+            ${ad.type === 'video'
+                ? `<video src="${ad.src}" autoplay muted playsinline></video>`
+                : `<img src="${ad.src}" alt="${ad.label}">`}
+        </a>
+        <button class="house-ad-skip" disabled>Passer (5)</button>
+    `;
+    wrapperEl.appendChild(overlay);
+
+    const skipBtn = overlay.querySelector('.house-ad-skip');
+    let secondsLeft = 5;
+    const countdown = setInterval(() => {
+        secondsLeft--;
+        if (secondsLeft <= 0) {
+            clearInterval(countdown);
+            skipBtn.textContent = 'Passer ⏭';
+            skipBtn.disabled = false;
+        } else {
+            skipBtn.textContent = `Passer (${secondsLeft})`;
+        }
+    }, 1000);
+
+    skipBtn.addEventListener('click', () => {
+        clearInterval(countdown);
+        overlay.remove();
+        onDone();
+    });
+}
 let personalMoviesCache = null;
 let iptvChannelsCache = null;
 let matchesCache = null;
@@ -559,7 +604,9 @@ watchMovieBtn.addEventListener('click', () => {
     if (activeMovieData?.source === 'youtube') {
         playerPlaceholder.style.display = 'none';
         personalPlayerWrapper.classList.add('active');
-        loadPersonalVideo(activeMovieData.youtubeId);
+        maybeShowAdOverlay(personalPlayerWrapper, () => {
+            loadPersonalVideo(activeMovieData.youtubeId);
+        });
     } else {
         // Film TMDB : comportement existant (placeholder + timeout)
         playerPlaceholder.style.display = '';
@@ -782,15 +829,19 @@ function playLiveStream(channel) {
     }
 }
 
+// --- MODALE LECTEUR IPTV ---
 function openLiveModal(channel) {
     currentChannel = channel;
     liveChannelLogo.src = channel.logo;
     liveChannelName.textContent = channel.nom;
     liveModal.classList.add('active');
     document.body.style.overflow = 'hidden';
-    playLiveStream(channel);
+    maybeShowAdOverlay(livePlayerWrapper, () => {
+        playLiveStream(channel);
+    });
 }
 
+// --- FERMETURE MODALE LECTEUR IPTV ---
 function closeLiveModal() {
     liveModal.classList.remove('active');
     document.body.style.overflow = 'auto';
@@ -854,7 +905,7 @@ function openMatchModal(match) {
         ${match.teamHome} vs ${match.teamAway}
         <img class="match-flag-img-small" src="${match.logoAway}" alt="${match.teamAway}">
     `;
-    matchIframe.src = match.iframeUrl;
+    matchIframe.src = '';
 
     let currentCount = match.viewerStart;
     matchViewerCountEl.textContent = currentCount.toLocaleString('fr-FR');
@@ -868,6 +919,10 @@ function openMatchModal(match) {
 
     matchModal.classList.add('active');
     document.body.style.overflow = 'hidden';
+
+    maybeShowAdOverlay(matchPlayerWrapper, () => {
+        matchIframe.src = match.iframeUrl;
+    });
 }
 
 function closeMatchModal() {
