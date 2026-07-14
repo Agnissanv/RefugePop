@@ -1,3 +1,5 @@
+alert("RefugePop est en constant développement. Certaines fonctionnalités peuvent ne pas être disponibles. Merci de votre compréhension. En attendant, installez-vous et profitez, on s'occupe du reste.");
+
 // app.js - Moteur d'immersion cinématique - Code A-Z
 
 const API_KEY = '578bd3c6b2ac39a432cb440a7c152ef6';
@@ -10,8 +12,8 @@ const IPTV_CHANNELS_URL = 'iptv/chaines.json';
 const MATCHES_URL = 'foot_live_manuel/matches.json';
 // --- PUBLICITÉS ---
 const HOUSE_ADS = [
-    { type: 'image', src: 'ads/promo1.png', link: 'https://agnissanisaac.com', label: 'Découvre IDS Tech' },
-    { type: 'image', src: 'ads/promo2.png', link: 'https://agnissanisaac.com', label: 'SENTIMENTALE' }
+    // { type: 'image', src: 'ads/promo1.png', link: 'https://agnissanisaac.com', label: 'Découvre IDS Tech' },
+    // { type: 'image', src: 'ads/promo2.png', link: 'https://agnissanisaac.com', label: 'SENTIMENTALE' }
 ];
 
 function getNextAdIndex() {
