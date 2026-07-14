@@ -153,7 +153,30 @@ const GENRE_KEYWORDS = {
     drame: 18,
     amour: 10749, romance: 10749, romantique: 10749,
     animation: 16, anime: 16, dessinanime: 16,
+    thriller: 53,
+    policier: 80, crime: 80, polar: 80,
+    mystere: 9648, mystery: 9648, enquete: 9648,
+    aventure: 12, adventure: 12,
+    scifi: 878, sciencefiction: 878,
+    documentaire: 99, doc: 99,
+    fantastique: 14, fantasy: 14,
 };
+
+const GENRE_LABELS = {
+    28: '🔥 Action', 27: '👻 Horreur', 35: '😂 Comédie', 18: '🎭 Drame',
+    10749: '💘 Amour', 16: '🐾 Animation', 53: '💓 Thriller', 80: '🔗 Policier',
+    9648: '🔍 Mystère', 12: '🧭 Aventure', 878: '🚀 Science-Fiction',
+    99: '📖 Documentaire', 14: '🧙 Fantastique', 10770: '📺 Téléfilm',
+    36: '📜 Histoire', 10752: '⚔️ Guerre', 10751: '👪 Famille',
+    37: '🤠 Western', 10402: '🎵 Musique'
+};
+
+function isRecentlyAdded(movie) {
+    if (!movie.dateAdded) return false;
+    const addedDate = new Date(movie.dateAdded);
+    const diffDays = (Date.now() - addedDate.getTime()) / (1000 * 60 * 60 * 24);
+    return diffDays <= 14;
+}
 
 function normalizeSearchText(s) {
     return s
@@ -381,16 +404,21 @@ function isFavorite(movieId) {
     return getFavorites().some(f => f.id === movieId);
 }
 
-// --- CHARGEMENT ET AFFICHAGE ---
-async function getTrendingMovies() {
-    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Initialisation du refuge...</div>`;
-    const url = `${BASE_URL}/trending/movie/week?api_key=${API_KEY}&language=${LANG}`;
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        displayMovies(data.results);
-    } catch (error) {
-        console.error("Erreur d'accès à l'API:", error);
+// --- FILTRAGE DES FILMS ---
+async function handleMovieFilterClick(genreKey) {
+    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement...</div>`;
+    const allMovies = await getPersonalMovies();
+
+    if (genreKey === 'perso') {
+        displayMovies(allMovies);
+    } else if (genreKey === 'trending') {
+        displayMovies([...allMovies].reverse());
+    } else if (genreKey === 'favorites') {
+        displayMovies(getFavorites());
+    } else {
+        const genreId = parseInt(genreKey, 10);
+        const filtered = allMovies.filter(m => Array.isArray(m.genre_ids) && m.genre_ids.includes(genreId));
+        displayMovies(filtered);
     }
 }
 
@@ -405,8 +433,8 @@ function buildMovieCard(movie) {
 
     const favIcon = isFavorite(movie.id) ? 'fas fa-check' : 'fas fa-plus';
     const favClass = isFavorite(movie.id) ? 'btn-fav active' : 'btn-fav';
-    const availableBadge = movie.source === 'youtube'
-        ? `<span class="badge-available"><i class="fas fa-check-circle"></i> Disponible</span>`
+    const availableBadge = isRecentlyAdded(movie)
+        ? `<span class="badge-available"><i class="fas fa-star"></i> Nouveau</span>`
         : '';
 
     const card = document.createElement('div');
@@ -529,22 +557,6 @@ async function renderCategoryFilters() {
 
 loadMoreBtn.addEventListener('click', renderNextBatch);
 
-// --- FILTRAGE ---
-async function getMoviesByGenre(genreId) {
-    grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement...</div>`;
-    
-    const url = genreId === 'trending'
-        ? `${BASE_URL}/trending/movie/week?api_key=${API_KEY}&language=${LANG}`
-        : `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=${LANG}&with_genres=${genreId}`;
-
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-        displayMovies(data.results);
-    } catch (error) {
-        console.error("Erreur lors du filtrage:", error);
-    }
-}
 
 // --- MODALES ET LECTEURS DE VIDÉO ---
 async function openCinematicModal(movie) {
@@ -560,7 +572,8 @@ async function openCinematicModal(movie) {
     if (movie.source === 'youtube') {
         modalTitle.textContent = movie.title;
         modalTitle.classList.remove('as-logo');
-        modalGenre.textContent = '🎬 Ma sélection';
+        const primaryGenreId = (movie.genre_ids || []).find(id => GENRE_LABELS[id]);
+        modalGenre.textContent = primaryGenreId ? GENRE_LABELS[primaryGenreId] : '🎬 Ma sélection';
 
         videoPlayer.src = `https://www.youtube.com/embed/${movie.youtubeId}?autoplay=1&mute=1&loop=1&playlist=${movie.youtubeId}&controls=0&modestbranding=1&enablejsapi=1&origin=${window.location.origin}`;
         isMuted = true;
@@ -652,7 +665,7 @@ closePlayerModalBtn.addEventListener('click', closeAllModals);
 // --- RECHERCHE ---
 async function searchMovies(query) {
     if (query.trim() === '') {
-        getTrendingMovies();
+        handleMovieFilterClick('trending');
         return;
     }
 
@@ -660,42 +673,19 @@ async function searchMovies(query) {
     const intent = detectSearchIntent(query);
 
     try {
-        const personalMovies = await getPersonalMovies();
-        let tmdbResults = [];
-        let personalResults = [];
+        const allMovies = await getPersonalMovies();
+        let results;
 
         if (intent.type === 'genre') {
-            const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=${LANG}&with_genres=${intent.value}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            tmdbResults = data.results || [];
-
-            personalResults = personalMovies.filter(movie =>
-                Array.isArray(movie.genre_ids) && movie.genre_ids.includes(intent.value)
-            );
+            results = allMovies.filter(m => Array.isArray(m.genre_ids) && m.genre_ids.includes(intent.value));
         } else if (intent.type === 'year') {
-            const url = `${BASE_URL}/discover/movie?api_key=${API_KEY}&language=${LANG}&primary_release_year=${intent.value}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            tmdbResults = data.results || [];
-
-            personalResults = personalMovies.filter(movie =>
-                (movie.release_date || '').startsWith(intent.value)
-            );
+            results = allMovies.filter(m => (m.release_date || '').startsWith(intent.value));
         } else {
-            const url = `${BASE_URL}/search/movie?api_key=${API_KEY}&language=${LANG}&query=${encodeURIComponent(query)}`;
-            const res = await fetch(url);
-            const data = await res.json();
-            tmdbResults = data.results || [];
-
             const normalizedQuery = query.trim().toLowerCase();
-            personalResults = personalMovies.filter(movie =>
-                movie.title.toLowerCase().includes(normalizedQuery)
-            );
+            results = allMovies.filter(m => m.title.toLowerCase().includes(normalizedQuery));
         }
 
-        // Tes films perso apparaissent en premier, suivis des résultats TMDB
-        displayMovies([...personalResults, ...tmdbResults]);
+        displayMovies(results);
     } catch (error) {
         console.error("Erreur lors de la recherche:", error);
     }
@@ -770,15 +760,7 @@ filterButtons.forEach(btn => {
         categoryContainer.classList.add('hidden');
         mondialSidebar.classList.add('hidden');
 
-        if (btn.dataset.genre === 'favorites') {
-            displayMovies(getFavorites());
-        } else if (btn.dataset.genre === 'perso') {
-            grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement...</div>`;
-            const movies = await getPersonalMovies();
-            displayMovies(movies);
-        } else {
-            getMoviesByGenre(btn.dataset.genre);
-        }
+        handleMovieFilterClick(btn.dataset.genre);
     });
 });
 
@@ -960,4 +942,4 @@ document.addEventListener('fullscreenchange', () => {
 
 
 // Initialisation au démarrage
-getTrendingMovies();
+handleMovieFilterClick('trending');

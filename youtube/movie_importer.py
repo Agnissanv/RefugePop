@@ -15,6 +15,7 @@ import time
 import unicodedata
 import difflib
 from pathlib import Path
+from datetime import date
 import requests
 
 # ---------- CONFIGURATION ----------
@@ -33,7 +34,26 @@ CHANNEL_HANDLES = [
     "@CultCinemaClassics",
     "@BoxOfficeActionFR",
     "@BoxOfficeFR",
+    "@BoxOfficeFilmsCompletsFR",
+    "@BoxofficeKidsFR",
+    "@BoxOfficeTeenFR",
+    "@BoxOfficeAnimation-FR",
+    "@BoxOfficeCOMEDIES",
+    "@BoxOfficeROMANCES",
+    "@BoxOfficeHORREUR",
     "@BoxOffice4K",
+    "@CINESTORIES_HQ",
+    "@Boxoffice-AtelierFilms",
+    "@CINESTREAM-q8p",
+    "@Cine_Pulse_Films",
+    "@BoxOfficeSF",
+    "@MOVIETIME-JI",
+    "@AllocineBA",
+    "@sunnyali-o6i",
+    "@Films_Complets",
+    "@BoxOfficeDRAMES",
+    "@CINESTARMOVIES-g8n",
+    "@CineTotalFrance-FilmsComplets",
 ]
 
 MIN_DURATION_MINUTES = 40
@@ -223,6 +243,7 @@ def main():
                     "youtubeId": video_id,
                     "tmdbId": tmdb_match["id"],
                     "genre_ids": tmdb_match.get("genre_ids", []),
+                    "dateAdded": date.today().isoformat(),
                 }
                 new_movies.append(entry)
                 year = (tmdb_match.get("release_date") or "----")[:4]
@@ -258,3 +279,16 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
+
+
+
+
+# Maintenance notes pour lancer le script :
+# pip install requests
+
+# python movie_importer.py
