@@ -38,9 +38,9 @@ function buildMatchCard(match) {
     card.innerHTML = `
         <div class="match-live-badge"><span class="live-dot">●</span> ${match.viewerStart.toLocaleString('fr-FR')} spectateurs</div>
         <div class="match-teams">
-            <span class="match-flag">${match.flagHome}</span>
+            <img class="match-flag-img" src="${match.logoHome}" alt="${match.teamHome}">
             <span class="match-vs">VS</span>
-            <span class="match-flag">${match.flagAway}</span>
+            <img class="match-flag-img" src="${match.logoAway}" alt="${match.teamAway}">
         </div>
         <p class="match-title">${match.teamHome} - ${match.teamAway}</p>
         <p class="match-datetime">${formatMatchDate(match.date)} à ${match.heure}</p>
@@ -849,7 +849,11 @@ const matchPlayerWrapper = document.getElementById('matchPlayerWrapper');
 let matchViewerInterval = null;
 
 function openMatchModal(match) {
-    matchModalTeams.textContent = `${match.flagHome} ${match.teamHome} vs ${match.teamAway} ${match.flagAway}`;
+    matchModalTeams.innerHTML = `
+        <img class="match-flag-img-small" src="${match.logoHome}" alt="${match.teamHome}">
+        ${match.teamHome} vs ${match.teamAway}
+        <img class="match-flag-img-small" src="${match.logoAway}" alt="${match.teamAway}">
+    `;
     matchIframe.src = match.iframeUrl;
 
     let currentCount = match.viewerStart;
