@@ -289,6 +289,6 @@ if __name__ == "__main__":
 
 
 # Maintenance notes pour lancer le script :
-# pip install requests
+# cd youtube
 
 # python movie_importer.py
