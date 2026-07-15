@@ -17,6 +17,7 @@ import difflib
 from pathlib import Path
 from datetime import date
 import requests
+from requests.exceptions import ConnectionError, Timeout
 
 # ---------- CONFIGURATION ----------
 
@@ -160,18 +161,42 @@ def backfill_genres(movies):
 
 
 
-def search_tmdb(title):
-    """Cherche sur TMDB et ne retourne un résultat que si son titre ressemble vraiment à la requête."""
+from requests.exceptions import ConnectionError, Timeout
+
+def search_tmdb(title, retries=3):
+    """Cherche sur TMDB et ne retourne un résultat que si son titre ressemble vraiment à la requête.
+    Intègre une gestion d'erreur réseau pour éviter les crashs [WinError 10054]."""
     url = "https://api.themoviedb.org/3/search/movie"
     params = {"api_key": TMDB_API_KEY, "language": "fr-FR", "query": title}
-    res = requests.get(url, params=params).json()
-    results = res.get("results", [])
+    
+    # Ajout d'un User-Agent classique pour passer sous le radar des pare-feux
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    }
+
+    # Boucle de réessai en cas d'échec de connexion
+    for attempt in range(retries):
+        try:
+            res = requests.get(url, params=params, headers=headers, timeout=10)
+            res.raise_for_status() # Vérifie que le code HTTP est 200 OK
+            data = res.json()
+            break # Succès de la requête, on sort de la boucle for
+            
+        except (ConnectionError, Timeout) as e:
+            print(f"⚠️ Perte de connexion TMDB pour '{title}' (Tentative {attempt + 1}/{retries}). Reprise dans 3s...")
+            time.sleep(3)
+    else:
+        # Cette clause 'else' s'exécute si la boucle for se termine sans atteindre le 'break' (donc si tous les retries échouent)
+        print(f"❌ Impossible de joindre TMDB pour le film : {title}")
+        return None, 0.0
+
+    results = data.get("results", [])
     if not results:
         return None, 0.0
 
     best_match = None
     best_score = 0.0
-    for movie in results[:8]:  # on regarde les 8 premiers résultats, pas juste le premier
+    for movie in results[:8]:  # on regarde les 8 premiers résultats
         candidates = [movie.get("title", ""), movie.get("original_title", "")]
         score = max(title_similarity(title, c) for c in candidates if c)
         if score > best_score:
@@ -181,7 +206,6 @@ def search_tmdb(title):
     if best_match and best_score >= MATCH_THRESHOLD:
         return best_match, best_score
     return None, best_score
-
 
 # ---------- SCRIPT PRINCIPAL ----------
 
