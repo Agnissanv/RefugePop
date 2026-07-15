@@ -233,6 +233,7 @@ function showPersonalPlayerError() {
 
 function hidePersonalPlayerError() {
     personalPlayerError.classList.add('hidden');
+    document.getElementById('personalVideoPlayer').style.visibility = 'visible';
 }
 
 function loadPersonalVideo(videoId, attempt = 0) {
@@ -266,6 +267,7 @@ function loadPersonalVideo(videoId, attempt = 0) {
                 },
                 onError: () => {
                     // Vidéo retirée, privée, ou intégration désactivée sur YouTube
+                    document.getElementById('personalVideoPlayer').style.visibility = 'hidden';
                     showPersonalPlayerError();
                 }
             }
