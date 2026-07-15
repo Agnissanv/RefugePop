@@ -250,7 +250,6 @@ function loadPersonalVideo(videoId, attempt = 0) {
 
     if (!personalPlayer) {
         personalPlayer = new YT.Player('personalVideoPlayer', {
-            host: 'https://www.youtube-nocookie.com',
             videoId: videoId,
             playerVars: {
                 autoplay: 1,
