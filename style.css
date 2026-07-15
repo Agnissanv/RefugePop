@@ -1137,6 +1137,27 @@ header {
 }
 
 
+.personal-player-error {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-align: center;
+    color: #ccc;
+    max-width: 80%;
+}
+
+.personal-player-error i {
+    font-size: 2rem;
+    color: var(--accent);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.personal-player-error.hidden {
+    display: none;
+}
 
 /* ==========================================================================
    VERSION RESPONSIVE MOBILE EXTRÊME (21e SIÈCLE ADAPTÉ)

@@ -225,12 +225,29 @@ function onYouTubeIframeAPIReady() {
     ytApiReady = true;
 }
 
-function loadPersonalVideo(videoId) {
+const personalPlayerError = document.getElementById('personalPlayerError');
+
+function showPersonalPlayerError() {
+    personalPlayerError.classList.remove('hidden');
+}
+
+function hidePersonalPlayerError() {
+    personalPlayerError.classList.add('hidden');
+}
+
+function loadPersonalVideo(videoId, attempt = 0) {
+    hidePersonalPlayerError();
+
     if (!ytApiReady || typeof YT === 'undefined' || !YT.Player) {
-        // Script YouTube pas encore prêt (connexion lente) : on réessaie un peu plus tard
-        setTimeout(() => loadPersonalVideo(videoId), 200);
+        if (attempt > 40) {
+            // ~8 secondes d'attente écoulées, le script YouTube n'a jamais chargé (bloqueur de pub, réseau...)
+            showPersonalPlayerError();
+            return;
+        }
+        setTimeout(() => loadPersonalVideo(videoId, attempt + 1), 200);
         return;
     }
+
     if (!personalPlayer) {
         personalPlayer = new YT.Player('personalVideoPlayer', {
             host: 'https://www.youtube-nocookie.com',
@@ -247,6 +264,10 @@ function loadPersonalVideo(videoId) {
                 onReady: (e) => {
                     e.target.playVideo();
                     isPersonalPlaying = true;
+                },
+                onError: () => {
+                    // Vidéo retirée, privée, ou intégration désactivée sur YouTube
+                    showPersonalPlayerError();
                 }
             }
         });
@@ -623,6 +644,7 @@ watchMovieBtn.addEventListener('click', () => {
     if (activeMovieData?.source === 'youtube') {
         playerPlaceholder.style.display = 'none';
         personalPlayerWrapper.classList.add('active');
+        hidePersonalPlayerError();
         maybeShowAdOverlay(personalPlayerWrapper, () => {
             loadPersonalVideo(activeMovieData.youtubeId);
         });
