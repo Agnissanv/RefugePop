@@ -1353,6 +1353,13 @@ header {
     }
 }
 
+.ad-banner-mobile {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    min-height: 50px; /* Réserve l'espace pour éviter les sauts de contenu */
+}
+
 /* ==========================================================================
    VERSION RESPONSIVE MOBILE EXTRÊME (21e SIÈCLE ADAPTÉ)
    ========================================================================== */
