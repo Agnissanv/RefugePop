@@ -82,6 +82,6 @@ if __name__ == "__main__":
     main()
 
 
-# 
+# pour lancer le script
 # cd youtube
 # python check_movies.py
