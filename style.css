@@ -1136,7 +1136,7 @@ header {
     cursor: not-allowed;
 }
 
-
+/* Erreur du lecteur personnel */
 .personal-player-error {
     position: absolute;
     top: 50%;
@@ -1157,6 +1157,54 @@ header {
 
 .personal-player-error.hidden {
     display: none;
+}
+
+
+/* Footer du site */
+.site-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 5% 30px;
+    text-align: center;
+    background: #050506;
+}
+
+.footer-brand {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 16px;
+}
+
+.footer-brand span {
+    color: var(--accent);
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    color: #999;
+    max-width: 700px;
+    margin: 0 auto 12px;
+    line-height: 1.6;
+}
+
+.footer-link {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+
+.footer-credit {
+    font-size: 0.8rem;
+    color: #bbb;
+    margin: 20px 0 8px;
+}
+
+.footer-copyright {
+    font-size: 0.75rem;
+    color: #666;
 }
 
 /* ==========================================================================
