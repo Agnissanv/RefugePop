@@ -30,8 +30,11 @@ body {
 }
 
 .filter-btn i {
-  margin-right: 8px; /* Espace parfait entre l'icône et le texte */
-  transition: transform 0.2s ease; /* Pour des micro-interactions sympas */
+    margin-right: 8px; /* Espace parfait entre l'icône et le texte */
+    transition: transform 0.2s ease; /* Pour des micro-interactions sympas */
+    display: inline-block;
+    width: 1em;
+    text-align: center;
 }
 
 /* Effet interactif au survol */

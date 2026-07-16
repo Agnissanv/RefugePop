@@ -2,7 +2,7 @@
 
 const API_KEY = '578bd3c6b2ac39a432cb440a7c152ef6';
 const BASE_URL = 'https://api.themoviedb.org/3';
-const IMG_URL = 'https://image.tmdb.org/t/p/w500';
+const IMG_URL = 'https://image.tmdb.org/t/p/w342';
 const LANG = 'fr-FR';
 const STREAM_TIMEOUT_MS = 30000; // délai avant d'afficher "flux non disponible" (30000 = 30 secondes)
 const PERSONAL_MOVIES_URL = 'youtube/movies.json';
