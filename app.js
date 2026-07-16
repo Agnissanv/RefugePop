@@ -444,7 +444,7 @@ async function handleMovieFilterClick(genreKey) {
     }
 }
 
-function buildMovieCard(movie) {
+function buildMovieCard(movie, index = 99) {
     const poster = movie.source === 'youtube'
         ? movie.poster
         : (movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Image');
@@ -463,7 +463,7 @@ function buildMovieCard(movie) {
     card.classList.add('movie-card');
 
     card.innerHTML = `
-        <img class="poster-img" src="${poster}" alt="${movie.title}" loading="lazy">
+        <img class="poster-img" src="${poster}" alt="${movie.title}" ${index < 4 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}>
         <img class="backdrop-img" src="${backdrop}" alt="${movie.title} fond" loading="lazy">
         ${availableBadge}
         <div class="card-overlay">
@@ -509,7 +509,7 @@ let currentCardBuilder = null;
 
 function renderNextBatch() {
     const batch = paginationQueue.slice(paginationIndex, paginationIndex + PAGE_SIZE);
-    batch.forEach(item => grid.appendChild(currentCardBuilder(item)));
+    batch.forEach((item, i) => grid.appendChild(currentCardBuilder(item, paginationIndex + i)));
     paginationIndex += batch.length;
     loadMoreBtn.classList.toggle('hidden', paginationIndex >= paginationQueue.length);
 }
