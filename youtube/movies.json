@@ -2,6 +2,23 @@
   {
     "id": "yt-GCPHbI",
     "source": "youtube",
+    "title": "Mon double presque parfait",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/41Rh4Es6Mv448ugczwMFjTon43d.jpg",
+    "backdrop": "https://media.themoviedb.org/t/p/w1066_and_h600_face/gOcVPUvkPifZzJ3fB8KighD6TRc.jpg",
+    "overview": "Qui n'a jamais rêvé d'avoir son « double » parfait en tout ? La découverte d’un miroir magique permet à Fred de réaliser cette incroyable expérience : son jumeau range sa chambre, mange sans rechigner et devient premier de la classe ! Mais Fred n’a pas tenu sa promesse de garder ce secret pour lui seul en le dévoilant à son meilleur ami, Émile. Les choses vont sérieusement se compliquer.Qui n'a jamais rêvé d'avoir son « double » parfait en tout ? La découverte d’un miroir magique permet à Fred de réaliser cette incroyable expérience : son jumeau range sa chambre, mange sans rechigner et devient premier de la classe ! Mais Fred n’a pas tenu sa promesse de garder ce secret pour lui seul en le dévoilant à son meilleur ami, Émile. Les choses vont sérieusement se compliquer.",
+    "release_date": "2019-04-04",
+    "youtubeId": "b_DRcVkvMI4",
+    "tmdbId": 570168,
+    "genre_ids": [
+      28,
+      53,
+      18,
+      80
+    ]
+  },
+  {
+    "id": "yt-GCPHbI",
+    "source": "youtube",
     "title": "Avatar : La Voie de l'eau",
     "poster": "https://image.tmdb.org/t/p/original/kQYx143yujkwyjJdZH2skOGeQfA.jpg",
     "backdrop": "https://image.tmdb.org/t/p/original/198vrF8k7mfQ4FjDJsBmdQcaiyq.jpg",
@@ -10,10 +27,10 @@
     "youtubeId": "8wYbHJd0hqM",
     "tmdbId": 76600,
     "genre_ids": [
-      28,
-      53,
-      18,
-      80
+      14,
+      878,
+      12,
+      28
     ]
   },
   {
