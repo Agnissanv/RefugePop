@@ -1340,6 +1340,19 @@ header {
     color: #666;
 }
 
+/* Correction pour le débordement de l'iframe publicitaire */
+.sidebar-ad-box iframe {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: auto !important; /* Maintient le ratio proportionnel */
+    display: block;
+}
+@media (max-width: 768px) {
+    .sidebar-ad-box {
+        padding: 10px; /* Réduit le padding interne sur mobile */
+    }
+}
+
 /* ==========================================================================
    VERSION RESPONSIVE MOBILE EXTRÊME (21e SIÈCLE ADAPTÉ)
    ========================================================================== */
