@@ -966,3 +966,24 @@ document.addEventListener('fullscreenchange', () => {
 
 // Initialisation au démarrage
 handleMovieFilterClick('trending');
+
+
+// --- FOOTER : liens rapides + retour en haut ---
+document.querySelectorAll('.footer-quicklink').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const target = link.dataset.genreTarget;
+        const btn = document.querySelector(`.filter-btn[data-genre="${target}"]`);
+        if (btn) btn.click();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+});
+
+const backToTopBtn = document.getElementById('backToTopBtn');
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+window.addEventListener('scroll', () => {
+    backToTopBtn.classList.toggle('visible', window.scrollY > 400);
+});
