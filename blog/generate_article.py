@@ -20,6 +20,7 @@ from datetime import date
 from pathlib import Path
 import requests
 
+
 GEMINI_API_KEY = "videnn"
 GEMINI_MODEL = "gemini-2.5-flash"
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent"
