@@ -1011,3 +1011,33 @@ backToTopBtn.addEventListener('click', () => {
 window.addEventListener('scroll', () => {
     backToTopBtn.classList.toggle('visible', window.scrollY > 400);
 });
+
+
+// --- MODALE DE SOUTIEN (Mobile Money) ---
+const supportModal = document.getElementById('supportModal');
+const openSupportModalBtn = document.getElementById('openSupportModal');
+const closeSupportModalBtn = document.getElementById('closeSupportModal');
+
+openSupportModalBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    supportModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+});
+
+function closeSupportModal() {
+    supportModal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+closeSupportModalBtn.addEventListener('click', closeSupportModal);
+supportModal.addEventListener('click', (e) => { if (e.target === supportModal) closeSupportModal(); });
+
+document.querySelectorAll('.support-copy-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        navigator.clipboard.writeText(btn.dataset.copy).then(() => {
+            const icon = btn.querySelector('i');
+            icon.className = 'fas fa-check';
+            setTimeout(() => { icon.className = 'fas fa-copy'; }, 1500);
+        });
+    });
+});
