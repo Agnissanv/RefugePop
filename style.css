@@ -21,6 +21,10 @@
     font-family: 'Inter', -apple-system, sans-serif;
     -webkit-font-smoothing: antialiased;
 }
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 body {
     background-color: var(--bg-dark);
@@ -64,6 +68,31 @@ header {
     font-weight: 900;
     letter-spacing: -1px;
     text-transform: uppercase;
+}
+.blog {
+    position: relative; 
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+.blog::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; 
+    left: 0;
+    width: 0; 
+    height: 3px;
+    background-color: var(--accent);
+    transition: width 0.3s ease; 
+}
+/* .blog:hover {
+    color: var(--accent);
+} */
+
+.blog:hover::after {
+    width: 100%;
 }
 
 .logo span { 

@@ -8,6 +8,28 @@ const STREAM_TIMEOUT_MS = 30000; // délai avant d'afficher "flux non disponible
 const PERSONAL_MOVIES_URL = 'youtube/movies.json';
 const IPTV_CHANNELS_URL = 'iptv/chaines.json';
 const MATCHES_URL = 'foot_live_manuel/matches.json';
+// --- UTILITAIRES pour blog ---
+function slugifyMovie(movie) {
+    const year = movie.release_date ? movie.release_date.split('-')[0] : '';
+    const base = movie.title
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+    return year ? `${base}-${year}` : base;
+}
+
+async function checkDeepLinkMovie() {
+    const params = new URLSearchParams(window.location.search);
+    const filmSlug = params.get('film');
+    if (!filmSlug) return;
+
+    const movies = await getPersonalMovies();
+    const match = movies.find(m => slugifyMovie(m) === filmSlug);
+    if (match) {
+        openCinematicModal(match);
+    }
+}
 // --- PUBLICITÉS ---
 const HOUSE_ADS = [
     { type: 'image', src: 'ads/recrutement_commercial.jpg', link: 'https://www.agnissanisaac.com/emploie/emploi.html', label: 'Recrutement Commercial chez Code A-Z' },
@@ -532,7 +554,7 @@ function startPagedRender(items, cardBuilder, emptyMessage) {
 
 function displayMovies(movies) {
     currentMovies = movies;
-    startPagedRender(movies, buildMovieCard, "Aucun film trouvé. les films toujours disponibles sont dans la catégorie 🎬Autres.");
+    startPagedRender(movies, buildMovieCard, "Aucun film trouvé. Clique sur les boutons pour choisir ce que tu veux !");
 }
 
 function buildChannelCard(channel) {
@@ -967,6 +989,7 @@ document.addEventListener('fullscreenchange', () => {
 
 // Initialisation au démarrage
 handleMovieFilterClick('trending');
+checkDeepLinkMovie();
 
 
 // --- FOOTER : liens rapides + retour en haut ---
