@@ -11,7 +11,7 @@ const MATCHES_URL = 'foot_live_manuel/matches.json';
 // --- PUBLICITÉS ---
 const HOUSE_ADS = [
     { type: 'image', src: 'ads/recrutement_commercial.jpg', link: 'https://www.agnissanisaac.com/emploie/emploi.html', label: 'Recrutement Commercial chez Code A-Z' },
-    { type: 'image', src: 'ads/recrutement_commercial.jpg', link: 'https://www.agnissanisaac.com/emploie/emploi.html', label: 'Recrutement Commercial chez Code A-Z' }
+    { type: 'image', src: 'ads/betwinner_affiliate.png', link: 'https://bwredir.com/32FI?extid=https://refugepop.agnissanisaac.com/&s1=RefugePop&p=%2Fregistration%2F', label: 'Betwinner Affiliate' }
 ];
 
 function getNextAdIndex() {
