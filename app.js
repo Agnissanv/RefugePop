@@ -553,8 +553,13 @@ function startPagedRender(items, cardBuilder, emptyMessage) {
 }
 
 function displayMovies(movies) {
-    currentMovies = movies;
-    startPagedRender(movies, buildMovieCard, "Aucun film trouvé. Clique sur les boutons pour choisir ce que tu veux !");
+    const sorted = [...(movies || [])].sort((a, b) => {
+        const aNew = isRecentlyAdded(a) ? 1 : 0;
+        const bNew = isRecentlyAdded(b) ? 1 : 0;
+        return bNew - aNew;
+    });
+    currentMovies = sorted;
+    startPagedRender(sorted, buildMovieCard, "Aucun film trouvé. Clique sur les boutons pour choisir ce que tu veux !");
 }
 
 function buildChannelCard(channel) {
