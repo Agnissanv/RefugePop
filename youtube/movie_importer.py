@@ -320,6 +320,7 @@ def main():
                     "dateAdded": date.today().isoformat(),
                 }
                 new_movies.append(entry)
+                used_tmdb_ids.add(tmdb_match["id"])
                 year = (tmdb_match.get("release_date") or "----")[:4]
                 log_lines.append(
                     f"✅ {cleaned_title} → {tmdb_match['title']} ({year}) [confiance {score:.2f}] [tmdbId {tmdb_match['id']}]"

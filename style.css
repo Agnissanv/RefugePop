@@ -1473,6 +1473,10 @@ header {
         width: 100%;
     }
 
+    .secure-player-container {
+        padding: 3rem 0.5rem 1.5rem;
+    }
+
     .cinematic-details {
         padding: 2rem 1.5rem;
     }
