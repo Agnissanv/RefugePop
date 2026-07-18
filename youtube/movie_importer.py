@@ -163,6 +163,23 @@ def backfill_genres(movies):
 
 from requests.exceptions import ConnectionError, Timeout
 
+def get_tmdb_runtime(tmdb_id):
+    """Retourne la durée officielle du film (en minutes), ou None si indisponible."""
+    url = f"https://api.themoviedb.org/3/movie/{tmdb_id}"
+    try:
+        res = requests.get(url, params={"api_key": TMDB_API_KEY}, timeout=10)
+        res.raise_for_status()
+        return res.json().get("runtime")
+    except Exception:
+        return None
+
+
+def runtime_is_plausible(video_minutes, tmdb_runtime):
+    """Compare la durée réelle de la vidéo à la durée officielle TMDB, avec tolérance."""
+    if not tmdb_runtime:
+        return True  # donnée indisponible : on ne bloque pas sur ce seul critère
+    tolerance = max(20, tmdb_runtime * 0.25)
+    return abs(video_minutes - tmdb_runtime) <= tolerance
 def search_tmdb(title, retries=3):
     """Cherche sur TMDB et ne retourne un résultat que si son titre ressemble vraiment à la requête.
     Intègre une gestion d'erreur réseau pour éviter les crashs [WinError 10054]."""
@@ -222,6 +239,7 @@ def main():
     existing_movies = backfill_genres(existing_movies)
     already_reviewed_ids = {r["youtubeId"] for r in needs_review}
     skip_ids = existing_ids | already_reviewed_ids
+    used_tmdb_ids = {m["tmdbId"] for m in existing_movies if m.get("tmdbId")}
 
     new_movies = []
     new_review_entries = []
