@@ -55,6 +55,7 @@ CHANNEL_HANDLES = [
     "@BoxOfficeDRAMES",
     "@CINESTARMOVIES-g8n",
     "@CineTotalFrance-FilmsComplets",
+    "@CINECHILL_OFFICIEL",
 ]
 
 MIN_DURATION_MINUTES = 40

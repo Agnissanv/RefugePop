@@ -28050,5 +28050,61 @@
       28
     ],
     "dateAdded": "2026-07-10"
+  },
+  {
+    "id": "yt-Y7SbTpp96zk",
+    "source": "youtube",
+    "title": "IA Justice",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/cftOXqZtYmWqHUHqpRCllkWgZAq.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/mjGGrL4L0RHGlMm86OfLRnscrjt.jpg",
+    "overview": "Dans un avenir proche, le gouvernement entend remplacer les juges par un logiciel d'intelligence artificielle, promettant ainsi d'automatiser et de dépolitiser efficacement le système judiciaire. Carmen Costa, une éminente juge, a été invitée à évaluer cette nouvelle procédure. Cependant, lorsque le créateur du logiciel est retrouvé mort, elle réalise que sa vie est en danger et qu'elle devra lutter contre les intérêts puissants qui se jouent dans les plus hautes sphères de l'État.",
+    "release_date": "2024-09-13",
+    "youtubeId": "Y7SbTpp96zk",
+    "tmdbId": 1209423,
+    "genre_ids": [
+      53,
+      878
+    ],
+    "dateAdded": "2026-07-18"
+  },
+  {
+    "id": "yt-xhWWovvWoEs",
+    "source": "youtube",
+    "title": "Predator: Wastelands",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/6DEY2lZK8Z4PB2dvrjoEufDDN9h.jpg",
+    "backdrop": "https://media.themoviedb.org/t/p/w1066_and_h600_face/xHO430HaC0eorzIqSv0O3oYMFwr.jpg",
+    "overview": "Lorsqu'un chasseur extraterrestre débarque sur Terre, il met hors d'état de nuire une bande de seigneurs de guerre et devient, contre toute attente, un héros populaire aux yeux des habitants opprimés. Fort de leur soutien, l'extraterrestre jette désormais son dévolu sur le chef impitoyable de ces seigneurs de guerre.",
+    "release_date": "2025-11-04",
+    "youtubeId": "xhWWovvWoEs",
+    "tmdbId": 1574042,
+    "genre_ids": [
+      53,
+      878
+    ],
+    "dateAdded": "2026-07-18"
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "id": "yt-oHnWGO17CMs",
+    "source": "youtube",
+    "title": "Mercenaries",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/eba3J71GIIXncTVzS3fMqjdMzfz.jpg",
+    "backdrop": "https://media.themoviedb.org/t/p/w1066_and_h600_face/3ZgQsD8R8FkX4sMAElZ3bSF0PW0.jpg",
+    "overview": "En visite en zone de guerre, un diplomate est kidnappé par un groupe terroriste. Les autorités américaines n'ont d'autre choix que de faire appel à des prisonnières très dangereuses pour tenter de le récupérer sain et sauf...",
+    "release_date": "2014-08-05",
+    "youtubeId": "oHnWGO17CMs",
+    "tmdbId": 277597,
+    "genre_ids": [
+      28
+    ],
+    "dateAdded": "2026-07-18"
   }
 ]
