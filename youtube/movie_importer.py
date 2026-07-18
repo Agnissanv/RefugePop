@@ -269,6 +269,38 @@ def main():
             cleaned_title = clean_title(raw_title)
             tmdb_match, score = search_tmdb(cleaned_title)
 
+            if tmdb_match and tmdb_match["id"] in used_tmdb_ids:
+                new_review_entries.append({
+                    "youtubeId": video_id,
+                    "title": cleaned_title,
+                    "thumbnail": info["thumbnail"],
+                    "channel": handle,
+                    "best_score": round(score, 2),
+                    "reason": f"tmdbId {tmdb_match['id']} déjà utilisé par un autre film",
+                })
+                log_lines.append(
+                    f"⚠️  {cleaned_title} → tmdbId {tmdb_match['id']} déjà attribué à un autre film, mis de côté"
+                )
+                skip_ids.add(video_id)
+                time.sleep(0.25)
+                continue
+
+            if tmdb_match and not runtime_is_plausible(info["minutes"], get_tmdb_runtime(tmdb_match["id"])):
+                new_review_entries.append({
+                    "youtubeId": video_id,
+                    "title": cleaned_title,
+                    "thumbnail": info["thumbnail"],
+                    "channel": handle,
+                    "best_score": round(score, 2),
+                    "reason": "durée de la vidéo incohérente avec la durée officielle du film",
+                })
+                log_lines.append(
+                    f"⚠️  {cleaned_title} → durée incohérente avec {tmdb_match['title']}, mis de côté"
+                )
+                skip_ids.add(video_id)
+                time.sleep(0.25)
+                continue
+
             if tmdb_match:
                 poster = (f"{TMDB_IMG_BASE}{tmdb_match['poster_path']}"
                           if tmdb_match.get("poster_path") else info["thumbnail"])
