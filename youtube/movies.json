@@ -28079,7 +28079,56 @@
     "tmdbId": 1574042,
     "genre_ids": [
       53,
-      878
+      27
+    ],
+    "dateAdded": "2026-07-18"
+  },
+  {
+    "id": "yt-bpLuWolu3wQ",
+    "source": "youtube",
+    "title": "Heat",
+    "poster": "https://image.tmdb.org/t/p/original/e0xv5Y7UVrhKEVy1g3URMLLVDYB.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/original/rfEXNlql4CafRmtgp2VFQrBC4sh.jpg",
+    "overview": "Neil McCauley est un braqueur qui a de l'expérience. Il veille, au cours de ses vols, à ne pas commettre d'impairs. Ses complices n'ont pas autant de scrupules ni de «conscience professionnelle». Lors d'une opération pourtant bien planifiée, l'un d'entre eux tire sur deux vigiles. Ce double meurtre intéresse au plus au point le lieutenant Hanna, qui ne met guère de temps à identifier McCauley comme étant le cerveau de la bande. Les deux hommes apprennent à se connaître par dossier et surveillance interposée. A tel point qu'il finissent par se rencontrer. Chacun jure alors de mettre l'autre en échec. Un duel s'engage, à la limite de la légalité.",
+    "release_date": "2024-11-04",
+    "youtubeId": "bpLuWolu3wQ",
+    "tmdbId": 8848,
+    "genre_ids": [
+      28,
+      18
+    ],
+    "dateAdded": "2026-07-18"
+  },
+  {
+    "id": "yt-3LQOfQOiaFw",
+    "source": "youtube",
+    "title": "Bad Cat",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/4Z7HdaTw7M2sqGjZzjncE4YPRNV.jpg",
+    "backdrop": "https://media.themoviedb.org/t/p/w1066_and_h600_face/3XRdZTizomKAFtWNa1MaOktxkKB.jpg",
+    "overview": "Shero et ses amis recherchent la même chose que n'importe qui d'autre dans ce quartier sordide et malfamé d'Istanbul : des filles sexy, de la nourriture et d'abondantes quantités d'alcool. Mais les projets de la petite bande prennent une mauvaise tournure lorsque Shero, déjà poursuivi par ses ennemis, tombe amoureux contre toute attente et découvre qu'il est le père d'un fils bâtard.",
+    "release_date": "2024-11-04",
+    "youtubeId": "3LQOfQOiaFw",
+    "tmdbId": 355066,
+    "genre_ids": [
+      28,
+      35,
+      16
+    ],
+    "dateAdded": "2026-07-18"
+  },
+  {
+    "id": "yt-hfvY0qSIxiQ&t=11s",
+    "source": "youtube",
+    "title": "Lino",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/xgBmhzPdkkdXMmlG7DizbMtOIZl.jpg",
+    "backdrop": "https://media.themoviedb.org/t/p/w1066_and_h600_face/sJNFfTWGQFG1jqJFiIW6lBbC6Dl.jpg",
+    "overview": "Lino travaille comme mascotte dans des fêtes d'anniversaire pour enfants mais il ne supporte plus la façon dont il est traité, ni son costume de chat. Décidé à changer de vie, il rend visite à un magicien, mais les choses dérapent et en se réveillant, Lino ne fait plus qu'un avec le costume qu'il déteste.",
+    "release_date": "2017-09-07",
+    "youtubeId": "hfvY0qSIxiQ&t=11s",
+    "tmdbId": 459788,
+    "genre_ids": [
+      12,
+      16
     ],
     "dateAdded": "2026-07-18"
   },
