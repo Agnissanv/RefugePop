@@ -27,6 +27,7 @@ TMDB_API_KEY = "578bd3c6b2ac39a432cb440a7c152ef6"
 CHANNEL_HANDLES = [
     "@CineNanarFilmsComplets",
     "@CINE_PRIME",
+    "@M_District",
     "@CineClubFilm",
     "@CineMoviesFilmsComplets",
     "@MyDigitalCompany",

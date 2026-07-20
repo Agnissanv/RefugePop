@@ -28130,7 +28130,7 @@
       12,
       16
     ],
-    "dateAdded": "2026-07-18"
+    "dateAdded": "2026-07-19"
   },
   {
     "id": "yt-1djb9vwKtoA",
@@ -28143,10 +28143,43 @@
     "youtubeId": "1djb9vwKtoA",
     "tmdbId": 797271,
     "genre_ids": [
-      12,
-      16
+      28,
+      53
     ],
-    "dateAdded": "2026-07-18"
+    "dateAdded": "2026-07-20"
+  },
+  {
+    "id": "yt-ElJ6NiuORBU",
+    "source": "youtube",
+    "title": "Le Gardien des Mondes",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/ga3h4LwhuPyGlbWY1y0agpUlGXu.jpg",
+    "backdrop": "https://media.themoviedb.org/t/p/w1066_and_h600_face/83PlIO0gBC5bUyVQf2huYr0RGne.jpg",
+    "overview": "Un jour, Kirill, un concepteur de jeux vidéo en vogue, retrouve une femme inconnue prénommée Renata dans son appartement. Au même moment, il découvre que personne ne le reconnaît plus. Renata lui révèle alors qu'il a été choisi par une organisation secrète pour devenir le gardien des mondes parallèles...",
+    "release_date": "2018-05-25",
+    "youtubeId": "ElJ6NiuORBU",
+    "tmdbId": 797271,
+    "genre_ids": [
+      28,
+      14,
+      878
+    ],
+    "dateAdded": "2026-07-20"
+  },
+  {
+    "id": "yt-pxD30QAIhGM",
+    "source": "youtube",
+    "title": "Andròn: Le Labyrinthe Noir",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/fySWnqtnDgxPKQvdmOryLDTtclB.jpg",
+    "backdrop": "https://media.themoviedb.org/t/p/w1066_and_h600_face/nM8iHJDIGuJPVmjejK2cBLEDiDF.jpg",
+    "overview": "Un groupe de personnes se réveille dans un labyrinthe sombre et claustrophobique. Ils ne se souviennent qui ils sont et comment ils se sont retrouvés dans le labyrinthe noir d'Andròn. Ils se mettent alors à déchiffrer des codes, comprendre des signaux et vaincre les défis de cet endroit.",
+    "release_date": "2016-06-03",
+    "youtubeId": "pxD30QAIhGM",
+    "tmdbId": 395883,
+    "genre_ids": [
+      28,
+      878
+    ],
+    "dateAdded": "2026-07-20"
   },
 
 
