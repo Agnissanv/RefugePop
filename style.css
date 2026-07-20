@@ -596,11 +596,11 @@ header {
 
 /* Interface de Lecture Finale Sécurisée */
 .player-layout {
-    max-width: 800px;
+    max-width: clamp(800px, 65vw, 1600px);
     background: #050508;
 }
 .live-layout {
-    max-width: 900px;
+    max-width: clamp(900px, 70vw, 1700px);
     background: #050508;
 }
 
@@ -611,23 +611,23 @@ header {
 }
 
 .player-icon-glow {
-    font-size: 3.5rem;
+    font-size: clamp(3.5rem, 4vw, 5.5rem);
     color: var(--accent);
     margin-bottom: 16px;
     filter: drop-shadow(0 0 15px rgba(255, 71, 87, 0.5));
 }
 
 .secure-player-container h2 {
-    font-size: 1.8rem;
+    font-size: clamp(1.8rem, 2.2vw, 2.6rem);
     font-weight: 800;
     margin-bottom: 8px;
 }
 
 .secure-player-container p {
     color: var(--text-muted);
-    max-width: 480px;
+    max-width: clamp(480px, 45vw, 720px);
     margin: 0 auto;
-    font-size: 0.95rem;
+    font-size: clamp(0.95rem, 1.1vw, 1.3rem);
 }
 
 .loading-bar-ux {
@@ -741,13 +741,13 @@ header {
 
 .ppc-playpause {
     flex-shrink: 0;
-    width: 36px;
-    height: 36px;
+    width: clamp(36px, 3vw, 52px);
+    height: clamp(36px, 3vw, 52px);
     border-radius: 50%;
     background: rgba(255, 255, 255, 0.12);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
-    font-size: 0.9rem;
+    font-size: clamp(0.9rem, 1.1vw, 1.3rem);
     cursor: pointer;
     display: flex;
     align-items: center;
@@ -763,7 +763,7 @@ header {
 .ppc-time {
     flex-shrink: 0;
     color: #ddd;
-    font-size: 0.75rem;
+    font-size: clamp(0.75rem, 0.9vw, 1.05rem);
     font-variant-numeric: tabular-nums;
     min-width: 42px;
     text-align: center;
