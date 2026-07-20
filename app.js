@@ -230,6 +230,7 @@ const modalYear = document.getElementById('modalYear');
 const modalDesc = document.getElementById('modalDesc');
 const modalGenre = document.getElementById('modalGenre');
 const watchMovieBtn = document.getElementById('watchMovieBtn');
+const modalFavBtn = document.getElementById('modalFavBtn');
 
 const playerModal = document.getElementById('playerModal');
 const closePlayerModalBtn = document.getElementById('closePlayerModal');
@@ -586,6 +587,24 @@ function isFavorite(movieId) {
     return getFavorites().some(f => f.id === movieId);
 }
 
+function updateModalFavButton(movie) {
+    const icon = modalFavBtn.querySelector('i');
+    if (isFavorite(movie.id)) {
+        icon.className = 'fas fa-check';
+        modalFavBtn.classList.add('active');
+    } else {
+        icon.className = 'fas fa-plus';
+        modalFavBtn.classList.remove('active');
+    }
+}
+
+modalFavBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (!activeMovieData) return;
+    toggleFavorite(activeMovieData);
+    updateModalFavButton(activeMovieData);
+});
+
 // --- FILTRAGE DES FILMS ---
 async function handleMovieFilterClick(genreKey) {
     grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement...</div>`;
@@ -748,6 +767,7 @@ loadMoreBtn.addEventListener('click', renderNextBatch);
 // --- MODALES ET LECTEURS DE VIDÉO ---
 async function openCinematicModal(movie) {
     activeMovieData = movie;
+    updateModalFavButton(movie);
 
     modalYear.textContent = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
     modalDesc.textContent = movie.overview || "Aucune description disponible.";

@@ -594,6 +594,39 @@ header {
     box-shadow: 0 8px 25px rgba(255, 71, 87, 0.45);
 }
 
+.cinematic-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.modal-fav-btn {
+    flex-shrink: 0;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.modal-fav-btn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.modal-fav-btn.active {
+    background: rgba(255, 71, 87, 0.15);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
 /* Interface de Lecture Finale Sécurisée */
 .player-layout {
     max-width: clamp(800px, 65vw, 1600px);
@@ -1611,8 +1644,12 @@ header {
         margin-bottom: 20px;
     }
 
-    .play-btn {
+    .cinematic-actions {
         width: 100%;
+    }
+
+    .play-btn {
+        flex: 1;
         justify-content: center;
         padding: 12px 24px;
     }
