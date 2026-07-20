@@ -247,6 +247,10 @@ const ppcDurationEl = document.getElementById('ppcDuration');
 const ppcProgressTrack = document.getElementById('ppcProgressTrack');
 const ppcProgressFill = document.getElementById('ppcProgressFill');
 const ppcProgressThumb = document.getElementById('ppcProgressThumb');
+const personalResumeChoice = document.getElementById('personalResumeChoice');
+const resumeChoiceTimeEl = document.getElementById('resumeChoiceTime');
+const resumeChoiceResumeBtn = document.getElementById('resumeChoiceResumeBtn');
+const resumeChoiceRestartBtn = document.getElementById('resumeChoiceRestartBtn');
 let isPersonalPlaying = true;
 let personalPlayer = null;
 let ytApiReady = false;
@@ -267,7 +271,7 @@ function hidePersonalPlayerError() {
     document.getElementById('personalVideoPlayer').style.visibility = 'visible';
 }
 
-function loadPersonalVideo(videoId, attempt = 0) {
+function loadPersonalVideo(videoId, startSeconds = 0, attempt = 0) {
     hidePersonalPlayerError();
 
     if (!ytApiReady || typeof YT === 'undefined' || !YT.Player) {
@@ -276,7 +280,7 @@ function loadPersonalVideo(videoId, attempt = 0) {
             showPersonalPlayerError();
             return;
         }
-        setTimeout(() => loadPersonalVideo(videoId, attempt + 1), 200);
+        setTimeout(() => loadPersonalVideo(videoId, startSeconds, attempt + 1), 200);
         return;
     }
 
@@ -289,6 +293,7 @@ function loadPersonalVideo(videoId, attempt = 0) {
                 rel: 0,
                 modestbranding: 1,
                 iv_load_policy: 3,
+                start: Math.floor(startSeconds) || 0,
                 origin: window.location.origin
             },
             events: {
@@ -314,6 +319,9 @@ function loadPersonalVideo(videoId, attempt = 0) {
                         ppcPlayPauseBtn.querySelector('i').className = 'fas fa-play';
                         stopProgressPolling();
                         showControls();
+                        if (activeMovieData?.source === 'youtube') {
+                            removeWatchProgress(activeMovieData.id);
+                        }
                     }
                 },
                 onError: () => {
@@ -325,9 +333,9 @@ function loadPersonalVideo(videoId, attempt = 0) {
             }
         });
     } else {
-        personalPlayer.loadVideoById(videoId);
+        personalPlayer.loadVideoById({ videoId: videoId, startSeconds: startSeconds || 0 });
         isPersonalPlaying = true;
-        setProgressUI(0, 0);
+        setProgressUI(startSeconds || 0, 0);
         showControls();
     }
 }
@@ -435,11 +443,19 @@ function setProgressUI(current, duration) {
 let progressIntervalId = null;
 let isScrubbing = false;
 
+let lastProgressSaveTime = 0;
+
 function updateProgressUI() {
     if (!personalPlayer || isScrubbing || !personalPlayer.getCurrentTime) return;
     const current = personalPlayer.getCurrentTime() || 0;
     const duration = personalPlayer.getDuration() || 0;
     setProgressUI(current, duration);
+
+    const now = Date.now();
+    if (activeMovieData?.source === 'youtube' && now - lastProgressSaveTime >= WATCH_PROGRESS_SAVE_INTERVAL_MS) {
+        lastProgressSaveTime = now;
+        updateWatchProgress(activeMovieData, current, duration);
+    }
 }
 
 function startProgressPolling() {
@@ -605,6 +621,79 @@ modalFavBtn.addEventListener('click', (e) => {
     updateModalFavButton(activeMovieData);
 });
 
+// --- REPRISE DE LECTURE & HISTORIQUE ---
+const RESUME_MIN_SECONDS = 300; // 5 minutes : en dessous, pas la peine de proposer une reprise
+const RESUME_MAX_RATIO = 0.95;  // au-delà, on considère le film comme terminé
+const WATCH_PROGRESS_SAVE_INTERVAL_MS = 5000;
+const MAX_HISTORY_ENTRIES = 30;
+
+function getWatchProgress() {
+    return JSON.parse(localStorage.getItem('refugePopWatchProgress')) || {};
+}
+
+function saveWatchProgressMap(map) {
+    localStorage.setItem('refugePopWatchProgress', JSON.stringify(map));
+}
+
+function getMovieProgress(movieId) {
+    return getWatchProgress()[movieId] || null;
+}
+
+function removeWatchProgress(movieId) {
+    const map = getWatchProgress();
+    delete map[movieId];
+    saveWatchProgressMap(map);
+}
+
+function updateWatchProgress(movie, currentTime, duration) {
+    if (!movie || !duration || currentTime < RESUME_MIN_SECONDS) return;
+
+    const map = getWatchProgress();
+
+    // Film quasi terminé : on retire l'entrée pour ne pas rester coincé en "reprise" indéfiniment
+    if (currentTime / duration >= RESUME_MAX_RATIO) {
+        delete map[movie.id];
+        saveWatchProgressMap(map);
+        return;
+    }
+
+    const entries = Object.entries(map);
+    if (!map[movie.id] && entries.length >= MAX_HISTORY_ENTRIES) {
+        const oldestId = entries.sort((a, b) => new Date(a[1].lastWatched) - new Date(b[1].lastWatched))[0][0];
+        delete map[oldestId];
+    }
+
+    map[movie.id] = {
+        movie,
+        currentTime,
+        duration,
+        lastWatched: new Date().toISOString(),
+    };
+    saveWatchProgressMap(map);
+}
+
+function getRecentlyWatched() {
+    return Object.values(getWatchProgress())
+        .sort((a, b) => new Date(b.lastWatched) - new Date(a.lastWatched))
+        .map(entry => entry.movie);
+}
+
+function showResumeChoice(savedSeconds, onChoice) {
+    resumeChoiceTimeEl.textContent = formatPlayerTime(savedSeconds);
+    personalResumeChoice.classList.remove('hidden');
+
+    const cleanup = () => {
+        personalResumeChoice.classList.add('hidden');
+        resumeChoiceResumeBtn.removeEventListener('click', onResume);
+        resumeChoiceRestartBtn.removeEventListener('click', onRestart);
+    };
+    const onResume = () => { cleanup(); onChoice(savedSeconds); };
+    const onRestart = () => { cleanup(); onChoice(0); };
+
+    resumeChoiceResumeBtn.addEventListener('click', onResume);
+    resumeChoiceRestartBtn.addEventListener('click', onRestart);
+}
+
 // --- FILTRAGE DES FILMS ---
 async function handleMovieFilterClick(genreKey) {
     grid.innerHTML = `<div class="loader"><i class="fas fa-spinner"></i> Chargement...</div>`;
@@ -616,6 +705,8 @@ async function handleMovieFilterClick(genreKey) {
         displayMovies([...allMovies].reverse());
     } else if (genreKey === 'favorites') {
         displayMovies(getFavorites());
+    } else if (genreKey === 'recent') {
+        displayRecentlyWatched(getRecentlyWatched());
     } else {
         const genreId = parseInt(genreKey, 10);
         const filtered = allMovies.filter(m => Array.isArray(m.genre_ids) && m.genre_ids.includes(genreId));
@@ -716,6 +807,12 @@ function displayMovies(movies) {
     });
     currentMovies = sorted;
     startPagedRender(sorted, buildMovieCard, "Aucun film trouvé. Clique sur les boutons pour choisir ce que tu veux !");
+}
+
+function displayRecentlyWatched(movies) {
+    // Pas de tri par badge "Nouveau" ici : l'ordre chronologique de visionnage prime
+    currentMovies = movies;
+    startPagedRender(movies, buildMovieCard, "Tu n'as encore rien regardé récemment.");
 }
 
 function buildChannelCard(channel) {
@@ -831,9 +928,24 @@ watchMovieBtn.addEventListener('click', () => {
         playerPlaceholder.style.display = 'none';
         personalPlayerWrapper.classList.add('active');
         hidePersonalPlayerError();
-        maybeShowAdOverlay(personalPlayerWrapper, () => {
-            loadPersonalVideo(activeMovieData.youtubeId);
-        });
+
+        const startPlayback = (startSeconds) => {
+            maybeShowAdOverlay(personalPlayerWrapper, () => {
+                loadPersonalVideo(activeMovieData.youtubeId, startSeconds);
+            });
+        };
+
+        const saved = getMovieProgress(activeMovieData.id);
+        const hasResumableProgress = saved
+            && saved.currentTime >= RESUME_MIN_SECONDS
+            && saved.duration
+            && (saved.currentTime / saved.duration) < RESUME_MAX_RATIO;
+
+        if (hasResumableProgress) {
+            showResumeChoice(saved.currentTime, startPlayback);
+        } else {
+            startPlayback(0);
+        }
     } else {
         // Film TMDB : comportement existant (placeholder + timeout)
         playerPlaceholder.style.display = '';
@@ -849,6 +961,12 @@ watchMovieBtn.addEventListener('click', () => {
 });
 
 function closeAllModals() {
+    if (personalPlayer && personalPlayer.getCurrentTime && activeMovieData?.source === 'youtube') {
+        const current = personalPlayer.getCurrentTime() || 0;
+        const duration = personalPlayer.getDuration ? (personalPlayer.getDuration() || 0) : 0;
+        updateWatchProgress(activeMovieData, current, duration);
+    }
+
     movieModal.classList.remove('active');
     playerModal.classList.remove('active');
     document.body.style.overflow = 'auto';
@@ -858,6 +976,7 @@ function closeAllModals() {
     playerMessageError.classList.remove('visible');
 
     personalPlayerWrapper.classList.remove('active');
+    personalResumeChoice.classList.add('hidden');
     if (personalPlayer && personalPlayer.stopVideo) {
         personalPlayer.stopVideo();
     }

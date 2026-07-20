@@ -83,7 +83,9 @@
         <button class="filter-btn" data-genre="live"><i class="fa-solid fa-tower-broadcast"></i> Direct</button>
         <button class="filter-btn" data-genre="mondial"><i class="fa-solid fa-globe"></i> Mondial</button>
         <button class="filter-btn" data-genre="favorites"><i class="fa-solid fa-heart"></i> Mes Favoris</button>
+        <button class="filter-btn" data-genre="recent"><i class="fa-solid fa-clock-rotate-left"></i> Récemment regardés</button>
     </div>
+
     <div class="filters-container">
         <button class="filter-btn" data-genre="perso"><i class="fa-solid fa-layer-group"></i> Tous mes films</button>
         <button class="filter-btn active" data-genre="trending"><i class="fa-solid fa-arrow-trend-up"></i> Tendances</button>
@@ -352,6 +354,19 @@
                     <div class="personal-player-error hidden" id="personalPlayerError">
                         <i class="fas fa-triangle-exclamation"></i>
                         <p>Cette vidéo n'a pas pu être chargée. Réessaie dans un instant, ou reviens plus tard.</p>
+                    </div>
+                    <div class="personal-resume-choice hidden" id="personalResumeChoice">
+                        <div class="resume-choice-box">
+                            <p class="resume-choice-text">Reprendre où tu t'étais arrêté ?</p>
+                            <div class="resume-choice-actions">
+                                <button class="resume-choice-btn resume-choice-btn-primary" id="resumeChoiceResumeBtn">
+                                    <i class="fas fa-play"></i> Reprendre à <span id="resumeChoiceTime"></span>
+                                </button>
+                                <button class="resume-choice-btn" id="resumeChoiceRestartBtn">
+                                    Depuis le début
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
