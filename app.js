@@ -235,6 +235,8 @@ const modalShareBtn = document.getElementById('modalShareBtn');
 const shareMenu = document.getElementById('shareMenu');
 const shareWhatsappLink = document.getElementById('shareWhatsappLink');
 const shareCopyBtn = document.getElementById('shareCopyBtn');
+const similarMoviesSection = document.getElementById('similarMoviesSection');
+const similarMoviesRow = document.getElementById('similarMoviesRow');
 
 const playerModal = document.getElementById('playerModal');
 const closePlayerModalBtn = document.getElementById('closePlayerModal');
@@ -674,6 +676,48 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// --- FILMS SIMILAIRES ---
+function buildSimilarMovieCard(movie) {
+    const poster = movie.source === 'youtube'
+        ? movie.poster
+        : (movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/220x320?text=No+Image');
+
+    const card = document.createElement('div');
+    card.classList.add('similar-movie-card');
+    card.innerHTML = `
+        <img src="${poster}" alt="${movie.title}" loading="lazy">
+        <span>${movie.title}</span>
+    `;
+    card.addEventListener('click', (e) => {
+        e.stopPropagation();
+        openCinematicModal(movie);
+    });
+    return card;
+}
+
+async function renderSimilarMovies(movie) {
+    const primaryGenreId = (movie.genre_ids || [])[0];
+
+    if (!primaryGenreId) {
+        similarMoviesSection.classList.add('hidden');
+        return;
+    }
+
+    const allMovies = await getPersonalMovies();
+    const similar = allMovies
+        .filter(m => m.id !== movie.id && Array.isArray(m.genre_ids) && m.genre_ids.includes(primaryGenreId))
+        .slice(0, 10);
+
+    if (!similar.length) {
+        similarMoviesSection.classList.add('hidden');
+        return;
+    }
+
+    similarMoviesRow.innerHTML = '';
+    similar.forEach(m => similarMoviesRow.appendChild(buildSimilarMovieCard(m)));
+    similarMoviesSection.classList.remove('hidden');
+}
+
 // --- REPRISE DE LECTURE & HISTORIQUE ---
 const RESUME_MIN_SECONDS = 300; // 5 minutes : en dessous, pas la peine de proposer une reprise
 const RESUME_MAX_RATIO = 0.95;  // au-delà, on considère le film comme terminé
@@ -918,6 +962,8 @@ loadMoreBtn.addEventListener('click', renderNextBatch);
 async function openCinematicModal(movie) {
     activeMovieData = movie;
     updateModalFavButton(movie);
+    similarMoviesSection.classList.add('hidden');
+    renderSimilarMovies(movie);
 
     modalYear.textContent = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
     modalDesc.textContent = movie.overview || "Aucune description disponible.";
