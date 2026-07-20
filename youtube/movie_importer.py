@@ -30,6 +30,7 @@ CHANNEL_HANDLES = [
     "@FilmandClips",
     "@CINE_PRIME",
     "@M_District",
+    "@CinemaCinemas",
     "@CineClubFilm",
     "@CineMoviesFilmsComplets",
     "@MyDigitalCompany",

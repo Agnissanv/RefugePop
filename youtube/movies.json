@@ -27937,22 +27937,6 @@
     "dateAdded": "2026-01-15"
   },
   {
-    "id": "yt-1MBVp7nqk74",
-    "source": "youtube",
-    "title": "Sans pitié",
-    "poster": "https://image.tmdb.org/t/p/w500/zngPhsBOrE6gEDWmBvutzYsKZ1E.jpg",
-    "backdrop": "https://image.tmdb.org/t/p/w500/j9CZj3kiR2WBs1okutQiqHpUOhR.jpg",
-    "overview": "Maria élève seule ses deux fils, Ryan et Dario. À eux trois ils tiennent le stand de tir d’une petite fête foraine. Après une balade en moto avec son grand frère, Dario disparait et reste introuvable. C’est seulement le lendemain qu’il réapparait blessé et muré dans le silence…  Vingt ans plus tard, à la mort de leur mère, les deux frères se retrouvent. Dario a reconstruit sa vie au Canada, alors que Ryan est lui, resté à Ferris Wheel, vivant du stand et de petites combines. Dario redécouvre cette vie foraine, presque oubliée, et la famille qui la compose. Mais un soir, parmi l’entourage de Ryan, il se retrouve par hasard, face à l’un de ses ravisseurs. De ce jour, les deux frères doivent composer avec d’un côté la vengeance, et de l’autre, le pardon…",
-    "release_date": "2026-01-14",
-    "youtubeId": "1MBVp7nqk74",
-    "tmdbId": 1512647,
-    "genre_ids": [
-      18,
-      53
-    ],
-    "dateAdded": "2026-07-15"
-  },
-  {
     "id": "yt-C_bUd6B1TBQ",
     "source": "youtube",
     "title": "The Underdog Knight",
@@ -28195,6 +28179,38 @@
       28,
       878,
       12
+    ],
+    "dateAdded": "2026-07-20"
+  },
+  {
+    "id": "yt-1MBVp7nqk74",
+    "source": "youtube",
+    "title": "Sans pitié",
+    "poster": "https://image.tmdb.org/t/p/w500/zngPhsBOrE6gEDWmBvutzYsKZ1E.jpg",
+    "backdrop": "https://image.tmdb.org/t/p/w500/j9CZj3kiR2WBs1okutQiqHpUOhR.jpg",
+    "overview": "Maria élève seule ses deux fils, Ryan et Dario. À eux trois ils tiennent le stand de tir d’une petite fête foraine. Après une balade en moto avec son grand frère, Dario disparait et reste introuvable. C’est seulement le lendemain qu’il réapparait blessé et muré dans le silence…  Vingt ans plus tard, à la mort de leur mère, les deux frères se retrouvent. Dario a reconstruit sa vie au Canada, alors que Ryan est lui, resté à Ferris Wheel, vivant du stand et de petites combines. Dario redécouvre cette vie foraine, presque oubliée, et la famille qui la compose. Mais un soir, parmi l’entourage de Ryan, il se retrouve par hasard, face à l’un de ses ravisseurs. De ce jour, les deux frères doivent composer avec d’un côté la vengeance, et de l’autre, le pardon…",
+    "release_date": "2026-01-14",
+    "youtubeId": "1MBVp7nqk74",
+    "tmdbId": 1512647,
+    "genre_ids": [
+      18,
+      53
+    ],
+    "dateAdded": "2026-07-15"
+  },
+  {
+    "id": "yt-aDOPbkHIgzg",
+    "source": "youtube",
+    "title": "Take Down",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/xt5FYrOeCtO7fEIWwLxcF8EJb6T.jpg",
+    "backdrop": "https://media.themoviedb.org/t/p/w1066_and_h600_face/23bMZAJx3LgY29WMVoqGnDI3ssO.jpg",
+    "overview": "Des enfants pourris gâtés, issus de familles aisées, sont envoyés dans une pension très stricte, dans l'espoir que cette éducation leur remettra les idées en place. Arrivés sur place, ils se retrouvent bientôt pris en otages par des criminels ayant assiégé l'école. Leurs kidnappeurs demandent alors une rançon exorbitante. Leur seul espoir : s'en sortir par leurs propres moyens...",
+    "release_date": "2016-08-19",
+    "youtubeId": "aDOPbkHIgzg",
+    "tmdbId": 270007,
+    "genre_ids": [
+      28,
+      53
     ],
     "dateAdded": "2026-07-20"
   },
