@@ -29,7 +29,13 @@
     <!-- Apparence navigateur -->
     <meta name="theme-color" content="#0b0b0d">
     <link rel="icon" type="image/svg+xml" href="logo.svg">
-    <link rel="apple-touch-icon" href="logo.svg">
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+
+    <!-- PWA : installation sur l'écran d'accueil -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Refuge Pop">
 
     <!-- Performance : établit la connexion aux domaines externes en avance -->
     <link rel="preconnect" href="https://api.themoviedb.org">
@@ -402,5 +408,15 @@
     <script defer src="https://www.youtube.com/iframe_api"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/hls.js@1.5.13/dist/hls.min.js"></script>
     <script defer src="app.js"></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js').catch((err) => {
+                    console.error('Erreur enregistrement service worker:', err);
+                });
+            });
+        }
+    </script>
 </body>
 </html>
