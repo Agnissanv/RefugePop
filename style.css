@@ -717,6 +717,117 @@ header {
     cursor: pointer;
 }
 
+/* --- Barre de contrôle du lecteur perso --- */
+.personal-player-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 8;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px 12px;
+    background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.75) 40%, rgba(0,0,0,0.85) 100%);
+    opacity: 1;
+    pointer-events: auto;
+    transition: opacity 0.3s ease;
+}
+
+.personal-player-controls.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ppc-playpause {
+    flex-shrink: 0;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 0.9rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.ppc-playpause:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+}
+
+.ppc-time {
+    flex-shrink: 0;
+    color: #ddd;
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    min-width: 42px;
+    text-align: center;
+}
+
+.ppc-progress-track {
+    position: relative;
+    flex: 1;
+    height: 20px; /* zone tactile large */
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    touch-action: none;
+}
+
+.ppc-progress-track::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.ppc-progress-fill {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 4px;
+    border-radius: 2px;
+    background: var(--accent);
+    width: 0%;
+    pointer-events: none;
+}
+
+.ppc-progress-thumb {
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: transform 0.15s ease;
+}
+
+.ppc-progress-track:hover .ppc-progress-thumb {
+    transform: translate(-50%, -50%) scale(1.25);
+}
+
+/* Le bouton plein écran vit maintenant dans la barre, plus en position absolue flottante */
+.personal-player-controls .personal-fullscreen-btn {
+    position: static;
+    flex-shrink: 0;
+    margin-left: 4px;
+}
+
 /* pointeur de recherche */
 .seek-indicator {
     position: absolute;

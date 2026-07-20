@@ -329,9 +329,21 @@
                     <div id="personalVideoPlayer"></div>
                     <div class="personal-player-overlay" id="personalPlayerOverlay"></div>
                     <div class="seek-indicator" id="seekIndicator"></div>
-                    <button class="personal-fullscreen-btn" id="personalFullscreenBtn" title="Plein écran">
-                        <i class="fas fa-expand"></i>
-                    </button>
+
+                    <div class="personal-player-controls" id="personalPlayerControls">
+                        <button class="ppc-playpause" id="ppcPlayPause" title="Lecture/Pause">
+                            <i class="fas fa-pause"></i>
+                        </button>
+                        <span class="ppc-time" id="ppcCurrentTime">0:00</span>
+                        <div class="ppc-progress-track" id="ppcProgressTrack">
+                            <div class="ppc-progress-fill" id="ppcProgressFill"></div>
+                            <div class="ppc-progress-thumb" id="ppcProgressThumb"></div>
+                        </div>
+                        <span class="ppc-time" id="ppcDuration">0:00</span>
+                        <button class="personal-fullscreen-btn" id="personalFullscreenBtn" title="Plein écran">
+                            <i class="fas fa-expand"></i>
+                        </button>
+                    </div>
                     <div class="personal-player-error hidden" id="personalPlayerError">
                         <i class="fas fa-triangle-exclamation"></i>
                         <p>Cette vidéo n'a pas pu être chargée. Réessaie dans un instant, ou reviens plus tard.</p>

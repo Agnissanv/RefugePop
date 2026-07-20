@@ -239,6 +239,13 @@ const personalPlayerWrapper = document.getElementById('personalPlayerWrapper');
 const personalVideoPlayer = document.getElementById('personalVideoPlayer');
 const personalPlayerOverlay = document.getElementById('personalPlayerOverlay');
 const seekIndicator = document.getElementById('seekIndicator');
+const personalPlayerControls = document.getElementById('personalPlayerControls');
+const ppcPlayPauseBtn = document.getElementById('ppcPlayPause');
+const ppcCurrentTimeEl = document.getElementById('ppcCurrentTime');
+const ppcDurationEl = document.getElementById('ppcDuration');
+const ppcProgressTrack = document.getElementById('ppcProgressTrack');
+const ppcProgressFill = document.getElementById('ppcProgressFill');
+const ppcProgressThumb = document.getElementById('ppcProgressThumb');
 let isPersonalPlaying = true;
 let personalPlayer = null;
 let ytApiReady = false;
@@ -287,10 +294,31 @@ function loadPersonalVideo(videoId, attempt = 0) {
                 onReady: (e) => {
                     e.target.playVideo();
                     isPersonalPlaying = true;
+                    showControls();
+                    scheduleControlsAutoHide();
+                },
+                onStateChange: (e) => {
+                    if (e.data === YT.PlayerState.PLAYING) {
+                        isPersonalPlaying = true;
+                        ppcPlayPauseBtn.querySelector('i').className = 'fas fa-pause';
+                        startProgressPolling();
+                        scheduleControlsAutoHide();
+                    } else if (e.data === YT.PlayerState.PAUSED) {
+                        isPersonalPlaying = false;
+                        ppcPlayPauseBtn.querySelector('i').className = 'fas fa-play';
+                        stopProgressPolling();
+                        showControls();
+                    } else if (e.data === YT.PlayerState.ENDED) {
+                        isPersonalPlaying = false;
+                        ppcPlayPauseBtn.querySelector('i').className = 'fas fa-play';
+                        stopProgressPolling();
+                        showControls();
+                    }
                 },
                 onError: () => {
                     // Vidéo retirée, privée, ou intégration désactivée sur YouTube
                     document.getElementById('personalVideoPlayer').style.visibility = 'hidden';
+                    stopProgressPolling();
                     showPersonalPlayerError();
                 }
             }
@@ -298,6 +326,8 @@ function loadPersonalVideo(videoId, attempt = 0) {
     } else {
         personalPlayer.loadVideoById(videoId);
         isPersonalPlaying = true;
+        setProgressUI(0, 0);
+        showControls();
     }
 }
 
@@ -379,6 +409,113 @@ document.addEventListener('fullscreenchange', () => {
     const icon = personalFullscreenBtn.querySelector('i');
     icon.className = document.fullscreenElement ? 'fas fa-compress' : 'fas fa-expand';
 });
+
+// --- BARRE DE CONTRÔLE DU LECTEUR PERSO ---
+function formatPlayerTime(seconds) {
+    if (!isFinite(seconds) || seconds < 0) seconds = 0;
+    const h = Math.floor(seconds / 3600);
+    const m = Math.floor((seconds % 3600) / 60);
+    const s = Math.floor(seconds % 60);
+    const ss = String(s).padStart(2, '0');
+    if (h > 0) {
+        return `${h}:${String(m).padStart(2, '0')}:${ss}`;
+    }
+    return `${m}:${ss}`;
+}
+
+function setProgressUI(current, duration) {
+    const pct = duration > 0 ? Math.min(100, (current / duration) * 100) : 0;
+    ppcProgressFill.style.width = pct + '%';
+    ppcProgressThumb.style.left = pct + '%';
+    ppcCurrentTimeEl.textContent = formatPlayerTime(current);
+    ppcDurationEl.textContent = formatPlayerTime(duration);
+}
+
+let progressIntervalId = null;
+let isScrubbing = false;
+
+function updateProgressUI() {
+    if (!personalPlayer || isScrubbing || !personalPlayer.getCurrentTime) return;
+    const current = personalPlayer.getCurrentTime() || 0;
+    const duration = personalPlayer.getDuration() || 0;
+    setProgressUI(current, duration);
+}
+
+function startProgressPolling() {
+    stopProgressPolling();
+    progressIntervalId = setInterval(updateProgressUI, 250);
+}
+
+function stopProgressPolling() {
+    clearInterval(progressIntervalId);
+    progressIntervalId = null;
+}
+
+// Play/pause via le bouton visible de la barre (l'icône est mise à jour par onStateChange)
+ppcPlayPauseBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    togglePersonalPlayPause();
+});
+
+function getTrackPercent(clientX) {
+    const rect = ppcProgressTrack.getBoundingClientRect();
+    const x = Math.min(Math.max(clientX - rect.left, 0), rect.width);
+    return rect.width > 0 ? x / rect.width : 0;
+}
+
+ppcProgressTrack.addEventListener('pointerdown', (e) => {
+    e.stopPropagation();
+    isScrubbing = true;
+    ppcProgressTrack.setPointerCapture(e.pointerId);
+    showControls();
+    const duration = personalPlayer?.getDuration ? personalPlayer.getDuration() : 0;
+    setProgressUI(getTrackPercent(e.clientX) * duration, duration);
+});
+
+ppcProgressTrack.addEventListener('pointermove', (e) => {
+    if (!isScrubbing) return;
+    const duration = personalPlayer?.getDuration ? personalPlayer.getDuration() : 0;
+    setProgressUI(getTrackPercent(e.clientX) * duration, duration);
+});
+
+function endScrub(e) {
+    if (!isScrubbing) return;
+    isScrubbing = false;
+    const duration = personalPlayer?.getDuration ? personalPlayer.getDuration() : 0;
+    if (personalPlayer && personalPlayer.seekTo) {
+        personalPlayer.seekTo(getTrackPercent(e.clientX) * duration, true);
+    }
+    scheduleControlsAutoHide();
+}
+
+ppcProgressTrack.addEventListener('pointerup', endScrub);
+ppcProgressTrack.addEventListener('pointercancel', () => { isScrubbing = false; });
+
+// Auto-hide façon YouTube/Netflix
+let controlsHideTimeoutId = null;
+
+function showControls() {
+    personalPlayerControls.classList.remove('hidden');
+}
+
+function scheduleControlsAutoHide() {
+    clearTimeout(controlsHideTimeoutId);
+    if (!isPersonalPlaying || isScrubbing) return;
+    controlsHideTimeoutId = setTimeout(() => {
+        if (isPersonalPlaying && !isScrubbing) {
+            personalPlayerControls.classList.add('hidden');
+        }
+    }, 3000);
+}
+
+function resetControlsAutoHideTimer() {
+    showControls();
+    scheduleControlsAutoHide();
+}
+
+personalPlayerWrapper.addEventListener('pointermove', resetControlsAutoHideTimer);
+personalPlayerWrapper.addEventListener('pointerdown', resetControlsAutoHideTimer);
+
 let streamTimeoutId = null;
 
 let isMuted = true; // état du son de la bande-annonce en arrière-plan
@@ -704,6 +841,10 @@ function closeAllModals() {
     if (personalPlayer && personalPlayer.stopVideo) {
         personalPlayer.stopVideo();
     }
+    stopProgressPolling();
+    clearTimeout(controlsHideTimeoutId);
+    isScrubbing = false;
+    showControls();
     playerPlaceholder.style.display = '';
 }
 
