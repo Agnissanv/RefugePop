@@ -219,6 +219,9 @@ function detectSearchIntent(rawQuery) {
     return { type: 'title', value: rawQuery };
 }
 const filterButtons = document.querySelectorAll('.filter-btn');
+const genreDropdownToggle = document.getElementById('genreDropdownToggle');
+const genreDropdownMenu = document.getElementById('genreDropdownMenu');
+const genreDropdownLabel = document.getElementById('genreDropdownLabel');
 
 // Modales & Lecteurs
 const movieModal = document.getElementById('movieModal');
@@ -1155,6 +1158,13 @@ filterButtons.forEach(btn => {
         filterButtons.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
 
+        // Un genre a été choisi ailleurs, ou un filtre top-niveau a été cliqué :
+        // on réinitialise le bouton "Genre" sauf si c'est justement une option de son propre menu
+        if (!btn.classList.contains('genre-option')) {
+            genreDropdownToggle.classList.remove('active');
+            genreDropdownLabel.textContent = 'Genre';
+        }
+
         const categoryContainer = document.getElementById('categoryFiltersContainer');
         const mondialSidebar = document.getElementById('mondialSidebar');
 
@@ -1192,6 +1202,54 @@ filterButtons.forEach(btn => {
 
         handleMovieFilterClick(btn.dataset.genre);
     });
+});
+
+// --- MENU DÉROULANT "GENRE" ---
+function positionGenreDropdown() {
+    const rect = genreDropdownToggle.getBoundingClientRect();
+    genreDropdownMenu.style.top = `${rect.bottom + 8}px`;
+    genreDropdownMenu.style.left = `${rect.left}px`;
+}
+
+function closeGenreDropdown() {
+    genreDropdownMenu.classList.add('hidden');
+    genreDropdownToggle.classList.remove('open');
+}
+
+genreDropdownToggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isHidden = genreDropdownMenu.classList.contains('hidden');
+    if (isHidden) {
+        positionGenreDropdown();
+        genreDropdownMenu.classList.remove('hidden');
+        genreDropdownToggle.classList.add('open');
+    } else {
+        closeGenreDropdown();
+    }
+});
+
+document.querySelectorAll('.genre-option').forEach(opt => {
+    opt.addEventListener('click', () => {
+        genreDropdownLabel.textContent = opt.textContent.trim();
+        genreDropdownToggle.classList.add('active');
+        closeGenreDropdown();
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!genreDropdownMenu.classList.contains('hidden') && !e.target.closest('.genre-dropdown') && !e.target.closest('.genre-dropdown-menu')) {
+        closeGenreDropdown();
+    }
+});
+
+// Le menu est positionné en fixed (calculé au clic) : on le ferme au scroll/resize
+// plutôt que de le repositionner en continu, pour rester simple et robuste.
+window.addEventListener('scroll', () => {
+    if (!genreDropdownMenu.classList.contains('hidden')) closeGenreDropdown();
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+    if (!genreDropdownMenu.classList.contains('hidden')) closeGenreDropdown();
 });
 
 

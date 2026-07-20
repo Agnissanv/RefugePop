@@ -192,6 +192,97 @@ header {
     box-shadow: 0 4px 15px rgba(255, 71, 87, 0.35);
 }
 
+/* --- Menu déroulant "Genre" --- */
+.genre-dropdown {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.genre-dropdown-toggle {
+    background: var(--bg-card);
+    color: var(--text-muted);
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    padding: 10px 24px;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+}
+
+.genre-dropdown-toggle:hover {
+    color: #fff;
+    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.genre-dropdown-toggle.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    box-shadow: 0 4px 15px rgba(255, 71, 87, 0.35);
+}
+
+.genre-caret {
+    font-size: 0.7rem;
+    transition: transform 0.2s ease;
+}
+
+.genre-dropdown-toggle.open .genre-caret {
+    transform: rotate(180deg);
+}
+
+.genre-dropdown-menu {
+    position: fixed; /* échappe au rognage overflow de .filters-container (position: absolute y était piégé) */
+    background: #16161c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 8px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 4px;
+    min-width: 340px;
+    max-height: 60vh;
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 200;
+}
+
+.genre-dropdown-menu.hidden {
+    display: none;
+}
+
+.genre-option {
+    background: none;
+    border: 1px solid transparent;
+    color: #ddd;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.genre-option:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.genre-option.active {
+    background: rgba(255, 71, 87, 0.15);
+    color: var(--accent);
+}
+
 /* ==========================================================================
    GRILLE ET SYSTÈME DE SUBSTITUTION DE LA CARTE (HOVER PREMIUM)
    ========================================================================== */
@@ -443,6 +534,19 @@ header {
 }
 .mute-toggle {
     right: 72px; /* se place à côté du bouton de fermeture (40px + marge) */
+}
+
+/* La modale cinématique peut désormais dépasser 100vh (section "Films similaires") :
+   on la rend scrollable et on ancre ses boutons à l'écran plutôt qu'au contenu,
+   pour qu'ils restent toujours visibles même en scrollant. */
+#movieModal {
+    align-items: flex-start;
+    overflow-y: auto;
+}
+
+#closeModal,
+#muteToggle {
+    position: fixed;
 }
 .personal-fullscreen-btn {
     position: absolute;
@@ -1742,9 +1846,15 @@ header {
         padding: 0.5rem 20px 1.5rem;
     }
 
-    .filter-btn {
+    .filter-btn,
+    .genre-dropdown-toggle {
         padding: 8px 18px;
         font-size: 0.85rem;
+    }
+
+    .genre-dropdown-menu {
+        grid-template-columns: 1fr;
+        min-width: 220px;
     }
 
     /* Grille Mobile : Passage en 2 colonnes ultra-stables */
