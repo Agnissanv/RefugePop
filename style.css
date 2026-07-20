@@ -627,6 +627,56 @@ header {
     border-color: var(--accent);
 }
 
+.share-btn-wrap {
+    position: relative;
+}
+
+.share-menu {
+    position: absolute;
+    bottom: calc(100% + 10px);
+    right: 0;
+    background: #16161c;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 180px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 15;
+}
+
+.share-menu.hidden {
+    display: none;
+}
+
+.share-menu-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    transition: background 0.2s ease;
+}
+
+.share-menu-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.share-menu-item i {
+    width: 16px;
+    text-align: center;
+}
+
 /* Interface de Lecture Finale Sécurisée */
 .player-layout {
     max-width: clamp(800px, 65vw, 1600px);
@@ -1705,6 +1755,11 @@ header {
 
     .cinematic-actions {
         width: 100%;
+    }
+
+    .share-menu {
+        right: auto;
+        left: 0;
     }
 
     .play-btn {

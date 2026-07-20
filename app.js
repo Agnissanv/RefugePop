@@ -231,6 +231,10 @@ const modalDesc = document.getElementById('modalDesc');
 const modalGenre = document.getElementById('modalGenre');
 const watchMovieBtn = document.getElementById('watchMovieBtn');
 const modalFavBtn = document.getElementById('modalFavBtn');
+const modalShareBtn = document.getElementById('modalShareBtn');
+const shareMenu = document.getElementById('shareMenu');
+const shareWhatsappLink = document.getElementById('shareWhatsappLink');
+const shareCopyBtn = document.getElementById('shareCopyBtn');
 
 const playerModal = document.getElementById('playerModal');
 const closePlayerModalBtn = document.getElementById('closePlayerModal');
@@ -619,6 +623,55 @@ modalFavBtn.addEventListener('click', (e) => {
     if (!activeMovieData) return;
     toggleFavorite(activeMovieData);
     updateModalFavButton(activeMovieData);
+});
+
+// --- PARTAGE SOCIAL ---
+function getShareText(movie) {
+    const link = `${window.location.origin}${window.location.pathname}?film=${slugifyMovie(movie)}`;
+    return { text: `🎬 ${movie.title} sur Refuge Pop`, link };
+}
+
+modalShareBtn.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    if (!activeMovieData) return;
+    const { text, link } = getShareText(activeMovieData);
+
+    if (navigator.share) {
+        try {
+            await navigator.share({ title: text, text: text, url: link });
+        } catch (err) {
+            // L'utilisateur a annulé le partage, ou l'API a échoué silencieusement : rien à faire
+        }
+        return;
+    }
+
+    // Pas de support natif (desktop) : on affiche le petit menu de secours
+    const { text: t2, link: l2 } = getShareText(activeMovieData);
+    shareWhatsappLink.href = `https://wa.me/?text=${encodeURIComponent(t2 + '\n' + l2)}`;
+    shareMenu.classList.toggle('hidden');
+});
+
+shareCopyBtn.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    if (!activeMovieData) return;
+    const { text, link } = getShareText(activeMovieData);
+    try {
+        await navigator.clipboard.writeText(`${text}\n${link}`);
+        const originalHTML = shareCopyBtn.innerHTML;
+        shareCopyBtn.innerHTML = '<i class="fas fa-check"></i> Lien copié !';
+        setTimeout(() => {
+            shareCopyBtn.innerHTML = originalHTML;
+            shareMenu.classList.add('hidden');
+        }, 1200);
+    } catch (err) {
+        console.error('Erreur copie lien:', err);
+    }
+});
+
+document.addEventListener('click', (e) => {
+    if (!shareMenu.classList.contains('hidden') && !e.target.closest('.share-btn-wrap')) {
+        shareMenu.classList.add('hidden');
+    }
 });
 
 // --- REPRISE DE LECTURE & HISTORIQUE ---
