@@ -77,6 +77,12 @@ header {
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
+
+.blog i {
+    font-size: 1rem;
+    margin-right: 6px;
+    color: var(--accent);
+}
 .blog::after {
     content: '';
     position: absolute;
