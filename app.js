@@ -273,6 +273,7 @@ const modalTitle = document.getElementById('modalTitle');
 const modalYear = document.getElementById('modalYear');
 const modalDesc = document.getElementById('modalDesc');
 const modalGenre = document.getElementById('modalGenre');
+const modalViews = document.getElementById('modalViews');
 const watchMovieBtn = document.getElementById('watchMovieBtn');
 const modalFavBtn = document.getElementById('modalFavBtn');
 const modalShareBtn = document.getElementById('modalShareBtn');
@@ -1010,6 +1011,7 @@ async function openCinematicModal(movie) {
     updateModalFavButton(movie);
     similarMoviesSection.classList.add('hidden');
     renderSimilarMovies(movie);
+    modalViews.innerHTML = `<i class="fas fa-eye"></i> ${formatViewCount(computeViewCount(movie))}`;
 
     modalYear.textContent = movie.release_date ? movie.release_date.split('-')[0] : 'N/A';
     modalDesc.textContent = movie.overview || "Aucune description disponible.";
