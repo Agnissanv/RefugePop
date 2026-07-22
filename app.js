@@ -194,6 +194,47 @@ const GENRE_LABELS = {
     37: '🤠 Western', 10402: '🎵 Musique'
 };
 
+// --- COMPTEUR DE VUES SIMULÉ (stable, jamais aléatoire à l'affichage, croît chaque jour) ---
+function hashToUnit(str) {
+    let hash = 0;
+    for (let i = 0; i < str.length; i++) {
+        hash = (hash << 5) - hash + str.charCodeAt(i);
+        hash |= 0;
+    }
+    return (hash >>> 0) / 4294967295; // normalisé entre 0 et 1
+}
+
+function computeViewCount(movie) {
+    const seedBase = hashToUnit(movie.id + '-base');
+    const seedRate = hashToUnit(movie.id + '-rate');
+
+    const baseViews = Math.floor(50000 + seedBase * 2950000);   // 50K à 3M au départ
+    const dailyRate = Math.floor(20 + seedRate * 230);          // 20 à 250 vues/jour
+
+    let days;
+    if (movie.dateAdded) {
+        days = Math.floor((Date.now() - new Date(movie.dateAdded).getTime()) / 86400000);
+        days = Math.max(days, 0);
+    } else {
+        // Pas de date connue (film importé avant l'ajout de ce champ) : on simule une ancienneté plausible
+        days = Math.floor(180 + hashToUnit(movie.id + '-age') * 1000); // 180 à 1180 jours
+    }
+
+    return baseViews + dailyRate * days;
+}
+
+function formatViewCount(n) {
+    const format = (value, suffix) => {
+        let str = value.toFixed(1);
+        if (str.endsWith('.0')) str = str.slice(0, -2);
+        return str.replace('.', ',') + ' ' + suffix;
+    };
+    if (n >= 1e9) return format(n / 1e9, 'Md');
+    if (n >= 1e6) return format(n / 1e6, 'M');
+    if (n >= 1e3) return format(n / 1e3, 'K');
+    return String(n);
+}
+
 function isRecentlyAdded(movie) {
     if (!movie.dateAdded) return false;
     const addedDate = new Date(movie.dateAdded);
@@ -828,6 +869,7 @@ function buildMovieCard(movie, index = 99) {
     const availableBadge = isRecentlyAdded(movie)
         ? `<span class="badge-available"><i class="fas fa-star"></i> Nouveau</span>`
         : '';
+    const viewsBadge = `<span class="badge-views"><i class="fas fa-eye"></i> ${formatViewCount(computeViewCount(movie))}</span>`;
 
     const card = document.createElement('div');
     card.classList.add('movie-card');
@@ -836,6 +878,7 @@ function buildMovieCard(movie, index = 99) {
         <img class="poster-img" src="${poster}" alt="${movie.title}" ${index < 4 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}>
         <img class="backdrop-img" src="${backdrop}" alt="${movie.title} fond" loading="lazy">
         ${availableBadge}
+        ${viewsBadge}
         <div class="card-overlay">
             <h3 class="card-title">${movie.title}</h3>
             <span class="card-year">🍿 ${year}</span>
