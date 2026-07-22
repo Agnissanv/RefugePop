@@ -1477,6 +1477,106 @@ document.addEventListener('fullscreenchange', () => {
 // Initialisation au démarrage
 handleMovieFilterClick('trending');
 checkDeepLinkMovie();
+initCurtain();
+
+// --- RIDEAU D'ACCUEIL ---
+function pickRandomBackdropUrl(movies) {
+    const pool = movies.filter(m => m.backdrop || m.poster);
+    if (!pool.length) return null;
+    const movie = pool[Math.floor(Math.random() * pool.length)];
+    return movie.backdrop || movie.poster;
+}
+
+function startCurtainDiaporama(movies) {
+    const slideA = document.getElementById('curtainSlideA');
+    const slideB = document.getElementById('curtainSlideB');
+    if (movies.length === 0) return;
+
+    let showingA = true;
+    const firstUrl = pickRandomBackdropUrl(movies);
+    if (firstUrl) slideA.src = firstUrl;
+
+    setInterval(() => {
+        const nextUrl = pickRandomBackdropUrl(movies);
+        if (!nextUrl) return;
+
+        const nextSlide = showingA ? slideB : slideA;
+        const currentSlide = showingA ? slideA : slideB;
+
+        // Préchargement : on ne fait le fondu qu'une fois l'image suivante réellement chargée,
+        // pour éviter tout flash de zone vide pendant le diaporama.
+        const preload = new Image();
+        preload.onload = () => {
+            nextSlide.src = nextUrl;
+            nextSlide.classList.add('active');
+            currentSlide.classList.remove('active');
+            showingA = !showingA;
+        };
+        preload.src = nextUrl;
+    }, 4500);
+}
+
+function initCurtainFaq() {
+    document.querySelectorAll('.curtain-faq-item').forEach(item => {
+        const question = item.querySelector('.curtain-faq-question');
+        question.addEventListener('click', () => {
+            item.classList.toggle('open');
+        });
+    });
+}
+
+function getLatestMovies(movies, count) {
+    return [...movies]
+        .sort((a, b) => new Date(b.dateAdded || 0) - new Date(a.dateAdded || 0))
+        .slice(0, count);
+}
+
+function renderCurtainTrending(movies, closeCurtain) {
+    const row = document.getElementById('curtainTrendingRow');
+    const latest = getLatestMovies(movies, 10);
+
+    latest.forEach((movie, index) => {
+        const poster = movie.source === 'youtube'
+            ? movie.poster
+            : (movie.poster_path ? `${IMG_URL}${movie.poster_path}` : 'https://via.placeholder.com/220x320?text=No+Image');
+
+        const card = document.createElement('div');
+        card.classList.add('curtain-trending-card');
+        card.innerHTML = `
+            <span class="curtain-trending-number">${index + 1}</span>
+            <img src="${poster}" alt="${movie.title}" loading="lazy">
+        `;
+        card.addEventListener('click', () => {
+            closeCurtain();
+            openCinematicModal(movie);
+        });
+        row.appendChild(card);
+    });
+
+    const arrowBtn = document.getElementById('curtainTrendingArrow');
+    arrowBtn.addEventListener('click', () => {
+        row.scrollBy({ left: 500, behavior: 'smooth' });
+    });
+}
+
+async function initCurtain() {
+    const curtainOverlay = document.getElementById('curtainOverlay');
+    if (curtainOverlay.classList.contains('hidden')) return; // déjà écarté (deep link ou déjà vu cette session)
+
+    const movies = await getPersonalMovies();
+    startCurtainDiaporama(movies); // tout le catalogue, tiré au hasard à chaque tour, sans limite
+    initCurtainFaq();
+
+    function closeCurtain() {
+        curtainOverlay.classList.add('hidden');
+        document.body.classList.remove('curtain-lock-scroll');
+    }
+
+    renderCurtainTrending(movies, closeCurtain);
+
+    document.getElementById('curtainEnterBtnTop').addEventListener('click', closeCurtain);
+    document.getElementById('curtainEnterBtnBottom').addEventListener('click', closeCurtain);
+}
 
 
 // --- FOOTER : liens rapides + retour en haut ---

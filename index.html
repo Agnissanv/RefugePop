@@ -49,6 +49,119 @@
 
 <body>
 
+    <!-- RIDEAU D'ACCUEIL : page de présentation complète, une fois par session -->
+    <div class="curtain-overlay" id="curtainOverlay">
+
+        <div class="curtain-hero">
+            <div class="curtain-backdrop-layer">
+                <img class="curtain-slide active" id="curtainSlideA" alt="">
+                <img class="curtain-slide" id="curtainSlideB" alt="">
+            </div>
+            <div class="curtain-dark-overlay"></div>
+            <div class="curtain-content">
+                <div class="curtain-logo"><img src="logo.svg" alt="Refuge Pop" class="brand-logo-img"> REFUGE<span>POP</span></div>
+                <h1>Installe-toi, on s'occupe du reste.</h1>
+                <p>Gratuit. Sans compte. Sans abonnement.</p>
+                <button class="curtain-enter-btn" id="curtainEnterBtnTop">C'est parti 🍿</button>
+            </div>
+        </div>
+
+        <section class="curtain-trending">
+            <h2>Nouveautés du moment</h2>
+            <div class="curtain-trending-wrapper">
+                <div class="curtain-trending-row" id="curtainTrendingRow"></div>
+                <button class="curtain-trending-arrow" id="curtainTrendingArrow" title="Nouveautés du moment"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </section>
+
+        <section class="curtain-reasons">
+            <h2>Pourquoi Refuge Pop ?</h2>
+            <div class="curtain-reasons-grid">
+                <div class="curtain-reason-card">
+                    <div class="curtain-reason-icon"><i class="fa-solid fa-gift"></i></div>
+                    <h3>100% gratuit, sans compte</h3>
+                    <p>Aucune carte bancaire, aucune inscription. Tu arrives, tu choisis, tu regardes.</p>
+                </div>
+                <div class="curtain-reason-card">
+                    <div class="curtain-reason-icon"><i class="fa-solid fa-tower-broadcast"></i></div>
+                    <h3>Direct, en illimité</h3>
+                    <p>Des dizaines de chaînes en direct, actualités, sport, musique, films et bien plus.</p>
+                </div>
+                <div class="curtain-reason-card">
+                    <div class="curtain-reason-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <h3>Partout, comme chez toi</h3>
+                    <p>Sur ton téléphone, ta tablette, ton ordinateur, ou directement sur le navigateur de ta télévision.</p>
+                </div>
+                <div class="curtain-reason-card">
+                    <div class="curtain-reason-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>Reprends où tu t'es arrêté</h3>
+                    <p>Le site se souvient de ta progression, sans avoir besoin d'un compte.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="curtain-faq">
+            <h2>Foire aux questions</h2>
+            <div class="curtain-faq-list" id="curtainFaqList">
+                <div class="curtain-faq-item">
+                    <button class="curtain-faq-question">Refuge Pop, qu'est-ce que c'est ?<i class="fa-solid fa-plus"></i></button>
+                    <div class="curtain-faq-answer"><p>Un site de cinéma gratuit et sans pression : un catalogue de films à regarder directement dans le navigateur, des chaînes en direct, et les matchs du moment dans la section Mondial.</p></div>
+                </div>
+                <div class="curtain-faq-item">
+                    <button class="curtain-faq-question">Est-ce vraiment payant ?<i class="fa-solid fa-plus"></i></button>
+                    <div class="curtain-faq-answer"><p>Non, Refuge Pop est entièrement gratuit. Pas d'abonnement, pas de carte bancaire à renseigner.</p></div>
+                </div>
+                <div class="curtain-faq-item">
+                    <button class="curtain-faq-question">Dois-je créer un compte ?<i class="fa-solid fa-plus"></i></button>
+                    <div class="curtain-faq-answer"><p>Non, aucun compte n'est nécessaire. Tes favoris et ta progression de lecture sont simplement sauvegardés sur ton appareil.</p></div>
+                </div>
+                <div class="curtain-faq-item">
+                    <button class="curtain-faq-question">Où puis-je regarder Refuge Pop ?<i class="fa-solid fa-plus"></i></button>
+                    <div class="curtain-faq-answer"><p>Sur ton téléphone, ta tablette, ton ordinateur, ou directement sur le navigateur de ta télévision.</p></div>
+                </div>
+                <div class="curtain-faq-item">
+                    <button class="curtain-faq-question">Le catalogue évolue-t-il ?<i class="fa-solid fa-plus"></i></button>
+                    <div class="curtain-faq-answer"><p>Oui, de nouveaux films sont ajoutés régulièrement, repérables grâce au badge "Nouveau".</p></div>
+                </div>
+                <div class="curtain-faq-item">
+                    <button class="curtain-faq-question">Est-ce légal ?<i class="fa-solid fa-plus"></i></button>
+                    <div class="curtain-faq-answer"><p>Refuge Pop n'héberge aucun fichier vidéo sur ses serveurs. Les films sont intégrés via le lecteur officiel YouTube depuis des chaînes tierces ; les chaînes en direct sont des flux publics agrégés.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="curtain-final-cta">
+            <p>Prêt à t'installer ?</p>
+            <button class="curtain-enter-btn" id="curtainEnterBtnBottom">C'est parti 🍿</button>
+        </section>
+
+        <footer class="curtain-footer">
+            <div class="curtain-footer-brand"><img src="logo.svg" alt="Refuge Pop" class="brand-logo-img"> REFUGE<span>POP</span></div>
+            <p class="curtain-footer-text">Refuge Pop n'héberge aucun fichier vidéo sur ses serveurs. Les informations de films proviennent de TMDB.</p>
+            <div class="curtain-footer-socials">
+                <a href="https://wa.me/+2250769398708" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://www.tiktok.com/@refugepop?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+            <p class="curtain-footer-copyright">© 2026 Refuge Pop</p>
+        </footer>
+
+    </div>
+    <script>
+        // Exécuté immédiatement (avant même app.js) pour éviter tout flash du rideau
+        // si l'utilisateur ne doit pas le voir (deep link vers un film, ou déjà vu cette session).
+        (function () {
+            var params = new URLSearchParams(window.location.search);
+            var hasFilmParam = params.has('film');
+            var alreadyShown = sessionStorage.getItem('refugePopCurtainShown');
+            if (hasFilmParam || alreadyShown) {
+                document.getElementById('curtainOverlay').classList.add('hidden');
+            } else {
+                document.body.classList.add('curtain-lock-scroll');
+            }
+            sessionStorage.setItem('refugePopCurtainShown', '1');
+        })();
+    </script>
+
     <header>
         <a href="#">
             <div class="logo"><img src="logo.svg" alt="Refuge Pop" class="brand-logo-img"> Refuge<span>Pop</span></div>

@@ -138,6 +138,397 @@ header {
     box-shadow: 0 0 20px rgba(255, 71, 87, 0.15);
 }
 
+/* --- Rideau d'accueil --- */
+.curtain-lock-scroll {
+    overflow: hidden;
+}
+
+.curtain-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 3000; /* au-dessus de toutes les modales (1000) */
+    background: var(--bg-dark);
+    overflow-y: auto;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.6s cubic-bezier(0.25, 1, 0.4, 1), visibility 0.6s;
+}
+
+.curtain-overlay.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Hero avec diaporama */
+.curtain-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.curtain-backdrop-layer {
+    position: absolute;
+    inset: 0;
+}
+
+.curtain-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.8s ease;
+}
+
+.curtain-slide.active {
+    opacity: 1;
+}
+
+.curtain-dark-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(7, 7, 10, 0.55) 0%, rgba(7, 7, 10, 0.92) 75%);
+}
+
+.curtain-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.curtain-logo {
+    font-size: 1.6rem;
+    font-weight: 900;
+    letter-spacing: -1px;
+    text-transform: uppercase;
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.curtain-logo span {
+    color: var(--accent);
+    text-shadow: 0 0 15px rgba(255, 71, 87, 0.3);
+}
+
+.curtain-content h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+}
+
+.curtain-content p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 32px;
+}
+
+.curtain-enter-btn {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 16px 44px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(255, 71, 87, 0.35);
+}
+
+.curtain-enter-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 71, 87, 0.5);
+}
+
+/* Carrousel "Nouveautés du moment" */
+.curtain-trending {
+    padding: 50px 5% 20px;
+}
+
+.curtain-trending h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    padding-left: 3%;
+}
+
+.curtain-trending-wrapper {
+    position: relative;
+}
+
+.curtain-trending-row {
+    display: flex;
+    gap: 6px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 3% 20px;
+    scrollbar-width: none;
+}
+
+.curtain-trending-row::-webkit-scrollbar {
+    display: none;
+}
+
+.curtain-trending-card {
+    flex-shrink: 0;
+    width: 160px;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+    position: relative;
+}
+
+.curtain-trending-card img {
+    width: 118px;
+    height: 175px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    transition: transform 0.25s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.curtain-trending-card:hover img {
+    transform: scale(1.05);
+}
+
+.curtain-trending-number {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 1;
+    color: var(--bg-dark);
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 0;
+    margin-right: -30px;
+    user-select: none;
+}
+
+.curtain-trending-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 20px;
+    right: 0;
+    width: 50px;
+    background: linear-gradient(to right, transparent, var(--bg-dark) 70%);
+    border: none;
+    color: #fff;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .curtain-trending-number {
+        font-size: 3.5rem;
+        margin-right: -18px;
+    }
+    .curtain-trending-card img {
+        width: 95px;
+        height: 140px;
+    }
+}
+
+/* Section "Pourquoi Refuge Pop ?" */
+.curtain-reasons {
+    padding: 70px 8% 20px;
+    text-align: center;
+}
+
+.curtain-reasons h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.curtain-reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.curtain-reason-card {
+    background: var(--bg-card);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: var(--radius-md);
+    padding: 28px;
+    text-align: left;
+}
+
+.curtain-reason-icon {
+    font-size: 1.6rem;
+    color: var(--accent);
+    margin-bottom: 14px;
+}
+
+.curtain-reason-card h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.curtain-reason-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* FAQ */
+.curtain-faq {
+    padding: 60px 8%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.curtain-faq h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.curtain-faq-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.curtain-faq-question {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 20px 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.curtain-faq-question i {
+    color: var(--accent);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+.curtain-faq-item.open .curtain-faq-question i {
+    transform: rotate(45deg);
+}
+
+.curtain-faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.curtain-faq-item.open .curtain-faq-answer {
+    max-height: 200px;
+}
+
+.curtain-faq-answer p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0 4px 20px;
+}
+
+/* CTA final */
+.curtain-final-cta {
+    text-align: center;
+    padding: 50px 20px 70px;
+}
+
+.curtain-final-cta p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+/* Footer du rideau */
+.curtain-footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.curtain-footer-brand {
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.curtain-footer-brand span {
+    color: var(--accent);
+}
+
+.curtain-footer-text {
+    color: var(--text-muted);
+    font-size: 0.78rem;
+    max-width: 500px;
+    margin: 0 auto 16px;
+    line-height: 1.5;
+}
+
+.curtain-footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.curtain-footer-socials a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    transition: all 0.2s ease;
+}
+
+.curtain-footer-socials a:hover {
+    background: var(--accent);
+    color: #fff;
+}
+
+.curtain-footer-copyright {
+    color: #666;
+    font-size: 0.75rem;
+}
+
+@media (max-width: 768px) {
+    .curtain-content h1 {
+        font-size: 1.8rem;
+    }
+    .curtain-content p {
+        font-size: 0.9rem;
+    }
+    .curtain-reasons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
