@@ -1543,8 +1543,8 @@ function renderCurtainTrending(movies, closeCurtain) {
         const card = document.createElement('div');
         card.classList.add('curtain-trending-card');
         card.innerHTML = `
-            <span class="curtain-trending-number">${index + 1}</span>
             <img src="${poster}" alt="${movie.title}" loading="lazy">
+            <span class="curtain-trending-rank">N°${index + 1}</span>
         `;
         card.addEventListener('click', () => {
             closeCurtain();

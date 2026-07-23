@@ -282,38 +282,35 @@ header {
 
 .curtain-trending-card {
     flex-shrink: 0;
-    width: 160px;
+    width: 140px;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
     cursor: pointer;
-    position: relative;
 }
 
 .curtain-trending-card img {
-    width: 118px;
-    height: 175px;
+    width: 140px;
+    height: 205px;
     object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
     transition: transform 0.25s ease;
-    position: relative;
-    z-index: 1;
 }
 
 .curtain-trending-card:hover img {
-    transform: scale(1.05);
+    transform: translateY(-4px);
 }
 
-.curtain-trending-number {
-    font-size: 5rem;
-    font-weight: 900;
-    line-height: 1;
-    color: var(--bg-dark);
-    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
-    position: relative;
-    z-index: 0;
-    margin-right: -30px;
-    user-select: none;
+.curtain-trending-rank {
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    background: rgba(255, 71, 87, 0.15);
+    color: var(--accent);
+    border: 1px solid rgba(255, 71, 87, 0.2);
 }
 
 .curtain-trending-arrow {
@@ -334,13 +331,16 @@ header {
 }
 
 @media (max-width: 768px) {
-    .curtain-trending-number {
-        font-size: 3.5rem;
-        margin-right: -18px;
+    .curtain-trending-card {
+        width: 105px;
     }
     .curtain-trending-card img {
-        width: 95px;
-        height: 140px;
+        width: 105px;
+        height: 155px;
+    }
+    .curtain-trending-rank {
+        font-size: 0.68rem;
+        padding: 3px 10px;
     }
 }
 
