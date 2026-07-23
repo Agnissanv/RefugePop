@@ -9933,14 +9933,14 @@
     "dateAdded": "2026-07-15"
   },
   {
-    "id": "yt-N7ccepBqDMg",
+    "id": "yt-3qhdbaoOoxI",
     "source": "youtube",
     "title": "Rebelle",
     "poster": "https://image.tmdb.org/t/p/w500/rFLhPoKAqg4CBQdwTs8sQlbao5M.jpg",
     "backdrop": "https://image.tmdb.org/t/p/w500/qx9ts2hBYJrkIQxhryitxnLlm2u.jpg",
     "overview": "Mérida est une archère talentueuse et la fille têtue du roi Fergus et de la reine Elinor. Déterminée à suivre son propre chemin, la jeune princesse défie une ancienne coutume chère aux seigneurs des terres. Lorsqu’elle déclenche le chaos au royaume, Mérida doit faire appel à tous ses talents et ressources (y compris ses frères triplets) pour rompre un horrible sort et découvrir le vrai sens de la bravoure.",
     "release_date": "2012-06-21",
-    "youtubeId": "N7ccepBqDMg",
+    "youtubeId": "3qhdbaoOoxI",
     "tmdbId": 62177,
     "genre_ids": [
       12,
@@ -28213,6 +28213,23 @@
       53
     ],
     "dateAdded": "2026-07-20"
+  },
+  {
+    "id": "yt-Sxwvm1b_-Io",
+    "source": "youtube",
+    "title": "Captain Hook : La Mer Maudite",
+    "poster": "https://media.themoviedb.org/t/p/w440_and_h660_face/87UBh8La2bnWyGhhwRWR0SjQEuU.jpg",
+    "backdrop": "https://media.themoviedb.org/t/p/w1066_and_h600_face/ygOR390GzOX5Quv0kAAcUNDG7fp.jpg",
+    "overview": "Après sa défaite face à l'amiral Smee, le capitaine Hook se cache à Eldritch Landing et s'allie au forgeron Silas Blackweather pour venger la mort de sa sœur. Va-t-il obtenir sa vengeance ?",
+    "release_date": "2025-07-11",
+    "youtubeId": "Sxwvm1b_-Io",
+    "tmdbId": 1511789,
+    "genre_ids": [
+      28,
+      12,
+      27
+    ],
+    "dateAdded": "2026-07-23"
   },
 
 
