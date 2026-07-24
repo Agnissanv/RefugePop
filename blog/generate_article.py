@@ -143,6 +143,11 @@ ARTICLE_TEMPLATE = """<!DOCTYPE html>
     <footer class="blog-footer">
         <p>© 2026 Refuge Pop — <a href="../index.html">Retour au site</a></p>
     </footer>
+
+    <script>
+        window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
 """
@@ -206,6 +211,11 @@ def rebuild_blog_index(articles):
     <footer class="blog-footer">
         <p>© 2026 Refuge Pop — <a href="../index.html">Retour au site</a></p>
     </footer>
+
+    <script>
+        window.va = window.va || function () {{ (window.vaq = window.vaq || []).push(arguments); }};
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
 </body>
 </html>
 """, encoding="utf-8")
